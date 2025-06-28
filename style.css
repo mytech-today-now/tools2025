@@ -1452,6 +1452,24 @@
        RESPONSIVE MEDIA QUERIES
        ======================================== */
 
+    /* Responsive margins for smaller screens */
+    @media screen and (max-width: 1001px) {
+      body {
+        margin-left: var(--spacing-md) !important;
+        margin-right: var(--spacing-md) !important;
+      }
+
+      main {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+
     /* WordPress theme compatibility for common themes */
 
     /* Twenty Twenty-Three and newer block themes */
@@ -1897,11 +1915,18 @@
       z-index: -1 !important;
     }
 
-    /* Blog grid items - preserve masonry positioning */
+    /* Blog grid container - uniform layout */
+    #container.masonry {
+      display: block !important;
+      overflow: hidden !important; /* Clear floats */
+    }
+
+    /* Blog grid items - uniform height and width */
     .blog-grid.element.column-3.masonry-brick {
-      /* Keep absolute positioning for masonry layout */
-      position: absolute !important;
+      /* Use static positioning for uniform grid layout */
+      position: static !important;
       width: calc((100% - (2 * var(--spacing-md))) / 3) !important;
+      height: 450px !important; /* Fixed height for uniformity */
       background: white !important;
       border-radius: var(--border-radius-large) !important;
       box-shadow: var(--shadow-light) !important;
@@ -1909,26 +1934,17 @@
       overflow: hidden !important;
       border: 1px solid var(--light-border) !important;
       box-sizing: border-box !important;
-      /* Don't override top/left positioning - let masonry handle it */
-      /* Ensure proper spacing between columns */
-      margin: 0 !important;
-      /* Ensure consistent spacing */
-      margin-bottom: var(--spacing-md) !important;
+      /* Use flexbox for uniform layout */
+      display: flex !important;
+      flex-direction: column !important;
+      margin: 0 var(--spacing-md) var(--spacing-md) 0 !important;
+      /* Use float for grid layout */
+      float: left !important;
     }
 
-    /* Define column positions for perfect alignment */
-    .blog-grid.element.column-3.masonry-brick[style*="left: 0"] {
-      /* First column - already positioned correctly */
-    }
-
-    .blog-grid.element.column-3.masonry-brick[style*="left: 33.33"] {
-      /* Second column - ensure proper gap */
-      left: calc(33.333% + (var(--spacing-md) / 2)) !important;
-    }
-
-    .blog-grid.element.column-3.masonry-brick[style*="left: 66.66"] {
-      /* Third column - ensure proper gap */
-      left: calc(66.666% + var(--spacing-md)) !important;
+    /* Remove every 3rd item's right margin for proper grid alignment */
+    .blog-grid.element.column-3.masonry-brick:nth-child(3n) {
+      margin-right: 0 !important;
     }
 
     .blog-grid.element.column-3.masonry-brick:hover {
@@ -1937,18 +1953,7 @@
       border-color: var(--primary-color) !important;
     }
 
-    /* Masonry column positioning helpers */
-    .blog-grid.element.column-3.masonry-brick:nth-child(3n+1) {
-      /* First column items - no additional left offset needed */
-    }
 
-    .blog-grid.element.column-3.masonry-brick:nth-child(3n+2) {
-      /* Second column items - ensure proper spacing */
-    }
-
-    .blog-grid.element.column-3.masonry-brick:nth-child(3n+3) {
-      /* Third column items - ensure proper spacing */
-    }
 
     /* Blog article wrapper */
     .blog-article {
@@ -2048,6 +2053,8 @@
       display: flex !important;
       flex-direction: column !important;
       gap: var(--spacing-md) !important;
+      flex: 1 !important; /* Take remaining space after header */
+      overflow: hidden !important; /* Prevent content overflow */
     }
 
     /* Blog title */
@@ -2312,7 +2319,15 @@
 
       .blog-grid.element.column-3.masonry-brick {
         width: calc((100% - var(--spacing-sm)) / 2) !important;
-        /* Keep absolute positioning for masonry on tablets */
+        height: 400px !important; /* Slightly smaller height for tablets */
+        /* Use static positioning for uniform grid on tablets */
+        position: static !important;
+        float: left !important;
+        margin: 0 var(--spacing-sm) var(--spacing-sm) 0 !important;
+      }
+
+      .blog-grid.element.column-3.masonry-brick:nth-child(2n) {
+        margin-right: 0 !important;
       }
 
       /* Maintain uniform header height on tablets */
@@ -2343,13 +2358,11 @@
 
       .blog-grid.element.column-3.masonry-brick {
         width: 100% !important;
-        /* Switch to static positioning for mobile stacking */
+        height: 350px !important; /* Smaller height for mobile */
+        /* Use static positioning for mobile stacking */
         position: static !important;
-        margin-bottom: var(--spacing-md) !important;
-        left: auto !important;
-        top: auto !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        float: none !important;
+        margin: 0 0 var(--spacing-md) 0 !important;
       }
 
       /* Maintain uniform header height on mobile */
@@ -2455,7 +2468,11 @@
     @media screen and (min-width: 1200px) {
       .blog-grid.element.column-3.masonry-brick {
         width: calc((100% - (2 * var(--spacing-lg))) / 3) !important;
-        /* Keep absolute positioning for masonry */
+        height: 480px !important; /* Larger height for desktop */
+        /* Use static positioning for uniform grid */
+        position: static !important;
+        float: left !important;
+        margin: 0 var(--spacing-lg) var(--spacing-lg) 0 !important;
       }
 
       #container.masonry {
@@ -2475,6 +2492,8 @@
       .blog-grid.element.column-3.masonry-brick {
         /* Keep 3-column layout but with more spacing */
         width: calc((100% - (2 * var(--spacing-xl))) / 3) !important;
+        height: 500px !important; /* Even larger height for extra large screens */
+        margin: 0 var(--spacing-xl) var(--spacing-xl) 0 !important;
       }
     }
 
@@ -2527,6 +2546,311 @@
       .hover-zoom,
       .hover-link {
         border: 2px solid var(--text-color) !important;
+      }
+    }
+
+    /* ========================================
+       BLOG POST LIST STYLES
+       ======================================== */
+
+    /* Main blog post list container */
+    .blog-post-list {
+      background: linear-gradient(145deg, #ffffff, #f8f9fa);
+      border: 1px solid var(--light-border);
+      border-radius: var(--border-radius-large);
+      padding: var(--spacing-xl);
+      margin: var(--spacing-xl) 0;
+      box-shadow: var(--shadow-light);
+      transition: all 0.3s ease;
+    }
+
+    .blog-post-list:hover {
+      box-shadow: var(--shadow-medium);
+      transform: translateY(-2px);
+    }
+
+    /* Blog post header section */
+    .blog-post-header {
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: var(--spacing-md);
+    }
+
+    .blog-post-header h3 {
+      color: var(--primary-color) !important;
+      font-size: 1.75rem !important;
+      font-weight: 600 !important;
+      margin: 0 !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-post-header h3 a {
+      color: var(--primary-color) !important;
+      text-decoration: none !important;
+      transition: all 0.3s ease !important;
+      border-bottom: none !important;
+    }
+
+    .blog-post-header h3 a:hover {
+      color: #003a6b !important;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Blog post actual list container */
+    .blog-post-actual-list {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: var(--border-radius);
+      padding: var(--spacing-lg);
+      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.05);
+      max-height: 500px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Custom scrollbar styling for blog post list */
+    .blog-post-actual-list::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .blog-post-actual-list::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: var(--border-radius);
+    }
+
+    .blog-post-actual-list::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: var(--border-radius);
+      transition: background 0.3s ease;
+    }
+
+    .blog-post-actual-list::-webkit-scrollbar-thumb:hover {
+      background: #003a6b;
+    }
+
+    /* Firefox scrollbar styling */
+    .blog-post-actual-list {
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary-color) rgba(0, 0, 0, 0.05);
+    }
+
+    /* Fade effect at bottom to indicate scrollable content */
+    .blog-post-actual-list::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+      pointer-events: none;
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+
+    /* Main list styling */
+    .blog-post-actual-list > ul {
+      list-style: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+
+    /* Individual blog post list items */
+    .blog-post-actual-list > ul > li {
+      background: linear-gradient(145deg, #ffffff, #f5f5f5);
+      border: 1px solid var(--light-border);
+      border-radius: var(--border-radius);
+      padding: var(--spacing-md);
+      transition: all 0.3s ease;
+      position: relative;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .blog-post-actual-list > ul > li:hover {
+      background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+      border-color: var(--primary-color);
+      transform: translateX(4px);
+      box-shadow: 4px 4px 12px rgba(0, 75, 141, 0.15);
+    }
+
+    /* Blog post links */
+    .blog-post-actual-list > ul > li > a {
+      color: var(--text-color) !important;
+      text-decoration: none !important;
+      font-weight: 500 !important;
+      line-height: 1.5 !important;
+      display: block !important;
+      transition: all 0.3s ease !important;
+      border-bottom: none !important;
+      font-size: 1rem !important;
+    }
+
+    .blog-post-actual-list > ul > li > a:hover {
+      color: var(--primary-color) !important;
+      font-weight: 600 !important;
+    }
+
+    /* Nested list styling for sub-categories */
+    .blog-post-actual-list ul ul {
+      list-style: none !important;
+      margin: var(--spacing-md) 0 0 var(--spacing-lg) !important;
+      padding: 0 !important;
+      border-left: 3px solid var(--primary-color);
+      padding-left: var(--spacing-md) !important;
+      background: rgba(0, 75, 141, 0.02);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+
+    .blog-post-actual-list ul ul li {
+      background: linear-gradient(145deg, #f8f9fa, #ffffff) !important;
+      border: 1px solid rgba(0, 75, 141, 0.1) !important;
+      border-radius: var(--border-radius) !important;
+      padding: var(--spacing-sm) var(--spacing-md) !important;
+      margin-bottom: var(--spacing-xs) !important;
+      transition: all 0.3s ease !important;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .blog-post-actual-list ul ul li:hover {
+      background: linear-gradient(145deg, #e3f2fd, #f8f9fa) !important;
+      border-color: var(--primary-color) !important;
+      transform: translateX(2px) !important;
+      box-shadow: 2px 2px 6px rgba(0, 75, 141, 0.1) !important;
+    }
+
+    .blog-post-actual-list ul ul li a {
+      color: var(--text-light) !important;
+      font-size: 0.95rem !important;
+      font-weight: 500 !important;
+    }
+
+    .blog-post-actual-list ul ul li a:hover {
+      color: var(--primary-color) !important;
+      font-weight: 600 !important;
+    }
+
+    /* Blog post list responsive styles */
+    @media screen and (max-width: 768px) {
+      .blog-post-list {
+        padding: var(--spacing-lg);
+        margin: var(--spacing-lg) 0;
+      }
+
+      .blog-post-header h3 {
+        font-size: 1.5rem !important;
+      }
+
+      .blog-post-actual-list {
+        padding: var(--spacing-md);
+        max-height: 400px;
+      }
+
+      .blog-post-actual-list > ul > li {
+        padding: var(--spacing-sm) var(--spacing-md);
+      }
+
+      .blog-post-actual-list > ul > li > a {
+        font-size: 0.95rem !important;
+      }
+
+      .blog-post-actual-list ul ul {
+        margin-left: var(--spacing-md) !important;
+        padding-left: var(--spacing-sm) !important;
+      }
+
+      .blog-post-actual-list ul ul li {
+        padding: var(--spacing-xs) var(--spacing-sm) !important;
+      }
+
+      .blog-post-actual-list ul ul li a {
+        font-size: 0.9rem !important;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .blog-post-list {
+        padding: var(--spacing-md);
+        margin: var(--spacing-md) 0;
+      }
+
+      .blog-post-header {
+        margin-bottom: var(--spacing-md);
+        padding-bottom: var(--spacing-sm);
+      }
+
+      .blog-post-header h3 {
+        font-size: 1.25rem !important;
+      }
+
+      .blog-post-actual-list {
+        padding: var(--spacing-sm);
+        max-height: 300px;
+      }
+
+      .blog-post-actual-list > ul {
+        gap: var(--spacing-xs);
+      }
+
+      .blog-post-actual-list > ul > li {
+        padding: var(--spacing-sm);
+      }
+
+      .blog-post-actual-list > ul > li > a {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+      }
+
+      .blog-post-actual-list ul ul {
+        margin-left: var(--spacing-sm) !important;
+        padding-left: var(--spacing-xs) !important;
+      }
+
+      .blog-post-actual-list ul ul li a {
+        font-size: 0.85rem !important;
+      }
+    }
+
+    /* Focus states for accessibility */
+    .blog-post-header h3 a:focus,
+    .blog-post-actual-list a:focus {
+      outline: 2px solid var(--primary-color) !important;
+      outline-offset: 2px !important;
+      border-radius: var(--border-radius) !important;
+    }
+
+    /* Reduced motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      .blog-post-list,
+      .blog-post-actual-list > ul > li,
+      .blog-post-actual-list ul ul li,
+      .blog-post-header h3 a,
+      .blog-post-actual-list a {
+        transition: none !important;
+        transform: none !important;
+      }
+
+      .blog-post-list:hover,
+      .blog-post-actual-list > ul > li:hover,
+      .blog-post-actual-list ul ul li:hover {
+        transform: none !important;
+      }
+    }
+
+    /* High contrast mode support for blog post list */
+    @media (prefers-contrast: high) {
+      .blog-post-list {
+        border: 2px solid var(--text-color) !important;
+      }
+
+      .blog-post-actual-list > ul > li {
+        border: 2px solid var(--text-color) !important;
+      }
+
+      .blog-post-actual-list ul ul li {
+        border: 2px solid var(--primary-color) !important;
       }
     }
     /*──────────────────────────────────────────────────
