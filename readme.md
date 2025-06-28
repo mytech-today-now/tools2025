@@ -1,9 +1,3 @@
-<html lang="en">
-<head>
-<title>Tools 2025</title>
-</head>
-<link rel="stylesheet" href="style.css">
-<body>
 <article>
 <header>
 <img src="https://plus.unsplash.com/premium_photo-1677009835876-4a29ddc4cc2c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Tools 2025">
@@ -759,18 +753,3 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 <p>© 2025 myTech.Today. All rights reserved.</p>
 </footer>
 </section>
-
-[sc name="beehiiv"][/sc]
-[sc name="previous-posts"][/sc]
-[sc name="contact-info"][/sc]
-
-<div class="ghost">
-<h2>Tools 2025</h2>
-<h4>Tools 2025</h4>
-<h4>Tools 2025</h4>
-<h5>Tools 2025</h5>
-<h6>Tools 2025</h6>
-</div>
-</article>
-</body>
-</html>
