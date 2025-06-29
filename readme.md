@@ -17,20 +17,24 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 <li><a href="#office-productivity">Office Productivity</a></li>
 <li><a href="#additional-office-productivity">Additional Office Productivity</a></li>
 <li><a href="#replacement-apps">Replacement Apps</a></li>
+<li><a href="#search-engines">Search Engines</a></li>
+<li><a href="#web-tools">Web Tools</a></li>
 </ul>
 <li><a href="#programmers">Most useful for programmers</a></li>
 <ul>
 <li><a href="#ides-text-editors">IDEs & Text Editors</a></li>
-<li><a href="#version-control">Version Control</a></li>
-<li><a href="#note-taking-knowledge-management">Note-Taking & Knowledge Management</a></li>
-<li><a href="#time-tracking-productivity">Time Tracking & Productivity</a></li>
-<li><a href="#screen-recording-screenshots">Screen Recording & Screenshots</a></li>
-<li><a href="#security">Security</a></li>
+<li><a href="#devops-version-control">DevOps & Version Control</a>
+<li><a href="#databases">Databases</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#blockchain-tools">Blockchain Tools</a></li>
+<li><a href="#resources">Resources</a></li>
 </ul>
 <li><a href="#game">Most useful for video game developers</a></li>
 <ul>
 <li><a href="#video-game-development">Video Game Development</a></li>
 <li><a href="#video-game-miscellaneous-tools">Video Game Miscellaneous Tools</a></li>
+<li><a href="#3d-modeling-and-printing">3D Modeling and Printing</a></li>
+<li><a href="#cad">CAD</a></li>
 </ul>
 <li><a href="#web-designers">Most useful for web designers/creators</a></li>
 <ul>
@@ -61,7 +65,6 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 <li><a href="#virtualization-cloud">Virtualization & Cloud</a></li>
 <li><a href="#password-management-security">Password Management & Security</a></li>
 <li><a href="#documentation-ticketing">Documentation & Ticketing</a></li>
-<li><a href="#virtualization-cloud">Virtualization & Cloud</a></li>
 </ul>
 <li><a href="#mac">Most useful for Mac/iOS Users</a></li>
 <ul>
