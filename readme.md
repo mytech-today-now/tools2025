@@ -1492,6 +1492,7 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 <li><h4>Marketing Automation & Workflows</h4>
 <ul>
 <li><a href="https://zapier.com/" target="_blank" rel="noopener">Zapier</a> (Free/Paid) - Automation platform connecting apps and services</li>
+<li><a href="https://tally.so/" target="_blank" rel="noopener">Tally.so</a> (Free/Paid) - Survey and form platform</li>
 <li><a href="https://www.integromat.com/" target="_blank" rel="noopener">Integromat (Make)</a> (Free/Paid) - Advanced automation platform</li>
 <li><a href="https://ifttt.com/" target="_blank" rel="noopener">IFTTT</a> (Free/Paid) - Simple automation for everyday tasks</li>
 <li><a href="https://www.microsoft.com/en-us/power-platform/products/power-automate" target="_blank" rel="noopener">Microsoft Power Automate</a> (Free/Paid) - Workflow automation across Microsoft and third-party services</li>
