@@ -1012,30 +1012,311 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 <section id="linux">
 <h2>Most useful for Linux users</h2>
 <ol>
-<li><h4>Tools</h4>
+<li><h4>Development & Programming Tools</h4>
 <ul>
-<li><a href="https://www.mono-project.com/" target="_blank" rel="noopener">Mono Framework</a> - Cross-platform, open-source .NET framework</li>
-<li><a href="https://i3wm.org/" target="_blank" rel="noopener">i3wm.org</a> - a <a href="https://en.wikipedia.org/wiki/Tiling_window_manager" target="_blank" rel="noopener">tiling window manager </a>for GNU/Linux and BSD</li>
-<li><a href="https://www.gnu.org/gnu/gnu.html" target="_blank" rel="noopener">GNU</a> &amp; <a href="https://www.gnu.org/software/coreutils/coreutils.html" target="_blank" rel="noopener">GNU core utilities</a> - Free Software Foundation</li>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">&gt;git</a> - a <a href="https://git-scm.com/about/free-and-open-source" target="_blank" rel="noopener">free and open-source</a> distributed version control system</li>
-<li><a href="https://regexr.com/" target="_blank" rel="noopener">regexr.com</a> - online regex explorer tool (<a href="https://regexone.com/" target="_blank" rel="noopener">regex tutorial</a>)</li>
-<li><a href="https://github.com/BurntSushi/ripgrep#installation" target="_blank" rel="noopener">ripgrep</a> (Linux) - recursively searches directories for a regex pattern (<a href="https://github.com/BurntSushi/ripgrep#installation" target="_blank" rel="noopener">install</a>)</li>
-<li><a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener">fzf</a> (Linux) - A command-line fuzzy finder </li>
-<li><a href="https://github.com/nvbn/thefuck" target="_blank" rel="noopener">thefuck</a> (Linux) - Magnificent app which corrects your previous console command</li>
-<li><a href="https://github.com/liljencrantz/crush#crush" target="_blank" rel="noopener">Crush</a> - an attempt to make a traditional command-line shell that is also a modern programming language</li>
-<li><a href="https://github.com/ycm-core/YouCompleteMe" target="_blank" rel="noopener">YouCompleteMe</a> (vim) - A code-completion engine for Vim</li>
-<li><a href="https://www.darlinghq.org/" target="_blank" rel="noopener">Darling</a> - Darling is a translation layer that lets you run macOS software on Linux</li>
-<li><a href="https://jvns.ca/blog/2020/07/11/scanimage--scan-from-the-command-line/" target="_blank" rel="noopener">scanimage</a> - scan from the command line (<code>scanimage</code> is a command-line tool, in the <code>sane-utils</code> Debian package )</li>
-<li><a href="https://blog.cronhub.io/cronhub-scheduler/" target="_blank" rel="noopener">Cronhub Scheduler</a> - a job scheduler to automate workflows and run jobs on a recurring basis. Think of it as a friendlier alternative to traditional cron jobs</li>
-<li><a href="https://github.com/argoproj/argo-workflows" target="_blank" rel="noopener">Argo Workflows</a> - a container-native workflow engine for orchestrating parallel jobs on Kubernetes</li>
-<li><a href="https://github.com/argoproj/argo-events" target="_blank" rel="noopener">Argo Events</a> - a cloudEvents-based event-driven compute platform for Kubernetes</li>
-<li><a href="https://github.com/argoproj/argo-cd" target="_blank" rel="noopener">Argo CD</a> - a declarative continuous delivery tool for Kubernetes</li>
-<li><a href="https://github.com/argoproj/argo-rollouts" target="_blank" rel="noopener">Argo Rollouts</a> - a progressive delivery tool for Kubernetes</li>
-<li><a href="https://github.com/argoproj/argo-tasks" target="_blank" rel="noopener">Argo Tasks</a> - a task scheduler for Kubernetes</li>
-<li><a href="https://github.com/argoproj/argo-dataflow" target="_blank" rel="noopener">Argo Dataflow</a> - a stream processing framework for Kubernetes</li>
-<li><a href="https://github.com/argoproj/argo-scuba" target="_blank" rel="noopener">Argo Scuba</a> - a tool for visualizing and debugging Kubernetes workloads</li>
-<li><a href="https://github.com/argoproj/argo-tasks" target="_blank" rel="noopener">Argo Tasks</a> - a task scheduler for Kubernetes</li>
-<li><a href="https://venam.nixers.net/blog/unix/2020/09/14/playing_with_fonts.html" target="_blank" rel="noopener">Freetype</a> - included in the font stack on Unix, is quite complex</li>
+<li><a href="https://www.mono-project.com/" target="_blank" rel="noopener">Mono Framework</a> (Free) - Cross-platform, open-source .NET framework for running .NET applications on Linux</li>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> (Free) - Distributed version control system for tracking changes in source code</li>
+<li><a href="https://github.com/ycm-core/YouCompleteMe" target="_blank" rel="noopener">YouCompleteMe</a> (Free) - Code-completion engine for Vim with semantic completion for multiple languages</li>
+<li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a> (Free) - Lightweight but powerful source code editor with extensive extension ecosystem</li>
+<li><a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">IntelliJ IDEA</a> (Free Community/Paid Ultimate) - Intelligent Java IDE with advanced coding assistance</li>
+<li><a href="https://www.eclipse.org/" target="_blank" rel="noopener">Eclipse IDE</a> (Free) - Comprehensive development environment for Java and other languages</li>
+<li><a href="https://atom.io/" target="_blank" rel="noopener">Atom</a> (Free) - Hackable text editor built on Electron with Git integration</li>
+<li><a href="https://www.sublimetext.com/" target="_blank" rel="noopener">Sublime Text</a> (Paid $99) - Sophisticated text editor for code, markup and prose</li>
+<li><a href="https://neovim.io/" target="_blank" rel="noopener">Neovim</a> (Free) - Hyperextensible Vim-based text editor with modern features</li>
+<li><a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">GNU Emacs</a> (Free) - Extensible, customizable text editor with built-in Lisp interpreter</li>
+</ul>
+</li>
+<li><h4>Command Line & Terminal Tools</h4>
+<ul>
+<li><a href="https://www.gnu.org/gnu/gnu.html" target="_blank" rel="noopener">GNU</a> &amp; <a href="https://www.gnu.org/software/coreutils/coreutils.html" target="_blank" rel="noopener">GNU core utilities</a> (Free) - Essential command-line tools for file, text, and shell operations</li>
+<li><a href="https://github.com/BurntSushi/ripgrep" target="_blank" rel="noopener">ripgrep</a> (Free) - Ultra-fast text search tool that recursively searches directories for regex patterns</li>
+<li><a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener">fzf</a> (Free) - Command-line fuzzy finder for interactive filtering of files, command history, and processes</li>
+<li><a href="https://github.com/nvbn/thefuck" target="_blank" rel="noopener">thefuck</a> (Free) - Corrects errors in previous console commands with intelligent suggestions</li>
+<li><a href="https://github.com/sharkdp/fd" target="_blank" rel="noopener">fd</a> (Free) - Simple, fast and user-friendly alternative to 'find' command</li>
+<li><a href="https://github.com/sharkdp/bat" target="_blank" rel="noopener">bat</a> (Free) - Cat clone with syntax highlighting and Git integration</li>
+<li><a href="https://github.com/ogham/exa" target="_blank" rel="noopener">exa</a> (Free) - Modern replacement for 'ls' with colors, icons, and tree view</li>
+<li><a href="https://github.com/dandavison/delta" target="_blank" rel="noopener">delta</a> (Free) - Syntax-highlighting pager for git, diff, and grep output</li>
+<li><a href="https://github.com/bootandy/dust" target="_blank" rel="noopener">dust</a> (Free) - More intuitive version of du written in Rust</li>
+<li><a href="https://github.com/ClementTsang/bottom" target="_blank" rel="noopener">bottom</a> (Free) - Cross-platform graphical process/system monitor with customizable interface</li>
+<li><a href="https://htop.dev/" target="_blank" rel="noopener">htop</a> (Free) - Interactive process viewer and system monitor</li>
+<li><a href="https://github.com/tmux/tmux" target="_blank" rel="noopener">tmux</a> (Free) - Terminal multiplexer for managing multiple terminal sessions</li>
+<li><a href="https://www.gnu.org/software/screen/" target="_blank" rel="noopener">GNU Screen</a> (Free) - Terminal multiplexer that allows multiple terminal sessions within one window</li>
+<li><a href="https://fishshell.com/" target="_blank" rel="noopener">Fish Shell</a> (Free) - Smart and user-friendly command line shell with autosuggestions</li>
+<li><a href="https://www.zsh.org/" target="_blank" rel="noopener">Zsh</a> (Free) - Extended Bourne shell with many improvements and plugin support</li>
+<li><a href="https://ohmyz.sh/" target="_blank" rel="noopener">Oh My Zsh</a> (Free) - Framework for managing Zsh configuration with themes and plugins</li>
+</ul>
+</li>
+<li><h4>Window Managers & Desktop Environments</h4>
+<ul>
+<li><a href="https://i3wm.org/" target="_blank" rel="noopener">i3wm</a> (Free) - Tiling window manager designed for advanced users and developers</li>
+<li><a href="https://swaywm.org/" target="_blank" rel="noopener">Sway</a> (Free) - i3-compatible Wayland compositor with tiling window management</li>
+<li><a href="https://awesomewm.org/" target="_blank" rel="noopener">Awesome</a> (Free) - Highly configurable framework window manager with Lua scripting</li>
+<li><a href="https://dwm.suckless.org/" target="_blank" rel="noopener">dwm</a> (Free) - Dynamic window manager designed to be simple, fast and small</li>
+<li><a href="https://bspwm.github.io/" target="_blank" rel="noopener">bspwm</a> (Free) - Tiling window manager that represents windows as leaves of binary trees</li>
+<li><a href="https://www.gnome.org/" target="_blank" rel="noopener">GNOME</a> (Free) - Modern desktop environment with clean interface and extensive customization</li>
+<li><a href="https://kde.org/plasma-desktop/" target="_blank" rel="noopener">KDE Plasma</a> (Free) - Feature-rich desktop environment with high customizability</li>
+<li><a href="https://xfce.org/" target="_blank" rel="noopener">Xfce</a> (Free) - Lightweight desktop environment that aims to be fast and low on system resources</li>
+<li><a href="https://lxde.org/" target="_blank" rel="noopener">LXDE</a> (Free) - Lightweight X11 desktop environment designed for low-end computers</li>
+<li><a href="https://www.mate-desktop.org/" target="_blank" rel="noopener">MATE</a> (Free) - Traditional desktop environment forked from GNOME 2</li>
+</ul>
+</li>
+<li><h4>System Administration & IT Tools</h4>
+<ul>
+<li><a href="https://www.ansible.com/" target="_blank" rel="noopener">Ansible</a> (Free/Paid Enterprise) - Automation platform for configuration management, application deployment, and orchestration</li>
+<li><a href="https://puppet.com/" target="_blank" rel="noopener">Puppet</a> (Free/Paid Enterprise) - Configuration management tool for automating infrastructure provisioning</li>
+<li><a href="https://saltproject.io/" target="_blank" rel="noopener">Salt</a> (Free/Paid Enterprise) - Event-driven automation and configuration management platform</li>
+<li><a href="https://www.chef.io/" target="_blank" rel="noopener">Chef</a> (Free/Paid Enterprise) - Infrastructure automation platform for managing servers and applications</li>
+<li><a href="https://www.terraform.io/" target="_blank" rel="noopener">Terraform</a> (Free/Paid Enterprise) - Infrastructure as code tool for building, changing, and versioning infrastructure</li>
+<li><a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a> (Free/Paid Pro) - Platform for developing, shipping, and running applications in containers</li>
+<li><a href="https://kubernetes.io/" target="_blank" rel="noopener">Kubernetes</a> (Free) - Container orchestration platform for automating deployment, scaling, and management</li>
+<li><a href="https://www.vagrantup.com/" target="_blank" rel="noopener">Vagrant</a> (Free) - Tool for building and managing virtual machine environments</li>
+<li><a href="https://www.virtualbox.org/" target="_blank" rel="noopener">VirtualBox</a> (Free) - Cross-platform virtualization software for running multiple operating systems</li>
+<li><a href="https://www.qemu.org/" target="_blank" rel="noopener">QEMU</a> (Free) - Generic machine emulator and virtualizer with KVM support</li>
+<li><a href="https://libvirt.org/" target="_blank" rel="noopener">libvirt</a> (Free) - Toolkit for managing virtualization platforms including KVM, QEMU, and Xen</li>
+<li><a href="https://www.nagios.org/" target="_blank" rel="noopener">Nagios</a> (Free Core/Paid XI) - Network and infrastructure monitoring system</li>
+<li><a href="https://www.zabbix.com/" target="_blank" rel="noopener">Zabbix</a> (Free/Paid Support) - Enterprise-class monitoring solution for networks, servers, and applications</li>
+<li><a href="https://prometheus.io/" target="_blank" rel="noopener">Prometheus</a> (Free) - Monitoring system and time series database with alerting</li>
+<li><a href="https://grafana.com/" target="_blank" rel="noopener">Grafana</a> (Free/Paid Cloud) - Analytics and interactive visualization web application</li>
+</ul>
+</li>
+<li><h4>Networking & Security Tools</h4>
+<ul>
+<li><a href="https://nmap.org/" target="_blank" rel="noopener">Nmap</a> (Free) - Network discovery and security auditing tool</li>
+<li><a href="https://www.wireshark.org/" target="_blank" rel="noopener">Wireshark</a> (Free) - Network protocol analyzer for troubleshooting and analysis</li>
+<li><a href="https://www.metasploit.com/" target="_blank" rel="noopener">Metasploit</a> (Free Community/Paid Pro) - Penetration testing framework for security assessment</li>
+<li><a href="https://www.kali.org/" target="_blank" rel="noopener">Kali Linux</a> (Free) - Debian-based Linux distribution for penetration testing and security auditing</li>
+<li><a href="https://www.parrotsec.org/" target="_blank" rel="noopener">Parrot Security OS</a> (Free) - GNU/Linux distribution designed for security experts and privacy-aware users</li>
+<li><a href="https://www.openvas.org/" target="_blank" rel="noopener">OpenVAS</a> (Free) - Full-featured vulnerability scanner and management solution</li>
+<li><a href="https://portswigger.net/burp" target="_blank" rel="noopener">Burp Suite</a> (Free Community/Paid Professional) - Web application security testing platform</li>
+<li><a href="https://owasp.org/www-project-zap/" target="_blank" rel="noopener">OWASP ZAP</a> (Free) - Web application security scanner for finding vulnerabilities</li>
+<li><a href="https://www.aircrack-ng.org/" target="_blank" rel="noopener">Aircrack-ng</a> (Free) - Complete suite of tools to assess WiFi network security</li>
+<li><a href="https://www.fail2ban.org/" target="_blank" rel="noopener">Fail2ban</a> (Free) - Intrusion prevention software framework that protects against brute-force attacks</li>
+<li><a href="https://suricata.io/" target="_blank" rel="noopener">Suricata</a> (Free) - High performance network IDS, IPS and network security monitoring engine</li>
+<li><a href="https://www.snort.org/" target="_blank" rel="noopener">Snort</a> (Free) - Network intrusion detection and prevention system</li>
+<li><a href="https://www.openvpn.net/" target="_blank" rel="noopener">OpenVPN</a> (Free/Paid Access Server) - Open source VPN solution for secure remote access</li>
+<li><a href="https://www.wireguard.com/" target="_blank" rel="noopener">WireGuard</a> (Free) - Simple, fast, and modern VPN that utilizes state-of-the-art cryptography</li>
+</ul>
+</li>
+<li><h4>Multimedia & Graphics</h4>
+<ul>
+<li><a href="https://www.gimp.org/" target="_blank" rel="noopener">GIMP</a> (Free) - GNU Image Manipulation Program for photo retouching, image composition and authoring</li>
+<li><a href="https://inkscape.org/" target="_blank" rel="noopener">Inkscape</a> (Free) - Professional vector graphics editor for creating scalable graphics</li>
+<li><a href="https://krita.org/" target="_blank" rel="noopener">Krita</a> (Free) - Professional painting program designed for concept artists, illustrators and texture artists</li>
+<li><a href="https://www.blender.org/" target="_blank" rel="noopener">Blender</a> (Free) - 3D creation suite supporting modeling, rigging, animation, simulation, rendering, and compositing</li>
+<li><a href="https://www.darktable.org/" target="_blank" rel="noopener">darktable</a> (Free) - Photography workflow application and raw developer</li>
+<li><a href="https://rawtherapee.com/" target="_blank" rel="noopener">RawTherapee</a> (Free) - Powerful cross-platform raw photo processing program</li>
+<li><a href="https://www.scribus.net/" target="_blank" rel="noopener">Scribus</a> (Free) - Desktop publishing application for creating professional layouts</li>
+<li><a href="https://www.audacityteam.org/" target="_blank" rel="noopener">Audacity</a> (Free) - Multi-track audio editor and recorder</li>
+<li><a href="https://ardour.org/" target="_blank" rel="noopener">Ardour</a> (Free/Paid Support) - Digital audio workstation for recording, editing and mixing</li>
+<li><a href="https://www.reaper.fm/" target="_blank" rel="noopener">REAPER</a> (Paid $60-225) - Digital audio production application for multitrack audio and MIDI recording</li>
+<li><a href="https://www.openshot.org/" target="_blank" rel="noopener">OpenShot</a> (Free) - Cross-platform video editor with simple interface</li>
+<li><a href="https://kdenlive.org/" target="_blank" rel="noopener">Kdenlive</a> (Free) - Non-linear video editor with multi-track editing</li>
+<li><a href="https://www.shotcut.org/" target="_blank" rel="noopener">Shotcut</a> (Free) - Cross-platform video editor with wide format support</li>
+<li><a href="https://www.blackmagicdesign.com/products/davinciresolve/" target="_blank" rel="noopener">DaVinci Resolve</a> (Free/Paid Studio) - Professional video editing, color correction, and audio post-production</li>
+<li><a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (Free) - Cross-platform multimedia player supporting most multimedia files</li>
+<li><a href="https://mpv.io/" target="_blank" rel="noopener">mpv</a> (Free) - Minimalist media player with high-quality video output</li>
+</ul>
+</li>
+<li><h4>Office & Productivity</h4>
+<ul>
+<li><a href="https://www.libreoffice.org/" target="_blank" rel="noopener">LibreOffice</a> (Free) - Comprehensive office suite with Writer, Calc, Impress, Draw, Base, and Math</li>
+<li><a href="https://www.openoffice.org/" target="_blank" rel="noopener">Apache OpenOffice</a> (Free) - Office productivity suite with word processor, spreadsheet, and presentation tools</li>
+<li><a href="https://www.onlyoffice.com/" target="_blank" rel="noopener">ONLYOFFICE</a> (Free/Paid Enterprise) - Office suite with document, spreadsheet, and presentation editors</li>
+<li><a href="https://www.wps.com/" target="_blank" rel="noopener">WPS Office</a> (Free/Paid Premium) - Lightweight office suite compatible with Microsoft Office formats</li>
+<li><a href="https://www.thunderbird.net/" target="_blank" rel="noopener">Thunderbird</a> (Free) - Email client with calendar, chat, and newsgroup support</li>
+<li><a href="https://evolution.gnome.org/" target="_blank" rel="noopener">Evolution</a> (Free) - Personal information management application with email, calendar, and contacts</li>
+<li><a href="https://www.seamonkey-project.org/" target="_blank" rel="noopener">SeaMonkey</a> (Free) - Internet application suite with web browser, email, newsgroup client, and HTML editor</li>
+<li><a href="https://obsidian.md/" target="_blank" rel="noopener">Obsidian</a> (Free/Paid Commercial) - Knowledge base that works on top of local folder of plain text Markdown files</li>
+<li><a href="https://logseq.com/" target="_blank" rel="noopener">Logseq</a> (Free) - Privacy-first, open-source knowledge base that works on top of local plain-text Markdown files</li>
+<li><a href="https://joplinapp.org/" target="_blank" rel="noopener">Joplin</a> (Free) - Note taking and to-do application with synchronization capabilities</li>
+<li><a href="https://standardnotes.com/" target="_blank" rel="noopener">Standard Notes</a> (Free/Paid Extended) - Simple and private notes app with end-to-end encryption</li>
+<li><a href="https://www.zotero.org/" target="_blank" rel="noopener">Zotero</a> (Free) - Research tool to collect, organize, cite, and share research sources</li>
+<li><a href="https://www.mendeley.com/" target="_blank" rel="noopener">Mendeley</a> (Free/Paid Premium) - Reference manager and academic social network</li>
+</ul>
+</li>
+<li><h4>Web Browsers & Internet</h4>
+<ul>
+<li><a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener">Firefox</a> (Free) - Open-source web browser with privacy focus and extensive customization</li>
+<li><a href="https://www.google.com/chrome/" target="_blank" rel="noopener">Google Chrome</a> (Free) - Fast web browser with Google services integration</li>
+<li><a href="https://www.chromium.org/" target="_blank" rel="noopener">Chromium</a> (Free) - Open-source web browser project that serves as base for Google Chrome</li>
+<li><a href="https://brave.com/" target="_blank" rel="noopener">Brave</a> (Free) - Privacy-focused browser with built-in ad blocker and cryptocurrency rewards</li>
+<li><a href="https://vivaldi.com/" target="_blank" rel="noopener">Vivaldi</a> (Free) - Highly customizable browser with advanced tab management and note-taking</li>
+<li><a href="https://www.opera.com/" target="_blank" rel="noopener">Opera</a> (Free) - Feature-rich browser with built-in VPN, ad blocker, and messaging apps</li>
+<li><a href="https://www.waterfox.net/" target="_blank" rel="noopener">Waterfox</a> (Free) - Firefox-based browser focused on privacy and user choice</li>
+<li><a href="https://librewolf.net/" target="_blank" rel="noopener">LibreWolf</a> (Free) - Firefox fork focused on privacy, security and freedom</li>
+<li><a href="https://www.torproject.org/" target="_blank" rel="noopener">Tor Browser</a> (Free) - Privacy-focused browser for anonymous web browsing</li>
+<li><a href="https://filezilla-project.org/" target="_blank" rel="noopener">FileZilla</a> (Free) - Cross-platform FTP, FTPS and SFTP client</li>
+<li><a href="https://remmina.org/" target="_blank" rel="noopener">Remmina</a> (Free) - Remote desktop client supporting RDP, VNC, SPICE, NX, XDMCP, SSH and EXEC</li>
+<li><a href="https://www.teamviewer.com/" target="_blank" rel="noopener">TeamViewer</a> (Free Personal/Paid Business) - Remote access and support software</li>
+<li><a href="https://anydesk.com/" target="_blank" rel="noopener">AnyDesk</a> (Free/Paid Professional) - Fast remote desktop software with low latency</li>
+</ul>
+</li>
+<li><h4>File Management & Utilities</h4>
+<ul>
+<li><a href="https://midnight-commander.org/" target="_blank" rel="noopener">Midnight Commander</a> (Free) - Text-based file manager with dual-pane interface</li>
+<li><a href="https://ranger.github.io/" target="_blank" rel="noopener">ranger</a> (Free) - Console file manager with VI key bindings and preview functionality</li>
+<li><a href="https://www.nemo-fm.org/" target="_blank" rel="noopener">Nemo</a> (Free) - File manager for Cinnamon desktop with advanced features</li>
+<li><a href="https://wiki.gnome.org/Apps/Files" target="_blank" rel="noopener">GNOME Files (Nautilus)</a> (Free) - Default file manager for GNOME desktop environment</li>
+<li><a href="https://apps.kde.org/dolphin/" target="_blank" rel="noopener">Dolphin</a> (Free) - KDE's file manager with split view and extensive customization</li>
+<li><a href="https://docs.xfce.org/xfce/thunar/start" target="_blank" rel="noopener">Thunar</a> (Free) - Modern file manager for Xfce desktop environment</li>
+<li><a href="https://www.7-zip.org/" target="_blank" rel="noopener">7-Zip</a> (Free) - File archiver with high compression ratio supporting multiple formats</li>
+<li><a href="https://peazip.github.io/" target="_blank" rel="noopener">PeaZip</a> (Free) - Cross-platform file archiver with encryption and secure deletion</li>
+<li><a href="https://github.com/sharkdp/hyperfine" target="_blank" rel="noopener">hyperfine</a> (Free) - Command-line benchmarking tool for measuring execution time</li>
+<li><a href="https://github.com/aristocratos/btop" target="_blank" rel="noopener">btop++</a> (Free) - Resource monitor showing usage and stats for processor, memory, disks, network and processes</li>
+<li><a href="https://github.com/dylanaraps/neofetch" target="_blank" rel="noopener">neofetch</a> (Free) - Command-line system information tool with customizable ASCII art</li>
+<li><a href="https://github.com/fastfetch-cli/fastfetch" target="_blank" rel="noopener">fastfetch</a> (Free) - Neofetch-like tool for fetching system information and displaying it prettily</li>
+</ul>
+</li>
+<li><h4>Database & Data Management</h4>
+<ul>
+<li><a href="https://www.mysql.com/" target="_blank" rel="noopener">MySQL</a> (Free/Paid Enterprise) - Popular open-source relational database management system</li>
+<li><a href="https://www.postgresql.org/" target="_blank" rel="noopener">PostgreSQL</a> (Free) - Advanced open-source relational database with extensive features</li>
+<li><a href="https://mariadb.org/" target="_blank" rel="noopener">MariaDB</a> (Free/Paid Enterprise) - MySQL-compatible relational database with enhanced features</li>
+<li><a href="https://sqlite.org/" target="_blank" rel="noopener">SQLite</a> (Free) - Lightweight, serverless, self-contained SQL database engine</li>
+<li><a href="https://www.mongodb.com/" target="_blank" rel="noopener">MongoDB</a> (Free Community/Paid Enterprise) - Document-oriented NoSQL database</li>
+<li><a href="https://redis.io/" target="_blank" rel="noopener">Redis</a> (Free/Paid Enterprise) - In-memory data structure store used as database, cache, and message broker</li>
+<li><a href="https://www.influxdata.com/" target="_blank" rel="noopener">InfluxDB</a> (Free/Paid Cloud) - Time series database designed for high-write and query loads</li>
+<li><a href="https://dbeaver.io/" target="_blank" rel="noopener">DBeaver</a> (Free Community/Paid Pro) - Universal database tool for developers and database administrators</li>
+<li><a href="https://www.adminer.org/" target="_blank" rel="noopener">Adminer</a> (Free) - Database management tool written in PHP</li>
+<li><a href="https://www.phpmyadmin.net/" target="_blank" rel="noopener">phpMyAdmin</a> (Free) - Web-based administration tool for MySQL and MariaDB</li>
+<li><a href="https://www.pgadmin.org/" target="_blank" rel="noopener">pgAdmin</a> (Free) - Administration and development platform for PostgreSQL</li>
+</ul>
+</li>
+<li><h4>Backup & Synchronization</h4>
+<ul>
+<li><a href="https://rsync.samba.org/" target="_blank" rel="noopener">rsync</a> (Free) - Fast, versatile file copying tool for local and remote synchronization</li>
+<li><a href="https://rclone.org/" target="_blank" rel="noopener">rclone</a> (Free) - Command line program to manage files on cloud storage</li>
+<li><a href="https://www.borgbackup.org/" target="_blank" rel="noopener">BorgBackup</a> (Free) - Deduplicating backup program with compression and encryption</li>
+<li><a href="https://restic.net/" target="_blank" rel="noopener">restic</a> (Free) - Fast, secure, efficient backup program with cross-platform support</li>
+<li><a href="https://duplicity.nongnu.org/" target="_blank" rel="noopener">Duplicity</a> (Free) - Encrypted bandwidth-efficient backup using rsync algorithm</li>
+<li><a href="https://www.bacula.org/" target="_blank" rel="noopener">Bacula</a> (Free/Paid Support) - Enterprise-class backup and recovery software</li>
+<li><a href="https://www.amanda.org/" target="_blank" rel="noopener">Amanda</a> (Free/Paid Enterprise) - Network backup solution for heterogeneous environments</li>
+<li><a href="https://syncthing.net/" target="_blank" rel="noopener">Syncthing</a> (Free) - Continuous file synchronization program for decentralized sync</li>
+<li><a href="https://www.seafile.com/" target="_blank" rel="noopener">Seafile</a> (Free Community/Paid Professional) - File hosting and synchronization platform</li>
+<li><a href="https://nextcloud.com/" target="_blank" rel="noopener">Nextcloud</a> (Free/Paid Enterprise) - Self-hosted productivity platform with file sync and sharing</li>
+<li><a href="https://owncloud.com/" target="_blank" rel="noopener">ownCloud</a> (Free Community/Paid Enterprise) - File sharing and collaboration platform</li>
+</ul>
+</li>
+<li><h4>Server & Web Development</h4>
+<ul>
+<li><a href="https://httpd.apache.org/" target="_blank" rel="noopener">Apache HTTP Server</a> (Free) - Most widely used web server software</li>
+<li><a href="https://nginx.org/" target="_blank" rel="noopener">Nginx</a> (Free/Paid Plus) - High-performance web server and reverse proxy</li>
+<li><a href="https://caddyserver.com/" target="_blank" rel="noopener">Caddy</a> (Free/Paid Commercial) - Web server with automatic HTTPS and easy configuration</li>
+<li><a href="https://www.lighttpd.net/" target="_blank" rel="noopener">lighttpd</a> (Free) - Lightweight web server optimized for speed-critical environments</li>
+<li><a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a> (Free) - JavaScript runtime built on Chrome's V8 JavaScript engine</li>
+<li><a href="https://www.php.net/" target="_blank" rel="noopener">PHP</a> (Free) - Popular general-purpose scripting language for web development</li>
+<li><a href="https://www.python.org/" target="_blank" rel="noopener">Python</a> (Free) - High-level programming language with extensive libraries</li>
+<li><a href="https://www.ruby-lang.org/" target="_blank" rel="noopener">Ruby</a> (Free) - Dynamic programming language focused on simplicity and productivity</li>
+<li><a href="https://golang.org/" target="_blank" rel="noopener">Go</a> (Free) - Open source programming language for building simple, reliable software</li>
+<li><a href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a> (Free) - Systems programming language focused on safety, speed, and concurrency</li>
+<li><a href="https://www.java.com/" target="_blank" rel="noopener">Java</a> (Free OpenJDK/Paid Oracle) - Object-oriented programming language and computing platform</li>
+<li><a href="https://dotnet.microsoft.com/" target="_blank" rel="noopener">.NET</a> (Free) - Cross-platform framework for building modern applications</li>
+<li><a href="https://www.postman.com/" target="_blank" rel="noopener">Postman</a> (Free/Paid Team) - API development environment for testing and documentation</li>
+<li><a href="https://insomnia.rest/" target="_blank" rel="noopener">Insomnia</a> (Free/Paid Plus) - Cross-platform REST client for API testing</li>
+</ul>
+</li>
+<li><h4>Gaming & Entertainment</h4>
+<ul>
+<li><a href="https://store.steampowered.com/" target="_blank" rel="noopener">Steam</a> (Free Platform) - Digital distribution platform for PC gaming with Proton compatibility layer</li>
+<li><a href="https://lutris.net/" target="_blank" rel="noopener">Lutris</a> (Free) - Gaming platform for Linux with support for various game sources</li>
+<li><a href="https://heroicgameslauncher.com/" target="_blank" rel="noopener">Heroic Games Launcher</a> (Free) - Native GOG and Epic Games launcher for Linux</li>
+<li><a href="https://www.playonlinux.com/" target="_blank" rel="noopener">PlayOnLinux</a> (Free) - Graphical frontend for Wine to run Windows applications</li>
+<li><a href="https://www.winehq.org/" target="_blank" rel="noopener">Wine</a> (Free) - Compatibility layer for running Windows applications on Unix-like systems</li>
+<li><a href="https://github.com/Kron4ek/Wine-Builds" target="_blank" rel="noopener">Wine-GE</a> (Free) - Wine builds with gaming-focused patches and improvements</li>
+<li><a href="https://github.com/ValveSoftware/Proton" target="_blank" rel="noopener">Proton</a> (Free) - Valve's Wine fork for Steam Play compatibility</li>
+<li><a href="https://www.retroarch.com/" target="_blank" rel="noopener">RetroArch</a> (Free) - Frontend for emulators, game engines and media players</li>
+<li><a href="https://dolphin-emu.org/" target="_blank" rel="noopener">Dolphin</a> (Free) - GameCube and Wii emulator with high compatibility</li>
+<li><a href="https://pcsx2.net/" target="_blank" rel="noopener">PCSX2</a> (Free) - PlayStation 2 emulator with high game compatibility</li>
+<li><a href="https://rpcs3.net/" target="_blank" rel="noopener">RPCS3</a> (Free) - PlayStation 3 emulator and debugger</li>
+<li><a href="https://yuzu-emu.org/" target="_blank" rel="noopener">yuzu</a> (Free) - Nintendo Switch emulator (development discontinued)</li>
+<li><a href="https://obsproject.com/" target="_blank" rel="noopener">OBS Studio</a> (Free) - Software for video recording and live streaming</li>
+<li><a href="https://www.mamedev.org/" target="_blank" rel="noopener">MAME</a> (Free) - Multi-purpose emulation framework for arcade games</li>
+</ul>
+</li>
+<li><h4>Education & Research Tools</h4>
+<ul>
+<li><a href="https://www.latex-project.org/" target="_blank" rel="noopener">LaTeX</a> (Free) - Document preparation system for high-quality typesetting</li>
+<li><a href="https://www.texstudio.org/" target="_blank" rel="noopener">TeXstudio</a> (Free) - Integrated writing environment for creating LaTeX documents</li>
+<li><a href="https://www.lyx.org/" target="_blank" rel="noopener">LyX</a> (Free) - Document processor that combines the power of LaTeX with GUI</li>
+<li><a href="https://www.gnu.org/software/octave/" target="_blank" rel="noopener">GNU Octave</a> (Free) - High-level language for numerical computations</li>
+<li><a href="https://www.r-project.org/" target="_blank" rel="noopener">R</a> (Free) - Statistical computing and graphics language and environment</li>
+<li><a href="https://www.rstudio.com/" target="_blank" rel="noopener">RStudio</a> (Free/Paid Pro) - Integrated development environment for R</li>
+<li><a href="https://jupyter.org/" target="_blank" rel="noopener">Jupyter</a> (Free) - Interactive computing environment for creating and sharing documents</li>
+<li><a href="https://www.anaconda.com/" target="_blank" rel="noopener">Anaconda</a> (Free Individual/Paid Commercial) - Python and R distribution for scientific computing</li>
+<li><a href="https://www.sagemath.org/" target="_blank" rel="noopener">SageMath</a> (Free) - Mathematics software system combining many existing open-source packages</li>
+<li><a href="https://maxima.sourceforge.io/" target="_blank" rel="noopener">Maxima</a> (Free) - Computer algebra system for symbolic and numerical expressions</li>
+<li><a href="https://www.geogebra.org/" target="_blank" rel="noopener">GeoGebra</a> (Free) - Interactive mathematics software for geometry, algebra, and calculus</li>
+<li><a href="https://stellarium.org/" target="_blank" rel="noopener">Stellarium</a> (Free) - Planetarium software showing realistic sky in 3D</li>
+<li><a href="https://celestia.space/" target="_blank" rel="noopener">Celestia</a> (Free) - Real-time 3D space simulation for exploring the universe</li>
+</ul>
+</li>
+<li><h4>Communication & Collaboration</h4>
+<ul>
+<li><a href="https://slack.com/" target="_blank" rel="noopener">Slack</a> (Free/Paid Pro) - Business communication platform with channels and integrations</li>
+<li><a href="https://discord.com/" target="_blank" rel="noopener">Discord</a> (Free/Paid Nitro) - Voice, video and text communication designed for communities</li>
+<li><a href="https://www.skype.com/" target="_blank" rel="noopener">Skype</a> (Free/Paid Credits) - Video calling and messaging service</li>
+<li><a href="https://zoom.us/" target="_blank" rel="noopener">Zoom</a> (Free/Paid Pro) - Video conferencing and webinar platform</li>
+<li><a href="https://jitsi.org/" target="_blank" rel="noopener">Jitsi Meet</a> (Free) - Open-source video conferencing solution</li>
+<li><a href="https://element.io/" target="_blank" rel="noopener">Element</a> (Free/Paid Enterprise) - Secure collaboration and messaging via Matrix protocol</li>
+<li><a href="https://signal.org/" target="_blank" rel="noopener">Signal</a> (Free) - Private messenger with end-to-end encryption</li>
+<li><a href="https://telegram.org/" target="_blank" rel="noopener">Telegram</a> (Free) - Cloud-based messaging with focus on speed and security</li>
+<li><a href="https://www.whatsapp.com/" target="_blank" rel="noopener">WhatsApp</a> (Free) - Cross-platform messaging and Voice over IP service</li>
+<li><a href="https://www.microsoft.com/microsoft-teams/" target="_blank" rel="noopener">Microsoft Teams</a> (Free/Paid Business) - Collaboration platform combining workplace chat, meetings, and files</li>
+<li><a href="https://www.hexchat.org/" target="_blank" rel="noopener">HexChat</a> (Free) - IRC client based on XChat with cross-platform support</li>
+<li><a href="https://irssi.org/" target="_blank" rel="noopener">Irssi</a> (Free) - Terminal-based IRC client with extensive scripting support</li>
+<li><a href="https://weechat.org/" target="_blank" rel="noopener">WeeChat</a> (Free) - Fast, light and extensible chat client for IRC and other protocols</li>
+</ul>
+</li>
+<li><h4>Specialized Tools for IT Professionals</h4>
+<ul>
+<li><a href="https://www.wireshark.org/" target="_blank" rel="noopener">Wireshark</a> (Free) - Network protocol analyzer for troubleshooting and security analysis</li>
+<li><a href="https://nmap.org/" target="_blank" rel="noopener">Nmap</a> (Free) - Network discovery and security auditing tool</li>
+<li><a href="https://www.tcpdump.org/" target="_blank" rel="noopener">tcpdump</a> (Free) - Command-line packet analyzer for network troubleshooting</li>
+<li><a href="https://iperf.fr/" target="_blank" rel="noopener">iperf3</a> (Free) - Network bandwidth measurement tool</li>
+<li><a href="https://mtr.tools/" target="_blank" rel="noopener">MTR</a> (Free) - Network diagnostic tool combining ping and traceroute</li>
+<li><a href="https://www.ntopng.org/" target="_blank" rel="noopener">ntopng</a> (Free Community/Paid Pro) - High-speed web-based traffic analysis and flow collection</li>
+<li><a href="https://www.elastic.co/elasticsearch/" target="_blank" rel="noopener">Elasticsearch</a> (Free/Paid Enterprise) - Distributed search and analytics engine</li>
+<li><a href="https://www.elastic.co/logstash/" target="_blank" rel="noopener">Logstash</a> (Free/Paid Enterprise) - Server-side data processing pipeline</li>
+<li><a href="https://www.elastic.co/kibana/" target="_blank" rel="noopener">Kibana</a> (Free/Paid Enterprise) - Data visualization dashboard for Elasticsearch</li>
+<li><a href="https://graylog.org/" target="_blank" rel="noopener">Graylog</a> (Free Open Source/Paid Enterprise) - Log management platform</li>
+<li><a href="https://www.splunk.com/" target="_blank" rel="noopener">Splunk</a> (Free/Paid Enterprise) - Platform for searching, monitoring, and analyzing machine data</li>
+<li><a href="https://www.fluentd.org/" target="_blank" rel="noopener">Fluentd</a> (Free) - Open source data collector for unified logging layer</li>
+<li><a href="https://www.rsyslog.com/" target="_blank" rel="noopener">rsyslog</a> (Free) - High-performance log processing system</li>
+<li><a href="https://www.syslog-ng.com/" target="_blank" rel="noopener">syslog-ng</a> (Free/Paid Premium) - Enhanced logging daemon with advanced filtering</li>
+</ul>
+</li>
+<li><h4>Automation & Scripting</h4>
+<ul>
+<li><a href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener">Bash</a> (Free) - GNU Bourne Again Shell for command-line scripting</li>
+<li><a href="https://www.python.org/" target="_blank" rel="noopener">Python</a> (Free) - High-level programming language ideal for automation scripts</li>
+<li><a href="https://www.perl.org/" target="_blank" rel="noopener">Perl</a> (Free) - High-level programming language excellent for text processing</li>
+<li><a href="https://www.ruby-lang.org/" target="_blank" rel="noopener">Ruby</a> (Free) - Dynamic programming language with elegant syntax</li>
+<li><a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a> (Free) - JavaScript runtime for server-side scripting</li>
+<li><a href="https://www.gnu.org/software/sed/" target="_blank" rel="noopener">sed</a> (Free) - Stream editor for filtering and transforming text</li>
+<li><a href="https://www.gnu.org/software/gawk/" target="_blank" rel="noopener">awk/gawk</a> (Free) - Pattern scanning and processing language</li>
+<li><a href="https://github.com/liljencrantz/crush#crush" target="_blank" rel="noopener">Crush</a> (Free) - Modern shell that is also a programming language</li>
+<li><a href="https://github.com/nushell/nushell" target="_blank" rel="noopener">Nushell</a> (Free) - Modern shell with structured data support</li>
+<li><a href="https://www.powershellgallery.com/" target="_blank" rel="noopener">PowerShell</a> (Free) - Cross-platform task automation and configuration management framework</li>
+<li><a href="https://crontab.guru/" target="_blank" rel="noopener">Cron</a> (Free) - Time-based job scheduler for Unix-like systems</li>
+<li><a href="https://github.com/robfig/cron" target="_blank" rel="noopener">systemd timers</a> (Free) - Modern alternative to cron for scheduling tasks</li>
+<li><a href="https://blog.cronhub.io/cronhub-scheduler/" target="_blank" rel="noopener">Cronhub Scheduler</a> (Free/Paid Pro) - Friendly alternative to traditional cron jobs</li>
+<li><a href="https://github.com/argoproj/argo-workflows" target="_blank" rel="noopener">Argo Workflows</a> (Free) - Container-native workflow engine for Kubernetes</li>
+</ul>
+</li>
+<li><h4>Legacy & Compatibility Tools</h4>
+<ul>
+<li><a href="https://www.darlinghq.org/" target="_blank" rel="noopener">Darling</a> (Free) - Translation layer for running macOS software on Linux</li>
+<li><a href="https://www.winehq.org/" target="_blank" rel="noopener">Wine</a> (Free) - Compatibility layer for running Windows applications</li>
+<li><a href="https://www.playonlinux.com/" target="_blank" rel="noopener">PlayOnLinux</a> (Free) - Graphical frontend for Wine</li>
+<li><a href="https://lutris.net/" target="_blank" rel="noopener">Bottles</a> (Free) - Wine prefix manager with easy Windows software installation</li>
+<li><a href="https://www.crossover.com/" target="_blank" rel="noopener">CrossOver</a> (Paid $74/year) - Commercial Wine distribution with professional support</li>
+<li><a href="https://www.vmware.com/products/workstation-player.html" target="_blank" rel="noopener">VMware Workstation Player</a> (Free Personal/Paid Commercial) - Desktop virtualization software</li>
+<li><a href="https://www.virtualbox.org/" target="_blank" rel="noopener">VirtualBox</a> (Free) - Cross-platform virtualization software</li>
+<li><a href="https://www.qemu.org/" target="_blank" rel="noopener">QEMU</a> (Free) - Generic machine emulator and virtualizer</li>
+<li><a href="https://virt-manager.org/" target="_blank" rel="noopener">virt-manager</a> (Free) - Desktop application for managing virtual machines via libvirt</li>
+<li><a href="https://www.gnome-boxes.org/" target="_blank" rel="noopener">GNOME Boxes</a> (Free) - Simple virtualization tool for GNOME desktop</li>
+<li><a href="https://jvns.ca/blog/2020/07/11/scanimage--scan-from-the-command-line/" target="_blank" rel="noopener">scanimage</a> (Free) - Command-line scanning tool from SANE project</li>
+<li><a href="https://venam.nixers.net/blog/unix/2020/09/14/playing_with_fonts.html" target="_blank" rel="noopener">Freetype</a> (Free) - Font rendering library included in Unix font stack</li>
 </ul>
 </li>
 </ol>
