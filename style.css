@@ -966,169 +966,263 @@
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
     }
 
-    /* Table of Contents Navigation - Scroll-triggered Sticky Design */
+    /* Table of Contents Navigation - Proper Hierarchical Design */
     nav.toc {
       background: linear-gradient(145deg, #ffffff, #f8f9fa);
       border: 1px solid var(--light-border);
       border-radius: var(--border-radius-large);
-      padding: var(--spacing-lg); /* Restore default padding for in-document position */
+      padding: var(--spacing-lg);
       margin: var(--spacing-xl) auto;
       max-width: 800px;
       box-shadow: var(--shadow-light);
-      position: relative; /* Start in normal document flow */
-      overflow: hidden; /* Normal overflow for in-document state */
-      transition: all 0.3s ease; /* Smooth transitions for all changes */
-      /* Remove max-height restriction for normal document flow */
+      position: relative;
+      overflow: visible; /* Allow nested lists to expand */
+      transition: all 0.3s ease;
+      text-align: left; /* Left-justified content */
     }
 
     /* Sticky state when scrolled past original position */
     nav.toc.toc-sticky {
-      position: fixed; /* Become sticky when scrolled past */
+      position: fixed;
       top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000; /* Ensure it stays above other content */
-      padding: 0; /* Remove padding for compact sticky state */
-      margin: 0; /* Remove margins for sticky state */
-      max-height: 60px; /* Collapsed height showing only title bar */
-      border-radius: 0; /* Remove border radius when sticky */
-      overflow: visible; /* Allow expansion to be visible */
+      left: 50%;
+      transform: translateX(-50%); /* Center the sticky TOC */
+      z-index: 1000;
+      padding: 0;
+      margin: 0;
+      max-height: 60px;
+      border-radius: 0;
+      overflow: visible;
+      max-width: 800px; /* Maintain max-width when sticky */
+      width: 90%; /* Responsive width with margins */
     }
 
     /* Expanded state when hovering over sticky TOC */
     nav.toc.toc-sticky:hover {
-      max-height: 100vh; /* Allow full expansion */
-      border-radius: 0 0 var(--border-radius-large) var(--border-radius-large); /* Rounded bottom corners when expanded */
-      box-shadow: var(--shadow-medium); /* Enhanced shadow when expanded */
+      max-height: 80vh;
+      border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+      box-shadow: var(--shadow-medium);
     }
 
-    /* TOC header styling - Normal document flow */
+    /* TOC header styling - Centered title */
     nav.toc h2 {
       color: var(--primary-color) !important;
-      font-size: 1.5rem !important; /* Normal size for in-document state */
+      font-size: 1.5rem !important;
       font-weight: 600 !important;
-      margin: 0 0 var(--spacing-md) 0 !important; /* Normal margins for in-document */
+      margin: 0 0 var(--spacing-md) 0 !important;
       padding-bottom: var(--spacing-sm);
       border-bottom: 2px solid var(--primary-color);
-      text-align: center;
-      cursor: pointer; /* Indicate interactivity */
-      transition: all 0.3s ease; /* Smooth transitions */
+      text-align: center; /* Keep title centered */
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
     /* TOC header styling when sticky */
     nav.toc.toc-sticky h2 {
-      font-size: 1.2rem !important; /* Smaller for compact sticky title bar */
-      margin: 0 !important; /* Remove margins for tight title bar */
-      padding: var(--spacing-md) var(--spacing-lg) !important; /* Horizontal padding for title bar */
-      background: linear-gradient(145deg, #ffffff, #f8f9fa); /* Match parent background */
-      position: relative; /* For z-index control */
-      z-index: 1001; /* Above the nav container */
-      border-radius: 0; /* No border radius for title bar */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for title bar */
+      font-size: 1.2rem !important;
+      margin: 0 !important;
+      padding: var(--spacing-md) var(--spacing-lg) !important;
+      background: linear-gradient(145deg, #ffffff, #f8f9fa);
+      position: relative;
+      z-index: 1001;
+      border-radius: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center; /* Keep sticky title centered */
     }
 
     /* TOC header hover state */
     nav.toc h2:hover,
     nav.toc.toc-sticky h2:hover {
-      background: linear-gradient(145deg, #f8f9fa, #e9ecef); /* Slightly darker on hover */
-      color: #003a6b !important; /* Darker blue on hover */
+      background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+      color: #003a6b !important;
     }
 
-    /* TOC list styling - Normal document flow */
-    nav.toc ul {
+    /* TOC main list styling - Centered container with left-justified content */
+    nav.toc > ul {
       list-style: none !important;
-      margin: 0 !important;
+      margin: 0 auto !important;
       padding: 0 !important;
       display: flex;
       flex-direction: column;
       gap: var(--spacing-xs);
-      transition: all 0.3s ease; /* Smooth transitions */
+      transition: all 0.3s ease;
+      max-width: 100%;
+      text-align: left; /* Left-justify the list content */
     }
 
-    /* Nested TOC lists - Hidden by default in normal flow */
+    /* All nested lists styling */
+    nav.toc ul {
+      list-style: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Nested TOC lists - Completely collapsed by default */
     nav.toc li ul {
       max-height: 0;
       opacity: 0;
       visibility: hidden;
       overflow: hidden;
       transform: translateY(-5px);
-      margin-left: var(--spacing-md) !important;
-      padding-left: var(--spacing-md) !important;
-      border-left: 2px solid transparent;
+      margin: 0 !important; /* Remove all margins when collapsed */
+      padding: 0 !important; /* Remove all padding when collapsed */
+      border-left: 3px solid transparent;
       transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.5); /* Subtle background for nested lists */
+      background: rgba(255, 255, 255, 0.7);
       border-radius: var(--border-radius);
-      margin-top: var(--spacing-xs);
+      text-align: left;
+      /* Completely collapse the space */
+      line-height: 0;
+      font-size: 0;
     }
 
-    /* Level 1 nested lists - Child level styling */
+    /* Collapse individual list items within hidden nested lists */
+    nav.toc li ul li {
+      max-height: 0;
+      overflow: hidden;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 0;
+      font-size: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      border: none;
+      height: 0;
+    }
+
+    /* Ensure links within collapsed list items also take no space */
+    nav.toc li ul li a {
+      display: none;
+    }
+
+    /* Level 1 nested lists - Child level styling with distinct color */
     nav.toc > ul > li > ul {
-      border-left-color: rgba(26, 54, 93, 0.15); /* Parent level border color */
-      background: rgba(26, 54, 93, 0.02); /* Very subtle parent-level background */
+      border-left-color: #1a365d; /* Dark blue for level 1 */
+      background: rgba(26, 54, 93, 0.05);
+      margin-left: var(--spacing-xl) !important; /* Increased indentation */
     }
 
-    /* Level 2 nested lists - Grandchild level styling */
+    /* Level 2 nested lists - Grandchild level styling with medium color */
     nav.toc li ul li ul {
-      border-left-color: rgba(45, 90, 135, 0.12); /* Child level border color */
-      background: rgba(45, 90, 135, 0.015); /* Very subtle child-level background */
+      border-left-color: #2d5a87; /* Medium blue for level 2 */
+      background: rgba(45, 90, 135, 0.04);
+      margin-left: var(--spacing-lg) !important; /* Progressive indentation */
     }
 
-    /* Level 3+ nested lists - Great-grandchild level styling */
+    /* Level 3+ nested lists - Great-grandchild level styling with lighter color */
     nav.toc li ul li ul li ul {
-      border-left-color: rgba(74, 123, 167, 0.1); /* Grandchild level border color */
-      background: rgba(74, 123, 167, 0.01); /* Very subtle grandchild-level background */
+      border-left-color: #4a7ba7; /* Light blue for level 3+ */
+      background: rgba(74, 123, 167, 0.03);
+      margin-left: var(--spacing-md) !important; /* Smaller indentation for deep levels */
     }
 
-    /* Show nested lists on parent hover in normal flow */
+    /* Show nested lists on parent hover - Smooth expansion with proper spacing */
     nav.toc li:hover > ul {
-      max-height: 500px; /* Generous max-height for expansion */
+      max-height: 800px; /* Generous max-height for expansion */
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
+      /* Restore proper spacing when expanded */
+      margin-left: var(--spacing-lg) !important;
+      padding-left: var(--spacing-md) !important;
+      margin-top: var(--spacing-xs) !important;
+      line-height: normal;
+      font-size: inherit;
     }
 
-    /* Enhanced border colors on hover for different levels */
+    /* Restore individual list items when parent is hovered */
+    nav.toc li:hover > ul > li {
+      max-height: none;
+      overflow: visible;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: normal;
+      font-size: inherit;
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+      border: initial;
+    }
+
+    /* Restore links within expanded list items */
+    nav.toc li:hover > ul > li a {
+      display: block;
+    }
+
+    /* Enhanced styling on hover for different levels with distinct colors and proper spacing */
     nav.toc > ul > li:hover > ul {
-      border-left-color: rgba(26, 54, 93, 0.3); /* Stronger parent border on hover */
-      background: rgba(26, 54, 93, 0.04);
+      border-left-color: #1a365d; /* Strong dark blue for level 1 hover */
+      background: rgba(26, 54, 93, 0.08);
+      box-shadow: 0 2px 8px rgba(26, 54, 93, 0.15);
+      margin-left: var(--spacing-xl) !important; /* Level 1 indentation */
     }
 
     nav.toc li ul li:hover > ul {
-      border-left-color: rgba(45, 90, 135, 0.25); /* Stronger child border on hover */
-      background: rgba(45, 90, 135, 0.03);
+      border-left-color: #2d5a87; /* Strong medium blue for level 2 hover */
+      background: rgba(45, 90, 135, 0.06);
+      box-shadow: 0 1px 6px rgba(45, 90, 135, 0.12);
+      margin-left: var(--spacing-lg) !important; /* Level 2 indentation */
     }
 
     nav.toc li ul li ul li:hover > ul {
-      border-left-color: rgba(74, 123, 167, 0.2); /* Stronger grandchild border on hover */
-      background: rgba(74, 123, 167, 0.02);
+      border-left-color: #4a7ba7; /* Strong light blue for level 3+ hover */
+      background: rgba(74, 123, 167, 0.05);
+      box-shadow: 0 1px 4px rgba(74, 123, 167, 0.1);
+      margin-left: var(--spacing-md) !important; /* Level 3+ indentation */
     }
 
     /* TOC list styling when sticky - Hidden by default, shown on hover */
     nav.toc.toc-sticky > ul {
-      padding: var(--spacing-lg) !important; /* Padding for expanded content */
-      opacity: 0; /* Hidden by default */
-      visibility: hidden; /* Hidden by default */
-      transform: translateY(-10px); /* Slight upward offset when hidden */
-      background: linear-gradient(145deg, #ffffff, #f8f9fa); /* Match parent background */
-      border-top: 1px solid var(--light-border); /* Separator from title */
-      max-height: 0; /* Collapsed height */
-      overflow: hidden; /* Hide content when collapsed */
-      transition: all 0.3s ease; /* Smooth transitions */
+      padding: var(--spacing-lg) !important;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      background: linear-gradient(145deg, #ffffff, #f8f9fa);
+      border-top: 1px solid var(--light-border);
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      text-align: left; /* Maintain left alignment when sticky */
     }
 
-    /* Nested lists in sticky TOC - Hidden by default */
+    /* Nested lists in sticky TOC - Completely collapsed by default */
     nav.toc.toc-sticky li ul {
       max-height: 0;
       opacity: 0;
       visibility: hidden;
       overflow: hidden;
       transform: translateY(-5px);
-      margin-left: var(--spacing-md) !important;
-      padding-left: var(--spacing-md) !important;
-      border-left: 2px solid transparent;
+      margin: 0 !important; /* Remove all margins when collapsed */
+      padding: 0 !important; /* Remove all padding when collapsed */
+      border-left: 3px solid transparent;
       background: rgba(255, 255, 255, 0.95);
       border-radius: var(--border-radius);
       transition: all 0.3s ease;
+      text-align: left;
+      /* Completely collapse the space */
+      line-height: 0;
+      font-size: 0;
+    }
+
+    /* Collapse individual list items within hidden nested lists in sticky TOC */
+    nav.toc.toc-sticky li ul li {
+      max-height: 0;
+      overflow: hidden;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 0;
+      font-size: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      border: none;
+      height: 0;
+    }
+
+    /* Ensure links within collapsed list items also take no space in sticky TOC */
+    nav.toc.toc-sticky li ul li a {
+      display: none;
     }
 
     /* TOC list visible state on hover when sticky */
@@ -1140,7 +1234,7 @@
       overflow-y: auto; /* Scroll if needed */
     }
 
-    /* Show nested lists on parent hover in sticky mode */
+    /* Show nested lists on parent hover in sticky mode with proper spacing */
     nav.toc.toc-sticky li:hover > ul {
       max-height: 300px; /* Generous max-height for expansion */
       opacity: 1;
@@ -1148,6 +1242,44 @@
       transform: translateY(0);
       border-left-color: rgba(0, 75, 141, 0.3);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      /* Restore proper spacing when expanded */
+      margin-left: var(--spacing-lg) !important;
+      padding-left: var(--spacing-md) !important;
+      margin-top: var(--spacing-xs) !important;
+      line-height: normal;
+      font-size: inherit;
+    }
+
+    /* Restore individual list items when parent is hovered in sticky TOC */
+    nav.toc.toc-sticky li:hover > ul > li {
+      max-height: none;
+      overflow: visible;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: normal;
+      font-size: inherit;
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+      border: initial;
+    }
+
+    /* Restore links within expanded list items in sticky TOC */
+    nav.toc.toc-sticky li:hover > ul > li a {
+      display: block;
+    }
+
+    /* Level-specific spacing for sticky TOC nested lists */
+    nav.toc.toc-sticky > ul > li:hover > ul {
+      margin-left: var(--spacing-xl) !important; /* Level 1 indentation */
+    }
+
+    nav.toc.toc-sticky li ul li:hover > ul {
+      margin-left: var(--spacing-lg) !important; /* Level 2 indentation */
+    }
+
+    nav.toc.toc-sticky li ul li ul li:hover > ul {
+      margin-left: var(--spacing-md) !important; /* Level 3+ indentation */
     }
 
     /* Body margin adjustment - only when TOC is sticky */
@@ -1169,23 +1301,24 @@
       position: relative;
     }
 
-    /* TOC link styling - Parent level (Level 0) */
+    /* TOC link styling - Parent level (Level 0) - Darkest blue */
     nav.toc > ul > li > a {
       display: block;
       padding: var(--spacing-sm) var(--spacing-md);
-      color: #1a365d !important; /* Darker blue for parent items */
+      color: #1a365d !important; /* Darkest blue for top-level items */
       text-decoration: none !important;
       border-radius: var(--border-radius);
       transition: all 0.3s ease;
-      font-weight: 600; /* Bold for parent items */
-      border-left: 3px solid transparent;
+      font-weight: 700; /* Bold for parent items */
+      border-left: 4px solid transparent;
       background: transparent;
       position: relative;
-      font-size: 1rem;
+      font-size: 1.1rem; /* Slightly larger for hierarchy */
       line-height: 1.4;
+      text-align: left;
     }
 
-    /* TOC link styling - Child level (Level 1) */
+    /* TOC link styling - Child level (Level 1) - Medium blue */
     nav.toc li ul li a {
       display: block;
       padding: var(--spacing-xs) var(--spacing-md);
@@ -1193,76 +1326,91 @@
       text-decoration: none !important;
       border-radius: var(--border-radius);
       transition: all 0.3s ease;
-      font-weight: 400; /* Normal weight for child items */
-      border-left: 2px solid transparent;
+      font-weight: 500; /* Medium weight for child items */
+      border-left: 3px solid transparent;
       background: transparent;
       position: relative;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       line-height: 1.3;
       margin-left: var(--spacing-sm);
+      text-align: left;
     }
 
-    /* TOC link styling - Grandchild level (Level 2) */
+    /* TOC link styling - Grandchild level (Level 2) - Light blue */
     nav.toc li ul li ul li a {
-      color: #4a7ba7 !important; /* Lighter blue for grandchild items */
-      font-weight: 300; /* Light weight for grandchild items */
-      font-size: 0.85rem;
+      display: block;
+      color: #4a7ba7 !important; /* Light blue for grandchild items */
+      font-weight: 400; /* Normal weight for grandchild items */
+      font-size: 0.9rem;
       padding: var(--spacing-xs) var(--spacing-sm);
       margin-left: var(--spacing-md);
-      border-left: 1px solid transparent;
+      border-left: 2px solid transparent;
       line-height: 1.2;
+      text-decoration: none !important;
+      border-radius: var(--border-radius);
+      transition: all 0.3s ease;
+      background: transparent;
+      position: relative;
+      text-align: left;
     }
 
-    /* TOC link styling - Great-grandchild level (Level 3+) */
+    /* TOC link styling - Great-grandchild level (Level 3+) - Lightest blue */
     nav.toc li ul li ul li ul li a {
-      color: #6b8db5 !important; /* Even lighter blue for deeper levels */
+      display: block;
+      color: #6b8db5 !important; /* Lightest blue for deeper levels */
       font-weight: 300;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       padding: var(--spacing-xs) var(--spacing-sm);
       margin-left: var(--spacing-lg);
-      opacity: 0.9;
+      opacity: 0.95;
       border-left: 1px solid transparent;
       line-height: 1.2;
+      text-decoration: none !important;
+      border-radius: var(--border-radius);
+      transition: all 0.3s ease;
+      background: transparent;
+      position: relative;
+      text-align: left;
     }
 
-    /* TOC link hover and focus states - Parent level */
+    /* TOC link hover and focus states - Parent level (Level 0) */
     nav.toc > ul > li > a:hover,
     nav.toc > ul > li > a:focus {
-      background: rgba(26, 54, 93, 0.1) !important; /* Darker blue background for parent hover */
-      color: #003a6b !important; /* Even darker blue text on hover */
+      background: rgba(26, 54, 93, 0.12) !important; /* Strong dark blue background */
+      color: #003a6b !important; /* Darkest blue text on hover */
       border-left-color: #1a365d;
-      transform: translateX(4px);
-      box-shadow: 0 2px 8px rgba(26, 54, 93, 0.2);
+      transform: translateX(6px); /* More pronounced movement for top level */
+      box-shadow: 0 3px 12px rgba(26, 54, 93, 0.25);
     }
 
-    /* TOC link hover and focus states - Child level */
+    /* TOC link hover and focus states - Child level (Level 1) */
     nav.toc li ul li a:hover,
     nav.toc li ul li a:focus {
-      background: rgba(45, 90, 135, 0.08) !important; /* Medium blue background for child hover */
-      color: #1a365d !important; /* Darker blue text on hover */
+      background: rgba(45, 90, 135, 0.1) !important; /* Medium blue background */
+      color: #1a365d !important; /* Dark blue text on hover */
       border-left-color: #2d5a87;
-      transform: translateX(3px);
-      box-shadow: 0 1px 6px rgba(45, 90, 135, 0.15);
+      transform: translateX(4px);
+      box-shadow: 0 2px 8px rgba(45, 90, 135, 0.2);
     }
 
-    /* TOC link hover and focus states - Grandchild level */
+    /* TOC link hover and focus states - Grandchild level (Level 2) */
     nav.toc li ul li ul li a:hover,
     nav.toc li ul li ul li a:focus {
-      background: rgba(74, 123, 167, 0.06) !important; /* Light blue background for grandchild hover */
-      color: #2d5a87 !important;
+      background: rgba(74, 123, 167, 0.08) !important; /* Light blue background */
+      color: #2d5a87 !important; /* Medium blue text on hover */
       border-left-color: #4a7ba7;
-      transform: translateX(2px);
-      box-shadow: 0 1px 4px rgba(74, 123, 167, 0.12);
+      transform: translateX(3px);
+      box-shadow: 0 2px 6px rgba(74, 123, 167, 0.15);
     }
 
-    /* TOC link hover and focus states - Great-grandchild level */
+    /* TOC link hover and focus states - Great-grandchild level (Level 3+) */
     nav.toc li ul li ul li ul li a:hover,
     nav.toc li ul li ul li ul li a:focus {
-      background: rgba(107, 141, 181, 0.05) !important; /* Very light blue background */
-      color: #4a7ba7 !important;
+      background: rgba(107, 141, 181, 0.06) !important; /* Very light blue background */
+      color: #4a7ba7 !important; /* Light blue text on hover */
       border-left-color: #6b8db5;
-      transform: translateX(1px);
-      box-shadow: 0 1px 3px rgba(107, 141, 181, 0.1);
+      transform: translateX(2px);
+      box-shadow: 0 1px 4px rgba(107, 141, 181, 0.12);
     }
 
     /* TOC active/current link - Parent level */
@@ -1290,6 +1438,32 @@
       color: white !important;
       border-left-color: #2d5a87;
       font-weight: 400;
+    }
+
+    /* Responsive design for TOC - Screens less than 1002px */
+    @media (max-width: 1002px) {
+      nav.toc {
+        margin-left: var(--spacing-md);
+        margin-right: var(--spacing-md);
+        max-width: calc(100% - 2 * var(--spacing-md));
+      }
+
+      nav.toc.toc-sticky {
+        left: var(--spacing-md);
+        right: var(--spacing-md);
+        transform: none; /* Remove centering transform */
+        width: calc(100% - 2 * var(--spacing-md));
+        max-width: none;
+      }
+
+      /* Maintain proper indentation on medium screens */
+      nav.toc > ul > li > ul {
+        margin-left: var(--spacing-lg) !important;
+      }
+
+      nav.toc li ul li ul {
+        margin-left: var(--spacing-md) !important;
+      }
     }
 
     /* TOC responsive behavior - Mobile adjustments for sticky design */
