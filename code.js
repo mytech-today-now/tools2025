@@ -728,6 +728,86 @@
     }
 
     /**
+     * Utility functions for debugging and fixing common issues
+     */
+    const DebugUtils = {
+        /**
+         * Check for and fix common jQuery issues
+         */
+        fixJQueryIssues() {
+            try {
+                if (window.jQuery) {
+                    // Fix waypoints plugin issues
+                    if (window.jQuery.fn.waypoint) {
+                        const originalWaypoint = window.jQuery.fn.waypoint;
+                        window.jQuery.fn.waypoint = function(options) {
+                            try {
+                                return originalWaypoint.call(this, options);
+                            } catch (error) {
+                                console.error('[TOC Module] Waypoint error:', error);
+                                return this;
+                            }
+                        };
+                    }
+
+                    // Fix potential issues with jQuery selectors
+                    const originalFind = window.jQuery.fn.find;
+                    window.jQuery.fn.find = function(selector) {
+                        try {
+                            if (typeof selector !== 'string') {
+                                console.warn('[TOC Module] jQuery find called with non-string selector:', selector);
+                                return window.jQuery();
+                            }
+                            return originalFind.call(this, selector);
+                        } catch (error) {
+                            console.error('[TOC Module] jQuery find error:', error);
+                            return window.jQuery();
+                        }
+                    };
+                }
+            } catch (error) {
+                console.error('[TOC Module] Error fixing jQuery issues:', error);
+            }
+        },
+
+        /**
+         * Check for and report potential issues
+         */
+        diagnostics() {
+            const issues = [];
+
+            try {
+                // Check for TOC element
+                const toc = document.querySelector('nav.toc');
+                if (!toc) {
+                    issues.push('TOC element not found');
+                }
+
+                // Check for jQuery
+                if (!window.jQuery) {
+                    issues.push('jQuery not loaded');
+                } else {
+                    issues.push(`jQuery version: ${window.jQuery.fn.jquery || 'unknown'}`);
+                }
+
+                // Check for common problematic scripts
+                const scripts = document.querySelectorAll('script[src]');
+                scripts.forEach(script => {
+                    if (script.src.includes('fbevents.js') || script.src.includes('pixel.js')) {
+                        issues.push(`Blocked external script: ${script.src}`);
+                    }
+                });
+
+                console.log('[TOC Module] Diagnostics:', issues);
+                return issues;
+            } catch (error) {
+                console.error('[TOC Module] Diagnostics error:', error);
+                return ['Diagnostics failed'];
+            }
+        }
+    };
+
+    /**
      * Public API for external access
      */
     window.StickyTOC = {
@@ -740,22 +820,168 @@
         nested: {
             init: () => NestedListManager.init(),
             expandAll: () => {
-                const parentItems = document.querySelectorAll('nav.toc li:has(ul)');
-                parentItems.forEach(item => NestedListManager.expandNestedList(item));
+                try {
+                    const parentItems = document.querySelectorAll('nav.toc li:has(ul)');
+                    if (parentItems.length === 0) {
+                        // Fallback for browsers without :has() support
+                        const allItems = document.querySelectorAll('nav.toc li');
+                        allItems.forEach(item => {
+                            if (item.querySelector('ul')) {
+                                NestedListManager.expandNestedList(item);
+                            }
+                        });
+                    } else {
+                        parentItems.forEach(item => NestedListManager.expandNestedList(item));
+                    }
+                } catch (error) {
+                    console.error('[TOC Module] expandAll error:', error);
+                }
             },
             collapseAll: () => {
-                const parentItems = document.querySelectorAll('nav.toc li:has(ul)');
-                parentItems.forEach(item => NestedListManager.collapseNestedList(item));
+                try {
+                    const parentItems = document.querySelectorAll('nav.toc li:has(ul)');
+                    if (parentItems.length === 0) {
+                        // Fallback for browsers without :has() support
+                        const allItems = document.querySelectorAll('nav.toc li');
+                        allItems.forEach(item => {
+                            if (item.querySelector('ul')) {
+                                NestedListManager.collapseNestedList(item);
+                            }
+                        });
+                    } else {
+                        parentItems.forEach(item => NestedListManager.collapseNestedList(item));
+                    }
+                } catch (error) {
+                    console.error('[TOC Module] collapseAll error:', error);
+                }
             }
         },
+        debug: DebugUtils,
         getLastError: () => TOCState.lastError
     };
 
+    /**
+     * Global error handler for unhandled JavaScript errors
+     */
+    function setupGlobalErrorHandling() {
+        // Handle unhandled promise rejections
+        window.addEventListener('unhandledrejection', function(event) {
+            console.error('[TOC Module] Unhandled promise rejection:', event.reason);
+            event.preventDefault(); // Prevent the default browser behavior
+        });
+
+        // Handle general JavaScript errors
+        window.addEventListener('error', function(event) {
+            console.error('[TOC Module] JavaScript error:', {
+                message: event.message,
+                filename: event.filename,
+                lineno: event.lineno,
+                colno: event.colno,
+                error: event.error
+            });
+        });
+
+        // Wrap jQuery load function to prevent indexOf errors
+        if (window.jQuery && window.jQuery.fn && window.jQuery.fn.load) {
+            const originalLoad = window.jQuery.fn.load;
+            window.jQuery.fn.load = function(url, params, callback) {
+                try {
+                    // Ensure url is a string
+                    if (typeof url !== 'string') {
+                        console.warn('[TOC Module] jQuery load called with non-string URL:', url);
+                        return this;
+                    }
+                    return originalLoad.call(this, url, params, callback);
+                } catch (error) {
+                    console.error('[TOC Module] jQuery load error:', error);
+                    return this;
+                }
+            };
+        }
+
+        // Wrap IntersectionObserver to prevent element type errors
+        if (window.IntersectionObserver) {
+            const OriginalIntersectionObserver = window.IntersectionObserver;
+            window.IntersectionObserver = function(callback, options) {
+                const observer = new OriginalIntersectionObserver(callback, options);
+                const originalObserve = observer.observe;
+
+                observer.observe = function(target) {
+                    try {
+                        // Check if target is a valid Element
+                        if (!target || !(target instanceof Element)) {
+                            console.warn('[TOC Module] IntersectionObserver.observe called with invalid target:', target);
+                            return;
+                        }
+                        return originalObserve.call(this, target);
+                    } catch (error) {
+                        console.error('[TOC Module] IntersectionObserver.observe error:', error);
+                    }
+                };
+
+                return observer;
+            };
+        }
+    }
+
+    /**
+     * Fix common jQuery and DOM issues
+     */
+    function fixCommonIssues() {
+        try {
+            // Fix missing images-slides directory issue
+            const brokenImages = document.querySelectorAll('img[src*="images-slides"]');
+            brokenImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    console.warn('[TOC Module] Broken image detected:', this.src);
+                    // Optionally replace with placeholder or hide
+                    this.style.display = 'none';
+                });
+            });
+
+            // Fix potential syntax errors in inline scripts
+            const scripts = document.querySelectorAll('script:not([src])');
+            scripts.forEach((script, index) => {
+                try {
+                    // Check for common syntax issues
+                    const content = script.textContent || script.innerHTML;
+                    if (content) {
+                        // Check for unmatched quotes or brackets
+                        const singleQuotes = (content.match(/'/g) || []).length;
+                        const doubleQuotes = (content.match(/"/g) || []).length;
+                        const openBrackets = (content.match(/\{/g) || []).length;
+                        const closeBrackets = (content.match(/\}/g) || []).length;
+
+                        if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || openBrackets !== closeBrackets) {
+                            console.warn(`[TOC Module] Potential syntax error in inline script #${index + 1}`);
+                        }
+                    }
+                } catch (error) {
+                    console.error(`[TOC Module] Error checking inline script #${index + 1}:`, error);
+                }
+            });
+
+        } catch (error) {
+            console.error('[TOC Module] Error in fixCommonIssues:', error);
+        }
+    }
+
+    // Setup global error handling first
+    setupGlobalErrorHandling();
+
     // Auto-initialize when DOM is ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initTOC);
+        document.addEventListener('DOMContentLoaded', function() {
+            DebugUtils.fixJQueryIssues();
+            initTOC();
+            fixCommonIssues();
+            DebugUtils.diagnostics();
+        });
     } else {
+        DebugUtils.fixJQueryIssues();
         initTOC();
+        fixCommonIssues();
+        DebugUtils.diagnostics();
     }
 
 })();

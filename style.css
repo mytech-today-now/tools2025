@@ -3462,3 +3462,26 @@
         gap: var(--spacing-sm);
       }
     }
+
+    /* Fix for pagination wrapper spans to prevent stacking */
+    .pag .pag-before,
+    .pag .pag-current,
+    .pag .pag-after {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: var(--spacing-sm) !important;
+    }
+
+    /* Ensure pagination inner container maintains flex layout */
+    .pag.pag-inner {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: var(--spacing-sm) !important;
+    }
+
+    /* Clear both utility for pagination - ensure it doesn't interfere */
+    .pag .clearboth {
+      display: none !important;
+    }

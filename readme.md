@@ -5,158 +5,158 @@
 <p>
 Your Complete Guide to Essential Software, Web Services, and Digital Tools for Every Professional Need
 </p>
-<h4 id="tools2025">Github Readme.md:    <a href="https://github.com/mytech-today-now/tools2025" target="_blank" rel="noopener">Tools 2025</a></h4>
-<h4 id="tools2025">myTech.Today:        <a href="https://mytech.today/tools2025/" target="_blank" rel="noopener">Tools 2025</a></h4>
+<h4 id="tools2025">Github Readme.md: <a href="https://github.com/mytech-today-now/tools2025" target="_blank" rel="noopener">Tools 2025</a></h4>
+<h4 id="tools2025">myTech.Today: <a href="https://mytech.today/tools2025/" target="_blank" rel="noopener">Tools 2025</a></h4>
 </header>
 <nav class="toc">
 <h2>Table of Contents</h2>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li>
-  <a href="#most-users">Most useful to most users</a>
-  <ul>
-    <li><a href="#browser-add-ins">Browser Add-ins</a></li>
-    <li><a href="#browsers">Browsers</a></li>
-    <li><a href="#office-productivity">Office Productivity</a></li>
-    <li><a href="#additional-office-productivity">Additional Office Productivity</a></li>
-    <li><a href="#replacement-apps">Replacement Apps</a></li>
-    <li><a href="#search-engines">Search Engines</a></li>
-    <li><a href="#web-tools">Web Tools</a></li>
-  </ul>
+<a href="#most-users">Most useful to most users</a>
+<ul>
+<li><a href="#browser-add-ins">Browser Add-ins</a></li>
+<li><a href="#browsers">Browsers</a></li>
+<li><a href="#office-productivity">Office Productivity</a></li>
+<li><a href="#additional-office-productivity">Additional Office Productivity</a></li>
+<li><a href="#replacement-apps">Replacement Apps</a></li>
+<li><a href="#search-engines">Search Engines</a></li>
+<li><a href="#web-tools">Web Tools</a></li>
+</ul>
 </li>
 <li>
-  <a href="#programmers">Most useful for programmers</a>
-  <ul>
-    <li><a href="#ides-text-editors">IDEs & Text Editors</a></li>
-    <li><a href="#devops-version-control">DevOps & Version Control</a></li>
-    <li><a href="#databases">Databases</a></li>
-    <li><a href="#tools">Tools</a></li>
-    <li><a href="#blockchain-tools">Blockchain Tools</a></li>
-    <li><a href="#resources">Resources</a></li>
-  </ul>
+<a href="#programmers">Most useful for programmers</a>
+<ul>
+<li><a href="#ides-text-editors">IDEs & Text Editors</a></li>
+<li><a href="#devops-version-control">DevOps & Version Control</a></li>
+<li><a href="#databases">Databases</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#blockchain-tools">Blockchain Tools</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
 </li>
 <li>
-  <a href="#game">Most useful for video game developers</a>
-  <ul>
-    <li><a href="#video-game-development">Video Game Development</a></li>
-    <li><a href="#video-game-miscellaneous-tools">Video Game Miscellaneous Tools</a></li>
-    <li><a href="#3d-modeling-and-printing">3D Modeling and Printing</a></li>
-    <li><a href="#cad">CAD</a></li>
-  </ul>
+<a href="#game">Most useful for video game developers</a>
+<ul>
+<li><a href="#video-game-development">Video Game Development</a></li>
+<li><a href="#video-game-miscellaneous-tools">Video Game Miscellaneous Tools</a></li>
+<li><a href="#3d-modeling-and-printing">3D Modeling and Printing</a></li>
+<li><a href="#cad">CAD</a></li>
+</ul>
 </li>
 <li>
-  <a href="#web-designers">Most useful for web designers/creators</a>
-  <ul>
-    <li><a href="#web-services">Web Services</a></li>
-    <li><a href="#web-design-services">Web Design Services</a></li>
-    <li><a href="#web-frameworks">Web Frameworks</a></li>
-    <li><a href="#javascript-libraries-frameworks">JavaScript Libraries & Frameworks</a></li>
-    <li><a href="#css-frameworks">CSS Frameworks</a></li>
-  </ul>
+<a href="#web-designers">Most useful for web designers/creators</a>
+<ul>
+<li><a href="#web-services">Web Services</a></li>
+<li><a href="#web-design-services">Web Design Services</a></li>
+<li><a href="#web-frameworks">Web Frameworks</a></li>
+<li><a href="#javascript-libraries-frameworks">JavaScript Libraries & Frameworks</a></li>
+<li><a href="#css-frameworks">CSS Frameworks</a></li>
+</ul>
 </li>
 <li>
-  <a href="#ai">Most useful AI tools</a>
-  <ul>
-    <li><a href="#ai-assistants-tools">AI Assistants & Tools</a></li>
-  </ul>
+<a href="#ai">Most useful AI tools</a>
+<ul>
+<li><a href="#ai-assistants-tools">AI Assistants & Tools</a></li>
+</ul>
 </li>
 <li>
-  <a href="#artists">Most useful for artists</a>
-  <ul>
-    <li><a href="#audio-streaming-players">Audio Streaming Players</a></li>
-    <li><a href="#audio-visual-tools">Audio & Visual Tools</a></li>
-  </ul>
+<a href="#artists">Most useful for artists</a>
+<ul>
+<li><a href="#audio-streaming-players">Audio Streaming Players</a></li>
+<li><a href="#audio-visual-tools">Audio & Visual Tools</a></li>
+</ul>
 </li>
 <li>
-  <a href="#it-technicians">Most useful for IT technicians</a>
-  <ul>
-    <li><a href="#security-networking">Security & Networking</a></li>
-    <li><a href="#system-monitoring-performance">System Monitoring & Performance</a></li>
-    <li><a href="#hardware-diagnostics-disk-management">Hardware Diagnostics & Disk Management</a></li>
-    <li><a href="#system-administration-automation">System Administration & Automation Tools</a></li>
-    <li><a href="#remote-access-connectivity">Remote Access & Connectivity</a></li>
-    <li><a href="#backup-recovery">Backup & Recovery</a></li>
-    <li><a href="#virtualization-cloud">Virtualization & Cloud</a></li>
-    <li><a href="#password-management-security">Password Management & Security</a></li>
-    <li><a href="#documentation-ticketing">Documentation & Ticketing</a></li>
-  </ul>
+<a href="#it-technicians">Most useful for IT technicians</a>
+<ul>
+<li><a href="#security-networking">Security & Networking</a></li>
+<li><a href="#system-monitoring-performance">System Monitoring & Performance</a></li>
+<li><a href="#hardware-diagnostics-disk-management">Hardware Diagnostics & Disk Management</a></li>
+<li><a href="#system-administration-automation">System Administration & Automation Tools</a></li>
+<li><a href="#remote-access-connectivity">Remote Access & Connectivity</a></li>
+<li><a href="#backup-recovery">Backup & Recovery</a></li>
+<li><a href="#virtualization-cloud">Virtualization & Cloud</a></li>
+<li><a href="#password-management-security">Password Management & Security</a></li>
+<li><a href="#documentation-ticketing">Documentation & Ticketing</a></li>
+</ul>
 </li>
 <li>
-  <a href="#mac">Most useful for Mac/iOS Users</a>
-  <ul>
-    <li><a href="#macos-system-tools">macOS System Tools & Development</a></li>
-    <li><a href="#security-antivirus">Security & Anti-Virus</a></li>
-    <li><a href="#macos-apps">Apps</a></li>
-    <li><a href="#macos-other-tools">Other Tools</a></li>
-    <li><a href="#macos-creative-media">Creative & Media Tools</a></li>
-    <li><a href="#macos-backup-cloud">Backup & Cloud Storage</a></li>
-    <li><a href="#macos-network-remote-access">Network & Remote Access Tools</a></li>
-  </ul>
+<a href="#mac">Most useful for Mac/iOS Users</a>
+<ul>
+<li><a href="#macos-system-tools">macOS System Tools & Development</a></li>
+<li><a href="#security-antivirus">Security & Anti-Virus</a></li>
+<li><a href="#macos-apps">Apps</a></li>
+<li><a href="#macos-other-tools">Other Tools</a></li>
+<li><a href="#macos-creative-media">Creative & Media Tools</a></li>
+<li><a href="#macos-backup-cloud">Backup & Cloud Storage</a></li>
+<li><a href="#macos-network-remote-access">Network & Remote Access Tools</a></li>
+</ul>
 </li>
 <li>
-  <a href="#linux">Most useful for Linux users</a>
-  <ul>
-    <li><a href="#linux-development">Development & Programming Tools</a></li>
-    <li><a href="#linux-command-line">Command Line & Terminal Tools</a></li>
-    <li><a href="#linux-window-managers">Window Managers & Desktop Environments</a></li>
-    <li><a href="#linux-system-administration">System Administration & IT Tools</a></li>
-    <li><a href="#linux-networking-security">Networking & Security Tools</a></li>
-    <li><a href="#linux-multimedia-graphics">Multimedia & Graphics</a></li>
-    <li><a href="#linux-office-productivity">Office & Productivity</a></li>
-    <li><a href="#linux-web-browsers-internet">Web Browsers & Internet</a></li>
-    <li><a href="#linux-file-management">File Management & Utilities</a></li>
-    <li><a href="#linux-database-data-management">Database & Data Management</a></li>
-    <li><a href="#linux-backup-synchronization">Backup & Synchronization</a></li>
-    <li><a href="#linux-server-web-development">Server & Web Development</a></li>
-    <li><a href="#linux-gaming-entertainment">Gaming & Entertainment</a></li>
-    <li><a href="#linux-education-research">Education & Research Tools</a></li>
-    <li><a href="#linux-communication-collaboration">Communication & Collaboration</a></li>
-    <li><a href="#linux-specialized-tools">Specialized Tools for IT Professionals</a></li>
-    <li><a href="#linux-automation-scripting">Automation & Scripting</a></li>
-    <li><a href="#linux-legacy-compatibility">Legacy & Compatibility Tools</a></li>
-  </ul>
+<a href="#linux">Most useful for Linux users</a>
+<ul>
+<li><a href="#linux-development">Development & Programming Tools</a></li>
+<li><a href="#linux-command-line">Command Line & Terminal Tools</a></li>
+<li><a href="#linux-window-managers">Window Managers & Desktop Environments</a></li>
+<li><a href="#linux-system-administration">System Administration & IT Tools</a></li>
+<li><a href="#linux-networking-security">Networking & Security Tools</a></li>
+<li><a href="#linux-multimedia-graphics">Multimedia & Graphics</a></li>
+<li><a href="#linux-office-productivity">Office & Productivity</a></li>
+<li><a href="#linux-web-browsers-internet">Web Browsers & Internet</a></li>
+<li><a href="#linux-file-management">File Management & Utilities</a></li>
+<li><a href="#linux-database-data-management">Database & Data Management</a></li>
+<li><a href="#linux-backup-synchronization">Backup & Synchronization</a></li>
+<li><a href="#linux-server-web-development">Server & Web Development</a></li>
+<li><a href="#linux-gaming-entertainment">Gaming & Entertainment</a></li>
+<li><a href="#linux-education-research">Education & Research Tools</a></li>
+<li><a href="#linux-communication-collaboration">Communication & Collaboration</a></li>
+<li><a href="#linux-specialized-tools">Specialized Tools for IT Professionals</a></li>
+<li><a href="#linux-automation-scripting">Automation & Scripting</a></li>
+<li><a href="#linux-legacy-compatibility">Legacy & Compatibility Tools</a></li>
+</ul>
 </li>
 <li>
-  <a href="#marketers">Most useful for marketers/SEO/advertising</a>
-  <ul>
-    <li><a href="#seo-analytics">SEO & Analytics</a></li>
-    <li><a href="#social-media-management">Social Media Management</a></li>
-    <li><a href="#email-marketing">Email Marketing & Automation</a></li>
-    <li><a href="#paid-advertising">Paid Advertising & PPC</a></li>
-    <li><a href="#crm-lead-management">CRM & Lead Management</a></li>
-    <li><a href="#analytics-conversion-optimization">Analytics & Conversion Optimization</a></li>
-    <li><a href="#content-marketing-seo">Content Marketing & SEO Writing</a></li>
-    <li><a href="#affiliate-influencer-marketing">Affiliate & Influencer Marketing</a></li>
-    <li><a href="#email-marketing-workflows">Marketing Automation & Workflows</a></li>
-  </ul>
+<a href="#marketers">Most useful for marketers/SEO/advertising</a>
+<ul>
+<li><a href="#seo-analytics">SEO & Analytics</a></li>
+<li><a href="#social-media-management">Social Media Management</a></li>
+<li><a href="#email-marketing">Email Marketing & Automation</a></li>
+<li><a href="#paid-advertising">Paid Advertising & PPC</a></li>
+<li><a href="#crm-lead-management">CRM & Lead Management</a></li>
+<li><a href="#analytics-conversion-optimization">Analytics & Conversion Optimization</a></li>
+<li><a href="#content-marketing-seo">Content Marketing & SEO Writing</a></li>
+<li><a href="#affiliate-influencer-marketing">Affiliate & Influencer Marketing</a></li>
+<li><a href="#email-marketing-workflows">Marketing Automation & Workflows</a></li>
+</ul>
 </li>
 <li>
-  <a href="#others">Other Tools</a>
-  <ul>
-    <li><a href="#website-monitoring-uptime">Website Monitoring & Uptime</a></li>
-    <li><a href="#people-search-background-research">People Search & Background Research</a></li>
-    <li><a href="#business-communication-voip">Business Communication & VoIP</a></li>
-    <li><a href="#web-scraping-data-extraction">Web Scraping & Data Extraction</a></li>
-    <li><a href="#web-performance-testing">Web Performance Testing</a></li>
-    <li><a href="#web-security-testing">Web Security Testing</a></li>
-  </ul>
+<a href="#others">Other Tools</a>
+<ul>
+<li><a href="#website-monitoring-uptime">Website Monitoring & Uptime</a></li>
+<li><a href="#people-search-background-research">People Search & Background Research</a></li>
+<li><a href="#business-communication-voip">Business Communication & VoIP</a></li>
+<li><a href="#web-scraping-data-extraction">Web Scraping & Data Extraction</a></li>
+<li><a href="#web-performance-testing">Web Performance Testing</a></li>
+<li><a href="#web-security-testing">Web Security Testing</a></li>
+</ul>
 </li>
 <li>
-  <a href="#investment">Investment Tools</a>
-  <ul>
-    <li><a href="#research-analysis">Research & Analysis</a></li>
-    <li><a href="#due-diligence">Due Diligence & Legal</a></li>
-    <li><a href="#portfolio-management">Portfolio Management & Tracking</a></li>
-    <li><a href="#financial-modeling">Financial Modeling & Valuation</a></li>
-    <li><a href="#deal-sourcing">Deal Sourcing & Networking</a></li>
-    <li><a href="#ceo-tools">CEO & Executive Tools</a></li>
-    <li><a href="#cto-tools">CTO & Technical Leadership Tools</a></li>
-    <li><a href="#cfo-tools">CFO & Financial Management Tools</a></li>
-    <li><a href="#angel-investor-tools">Angel Investor Specific Tools</a></li>
-    <li><a href="#vc-tools">Venture Capital & Growth Stage Tools</a></li>
-    <li><a href="#market-intelligence">Market Intelligence & Competitive Analysis</a></li>
-    <li><a href="#investor-communication">Investor Communication & Reporting</a></li>
-  </ul>
+<a href="#investment">Investment Tools</a>
+<ul>
+<li><a href="#research-analysis">Research & Analysis</a></li>
+<li><a href="#due-diligence">Due Diligence & Legal</a></li>
+<li><a href="#portfolio-management">Portfolio Management & Tracking</a></li>
+<li><a href="#financial-modeling">Financial Modeling & Valuation</a></li>
+<li><a href="#deal-sourcing">Deal Sourcing & Networking</a></li>
+<li><a href="#ceo-tools">CEO & Executive Tools</a></li>
+<li><a href="#cto-tools">CTO & Technical Leadership Tools</a></li>
+<li><a href="#cfo-tools">CFO & Financial Management Tools</a></li>
+<li><a href="#angel-investor-tools">Angel Investor Specific Tools</a></li>
+<li><a href="#vc-tools">Venture Capital & Growth Stage Tools</a></li>
+<li><a href="#market-intelligence">Market Intelligence & Competitive Analysis</a></li>
+<li><a href="#investor-communication">Investor Communication & Reporting</a></li>
+</ul>
 </li>
 </ul>
 </nav>
@@ -324,11 +324,13 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 <li><a href="https://regexr.com/" target="_blank" rel="noopener">regexr.com</a> – Regex testing sandbox.</li>
 <li><a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="noopener">PyCharm</a> – Python IDE.</li>
 <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a> – Lightweight code editor.</li>
+<li><a href="https://www.augmentcode.com/" target="_blank" rel="noopener">Augment AI</a> – AI code completion.</li>
 <li><a href="https://visualstudio.microsoft.com/vs/community/" target="_blank" rel="noopener">Visual Studio 2022 Community</a> – Full-featured IDE.</li>
 <li><a href="https://www.eclipse.org/downloads/packages/" target="_blank" rel="noopener">Eclipse IDE </a> - an open source, cross-platform IDE written in Java, used for building Java applications</li>
 <li><a href="http://brackets.io/" target="_blank" rel="noopener">Brackets</a> - A modern, open-source text editor that understands web design with live preview</li>
 <li><a href="https://atom.io/" target="_blank" rel="noopener">Atom Text Editor x64</a> - A hackable text editor for the 21st Century</li>
-<li><a href="https://www.ni.com/en/support/downloads/software-products/download.labview.html#559079" target="_blank" rel="noopener">LabVIEW 2025 Q1 Community</a> -  a graphical programming environment that provides unique productivity accelerators for test system development, such as an intuitive approach to programming, connectivity to any instrument, and fully integrated user interfaces.</li>
+<li><a href="https://replit.com/" target="_blank" rel="noopener">Replit</a> – AI-powered coding environment for building and deploying applications.</li>
+<li><a href="https://www.ni.com/en/support/downloads/software-products/download.labview.html#559079" target="_blank" rel="noopener">LabVIEW 2025 Q1 Community</a> -a graphical programming environment that provides unique productivity accelerators for test system development, such as an intuitive approach to programming, connectivity to any instrument, and fully integrated user interfaces.</li>
 </ul>
 </li>
 <li><h4 id="devops-version-control">DevOps & Version Control</h4>
@@ -714,7 +716,6 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 <ul>
 <li><a href="https://github.com/features/copilot/" target="_blank" rel="noopener">GitHub CoPilot</a> – AI pair programmer that helps write code faster.</li>
 <li><a href="https://chat.openai.com/" target="_blank" rel="noopener">ChatGPT</a> – Revolutionary AI for natural language processing.</li>
-<li><a href="https://chat.openai.com/" target="_blank" rel="noopener">MyGPT</a> – Customizable user interface for ChatGPT with plugins and API integrations.</li>
 <li><a href="https://www.bing.com/create" target="_blank" rel="noopener">DALL-E AI</a> – Advanced AI for generating digital images from text descriptions.</li>
 <li><a href="https://github.com/Mozilla-Ocho/llamafile" target="_blank" rel="noopener">llamafile</a> – Project leveraging AI for enhanced file management.</li>
 <li><a href="https://github.com/Significant-Gravitas/Auto-GPT" target="_blank" rel="noopener">Auto-GPT</a> – AI tool for automating content creation and processing tasks.</li>
