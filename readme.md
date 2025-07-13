@@ -158,6 +158,21 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 <li><a href="#investor-communication">Investor Communication & Reporting</a></li>
 </ul>
 </li>
+<li>
+<a href="#erp">ERP Systems and Tools</a>
+<ul>
+<li><a href="#erp-systems">ERP Systems</a></li>
+<li><a href="#erp-tools">ERP Tools</a></li>
+<li><a href="#erp-integrations">ERP Integrations</a></li>
+<li><a href="#erp-consulting">ERP Consulting</a></li>
+<li><a href="#erp-training">ERP Training</a></li>
+<li><a href="#erp-certifications">ERP Certifications</a></li>
+<li><a href="#erp-resources">ERP Resources</a></li>
+<li><a href="#erp-software-development">ERP Software Development</a></li>
+<li><a href="#erp-implementation">ERP Implementation</a></li>
+<li><a href="#erp-migration">ERP Migration</a></li>
+</ul>
+</li>
 </ul>
 </nav>
 <main>
@@ -2040,7 +2055,286 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 <li><a href="https://www.wistia.com/" target="_blank" rel="noopener">Wistia</a> (Free/Paid $99+/month) - Video hosting and analytics platform for professional communications</li>
 </ul>
 </li>
+<li><h4 id="erp">ERP Systems and Tools</h4>
+<ul>
+<li><h5 id="erp-systems">ERP Systems</h5>
+<ul>
+<li><a href="https://www.sap.com/" target="_blank" rel="noopener">SAP ERP</a> (Paid Enterprise) - Comprehensive enterprise resource planning software for large organizations</li>
+<li><a href="https://www.oracle.com/erp/" target="_blank" rel="noopener">Oracle ERP Cloud</a> (Paid Enterprise) - Cloud-based ERP solution with financial management and supply chain</li>
+<li><a href="https://www.microsoft.com/en-us/dynamics-365/" target="_blank" rel="noopener">Microsoft Dynamics 365</a> (Paid $95+/month) - Cloud ERP and CRM platform for business applications</li>
+<li><a href="https://www.netsuite.com/" target="_blank" rel="noopener">NetSuite</a> (Paid $999+/month) - Cloud-based ERP system for financial management and operations</li>
+<li><a href="https://www.workday.com/" target="_blank" rel="noopener">Workday</a> (Paid Enterprise) - Cloud ERP for human capital management and financial planning</li>
+<li><a href="https://www.infor.com/" target="_blank" rel="noopener">Infor CloudSuite</a> (Paid Enterprise) - Industry-specific cloud ERP solutions</li>
+<li><a href="https://www.epicor.com/" target="_blank" rel="noopener">Epicor ERP</a> (Paid Enterprise) - ERP software for manufacturing and distribution companies</li>
+<li><a href="https://www.sage.com/en-us/products/sage-x3/" target="_blank" rel="noopener">Sage X3</a> (Paid Enterprise) - ERP solution for mid-market and subsidiary companies</li>
+<li><a href="https://www.ifs.com/" target="_blank" rel="noopener">IFS Applications</a> (Paid Enterprise) - Enterprise software for asset-intensive industries</li>
+<li><a href="https://www.unit4.com/" target="_blank" rel="noopener">Unit4 ERP</a> (Paid Enterprise) - Cloud ERP for service-oriented organizations</li>
+<li><a href="https://www.infor.com/products/fourthshift" target="_blank" rel="noopener">Infor FourthShift</a> (Paid Enterprise) - Enabling customer sites ranging from medium-sized, fast-growing manufacturers to independent subsidiaries of multinational corporations</li>
+<li><a href="https://www.acumatica.com/" target="_blank" rel="noopener">Acumatica</a> (Paid $1,500+/month) - Cloud-based ERP with unlimited user licensing model</li>
+<li><a href="https://www.deltek.com/" target="_blank" rel="noopener">Deltek</a> (Paid Enterprise) - Project-based ERP for government contractors and professional services</li>
+<li><a href="https://www.syspro.com/" target="_blank" rel="noopener">SYSPRO</a> (Paid $3,000+/month) - Manufacturing and distribution ERP for mid-market companies</li>
+<li><a href="https://www.globalshop.com/" target="_blank" rel="noopener">Global Shop Solutions</a> (Paid $50,000+) - Manufacturing ERP with integrated shop floor control</li>
+<li><a href="https://www.iqms.com/" target="_blank" rel="noopener">IQMS</a> (Paid Enterprise) - Real-time manufacturing ERP with quality management</li>
+<li><a href="https://www.rootstock.com/" target="_blank" rel="noopener">Rootstock</a> (Paid $150+/month) - Cloud manufacturing ERP built on Salesforce platform</li>
+<li><a href="https://www.plex.com/" target="_blank" rel="noopener">Plex Systems</a> (Paid $150+/month) - Cloud-based manufacturing execution system and ERP</li>
+<li><a href="https://www.abas-erp.com/" target="_blank" rel="noopener">abas ERP</a> (Paid $100+/month) - Real-time ERP for manufacturing and trading companies</li>
+<li><a href="https://www.priority-software.com/" target="_blank" rel="noopener">Priority</a> (Paid $89+/month) - Business management software for mid-market companies</li>
+<li><a href="https://www.ramco.com/" target="_blank" rel="noopener">Ramco ERP</a> (Paid Enterprise) - Multi-country, multi-currency ERP with aviation focus</li>
+<li><a href="https://www.erpnext.com/" target="_blank" rel="noopener">ERPNext</a> (Free/Paid $20+/month) - Open-source ERP with comprehensive business applications</li>
+<li><a href="https://odoo.com/" target="_blank" rel="noopener">Odoo</a> (Free/Paid $20+/month) - Open-source business apps suite with ERP functionality</li>
+<li><a href="https://www.dolibarr.org/" target="_blank" rel="noopener">Dolibarr</a> (Free) - Open-source ERP and CRM for small and medium businesses</li>
+<li><a href="https://www.openerp.com/" target="_blank" rel="noopener">OpenERP</a> (Free/Paid Support) - Open-source business applications platform</li>
+<li><a href="https://www.compiere.com/" target="_blank" rel="noopener">Compiere</a> (Free/Paid Support) - Open-source ERP and CRM business solution</li>
+<li><a href="https://www.adempiere.net/" target="_blank" rel="noopener">ADempiere</a> (Free) - Open-source ERP business suite</li>
+<li><a href="https://www.webERP.org/" target="_blank" rel="noopener">webERP</a> (Free) - Web-based accounting and business administration suite</li>
+<li><a href="https://www.postbooks.com/" target="_blank" rel="noopener">PostBooks</a> (Free/Paid Support) - Open-source accounting and ERP software</li>
+<li><a href="https://www.tryton.org/" target="_blank" rel="noopener">Tryton</a> (Free) - Three-tier high-level general purpose application platform</li>
+</ul>
+</li>
+<li><h5 id="erp-tools">ERP Tools</h5>
+<ul>
+<li><a href="https://www.tableau.com/" target="_blank" rel="noopener">Tableau</a> (Paid $70+/month) - Business intelligence and analytics for ERP data visualization</li>
+<li><a href="https://powerbi.microsoft.com/" target="_blank" rel="noopener">Microsoft Power BI</a> (Free/Paid $10+/month) - Business analytics tool for ERP reporting and dashboards</li>
+<li><a href="https://www.qlik.com/" target="_blank" rel="noopener">QlikView/QlikSense</a> (Paid Enterprise) - Data discovery and visualization for ERP analytics</li>
+<li><a href="https://www.informatica.com/" target="_blank" rel="noopener">Informatica</a> (Paid Enterprise) - Data integration and management for ERP systems</li>
+<li><a href="https://www.talend.com/" target="_blank" rel="noopener">Talend</a> (Free/Paid Enterprise) - Data integration and quality tools for ERP environments</li>
+<li><a href="https://www.pentaho.com/" target="_blank" rel="noopener">Pentaho</a> (Free/Paid Enterprise) - Business intelligence suite for ERP data analysis</li>
+<li><a href="https://www.alteryx.com/" target="_blank" rel="noopener">Alteryx</a> (Paid $5,195+/year) - Self-service data analytics platform for ERP data preparation</li>
+<li><a href="https://www.sas.com/" target="_blank" rel="noopener">SAS</a> (Paid Enterprise) - Advanced analytics and business intelligence for ERP systems</li>
+<li><a href="https://www.sisense.com/" target="_blank" rel="noopener">Sisense</a> (Paid $2,000+/month) - AI-driven analytics platform for complex ERP data</li>
+<li><a href="https://www.looker.com/" target="_blank" rel="noopener">Looker</a> (Paid $3,000+/month) - Modern BI platform for ERP data exploration</li>
+<li><a href="https://www.domo.com/" target="_blank" rel="noopener">Domo</a> (Paid $83+/month) - Cloud-based business intelligence for ERP dashboards</li>
+<li><a href="https://www.yellowfinbi.com/" target="_blank" rel="noopener">Yellowfin</a> (Paid $50+/month) - Analytics and BI platform with embedded capabilities</li>
+<li><a href="https://www.gooddata.com/" target="_blank" rel="noopener">GoodData</a> (Paid $125+/month) - Cloud analytics platform for ERP data insights</li>
+<li><a href="https://www.klipfolio.com/" target="_blank" rel="noopener">Klipfolio</a> (Paid $20+/month) - Dashboard and reporting tool for ERP metrics</li>
+<li><a href="https://www.chartio.com/" target="_blank" rel="noopener">Chartio</a> (Paid $80+/month) - Cloud-based business intelligence for ERP analytics</li>
+<li><a href="https://www.metabase.com/" target="_blank" rel="noopener">Metabase</a> (Free/Paid $85+/month) - Open-source business intelligence tool</li>
+<li><a href="https://superset.apache.org/" target="_blank" rel="noopener">Apache Superset</a> (Free) - Modern data exploration and visualization platform</li>
+<li><a href="https://grafana.com/" target="_blank" rel="noopener">Grafana</a> (Free/Paid $9+/month) - Analytics and monitoring platform for ERP metrics</li>
+<li><a href="https://www.knime.com/" target="_blank" rel="noopener">KNIME</a> (Free/Paid Enterprise) - Analytics platform for data science and ERP analysis</li>
+<li><a href="https://rapidminer.com/" target="_blank" rel="noopener">RapidMiner</a> (Free/Paid $2,500+/year) - Data science platform for ERP predictive analytics</li>
+<li><a href="https://www.dataiku.com/" target="_blank" rel="noopener">Dataiku</a> (Paid $50,000+/year) - Data science platform for ERP advanced analytics</li>
+<li><a href="https://www.palantir.com/" target="_blank" rel="noopener">Palantir Foundry</a> (Paid Enterprise) - Data integration and analysis platform</li>
+<li><a href="https://www.databricks.com/" target="_blank" rel="noopener">Databricks</a> (Paid $0.15+/hour) - Unified analytics platform for big data and machine learning</li>
+<li><a href="https://www.snowflake.com/" target="_blank" rel="noopener">Snowflake</a> (Pay-per-use) - Cloud data platform for ERP data warehousing</li>
+<li><a href="https://www.fivetran.com/" target="_blank" rel="noopener">Fivetran</a> (Paid $120+/month) - Automated data integration for ERP systems</li>
+<li><a href="https://www.stitch.com/" target="_blank" rel="noopener">Stitch</a> (Free/Paid $100+/month) - Simple, extensible ETL for ERP data pipelines</li>
+<li><a href="https://airbyte.io/" target="_blank" rel="noopener">Airbyte</a> (Free/Paid Cloud) - Open-source data integration platform</li>
+<li><a href="https://www.singer.io/" target="_blank" rel="noopener">Singer</a> (Free) - Open-source standard for writing scripts that move data</li>
+<li><a href="https://www.prefect.io/" target="_blank" rel="noopener">Prefect</a> (Free/Paid $39+/month) - Modern workflow orchestration for ERP data pipelines</li>
+<li><a href="https://airflow.apache.org/" target="_blank" rel="noopener">Apache Airflow</a> (Free) - Platform to programmatically author, schedule and monitor workflows</li>
+</ul>
+</li>
+<li><h5 id="erp-integrations">ERP Integrations</h5>
+<ul>
+<li><a href="https://www.mulesoft.com/" target="_blank" rel="noopener">MuleSoft</a> (Paid Enterprise) - Integration platform for connecting ERP systems with other applications</li>
+<li><a href="https://www.boomi.com/" target="_blank" rel="noopener">Dell Boomi</a> (Paid $550+/month) - Cloud-based integration platform for ERP connectivity</li>
+<li><a href="https://zapier.com/" target="_blank" rel="noopener">Zapier</a> (Free/Paid $19.99+/month) - Automation platform for connecting ERP with web applications</li>
+<li><a href="https://www.jitterbit.com/" target="_blank" rel="noopener">Jitterbit</a> (Paid $500+/month) - Integration platform for ERP and cloud applications</li>
+<li><a href="https://www.snaplogic.com/" target="_blank" rel="noopener">SnapLogic</a> (Paid Enterprise) - Intelligent integration platform for ERP systems</li>
+<li><a href="https://www.celigo.com/" target="_blank" rel="noopener">Celigo</a> (Paid $500+/month) - Integration platform as a service for ERP connectivity</li>
+<li><a href="https://www.workato.com/" target="_blank" rel="noopener">Workato</a> (Paid Enterprise) - Enterprise automation platform for ERP integrations</li>
+<li><a href="https://www.tibco.com/" target="_blank" rel="noopener">TIBCO</a> (Paid Enterprise) - Integration and analytics platform for enterprise systems</li>
+<li><a href="https://www.informatica.com/products/cloud-integration.html" target="_blank" rel="noopener">Informatica Cloud</a> (Paid $2,000+/month) - Cloud data integration for ERP systems</li>
+<li><a href="https://www.software.ag/" target="_blank" rel="noopener">Software AG webMethods</a> (Paid Enterprise) - Integration platform for enterprise applications</li>
+<li><a href="https://www.oracle.com/middleware/integration/" target="_blank" rel="noopener">Oracle Integration Cloud</a> (Paid $150+/month) - Cloud integration platform for Oracle and third-party applications</li>
+<li><a href="https://azure.microsoft.com/en-us/services/logic-apps/" target="_blank" rel="noopener">Azure Logic Apps</a> (Pay-per-execution) - Cloud integration service for connecting ERP systems</li>
+<li><a href="https://aws.amazon.com/step-functions/" target="_blank" rel="noopener">AWS Step Functions</a> (Pay-per-execution) - Serverless workflow orchestration for ERP integrations</li>
+<li><a href="https://cloud.google.com/integration-connectors" target="_blank" rel="noopener">Google Cloud Integration</a> (Pay-per-use) - Integration platform for connecting enterprise applications</li>
+<li><a href="https://www.ibm.com/cloud/app-connect" target="_blank" rel="noopener">IBM App Connect</a> (Paid $200+/month) - Integration platform for connecting applications and data</li>
+<li><a href="https://www.sap.com/products/cloud-platform-integration.html" target="_blank" rel="noopener">SAP Cloud Platform Integration</a> (Paid Enterprise) - Integration platform for SAP and non-SAP systems</li>
+<li><a href="https://www.flowgear.net/" target="_blank" rel="noopener">Flowgear</a> (Paid $99+/month) - Integration platform as a service for business applications</li>
+<li><a href="https://www.scribe.com/" target="_blank" rel="noopener">Scribe</a> (Paid $500+/month) - Data integration platform for business applications</li>
+<li><a href="https://www.liaison.com/" target="_blank" rel="noopener">Liaison ALLOY Platform</a> (Paid Enterprise) - Data integration and management platform</li>
+<li><a href="https://www.cdata.com/" target="_blank" rel="noopener">CData</a> (Paid $99+/month) - Data connectivity solutions for ERP and business applications</li>
+<li><a href="https://www.progress.com/datadirect" target="_blank" rel="noopener">Progress DataDirect</a> (Paid $500+/year) - Data connectivity and integration solutions</li>
+<li><a href="https://www.actian.com/" target="_blank" rel="noopener">Actian DataConnect</a> (Paid $2,000+/month) - Data integration platform for enterprise applications</li>
+<li><a href="https://www.hevodata.com/" target="_blank" rel="noopener">Hevo Data</a> (Paid $239+/month) - No-code data pipeline platform for ERP integrations</li>
+<li><a href="https://www.integrate.io/" target="_blank" rel="noopener">Integrate.io</a> (Paid $15,000+/year) - Data integration platform for enterprise systems</li>
+<li><a href="https://www.rivery.io/" target="_blank" rel="noopener">Rivery</a> (Paid $0.75+/hour) - Cloud data platform for ERP data integration</li>
+<li><a href="https://www.matillion.com/" target="_blank" rel="noopener">Matillion</a> (Paid $2.00+/hour) - Cloud data transformation platform</li>
+<li><a href="https://www.xplenty.com/" target="_blank" rel="noopener">Xplenty</a> (Paid $599+/month) - Cloud data integration platform</li>
+<li><a href="https://www.etleap.com/" target="_blank" rel="noopener">Etleap</a> (Paid $1,250+/month) - Automated data pipeline platform</li>
+<li><a href="https://www.alooma.com/" target="_blank" rel="noopener">Alooma</a> (Paid Enterprise) - Data pipeline platform for real-time integration</li>
+<li><a href="https://www.blendo.co/" target="_blank" rel="noopener">Blendo</a> (Paid $150+/month) - Cloud data integration platform</li>
+</ul>
+</li>
+<li><h5 id="erp-consulting">ERP Consulting</h5>
+<ul>
+<li><a href="https://www.accenture.com/" target="_blank" rel="noopener">Accenture</a> (Paid Consulting) - Global consulting services for ERP implementation and optimization</li>
+<li><a href="https://www.deloitte.com/" target="_blank" rel="noopener">Deloitte</a> (Paid Consulting) - ERP consulting and digital transformation services</li>
+<li><a href="https://www.pwc.com/" target="_blank" rel="noopener">PwC</a> (Paid Consulting) - ERP advisory and implementation consulting services</li>
+<li><a href="https://www.ey.com/" target="_blank" rel="noopener">EY</a> (Paid Consulting) - Enterprise technology and ERP transformation consulting</li>
+<li><a href="https://www.kpmg.com/" target="_blank" rel="noopener">KPMG</a> (Paid Consulting) - ERP implementation and business process consulting</li>
+<li><a href="https://www.ibm.com/consulting/" target="_blank" rel="noopener">IBM Consulting</a> (Paid Consulting) - ERP modernization and cloud migration services</li>
+<li><a href="https://www.capgemini.com/" target="_blank" rel="noopener">Capgemini</a> (Paid Consulting) - ERP consulting and digital transformation services</li>
+<li><a href="https://www.cognizant.com/" target="_blank" rel="noopener">Cognizant</a> (Paid Consulting) - ERP implementation and support services</li>
+<li><a href="https://www.tcs.com/" target="_blank" rel="noopener">Tata Consultancy Services</a> (Paid Consulting) - Global IT services and ERP consulting</li>
+<li><a href="https://www.infosys.com/" target="_blank" rel="noopener">Infosys</a> (Paid Consulting) - Digital transformation and ERP implementation services</li>
+<li><a href="https://www.wipro.com/" target="_blank" rel="noopener">Wipro</a> (Paid Consulting) - IT consulting and ERP services</li>
+<li><a href="https://www.hcl.com/" target="_blank" rel="noopener">HCL Technologies</a> (Paid Consulting) - Technology consulting and ERP services</li>
+<li><a href="https://www.atos.net/" target="_blank" rel="noopener">Atos</a> (Paid Consulting) - Digital transformation and ERP consulting</li>
+<li><a href="https://www.dxc.technology/" target="_blank" rel="noopener">DXC Technology</a> (Paid Consulting) - Enterprise technology services and ERP consulting</li>
+<li><a href="https://www.csc.com/" target="_blank" rel="noopener">CSC (DXC)</a> (Paid Consulting) - IT services and ERP consulting</li>
+<li><a href="https://www.nttdata.com/" target="_blank" rel="noopener">NTT DATA</a> (Paid Consulting) - Global technology services and ERP consulting</li>
+<li><a href="https://www.fujitsu.com/" target="_blank" rel="noopener">Fujitsu</a> (Paid Consulting) - Technology services and ERP consulting</li>
+<li><a href="https://www.unisys.com/" target="_blank" rel="noopener">Unisys</a> (Paid Consulting) - IT services and ERP solutions</li>
+<li><a href="https://www.cgi.com/" target="_blank" rel="noopener">CGI</a> (Paid Consulting) - IT and business consulting services</li>
+<li><a href="https://www.soprasteria.com/" target="_blank" rel="noopener">Sopra Steria</a> (Paid Consulting) - Digital transformation and ERP consulting</li>
+<li><a href="https://www.logicalis.com/" target="_blank" rel="noopener">Logicalis</a> (Paid Consulting) - Technology solutions and ERP consulting</li>
+<li><a href="https://www.slalom.com/" target="_blank" rel="noopener">Slalom</a> (Paid Consulting) - Modern consulting focused on strategy, technology, and business transformation</li>
+<li><a href="https://www.protiviti.com/" target="_blank" rel="noopener">Protiviti</a> (Paid Consulting) - Business consulting and ERP risk management</li>
+<li><a href="https://www.boozallen.com/" target="_blank" rel="noopener">Booz Allen Hamilton</a> (Paid Consulting) - Management and technology consulting</li>
+<li><a href="https://www.bain.com/" target="_blank" rel="noopener">Bain & Company</a> (Paid Consulting) - Management consulting with technology focus</li>
+<li><a href="https://www.bcg.com/" target="_blank" rel="noopener">Boston Consulting Group</a> (Paid Consulting) - Strategy consulting with digital capabilities</li>
+<li><a href="https://www.mckinsey.com/" target="_blank" rel="noopener">McKinsey & Company</a> (Paid Consulting) - Management consulting with technology transformation</li>
+<li><a href="https://www.oliverwyman.com/" target="_blank" rel="noopener">Oliver Wyman</a> (Paid Consulting) - Management consulting with technology expertise</li>
+<li><a href="https://www.adlittle.com/" target="_blank" rel="noopener">Arthur D. Little</a> (Paid Consulting) - Strategy and technology consulting</li>
+<li><a href="https://www.rolandberger.com/" target="_blank" rel="noopener">Roland Berger</a> (Paid Consulting) - Strategy and operations consulting</li>
+</ul>
+</li>
+<li><h5 id="erp-training">ERP Training</h5>
+<ul>
+<li><a href="https://training.sap.com/" target="_blank" rel="noopener">SAP Training</a> (Paid $3,000+/course) - Official SAP training courses and certifications</li>
+<li><a href="https://education.oracle.com/" target="_blank" rel="noopener">Oracle University</a> (Paid $2,500+/course) - Oracle ERP training and certification programs</li>
+<li><a href="https://www.microsoft.com/en-us/learning/" target="_blank" rel="noopener">Microsoft Learn</a> (Free/Paid Certification) - Training for Microsoft Dynamics 365 and related technologies</li>
+<li><a href="https://www.udemy.com/" target="_blank" rel="noopener">Udemy</a> (Paid $50-200/course) - Online ERP training courses for various systems</li>
+<li><a href="https://www.coursera.org/" target="_blank" rel="noopener">Coursera</a> (Free/Paid $39+/month) - University-level ERP and business process courses</li>
+<li><a href="https://www.linkedin.com/learning/" target="_blank" rel="noopener">LinkedIn Learning</a> (Paid $29.99/month) - Professional ERP training and skill development</li>
+<li><a href="https://www.pluralsight.com/" target="_blank" rel="noopener">Pluralsight</a> (Paid $29+/month) - Technology training including ERP systems and tools</li>
+<li><a href="https://www.skillsoft.com/" target="_blank" rel="noopener">Skillsoft</a> (Paid Enterprise) - Corporate learning platform with ERP training content</li>
+<li><a href="https://www.netsuite.com/portal/services/training/" target="_blank" rel="noopener">NetSuite Training</a> (Paid $1,500+/course) - Official NetSuite training and certification</li>
+<li><a href="https://www.workday.com/en-us/company/careers/life-at-workday/workday-education.html" target="_blank" rel="noopener">Workday Education</a> (Paid Enterprise) - Workday training and certification programs</li>
+<li><a href="https://www.infor.com/services/education" target="_blank" rel="noopener">Infor Education</a> (Paid $2,000+/course) - Infor ERP training and certification</li>
+<li><a href="https://www.epicor.com/en-us/services/education-services/" target="_blank" rel="noopener">Epicor Education</a> (Paid $1,800+/course) - Epicor ERP training programs</li>
+<li><a href="https://www.sage.com/en-us/sage-university/" target="_blank" rel="noopener">Sage University</a> (Paid $500+/course) - Sage ERP training and certification</li>
+<li><a href="https://www.ifs.com/services/education" target="_blank" rel="noopener">IFS Education</a> (Paid Enterprise) - IFS Applications training and certification</li>
+<li><a href="https://www.unit4.com/services/education" target="_blank" rel="noopener">Unit4 Education</a> (Paid Enterprise) - Unit4 ERP training services</li>
+<li><a href="https://www.edx.org/" target="_blank" rel="noopener">edX</a> (Free/Paid $50+/course) - University-level courses including ERP and business systems</li>
+<li><a href="https://www.futurelearn.com/" target="_blank" rel="noopener">FutureLearn</a> (Free/Paid $49+/course) - Online courses from universities including business systems</li>
+<li><a href="https://www.khanacademy.org/" target="_blank" rel="noopener">Khan Academy</a> (Free) - Free educational content including business and technology topics</li>
+<li><a href="https://www.cybrary.it/" target="_blank" rel="noopener">Cybrary</a> (Free/Paid $39+/month) - IT and cybersecurity training including enterprise systems</li>
+<li><a href="https://www.cbtnuggets.com/" target="_blank" rel="noopener">CBT Nuggets</a> (Paid $59+/month) - IT training including enterprise applications</li>
+<li><a href="https://www.itpro.tv/" target="_blank" rel="noopener">ITProTV</a> (Paid $57+/month) - IT training and certification preparation</li>
+<li><a href="https://www.globalknowledge.com/" target="_blank" rel="noopener">Global Knowledge</a> (Paid $2,000+/course) - IT training and certification courses</li>
+<li><a href="https://www.learningtree.com/" target="_blank" rel="noopener">Learning Tree</a> (Paid $2,500+/course) - Technology and business training courses</li>
+<li><a href="https://www.quickstart.com/" target="_blank" rel="noopener">QuickStart</a> (Paid $1,500+/course) - Technology training and certification bootcamps</li>
+<li><a href="https://www.firebrandtraining.com/" target="_blank" rel="noopener">Firebrand Training</a> (Paid $3,000+/course) - Accelerated technology training courses</li>
+<li><a href="https://www.newrelic.com/university" target="_blank" rel="noopener">New Relic University</a> (Free) - Application performance monitoring training</li>
+<li><a href="https://www.tableau.com/learn/training" target="_blank" rel="noopener">Tableau Training</a> (Free/Paid $1,500+/course) - Data visualization and analytics training</li>
+<li><a href="https://powerbi.microsoft.com/en-us/learning/" target="_blank" rel="noopener">Power BI Learning</a> (Free) - Microsoft Power BI training resources</li>
+<li><a href="https://www.qlik.com/us/services/training" target="_blank" rel="noopener">Qlik Training</a> (Paid $1,200+/course) - Qlik analytics platform training</li>
+<li><a href="https://www.alteryx.com/learn" target="_blank" rel="noopener">Alteryx Academy</a> (Free/Paid Certification) - Self-service data analytics training</li>
+</ul>
+</li>
+<li><h5 id="erp-certifications">ERP Certifications</h5>
+<ul>
+<li><a href="https://www.sap.com/training-certification/certification.html" target="_blank" rel="noopener">SAP Certification</a> (Paid $500+/exam) - Official SAP professional certifications</li>
+<li><a href="https://education.oracle.com/certification" target="_blank" rel="noopener">Oracle Certification</a> (Paid $245+/exam) - Oracle ERP and database certifications</li>
+<li><a href="https://docs.microsoft.com/en-us/learn/certifications/" target="_blank" rel="noopener">Microsoft Certifications</a> (Paid $165/exam) - Microsoft Dynamics 365 and Azure certifications</li>
+<li><a href="https://www.netsuite.com/portal/services/training/suitetraining.shtml" target="_blank" rel="noopener">NetSuite Certification</a> (Paid $300+/exam) - NetSuite administrator and developer certifications</li>
+<li><a href="https://www.workday.com/en-us/company/careers/life-at-workday/workday-certification.html" target="_blank" rel="noopener">Workday Certification</a> (Paid Enterprise) - Workday functional and technical certifications</li>
+<li><a href="https://www.infor.com/services/education" target="_blank" rel="noopener">Infor Certification</a> (Paid Varies) - Infor ERP system certifications</li>
+<li><a href="https://www.epicor.com/en-us/services/education-services/" target="_blank" rel="noopener">Epicor Certification</a> (Paid Varies) - Epicor ERP professional certifications</li>
+<li><a href="https://www.apics.org/" target="_blank" rel="noopener">APICS Certification</a> (Paid $695+/exam) - Supply chain and operations management certifications</li>
+<li><a href="https://www.sage.com/en-us/sage-university/certification/" target="_blank" rel="noopener">Sage Certification</a> (Paid $400+/exam) - Sage ERP professional certifications</li>
+<li><a href="https://www.ifs.com/services/education/certification" target="_blank" rel="noopener">IFS Certification</a> (Paid Enterprise) - IFS Applications professional certifications</li>
+<li><a href="https://www.unit4.com/services/education/certification" target="_blank" rel="noopener">Unit4 Certification</a> (Paid Enterprise) - Unit4 ERP certifications</li>
+<li><a href="https://www.acumatica.com/acumatica-university/" target="_blank" rel="noopener">Acumatica Certification</a> (Paid $500+/exam) - Acumatica ERP certifications</li>
+<li><a href="https://www.deltek.com/en/learn/certification" target="_blank" rel="noopener">Deltek Certification</a> (Paid $400+/exam) - Deltek project ERP certifications</li>
+<li><a href="https://www.syspro.com/services/training-certification/" target="_blank" rel="noopener">SYSPRO Certification</a> (Paid $600+/exam) - SYSPRO ERP certifications</li>
+<li><a href="https://www.pmi.org/" target="_blank" rel="noopener">PMI Certification</a> (Paid $405+/exam) - Project Management Professional certifications</li>
+<li><a href="https://www.isaca.org/" target="_blank" rel="noopener">ISACA Certifications</a> (Paid $760+/exam) - IT governance and risk management certifications</li>
+<li><a href="https://www.iiba.org/" target="_blank" rel="noopener">IIBA Certification</a> (Paid $325+/exam) - Business analysis professional certifications</li>
+<li><a href="https://www.comptia.org/" target="_blank" rel="noopener">CompTIA Certifications</a> (Paid $370+/exam) - IT professional certifications</li>
+<li><a href="https://www.cisco.com/c/en/us/training-events/training-certifications.html" target="_blank" rel="noopener">Cisco Certifications</a> (Paid $300+/exam) - Networking and IT infrastructure certifications</li>
+<li><a href="https://aws.amazon.com/certification/" target="_blank" rel="noopener">AWS Certifications</a> (Paid $150+/exam) - Amazon Web Services cloud certifications</li>
+<li><a href="https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/" target="_blank" rel="noopener">Azure Certifications</a> (Paid $165/exam) - Microsoft Azure cloud certifications</li>
+<li><a href="https://cloud.google.com/certification" target="_blank" rel="noopener">Google Cloud Certifications</a> (Paid $200/exam) - Google Cloud Platform certifications</li>
+<li><a href="https://www.salesforce.com/products/platform/trailhead/" target="_blank" rel="noopener">Salesforce Certifications</a> (Paid $200+/exam) - Salesforce platform certifications</li>
+<li><a href="https://www.tableau.com/learn/certification" target="_blank" rel="noopener">Tableau Certification</a> (Paid $250/exam) - Tableau data visualization certifications</li>
+<li><a href="https://powerbi.microsoft.com/en-us/certification/" target="_blank" rel="noopener">Power BI Certification</a> (Paid $165/exam) - Microsoft Power BI certifications</li>
+<li><a href="https://www.qlik.com/us/services/training/certification" target="_blank" rel="noopener">Qlik Certification</a> (Paid $250/exam) - Qlik analytics platform certifications</li>
+<li><a href="https://www.informatica.com/services/training-and-certification.html" target="_blank" rel="noopener">Informatica Certification</a> (Paid $200+/exam) - Informatica data integration certifications</li>
+<li><a href="https://www.talend.com/training/certification/" target="_blank" rel="noopener">Talend Certification</a> (Paid $150/exam) - Talend data integration certifications</li>
+<li><a href="https://www.alteryx.com/learn/certification" target="_blank" rel="noopener">Alteryx Certification</a> (Paid $150/exam) - Alteryx data analytics certifications</li>
+<li><a href="https://www.mulesoft.com/training-certification" target="_blank" rel="noopener">MuleSoft Certification</a> (Paid $250/exam) - MuleSoft integration platform certifications</li>
+</ul>
+</li>
+<li><h5 id="erp-resources">ERP Resources</h5>
+<ul>
+<li><a href="https://www.erp.com/" target="_blank" rel="noopener">ERP.com</a> (Free) - ERP news, research, and vendor comparisons</li>
+<li><a href="https://www.erpfocus.com/" target="_blank" rel="noopener">ERP Focus</a> (Free) - ERP industry news and analysis</li>
+<li><a href="https://www.panorama-consulting.com/" target="_blank" rel="noopener">Panorama Consulting</a> (Free Resources/Paid Consulting) - ERP research reports and selection guidance</li>
+<li><a href="https://www.gartner.com/" target="_blank" rel="noopener">Gartner</a> (Paid $15,000+/year) - ERP market research and vendor analysis</li>
+<li><a href="https://www.forrester.com/" target="_blank" rel="noopener">Forrester</a> (Paid $50,000+/year) - Technology research including ERP systems</li>
+<li><a href="https://www.idc.com/" target="_blank" rel="noopener">IDC</a> (Paid Reports) - Market intelligence and ERP industry analysis</li>
+<li><a href="https://www.erpnews.com/" target="_blank" rel="noopener">ERP News</a> (Free) - Latest news and trends in ERP industry</li>
+<li><a href="https://www.selecthub.com/" target="_blank" rel="noopener">SelectHub</a> (Free/Paid Services) - Software selection platform including ERP systems</li>
+<li><a href="https://www.softwareadvice.com/" target="_blank" rel="noopener">Software Advice</a> (Free) - Software selection guidance and ERP comparisons</li>
+<li><a href="https://www.capterra.com/" target="_blank" rel="noopener">Capterra</a> (Free) - Business software discovery platform including ERP systems</li>
+<li><a href="https://www.g2.com/" target="_blank" rel="noopener">G2</a> (Free/Paid Reports) - Software reviews and comparisons platform</li>
+<li><a href="https://www.trustradius.com/" target="_blank" rel="noopener">TrustRadius</a> (Free) - B2B software reviews and research platform</li>
+<li><a href="https://www.getapp.com/" target="_blank" rel="noopener">GetApp</a> (Free) - Business software discovery and comparison platform</li>
+<li><a href="https://www.financesonline.com/" target="_blank" rel="noopener">FinancesOnline</a> (Free) - Business software reviews and comparisons</li>
+<li><a href="https://www.softwareworld.co/" target="_blank" rel="noopener">SoftwareWorld</a> (Free) - Software discovery and comparison platform</li>
+<li><a href="https://www.erpresearch.com/" target="_blank" rel="noopener">ERP Research</a> (Free/Paid Reports) - Independent ERP research and analysis</li>
+<li><a href="https://www.erpguru.com/" target="_blank" rel="noopener">ERP Guru</a> (Free) - ERP implementation guidance and resources</li>
+<li><a href="https://www.erpgreat.com/" target="_blank" rel="noopener">ERP Great</a> (Free) - ERP news, articles, and vendor information</li>
+<li><a href="https://www.erpcloud.com/" target="_blank" rel="noopener">ERP Cloud</a> (Free) - Cloud ERP resources and comparisons</li>
+<li><a href="https://www.erpvar.com/" target="_blank" rel="noopener">ERP VAR</a> (Free) - ERP value-added reseller directory and resources</li>
+<li><a href="https://www.manufacturingtomorrow.com/" target="_blank" rel="noopener">Manufacturing Tomorrow</a> (Free) - Manufacturing technology news including ERP</li>
+<li><a href="https://www.industryweek.com/" target="_blank" rel="noopener">IndustryWeek</a> (Free/Paid Subscription) - Manufacturing industry news and insights</li>
+<li><a href="https://www.plantengineering.com/" target="_blank" rel="noopener">Plant Engineering</a> (Free) - Manufacturing and plant operations resources</li>
+<li><a href="https://www.automationworld.com/" target="_blank" rel="noopener">Automation World</a> (Free) - Industrial automation and manufacturing technology</li>
+<li><a href="https://www.cio.com/" target="_blank" rel="noopener">CIO</a> (Free) - IT leadership and enterprise technology insights</li>
+<li><a href="https://www.computerworld.com/" target="_blank" rel="noopener">Computerworld</a> (Free) - Enterprise technology news and analysis</li>
+<li><a href="https://www.informationweek.com/" target="_blank" rel="noopener">InformationWeek</a> (Free) - Business technology news and insights</li>
+<li><a href="https://www.zdnet.com/" target="_blank" rel="noopener">ZDNet</a> (Free) - Technology news and enterprise software coverage</li>
+<li><a href="https://www.techrepublic.com/" target="_blank" rel="noopener">TechRepublic</a> (Free/Paid Premium) - IT professional resources and news</li>
+<li><a href="https://www.itworld.com/" target="_blank" rel="noopener">ITworld</a> (Free) - IT news and enterprise technology insights</li>
+</ul>
+</li>
+<li><h5 id="erp-software-development">ERP Software Development</h5>
+<ul>
+<li><a href="https://www.outsystems.com/" target="_blank" rel="noopener">OutSystems</a> (Paid $1,513+/month) - Low-code platform for enterprise application development</li>
+<li><a href="https://www.mendix.com/" target="_blank" rel="noopener">Mendix</a> (Free/Paid $50+/month) - Low-code application development platform</li>
+<li><a href="https://www.appian.com/" target="_blank" rel="noopener">Appian</a> (Paid Enterprise) - Low-code automation platform for business applications</li>
+<li><a href="https://www.salesforce.com/products/platform/" target="_blank" rel="noopener">Salesforce Platform</a> (Paid $25+/month) - Custom application development platform</li>
+<li><a href="https://powerapps.microsoft.com/" target="_blank" rel="noopener">Microsoft Power Apps</a> (Paid $5+/month) - Low-code application development platform</li>
+<li><a href="https://www.oracle.com/application-development/" target="_blank" rel="noopener">Oracle APEX</a> (Free/Paid Cloud) - Low-code development platform for database applications</li>
+<li><a href="https://www.servicenow.com/products/app-engine.html" target="_blank" rel="noopener">ServiceNow App Engine</a> (Paid Enterprise) - Enterprise application development platform</li>
+<li><a href="https://www.pega.com/" target="_blank" rel="noopener">Pega Platform</a> (Paid Enterprise) - Low-code application development and BPM platform</li>
+</ul>
+</li>
+<li><h5 id="erp-implementation">ERP Implementation</h5>
+<ul>
+<li><a href="https://www.smartsheet.com/" target="_blank" rel="noopener">Smartsheet</a> (Paid $14+/month) - Project management platform for ERP implementation tracking</li>
+<li><a href="https://www.monday.com/" target="_blank" rel="noopener">Monday.com</a> (Paid $8+/month) - Work management platform for ERP project coordination</li>
+<li><a href="https://asana.com/" target="_blank" rel="noopener">Asana</a> (Free/Paid $10.99+/month) - Project management tool for ERP implementation planning</li>
+<li><a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener">Jira</a> (Free/Paid $7+/month) - Issue tracking and project management for ERP implementations</li>
+<li><a href="https://www.microsoft.com/en-us/microsoft-365/project/" target="_blank" rel="noopener">Microsoft Project</a> (Paid $10+/month) - Project management software for ERP implementation planning</li>
+<li><a href="https://www.oracle.com/applications/primavera/" target="_blank" rel="noopener">Oracle Primavera</a> (Paid Enterprise) - Enterprise project portfolio management for large ERP implementations</li>
+<li><a href="https://www.planview.com/" target="_blank" rel="noopener">Planview</a> (Paid Enterprise) - Portfolio and resource management for ERP projects</li>
+<li><a href="https://www.clarity.ca/" target="_blank" rel="noopener">Clarity PPM</a> (Paid Enterprise) - Project and portfolio management for enterprise implementations</li>
+</ul>
+</li>
+<li><h5 id="erp-migration">ERP Migration</h5>
+<ul>
+<li><a href="https://www.informatica.com/products/data-integration.html" target="_blank" rel="noopener">Informatica PowerCenter</a> (Paid Enterprise) - Data integration platform for ERP migrations</li>
+<li><a href="https://www.talend.com/products/data-integration/" target="_blank" rel="noopener">Talend Data Integration</a> (Free/Paid Enterprise) - Open-source data integration for ERP migration</li>
+<li><a href="https://www.pentaho.com/product/data-integration" target="_blank" rel="noopener">Pentaho Data Integration</a> (Free/Paid Enterprise) - ETL tool for ERP data migration</li>
+<li><a href="https://www.sap.com/products/data-migration.html" target="_blank" rel="noopener">SAP Data Services</a> (Paid Enterprise) - Data integration and migration tools for SAP environments</li>
+<li><a href="https://docs.microsoft.com/en-us/sql/integration-services/" target="_blank" rel="noopener">SQL Server Integration Services</a> (Paid $931+/year) - Microsoft ETL tool for data migration</li>
+<li><a href="https://www.oracle.com/middleware/technologies/data-integrator.html" target="_blank" rel="noopener">Oracle Data Integrator</a> (Paid Enterprise) - Data integration platform for Oracle ERP migrations</li>
+<li><a href="https://www.ibm.com/products/datastage" target="_blank" rel="noopener">IBM DataStage</a> (Paid Enterprise) - Enterprise data integration for large-scale ERP migrations</li>
+<li><a href="https://www.syncsort.com/" target="_blank" rel="noopener">Syncsort</a> (Paid Enterprise) - Data integration and migration platform for enterprise systems</li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
+
 </section>
 </main>
 <section>
