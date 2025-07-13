@@ -175,6 +175,19 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 <li><a href="#erp-migration">ERP Migration</a></li>
 </ul>
 </li>
+<li>
+<a href="#edi">EDI Systems and Tools</a>
+<ul>
+<li><a href="#edi-systems">EDI Systems</a></li>
+<li><a href="#edi-translation-software">EDI Translation Software</a></li>
+<li><a href="#edi-communication-protocols">EDI Communication Protocols</a></li>
+<li><a href="#edi-standards-compliance">EDI Standards & Compliance</a></li>
+<li><a href="#edi-integration-platforms">EDI Integration Platforms</a></li>
+<li><a href="#edi-testing-validation">EDI Testing & Validation</a></li>
+<li><a href="#edi-managed-services">EDI Managed Services</a></li>
+<li><a href="#edi-training-certification">EDI Training & Certification</a></li>
+</ul>
+</li>
 </ul>
 </nav>
 <main>
@@ -2057,6 +2070,12 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 <li><a href="https://www.wistia.com/" target="_blank" rel="noopener">Wistia</a> (Free/Paid $99+/month) - Video hosting and analytics platform for professional communications</li>
 </ul>
 </li>
+</ul>
+</li>
+</ol>
+</section>
+
+<section>
 <li><h4 id="erp">ERP Systems and Tools</h4>
 <ul>
 <li><h5 id="erp-systems">ERP Systems</h5>
@@ -2336,6 +2355,126 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 </ul>
 </li>
 </ol>
+</section>
+<section id="edi">
+<h2>EDI Systems and Tools</h2>
+<ol>
+<li><h4 id="edi-systems">EDI Systems</h4>
+<ul>
+<li><a href="https://www.spscommerce.com/" target="_blank" rel="noopener">SPS Commerce</a> (Paid $500+/month) - Cloud-based EDI platform for retail and supply chain</li>
+<li><a href="https://www.trucommerce.com/" target="_blank" rel="noopener">TruCommerce</a> (Paid $300+/month) - Comprehensive EDI and supply chain integration platform</li>
+<li><a href="https://www.ibm.com/products/supply-chain-business-network" target="_blank" rel="noopener">IBM Sterling B2B Integrator</a> (Paid Enterprise) - Enterprise B2B integration and EDI platform</li>
+<li><a href="https://www.opentext.com/products-and-solutions/products/specialty-technologies/opentext-business-network" target="_blank" rel="noopener">OpenText Business Network</a> (Paid Enterprise) - Global B2B integration and EDI network</li>
+<li><a href="https://www.covalentworks.com/" target="_blank" rel="noopener">Covalent Works</a> (Paid $200+/month) - Cloud EDI platform for mid-market companies</li>
+<li><a href="https://www.edicomgroup.com/" target="_blank" rel="noopener">EDICOM</a> (Paid Enterprise) - Global EDI and e-invoicing platform</li>
+<li><a href="https://www.liaison.com/" target="_blank" rel="noopener">Liaison Technologies</a> (Paid Enterprise) - Cloud-based data integration and EDI platform</li>
+<li><a href="https://www.axway.com/en/products/b2b-integration" target="_blank" rel="noopener">Axway B2B Integration</a> (Paid Enterprise) - Secure B2B integration and EDI platform</li>
+<li><a href="https://www.mulesoft.com/platform/enterprise-integration" target="_blank" rel="noopener">MuleSoft Anypoint B2B</a> (Paid $500+/month) - API-led B2B integration platform</li>
+<li><a href="https://www.boomi.com/" target="_blank" rel="noopener">Dell Boomi</a> (Paid $550+/month) - Cloud integration platform with EDI capabilities</li>
+<li><a href="https://www.informatica.com/products/cloud-integration/b2b-data-exchange.html" target="_blank" rel="noopener">Informatica B2B Data Exchange</a> (Paid Enterprise) - Cloud B2B integration and EDI platform</li>
+<li><a href="https://www.gentran.com/" target="_blank" rel="noopener">Gentran Integration Suite</a> (Paid Enterprise) - Enterprise B2B integration and EDI platform</li>
+</ul>
+</li>
+<li><h4 id="edi-translation-software">EDI Translation Software</h4>
+<ul>
+<li><a href="https://www.edidev.com/" target="_blank" rel="noopener">EDI Dev Studio</a> (Paid $2,000+/license) - EDI development and translation software</li>
+<li><a href="https://www.tallan.com/products/fredi/" target="_blank" rel="noopener">FREDI</a> (Free) - Framework for EDI development and translation</li>
+<li><a href="https://www.bots.com/" target="_blank" rel="noopener">Bots EDI Translator</a> (Free/Paid Support) - Open-source EDI translation software</li>
+<li><a href="https://www.edifabric.com/" target="_blank" rel="noopener">EdiFabric</a> (Paid $500+/month) - .NET EDI library and translation toolkit</li>
+<li><a href="https://www.ediconnect.com/" target="_blank" rel="noopener">EDI Connect</a> (Paid $300+/month) - EDI translation and integration platform</li>
+<li><a href="https://www.pilotfish.com/" target="_blank" rel="noopener">PilotFish eiConsole</a> (Paid $10,000+/year) - Data transformation and EDI translation platform</li>
+<li><a href="https://www.crossfire.com/" target="_blank" rel="noopener">Crossfire EDI</a> (Paid $1,500+/month) - EDI translation and communication software</li>
+<li><a href="https://www.edistation.com/" target="_blank" rel="noopener">EDI Station</a> (Paid $200+/month) - EDI translation and testing software</li>
+<li><a href="https://www.edisphere.com/" target="_blank" rel="noopener">EDI Sphere</a> (Paid $400+/month) - EDI translation and integration platform</li>
+<li><a href="https://www.1edisource.com/" target="_blank" rel="noopener">1 EDI Source</a> (Paid $150+/month) - EDI translation and communication software</li>
+</ul>
+</li>
+<li><h4 id="edi-communication-protocols">EDI Communication Protocols</h4>
+<ul>
+<li><a href="https://www.van-services.com/" target="_blank" rel="noopener">VAN Services</a> (Paid $0.10+/transaction) - Value Added Network for EDI communications</li>
+<li><a href="https://www.as2secure.com/" target="_blank" rel="noopener">AS2 Secure</a> (Paid $100+/month) - AS2 protocol implementation for secure EDI transmission</li>
+<li><a href="https://www.mendelson-e-c.com/as2/" target="_blank" rel="noopener">Mendelson AS2</a> (Free/Paid Support) - Open-source AS2 communication software</li>
+<li><a href="https://www.cleo.com/" target="_blank" rel="noopener">Cleo Integration Cloud</a> (Paid $500+/month) - Multi-protocol B2B integration platform</li>
+<li><a href="https://www.globalscape.com/eft" target="_blank" rel="noopener">Globalscape EFT</a> (Paid $1,500+/year) - Secure file transfer with EDI protocol support</li>
+<li><a href="https://www.goanywhere.com/" target="_blank" rel="noopener">GoAnywhere MFT</a> (Paid $3,000+/year) - Managed file transfer with EDI capabilities</li>
+<li><a href="https://www.ipswitch.com/moveit" target="_blank" rel="noopener">MOVEit</a> (Paid $1,500+/year) - Secure file transfer platform with EDI support</li>
+<li><a href="https://www.primeur.com/" target="_blank" rel="noopener">Primeur SPAZIO</a> (Paid Enterprise) - Secure file transfer and EDI communication platform</li>
+<li><a href="https://www.jscape.com/" target="_blank" rel="noopener">JSCAPE MFT Server</a> (Paid $1,000+/year) - Managed file transfer server with EDI protocols</li>
+<li><a href="https://www.coviant.com/" target="_blank" rel="noopener">Coviant Software</a> (Paid $500+/month) - Secure file transfer and EDI communication solutions</li>
+</ul>
+</li>
+<li><h4 id="edi-standards-compliance">EDI Standards & Compliance</h4>
+<ul>
+<li><a href="https://www.x12.org/" target="_blank" rel="noopener">ASC X12</a> (Paid Membership) - American National Standards Institute accredited standards organization</li>
+<li><a href="https://www.gs1.org/" target="_blank" rel="noopener">GS1</a> (Paid Membership) - Global standards organization for supply chain visibility</li>
+<li><a href="https://www.unece.org/trade/untdid/welcome.html" target="_blank" rel="noopener">UN/EDIFACT</a> (Free) - United Nations Electronic Data Interchange standards</li>
+<li><a href="https://www.hl7.org/" target="_blank" rel="noopener">HL7</a> (Paid Membership) - Healthcare data exchange standards organization</li>
+<li><a href="https://www.odette.org/" target="_blank" rel="noopener">ODETTE</a> (Paid Membership) - Automotive industry EDI standards organization</li>
+<li><a href="https://www.edifice.org/" target="_blank" rel="noopener">EDIFICE</a> (Paid Membership) - High-tech industry EDI standards organization</li>
+<li><a href="https://www.eancom.org/" target="_blank" rel="noopener">EANCOM</a> (Free) - European Article Numbering EDI standards</li>
+<li><a href="https://www.tradacoms.org/" target="_blank" rel="noopener">TRADACOMS</a> (Free) - UK retail EDI standards</li>
+<li><a href="https://www.vics.org/" target="_blank" rel="noopener">VICS</a> (Paid Membership) - Voluntary Interindustry Commerce Standards Association</li>
+<li><a href="https://www.rnd.org/" target="_blank" rel="noopener">RND</a> (Paid Membership) - Retail industry EDI standards organization</li>
+</ul>
+</li>
+<li><h4 id="edi-integration-platforms">EDI Integration Platforms</h4>
+<ul>
+<li><a href="https://www.zapier.com/" target="_blank" rel="noopener">Zapier</a> (Free/Paid $20+/month) - Automation platform with EDI integration capabilities</li>
+<li><a href="https://www.workato.com/" target="_blank" rel="noopener">Workato</a> (Paid $10,000+/year) - Enterprise automation platform with B2B integration</li>
+<li><a href="https://www.snaplogic.com/" target="_blank" rel="noopener">SnapLogic</a> (Paid $15,000+/year) - Cloud data integration platform with EDI connectors</li>
+<li><a href="https://www.tibco.com/products/tibco-cloud-integration" target="_blank" rel="noopener">TIBCO Cloud Integration</a> (Paid $500+/month) - Hybrid integration platform with B2B capabilities</li>
+<li><a href="https://www.software.ag/products/integration/" target="_blank" rel="noopener">Software AG webMethods</a> (Paid Enterprise) - Enterprise integration platform with EDI support</li>
+<li><a href="https://www.oracle.com/middleware/technologies/integration.html" target="_blank" rel="noopener">Oracle Integration Cloud</a> (Paid $350+/month) - Cloud integration platform with B2B adapters</li>
+<li><a href="https://azure.microsoft.com/en-us/services/logic-apps/" target="_blank" rel="noopener">Azure Logic Apps</a> (Pay-per-use) - Cloud integration service with EDI capabilities</li>
+<li><a href="https://aws.amazon.com/b2b-data-interchange/" target="_blank" rel="noopener">AWS B2B Data Interchange</a> (Pay-per-use) - Managed EDI service on AWS</li>
+<li><a href="https://cloud.google.com/application-integration" target="_blank" rel="noopener">Google Cloud Application Integration</a> (Pay-per-use) - Integration platform with B2B connectors</li>
+<li><a href="https://www.jitterbit.com/" target="_blank" rel="noopener">Jitterbit</a> (Paid $500+/month) - Cloud integration platform with EDI transformation</li>
+</ul>
+</li>
+<li><h4 id="edi-testing-validation">EDI Testing & Validation</h4>
+<ul>
+<li><a href="https://www.edifecs.com/" target="_blank" rel="noopener">Edifecs</a> (Paid Enterprise) - Healthcare EDI testing and validation platform</li>
+<li><a href="https://www.edivalidator.com/" target="_blank" rel="noopener">EDI Validator</a> (Free/Paid $50+/month) - Online EDI document validation service</li>
+<li><a href="https://www.edichecker.com/" target="_blank" rel="noopener">EDI Checker</a> (Free/Paid $30+/month) - EDI file validation and analysis tool</li>
+<li><a href="https://www.edidev.com/products/edi-validator/" target="_blank" rel="noopener">EDI Dev Validator</a> (Paid $500+/license) - Desktop EDI validation software</li>
+<li><a href="https://www.berryworks.com/" target="_blank" rel="noopener">BerryWorks EDI</a> (Paid $2,000+/license) - Java-based EDI parsing and validation toolkit</li>
+<li><a href="https://www.ediinspector.com/" target="_blank" rel="noopener">EDI Inspector</a> (Paid $200+/month) - EDI document analysis and validation tool</li>
+<li><a href="https://www.edisimulator.com/" target="_blank" rel="noopener">EDI Simulator</a> (Paid $300+/month) - EDI testing and simulation platform</li>
+<li><a href="https://www.edianalyst.com/" target="_blank" rel="noopener">EDI Analyst</a> (Paid $150+/month) - EDI document analysis and reporting tool</li>
+<li><a href="https://www.editester.com/" target="_blank" rel="noopener">EDI Tester</a> (Paid $400+/month) - Automated EDI testing platform</li>
+<li><a href="https://www.edivalidation.com/" target="_blank" rel="noopener">EDI Validation Services</a> (Paid $100+/hour) - Professional EDI validation consulting</li>
+</ul>
+</li>
+<li><h4 id="edi-managed-services">EDI Managed Services</h4>
+<ul>
+<li><a href="https://www.spscommerce.com/services/" target="_blank" rel="noopener">SPS Commerce Managed Services</a> (Paid $1,000+/month) - Full-service EDI management and support</li>
+<li><a href="https://www.trucommerce.com/services/" target="_blank" rel="noopener">TruCommerce Managed Services</a> (Paid $800+/month) - Comprehensive EDI outsourcing services</li>
+<li><a href="https://www.edicomgroup.com/services/" target="_blank" rel="noopener">EDICOM Managed Services</a> (Paid Enterprise) - Global EDI and e-invoicing managed services</li>
+<li><a href="https://www.liaison.com/services/" target="_blank" rel="noopener">Liaison Managed Services</a> (Paid Enterprise) - Enterprise data integration managed services</li>
+<li><a href="https://www.covalentworks.com/services/" target="_blank" rel="noopener">Covalent Works Services</a> (Paid $500+/month) - EDI implementation and managed services</li>
+<li><a href="https://www.edispecialists.com/" target="_blank" rel="noopener">EDI Specialists</a> (Paid $200+/hour) - EDI consulting and managed services</li>
+<li><a href="https://www.edisolutions.com/" target="_blank" rel="noopener">EDI Solutions</a> (Paid $300+/hour) - EDI implementation and support services</li>
+<li><a href="https://www.b2bgateway.net/" target="_blank" rel="noopener">B2B Gateway</a> (Paid $400+/month) - EDI managed services and integration</li>
+<li><a href="https://www.ediexperts.com/" target="_blank" rel="noopener">EDI Experts</a> (Paid $250+/hour) - EDI consulting and managed services</li>
+<li><a href="https://www.edisource.com/" target="_blank" rel="noopener">EDI Source</a> (Paid $350+/month) - EDI outsourcing and managed services</li>
+</ul>
+</li>
+<li><h4 id="edi-training-certification">EDI Training & Certification</h4>
+<ul>
+<li><a href="https://www.x12.org/training/" target="_blank" rel="noopener">ASC X12 Training</a> (Paid $500+/course) - Official X12 EDI standards training</li>
+<li><a href="https://www.gs1.org/services/training" target="_blank" rel="noopener">GS1 Training</a> (Paid $300+/course) - GS1 standards and EDI training programs</li>
+<li><a href="https://www.edibasics.com/" target="_blank" rel="noopener">EDI Basics</a> (Free/Paid $200+/course) - Comprehensive EDI training and resources</li>
+<li><a href="https://www.editraining.com/" target="_blank" rel="noopener">EDI Training</a> (Paid $400+/course) - Professional EDI education and certification</li>
+<li><a href="https://www.udemy.com/topic/edi/" target="_blank" rel="noopener">Udemy EDI Courses</a> (Paid $50-200/course) - Online EDI training courses</li>
+<li><a href="https://www.coursera.org/search?query=edi" target="_blank" rel="noopener">Coursera EDI Courses</a> (Free/Paid $39+/month) - University-level EDI and B2B integration courses</li>
+<li><a href="https://www.linkedin.com/learning/search?keywords=edi" target="_blank" rel="noopener">LinkedIn Learning EDI</a> (Paid $29.99/month) - Professional EDI skill development</li>
+<li><a href="https://www.pluralsight.com/search?q=edi" target="_blank" rel="noopener">Pluralsight EDI</a> (Paid $29+/month) - Technology training including EDI systems</li>
+<li><a href="https://www.edicertification.com/" target="_blank" rel="noopener">EDI Certification Institute</a> (Paid $800+/certification) - Professional EDI certifications</li>
+<li><a href="https://www.edispecialists.com/training/" target="_blank" rel="noopener">EDI Specialists Training</a> (Paid $1,500+/course) - Advanced EDI implementation training</li>
+</ul>
+</li>
+</ol>
+</section>
 
 </section>
 </main>
