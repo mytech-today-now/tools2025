@@ -7,6 +7,8 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 </p>
 <h4 id="tools2025">Github Readme.md: <a href="https://github.com/mytech-today-now/tools2025" target="_blank" rel="noopener">Tools 2025</a></h4>
 <h4 id="tools2025">myTech.Today: <a href="https://mytech.today/tools2025/" target="_blank" rel="noopener">Tools 2025</a></h4>
+<h4 id="tools2025"><a href="https://mytech.today/why-passwords-matter/" target="_blank" rel="noopener">Why Passwords Matter</h4>
+<h4 id="tools2025"><a href="https://mytech.today/why-ai-first-apps-will-rule-the-future/" target="_blank" rel="noopener">Why AI-First Apps Will Rule the Future</h4>
 </header>
 <nav class="toc">
 <h2>Table of Contents</h2>
