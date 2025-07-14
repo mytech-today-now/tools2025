@@ -1234,6 +1234,69 @@
       overflow-y: auto; /* Scroll if needed */
     }
 
+    /* Enhanced scrollable behavior for sticky TOC */
+    nav.toc.toc-sticky > ul.toc-scrollable {
+      /* Ensure scrolling is always available when content overflows */
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      /* Smooth scrolling behavior */
+      scroll-behavior: smooth;
+      /* Custom scrollbar styling for better UX */
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0, 75, 141, 0.3) rgba(248, 249, 250, 0.5);
+    }
+
+    /* Webkit scrollbar styling for sticky TOC */
+    nav.toc.toc-sticky > ul.toc-scrollable::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    nav.toc.toc-sticky > ul.toc-scrollable::-webkit-scrollbar-track {
+      background: rgba(248, 249, 250, 0.5);
+      border-radius: 4px;
+    }
+
+    nav.toc.toc-sticky > ul.toc-scrollable::-webkit-scrollbar-thumb {
+      background: rgba(0, 75, 141, 0.3);
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    nav.toc.toc-sticky > ul.toc-scrollable::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 75, 141, 0.5);
+    }
+
+    /* Ensure proper focus indicators for keyboard navigation in scrollable TOC */
+    nav.toc.toc-sticky > ul.toc-scrollable:focus {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+
+    /* Prevent horizontal overflow in scrollable TOC */
+    nav.toc.toc-sticky > ul.toc-scrollable li {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Visual indicator for scrollable content */
+    nav.toc.toc-sticky:hover > ul.toc-scrollable::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: linear-gradient(transparent, rgba(248, 249, 250, 0.9));
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Show scroll indicator when content overflows */
+    nav.toc.toc-sticky:hover > ul.toc-scrollable[data-scrollable="true"]::after {
+      opacity: 1;
+    }
+
     /* Show nested lists on parent hover in sticky mode with proper spacing */
     nav.toc.toc-sticky li:hover > ul {
       max-height: 300px; /* Generous max-height for expansion */
@@ -1488,6 +1551,16 @@
         padding-left: var(--spacing-sm) !important;
       }
 
+      /* Mobile-specific scrollable TOC adjustments */
+      nav.toc.toc-sticky:hover > ul {
+        max-height: calc(100vh - 60px) !important; /* Account for smaller mobile header */
+      }
+
+      nav.toc.toc-sticky > ul.toc-scrollable::-webkit-scrollbar {
+        width: 6px; /* Thinner scrollbar for mobile */
+      }
+    }
+
       /* Mobile adjustments for hierarchical links */
       nav.toc > ul > li > a {
         padding: var(--spacing-sm);
@@ -1545,6 +1618,11 @@
 
       nav.toc.toc-sticky:hover ul {
         max-height: calc(80vh - 90px); /* Adjust for larger title on desktop */
+      }
+
+      /* Desktop-specific scrollable TOC adjustments */
+      nav.toc.toc-sticky > ul.toc-scrollable::-webkit-scrollbar {
+        width: 10px; /* Wider scrollbar for desktop */
       }
 
       /* Adjust body margin for desktop when sticky */

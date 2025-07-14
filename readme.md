@@ -770,7 +770,7 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="https://picnicss.com/" target="_blank" rel="noopener">Picnic CSS</a> - (Free) lightweight and beautiful library with no dependencies for building responsive websites</li>
 <li><a href="https://bulma.io/" target="_blank" rel="noopener">bulma.io</a> - a free, open-source CSS framework based on Flexbox and used by more than 200,000 developers</li>
 <li><a href="http://getskeleton.com/" target="_blank" rel="noopener">skeleton</a> - A dead simple, responsive boilerplate</li>
-<li><a href="https://github.com/susam/spcss#spcss" target="_blank" rel="noopener">SPCSS</a> - a simple and plain stylesheet for simple text-based websites. <a href="https://susam.github.io/spcss/" target="_blank" rel="noopener">Demo</a> &lt;link rel="<span style="color: #ff6600;">stylesheet" href="<a href="https://cdn.jsdelivr.net/npm/spcss@0.3.0" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/spcss@0.3.0</a>"&gt;</span></li>
+<li><a href="https://github.com/susam/spcss#spcss" target="_blank" rel="noopener">SPCSS</a> - a simple and plain stylesheet for simple text-based websites. <a href="https://susam.github.io/spcss/" target="_blank" rel="noopener">Demo</a></li>
 <li><a href="https://purecss.io/" target="_blank" rel="noopener">purecss.io</a> - A set of small, responsive CSS modules that you can use in every web project</li>
 <li><a href="https://groundworkcss.github.io/" target="_blank" rel="noopener">groundworkcss</a> - A Responsive HTML5, CSS and Javascript Framework</li>
 <li><a href="https://cardinalcss.com/" target="_blank" rel="noopener">cardinalcss</a> - Cardinal is a modular, “mobile-first” CSS framework built with performance and scalability in mind</li>

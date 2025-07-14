@@ -224,6 +224,9 @@
                     body.classList.add('toc-sticky-active');
                     toc.setAttribute('aria-expanded', 'false');
 
+                    // Enable scrollable behavior for sticky TOC
+                    this.enableStickyScrolling(toc);
+
                     // Reset expansion state when becoming sticky
                     TOCState.isExpanded = false;
                 } else {
@@ -231,6 +234,9 @@
                     toc.classList.remove('toc-sticky');
                     body.classList.remove('toc-sticky-active');
                     toc.removeAttribute('aria-expanded');
+
+                    // Disable scrollable behavior when not sticky
+                    this.disableStickyScrolling(toc);
 
                     // Reset expansion state when returning to normal flow
                     TOCState.isExpanded = false;
@@ -244,6 +250,141 @@
 
             } catch (error) {
                 logError('nav', 13, `Sticky state toggle error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Enable scrollable behavior for sticky TOC
+         * @param {Element} toc - The TOC element
+         */
+        enableStickyScrolling(toc) {
+            try {
+                const tocList = toc.querySelector('ul');
+                if (!tocList) return;
+
+                // Add scrollable container class for CSS targeting
+                tocList.classList.add('toc-scrollable');
+
+                // Set up scroll behavior attributes
+                tocList.setAttribute('tabindex', '0');
+                tocList.setAttribute('role', 'region');
+                tocList.setAttribute('aria-label', 'Scrollable table of contents');
+
+                // Add scroll event listener for accessibility
+                tocList.addEventListener('scroll', this.handleTOCScroll.bind(this));
+
+                // Check if content is scrollable and add indicator
+                this.updateScrollIndicator(tocList);
+
+                // Add resize observer to update scroll indicator when content changes
+                if (window.ResizeObserver) {
+                    const resizeObserver = new ResizeObserver(() => {
+                        this.updateScrollIndicator(tocList);
+                    });
+                    resizeObserver.observe(tocList);
+
+                    // Store observer for cleanup
+                    tocList._scrollResizeObserver = resizeObserver;
+                }
+
+            } catch (error) {
+                logError('scroll', 3, `Enable sticky scrolling error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Disable scrollable behavior for non-sticky TOC
+         * @param {Element} toc - The TOC element
+         */
+        disableStickyScrolling(toc) {
+            try {
+                const tocList = toc.querySelector('ul');
+                if (!tocList) return;
+
+                // Remove scrollable container class
+                tocList.classList.remove('toc-scrollable');
+
+                // Remove scroll behavior attributes
+                tocList.removeAttribute('tabindex');
+                tocList.removeAttribute('role');
+                tocList.removeAttribute('aria-label');
+                tocList.removeAttribute('data-scrollable');
+
+                // Remove scroll event listener
+                tocList.removeEventListener('scroll', this.handleTOCScroll.bind(this));
+
+                // Clean up resize observer
+                if (tocList._scrollResizeObserver) {
+                    tocList._scrollResizeObserver.disconnect();
+                    delete tocList._scrollResizeObserver;
+                }
+
+            } catch (error) {
+                logError('scroll', 4, `Disable sticky scrolling error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Update scroll indicator based on content overflow
+         * @param {Element} tocList - The TOC list element
+         */
+        updateScrollIndicator(tocList) {
+            try {
+                if (!tocList) return;
+
+                // Check if content is scrollable
+                const isScrollable = tocList.scrollHeight > tocList.clientHeight;
+
+                // Update data attribute for CSS targeting
+                if (isScrollable) {
+                    tocList.setAttribute('data-scrollable', 'true');
+                } else {
+                    tocList.removeAttribute('data-scrollable');
+                }
+
+                // Update ARIA label to indicate scrollable state
+                const baseLabel = 'Table of contents';
+                const scrollableLabel = isScrollable ? `${baseLabel} - scrollable content` : baseLabel;
+                tocList.setAttribute('aria-label', scrollableLabel);
+
+            } catch (error) {
+                logError('scroll', 6, `Update scroll indicator error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Handle TOC internal scrolling for accessibility
+         * @param {Event} event - Scroll event
+         */
+        handleTOCScroll(event) {
+            try {
+                const tocList = event.target;
+                const scrollTop = tocList.scrollTop;
+                const scrollHeight = tocList.scrollHeight;
+                const clientHeight = tocList.clientHeight;
+
+                // Check if content is scrollable
+                const isScrollable = scrollHeight > clientHeight;
+
+                if (!isScrollable) {
+                    tocList.setAttribute('aria-label', 'Table of contents');
+                    return;
+                }
+
+                // Update ARIA attributes based on scroll position
+                if (scrollTop === 0) {
+                    tocList.setAttribute('aria-label', 'Scrollable table of contents - at top');
+                } else if (scrollTop + clientHeight >= scrollHeight - 5) {
+                    tocList.setAttribute('aria-label', 'Scrollable table of contents - at bottom');
+                } else {
+                    tocList.setAttribute('aria-label', 'Scrollable table of contents - scrolling');
+                }
+
+                // Update scroll indicator visibility
+                this.updateScrollIndicator(tocList);
+
+            } catch (error) {
+                logError('scroll', 5, `TOC scroll handler error: ${error.message}`, 0, 0);
             }
         },
 
@@ -510,7 +651,7 @@
         handleMouseEnter() {
             try {
                 TOCState.isHovered = true;
-                
+
                 // Delay expansion slightly to prevent accidental triggers
                 setTimeout(() => {
                     if (TOCState.isHovered && !ViewportUtils.isMobile()) {
@@ -570,6 +711,17 @@
         expandTOC() {
             if (!TOCState.isExpanded) {
                 this.toggleExpansion();
+
+                // Update scroll indicator after expansion
+                setTimeout(() => {
+                    const toc = safeQuerySelector(TOCConfig.selectors.toc);
+                    if (toc && TOCState.isSticky) {
+                        const tocList = toc.querySelector('ul.toc-scrollable');
+                        if (tocList) {
+                            ScrollManager.updateScrollIndicator(tocList);
+                        }
+                    }
+                }, TOCConfig.timing.transitionDuration);
             }
         },
 
