@@ -119,7 +119,7 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 </ul>
 </li>
 <li>
-<a href="#marketers">Most useful for marketers/SEO/advertising</a>
+<a href="#marketers">Most useful for marketers/SEO/advertising/sales</a>
 <ul>
 <li><a href="#seo-analytics">SEO & Analytics</a></li>
 <li><a href="#social-media-management">Social Media Management</a></li>
@@ -130,6 +130,7 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="#content-marketing-seo">Content Marketing & SEO Writing</a></li>
 <li><a href="#affiliate-influencer-marketing">Affiliate & Influencer Marketing</a></li>
 <li><a href="#email-marketing-workflows">Marketing Automation & Workflows</a></li>
+<li><a href="#sales-customer-service">Sales & Customer Service</a></li>
 </ul>
 </li>
 <li>
@@ -1155,6 +1156,8 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 </li>
 <li><h4 id="macos-other-tools">Other Tools</h4>
 <ul>
+<li><a href="https://refine.sh/" target="_blank" rel="noopener">refine.sh</a> - Grammar checking that respects your privacy
+Your writing assistant that never leaves your Mac. Powered by local AI models with zero data collection.</li>
 <li><a href="https://setapp.com/apps" target="_blank" rel="noopener">Setapp.com</a> - Full repertoire - Maintenance, Lifestyle, Productivity, Task Management, Developer Tools, Writing &amp; Blogging, Education, Mac Hacks, Creativity, Personal Finance</li>
 <li><a href="https://www.alfredapp.com/" target="_blank" rel="noopener">Alfred</a> - Alfred is an award-winning app for macOS which boosts your efficiency with hotkeys, keywords, text expansion, and more. Search your Mac and the web, and be more productive with custom actions to control your Mac</li>
 <li><a href="https://support.apple.com/en-us/HT201236" target="_blank" rel="noopener">Mac keyboard shortcuts</a> - By pressing certain key combinations, you can do things that normally need a mouse, trackpad, or other input device</li></ul>
@@ -1538,7 +1541,7 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 </section>
 
 <section id="marketers">
-<h2>Most useful for marketers/SEO/advertising</h2>
+<h2>Most useful for marketers/SEO/advertising/sales</h2>
 <ol>
 <li><h4 id="seo-analytics">SEO & Analytics</h4>
 <ul>
@@ -1722,6 +1725,86 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="https://www.automationanywhere.com/" target="_blank" rel="noopener">Automation Anywhere</a> (Paid) - RPA platform for business automation</li>
 <li><a href="https://www.blueprism.com/" target="_blank" rel="noopener">Blue Prism</a> (Paid) - Intelligent automation platform</li>
 <li><a href="https://www.kissflow.com/" target="_blank" rel="noopener">Kissflow</a> (Free/Paid) - Digital workplace platform with workflow automation</li>
+</ul>
+</li>
+<li><h4 id="sales-customer-service">Sales & Customer Service</h4>
+<ul>
+<li><strong>Enterprise CRM Platforms (CEO/CTO/CFO Focus)</strong></li>
+<li><a href="https://www.salesforce.com/" target="_blank" rel="noopener">Salesforce</a> (Paid) - Comprehensive customer relationship management and business automation platform with advanced analytics, AI-powered insights, and enterprise-grade scalability for large organizations</li>
+<li><a href="https://www.microsoft.com/en-us/dynamics-365/" target="_blank" rel="noopener">Microsoft Dynamics 365</a> (Paid) - Integrated business applications combining CRM and ERP capabilities with seamless Office 365 integration for enterprise digital transformation</li>
+<li><a href="https://www.oracle.com/cx/sales/" target="_blank" rel="noopener">Oracle Sales Cloud</a> (Paid) - Enterprise-grade sales automation and customer experience platform with advanced forecasting and territory management</li>
+<li><a href="https://www.sap.com/products/crm.html" target="_blank" rel="noopener">SAP Sales Cloud</a> (Paid) - Enterprise customer relationship management solution with real-time analytics and machine learning capabilities</li>
+<li><a href="https://www.hubspot.com/" target="_blank" rel="noopener">HubSpot CRM</a> (Free/Paid) - Inbound marketing and sales platform with comprehensive customer lifecycle management and marketing automation</li>
+
+<li><strong>Mid-Market CRM Solutions (IT Consultants/MSP Focus)</strong></li>
+<li><a href="https://www.zoho.com/crm/" target="_blank" rel="noopener">Zoho CRM</a> (Free/Paid) - Comprehensive customer relationship management with workflow automation, analytics, and multi-channel communication</li>
+<li><a href="https://www.pipedrive.com/" target="_blank" rel="noopener">Pipedrive</a> (Paid) - Visual sales pipeline management tool designed for sales teams with activity-based selling methodology</li>
+<li><a href="https://www.freshworks.com/crm/" target="_blank" rel="noopener">Freshsales</a> (Free/Paid) - Modern CRM with built-in phone, email, activity capture, and lead scoring capabilities</li>
+<li><a href="https://www.insightly.com/" target="_blank" rel="noopener">Insightly</a> (Free/Paid) - CRM with project management integration for service-based businesses and consultancies</li>
+<li><a href="https://www.copper.com/" target="_blank" rel="noopener">Copper</a> (Paid) - Google Workspace-native CRM designed for seamless integration with Gmail and Google applications</li>
+<li><a href="https://www.airtable.com/" target="_blank" rel="noopener">Airtable</a> (Free/Paid) - Flexible database platform that can be configured as a powerful CRM with custom workflows and automation</li>
+
+<li><strong>Small Business & Startup CRM (End User Focus)</strong></li>
+<li><a href="https://www.monday.com/" target="_blank" rel="noopener">Monday.com</a> (Paid) - Work operating system with CRM templates and customizable sales tracking workflows</li>
+<li><a href="https://www.notion.so/" target="_blank" rel="noopener">Notion</a> (Free/Paid) - All-in-one workspace that can be configured as a CRM with databases, templates, and collaboration features</li>
+<li><a href="https://www.capsulecrm.com/" target="_blank" rel="noopener">Capsule CRM</a> (Free/Paid) - Simple, user-friendly CRM focused on contact management and sales tracking</li>
+<li><a href="https://www.agilecrm.com/" target="_blank" rel="noopener">Agile CRM</a> (Free/Paid) - All-in-one CRM with sales, marketing automation, and customer service features</li>
+<li><a href="https://www.streak.com/" target="_blank" rel="noopener">Streak</a> (Free/Paid) - Gmail-based CRM that turns your inbox into a powerful customer relationship management system</li>
+
+<li><strong>Customer Support & Help Desk Platforms</strong></li>
+<li><a href="https://www.zendesk.com/" target="_blank" rel="noopener">Zendesk</a> (Paid) - Comprehensive customer service platform with ticketing, knowledge base, and multichannel support</li>
+<li><a href="https://www.freshworks.com/freshdesk/" target="_blank" rel="noopener">Freshdesk</a> (Free/Paid) - Modern help desk software with automation, collaboration tools, and customer satisfaction surveys</li>
+<li><a href="https://www.intercom.com/" target="_blank" rel="noopener">Intercom</a> (Paid) - Conversational customer support platform with live chat, bots, and customer messaging</li>
+<li><a href="https://www.helpscout.com/" target="_blank" rel="noopener">Help Scout</a> (Paid) - Customer service platform designed for growing businesses with shared inbox and knowledge base</li>
+<li><a href="https://www.kayako.com/" target="_blank" rel="noopener">Kayako</a> (Paid) - Unified customer service platform with live chat, help desk, and customer journey tracking</li>
+<li><a href="https://www.servicenow.com/" target="_blank" rel="noopener">ServiceNow</a> (Paid) - Enterprise service management platform with IT service management and customer service workflows</li>
+<li><a href="https://www.thesalesscout.com/" target="_blank" rel="noopener">thesalesscout</a> (Paid) - Sales intelligence and engagement platform with prospecting database and outreach automation</li>
+
+<li><strong>Live Chat & Customer Communication</strong></li>
+<li><a href="https://www.livechat.com/" target="_blank" rel="noopener">LiveChat</a> (Paid) - Real-time customer support chat with visitor tracking and integration capabilities</li>
+<li><a href="https://www.drift.com/" target="_blank" rel="noopener">Drift</a> (Free/Paid) - Conversational marketing and sales platform with chatbots and lead qualification</li>
+<li><a href="https://www.olark.com/" target="_blank" rel="noopener">Olark</a> (Paid) - Simple live chat software with visitor insights and team collaboration features</li>
+<li><a href="https://www.crisp.chat/" target="_blank" rel="noopener">Crisp</a> (Free/Paid) - Multichannel messaging platform with live chat, email, and social media integration</li>
+<li><a href="https://www.tawk.to/" target="_blank" rel="noopener">Tawk.to</a> (Free) - Free live chat application with unlimited agents and chat history</li>
+<li><a href="https://www.tidio.com/" target="_blank" rel="noopener">Tidio</a> (Free/Paid) - Live chat with chatbots and email integration for e-commerce and service businesses</li>
+
+<li><strong>Sales Automation & Outreach Tools</strong></li>
+<li><a href="https://outreach.io/" target="_blank" rel="noopener">Outreach</a> (Paid) - Sales engagement platform with sequence automation, analytics, and revenue intelligence</li>
+<li><a href="https://www.salesloft.com/" target="_blank" rel="noopener">SalesLoft</a> (Paid) - Sales engagement platform with cadence management and conversation intelligence</li>
+<li><a href="https://www.apollo.io/" target="_blank" rel="noopener">Apollo</a> (Free/Paid) - Sales intelligence and engagement platform with prospecting database and outreach automation</li>
+<li><a href="https://www.lemlist.com/" target="_blank" rel="noopener">Lemlist</a> (Paid) - Personalized cold email outreach platform with video prospecting and LinkedIn automation</li>
+<li><a href="https://www.woodpecker.co/" target="_blank" rel="noopener">Woodpecker</a> (Paid) - Cold email automation tool with deliverability optimization and follow-up sequences</li>
+<li><a href="https://www.mailshake.com/" target="_blank" rel="noopener">Mailshake</a> (Paid) - Sales engagement platform with email outreach, social selling, and phone dialing</li>
+
+<li><strong>Independent & Specialized Solutions</strong></li>
+<li><a href="https://www.close.com/" target="_blank" rel="noopener">Close</a> (Paid) - Sales CRM built for inside sales teams with built-in calling and email capabilities</li>
+<li><a href="https://www.nutshell.com/" target="_blank" rel="noopener">Nutshell</a> (Paid) - Simple CRM and email marketing platform designed for small businesses and teams</li>
+<li><a href="https://www.lessannoyingcrm.com/" target="_blank" rel="noopener">Less Annoying CRM</a> (Paid) - Simple, affordable CRM focused on contact management without unnecessary complexity</li>
+<li><a href="https://www.nimble.com/" target="_blank" rel="noopener">Nimble</a> (Paid) - Social CRM that aggregates contact information from social networks and business databases</li>
+<li><a href="https://www.amoCRM.com/" target="_blank" rel="noopener">amoCRM</a> (Paid) - Sales-focused CRM with lead management and sales funnel optimization</li>
+<li><a href="https://www.vtiger.com/" target="_blank" rel="noopener">Vtiger</a> (Free/Paid) - Open-source CRM with sales, marketing, and customer support modules</li>
+
+<li><strong>Enterprise Sales Intelligence (Angel/Seed/A/B Round Investor Focus)</strong></li>
+<li><a href="https://www.zoominfo.com/" target="_blank" rel="noopener">ZoomInfo</a> (Paid) - B2B contact database and sales intelligence platform with intent data and technographics</li>
+<li><a href="https://www.linkedin.com/sales/" target="_blank" rel="noopener">LinkedIn Sales Navigator</a> (Paid) - Advanced LinkedIn prospecting tool with lead recommendations and InMail messaging</li>
+<li><a href="https://www.seamless.ai/" target="_blank" rel="noopener">Seamless.AI</a> (Free/Paid) - Real-time search engine for B2B contact information and company data</li>
+<li><a href="https://www.lusha.com/" target="_blank" rel="noopener">Lusha</a> (Free/Paid) - Contact finder and prospecting tool with email and phone number discovery</li>
+<li><a href="https://www.hunter.io/" target="_blank" rel="noopener">Hunter</a> (Free/Paid) - Email finder and verification tool for outbound prospecting and lead generation</li>
+<li><a href="https://www.clearbit.com/" target="_blank" rel="noopener">Clearbit</a> (Paid) - Business intelligence API for customer data enrichment and lead scoring</li>
+
+<li><strong>Customer Success & Retention Platforms</strong></li>
+<li><a href="https://www.gainsight.com/" target="_blank" rel="noopener">Gainsight</a> (Paid) - Customer success platform with health scoring, automation, and churn prevention</li>
+<li><a href="https://www.totango.com/" target="_blank" rel="noopener">Totango</a> (Paid) - Customer success platform with user analytics and engagement tracking</li>
+<li><a href="https://www.clientsuccess.com/" target="_blank" rel="noopener">ClientSuccess</a> (Paid) - Customer success management platform with health monitoring and automation</li>
+<li><a href="https://www.planhat.com/" target="_blank" rel="noopener">Planhat</a> (Paid) - Customer platform combining CRM, customer success, and product analytics</li>
+<li><a href="https://www.churnzero.net/" target="_blank" rel="noopener">ChurnZero</a> (Paid) - Real-time customer success platform with in-app messaging and health scoring</li>
+
+<li><strong>Quote & Proposal Management</strong></li>
+<li><a href="https://www.pandadoc.com/" target="_blank" rel="noopener">PandaDoc</a> (Free/Paid) - Document automation platform for proposals, quotes, contracts, and e-signatures</li>
+<li><a href="https://www.proposify.com/" target="_blank" rel="noopener">Proposify</a> (Paid) - Proposal software with templates, analytics, and client collaboration features</li>
+<li><a href="https://www.quotient.com/" target="_blank" rel="noopener">Quotient</a> (Paid) - CPQ (Configure, Price, Quote) software for complex product configurations</li>
+<li><a href="https://www.nusii.com/" target="_blank" rel="noopener">Nusii</a> (Paid) - Proposal software designed for agencies and freelancers with client approval workflows</li>
+<li><a href="https://www.bidsketch.com/" target="_blank" rel="noopener">Bidsketch</a> (Paid) - Proposal software with templates and client feedback management</li>
 </ul>
 </li>
 </ol>
