@@ -964,7 +964,7 @@ Your Complete Guide to Essential Software, Web Services, and Digital Tools for E
 <li><a href="https://www.splashtop.com/" target="_blank" rel="noopener">Splashtop</a> (Paid) - Remote desktop and remote support software</li>
 <li><a href="https://www.logmein.com/" target="_blank" rel="noopener">LogMeIn</a> (Paid) - Remote access and support solutions</li>
 <li><a href="https://www.gotomypc.com/" target="_blank" rel="noopener">GoToMyPC</a> (Paid) - Remote access software</li>
-<li><a href="https://www.chrome-remote-desktop.com/" target="_blank" rel="noopener">Chrome Remote Desktop</a> (Free) - Remote access through Chrome browser</li>
+<li><a href="https://remotedesktop.google.com/?pli=1" target="_blank" rel="noopener">Chrome Remote Desktop</a> (Free) - Remote access through Chrome browser</li>
 </ul>
 </li>
 <li><h4 id="backup-recovery">Backup & Recovery</h4>
