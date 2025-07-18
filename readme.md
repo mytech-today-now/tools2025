@@ -60,6 +60,17 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <a href="#ai">Most useful AI tools</a>
 <ul>
 <li><a href="#ai-assistants-tools">AI Assistants & Tools</a></li>
+<li><a href="#ai-coding-development">AI Coding & Development</a></li>
+<li><a href="#ai-content-creation">AI Content Creation & Writing</a></li>
+<li><a href="#ai-image-video-generation">AI Image & Video Generation</a></li>
+<li><a href="#ai-audio-voice-tools">AI Audio & Voice Tools</a></li>
+<li><a href="#ai-data-analytics">AI Data Analytics & Machine Learning</a></li>
+<li><a href="#ai-business-productivity">AI Business & Productivity</a></li>
+<li><a href="#ai-research-education">AI Research & Education</a></li>
+<li><a href="#ai-automation-workflows">AI Automation & Workflows</a></li>
+<li><a href="#ai-specialized-tools">AI Specialized Tools</a></li>
+<li><a href="#ai-platforms-frameworks">AI Platforms & Frameworks</a></li>
+<li><a href="#ai-enterprise-solutions">AI Enterprise Solutions</a></li>
 </ul>
 </li>
 <li>
@@ -67,6 +78,29 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <ul>
 <li><a href="#audio-streaming-players">Audio Streaming Players</a></li>
 <li><a href="#audio-visual-tools">Audio & Visual Tools</a></li>
+<li><a href="#digital-art-design">Digital Art & Design</a></li>
+<li><a href="#music-production-daw">Music Production & DAW</a></li>
+<li><a href="#video-editing-animation">Video Editing & Animation</a></li>
+<li><a href="#movie-making-production">Movie Making & Production</a>
+<ul>
+<li><a href="#pre-production-planning">Pre-Production & Planning</a></li>
+<li><a href="#storyboard-previz">Storyboard & Previsualization</a></li>
+<li><a href="#production-management">Production Management</a></li>
+<li><a href="#post-production-workflow">Post-Production Workflow</a></li>
+</ul>
+</li>
+<li><a href="#photography-image-editing">Photography & Image Editing</a></li>
+<li><a href="#creative-writing-content">Creative Writing & Content</a>
+<ul>
+<li><a href="#screenplay-writing">Screenplay Writing Software</a></li>
+<li><a href="#general-writing-tools">General Writing & Content Tools</a></li>
+</ul>
+</li>
+<li><a href="#3d-modeling-rendering">3D Modeling & Rendering</a></li>
+<li><a href="#portfolio-showcase">Portfolio & Showcase Platforms</a></li>
+<li><a href="#collaboration-project-management">Collaboration & Project Management</a></li>
+<li><a href="#stock-resources-assets">Stock Resources & Assets</a></li>
+<li><a href="#learning-tutorials">Learning & Tutorials</a></li>
 </ul>
 </li>
 <li>
@@ -142,6 +176,21 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="#web-scraping-data-extraction">Web Scraping & Data Extraction</a></li>
 <li><a href="#web-performance-testing">Web Performance Testing</a></li>
 <li><a href="#web-security-testing">Web Security Testing</a></li>
+</ul>
+</li>
+<li>
+<a href="#analytics-data-science">Anaylitics & Data Science</a>
+<ul>
+<li><a href="#analytics-data-science">Analytics & Data Science</a></li>
+<li><a href="#machine-learning">Machine Learning</a></li>
+<li><a href="#data-visualization">Data Visualization</a></li>
+<li><a href="#data-science-tools">Data Science Tools</a></li>
+<li><a href="#data-science-certifications">Data Science Certifications</a></li>
+<li><a href="#data-science-resources">Data Science Resources</a></li>
+<li><a href="#data-science-books">Data Science Books</a></li>
+<li><a href="#data-science-conferences">Data Science Conferences</a></li>
+<li><a href="#data-science-jobs">Data Science Jobs</a></li>
+<li><a href="#data-science-communities">Data Science Communities</a></li>
 </ul>
 </li>
 <li>
@@ -786,37 +835,180 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 </ol>
 </section>
 
+
 <section id="ai">
-<h2>Most useful for AI tools</h2>
+<h2>Most useful AI tools</h2>
 <ol>
 <li><h4 id="ai-assistants-tools">AI Assistants & Tools</h4>
 <ul>
-<li><a href="https://github.com/features/copilot/" target="_blank" rel="noopener">GitHub CoPilot</a> – AI pair programmer that helps write code faster.</li>
-<li><a href="https://chat.openai.com/" target="_blank" rel="noopener">ChatGPT</a> – Revolutionary AI for natural language processing.</li>
-<li><a href="https://www.bing.com/create" target="_blank" rel="noopener">DALL-E AI</a> – Advanced AI for generating digital images from text descriptions.</li>
-<li><a href="https://github.com/Mozilla-Ocho/llamafile" target="_blank" rel="noopener">llamafile</a> – Project leveraging AI for enhanced file management.</li>
-<li><a href="https://github.com/Significant-Gravitas/Auto-GPT" target="_blank" rel="noopener">Auto-GPT</a> – AI tool for automating content creation and processing tasks.</li>
-<li><a href="https://flexgpt.io/app" target="_blank" rel="noopener">Flex-GPT</a> – Flexible AI platform for custom GPT model training and deployment.</li>
-<li><a href="https://swarms.apac.ai/en/latest/" target="_blank" rel="noopener">Swarms</a> – AI-driven platform for collaborative decision making.</li>
-<li><a href="https://microsoft.github.io/autogen/" target="_blank" rel="noopener">AutoGen</a> – Microsoft's AI tool for generating code and automating development.</li>
-<li><a href="https://bard.google.com/" target="_blank" rel="noopener">BardAI Chatbot</a> – Google's AI-driven chatbot for answering questions.</li>
-<li><a href="https://bing.com/create" target="_blank" rel="noopener">Bing.com/create</a> – AI-powered tool for content creation and idea generation.</li>
-<li><a href="https://app.myshell.ai/invite/16af8d" target="_blank" rel="noopener">app.myshell.ai</a> – AI-based platform for enhancing shell scripting.</li>
-<li><a href="https://docs.askthecode.ai/" target="_blank" rel="noopener">AskTheCode</a> – AI solution for code querying and understanding.</li>
-<li><a href="https://huggingface.co/" target="_blank" rel="noopener">Hugging Face</a> – Technology company specializing in NLP and machine learning.</li>
-<li><a href="https://vocalremover.org/" target="_blank" rel="noopener">Vocal Remover and Isolation</a> – Separate voice from music using AI algorithms.</li>
-<li><a href="https://www.funcburger.com/workflows/9c134c73-f72a-4838-959a-8498ae253588/clone" target="_blank" rel="noopener">ChatGPT Workflows</a> – Integrating ChatGPT API into systems for automation.</li>
-<li><a href="https://ai4k.eu/content/ai-tools-for-business/#products-menu" target="_blank" rel="noopener">AI Tools for Business</a> – Curated list of 65 AI tools for small businesses.</li>
-<li><a href="https://unify.ai/chat?default=true" target="_blank" rel="noopener">Unify.AI</a> – Route your prompts to the best LLM.</li>
-<li><a href="https://unify.ai/chat?default=true" target="_blank" rel="noopener">Claude AI</a> – AI chatbot by Anthropic.</li>
-<li><a href="https://chat.deepseek.com/" target="_blank" rel="noopener">DeepSeek AI</a> - AI chatbot by Chinese DeepSeek.</li>
-<li><a href="https://notebooklm.google.com/" target="_blank" rel="noopener">NotebookLM</a> – </li>
-<li><a href="https://x.ai/" target="_blank" rel="noopener">Grok AI</a> – AI chatbot by X.ai.</li>
-<li><a href="https://eddy.headliner.app/dashboard" target="_blank" rel="noopener">Headliner</a> – AI tool for generating transcripts and manipulating content.</li>
-<li><a href="https://labs.google/fx/tools/flow" target="_blank" rel="noopener">Google Flow and Veo 3</a> – AI tools for video content creation and editing.</li>
-<li><a href="https://nouswise.com/" target="_blank" rel="noopener">Nouswise</a> – AI tool for generating content.</li>
-<li><a href="https://x.ai/" target="_blank" rel="noopener">Grok AI</a> – AI chatbot by X.ai.</li>
-<li><a href="https://www.finalroundai.com/" target="_blank" rel="noopener">Finalround AI</a> – AI-powered tools to help you ace interviews, apply faster, and land offers with confidence.</li>
+<li><a href="https://chat.openai.com/" target="_blank" rel="noopener">ChatGPT</a> (Free/Paid $20/month) – Revolutionary AI chatbot for natural language processing, content creation, and problem-solving across multiple domains</li>
+<li><a href="https://claude.ai/" target="_blank" rel="noopener">Claude AI</a> (Free/Paid $20/month) – Advanced AI assistant by Anthropic with strong reasoning capabilities and ethical AI principles</li>
+<li><a href="https://bard.google.com/" target="_blank" rel="noopener">Google Bard</a> (Free) – Google's AI-powered conversational assistant with real-time web access and multimodal capabilities</li>
+<li><a href="https://x.ai/" target="_blank" rel="noopener">Grok AI</a> (Paid $16/month) – X.ai's AI chatbot with real-time information access and conversational personality</li>
+<li><a href="https://chat.deepseek.com/" target="_blank" rel="noopener">DeepSeek AI</a> (Free/Paid) – Advanced AI chatbot with strong coding and reasoning capabilities</li>
+<li><a href="https://www.perplexity.ai/" target="_blank" rel="noopener">Perplexity AI</a> (Free/Paid $20/month) – AI-powered search engine and research assistant with real-time web access</li>
+<li><a href="https://you.com/" target="_blank" rel="noopener">You.com</a> (Free/Paid $20/month) – AI search engine with personalized results and conversational interface</li>
+<li><a href="https://unify.ai/chat?default=true" target="_blank" rel="noopener">Unify.AI</a> (Paid) – Route your prompts to the best LLM for optimal performance and cost efficiency</li>
+<li><a href="https://www.finalroundai.com/" target="_blank" rel="noopener">Finalround AI</a> (Paid) – AI-powered interview preparation tools for job seekers and career advancement</li>
+<li><a href="https://www.jasper.ai/" target="_blank" rel="noopener">Jasper AI</a> (Paid $39+/month) – AI writing assistant for marketing teams and content creators</li>
+<li><a href="https://www.copy.ai/" target="_blank" rel="noopener">Copy.ai</a> (Free/Paid $36+/month) – AI copywriting tool for marketing content, emails, and social media</li>
+<li><a href="https://writesonic.com/" target="_blank" rel="noopener">Writesonic</a> (Free/Paid $16+/month) – AI writing platform for articles, ads, and marketing copy</li>
+</ul>
+</li>
+<li><h4 id="ai-coding-development">AI Coding & Development</h4>
+<ul>
+<li><a href="https://github.com/features/copilot/" target="_blank" rel="noopener">GitHub Copilot</a> (Paid $10/month) – AI pair programmer that suggests code completions and entire functions in real-time</li>
+<li><a href="https://codeium.com/" target="_blank" rel="noopener">Codeium</a> (Free/Paid $12+/month) – Free AI code completion tool supporting 70+ programming languages</li>
+<li><a href="https://www.tabnine.com/" target="_blank" rel="noopener">Tabnine</a> (Free/Paid $12+/month) – AI code assistant with advanced code completion and generation</li>
+<li><a href="https://aws.amazon.com/codewhisperer/" target="_blank" rel="noopener">Amazon CodeWhisperer</a> (Free/Paid) – AI coding companion for AWS development and general programming</li>
+<li><a href="https://www.cursor.so/" target="_blank" rel="noopener">Cursor</a> (Free/Paid $20/month) – AI-first code editor built for pair programming with AI</li>
+<li><a href="https://docs.askthecode.ai/" target="_blank" rel="noopener">AskTheCode</a> (Paid) – AI solution for code analysis, documentation, and understanding large codebases</li>
+<li><a href="https://microsoft.github.io/autogen/" target="_blank" rel="noopener">AutoGen</a> (Free) – Microsoft's framework for building multi-agent AI systems for code generation</li>
+<li><a href="https://www.replit.com/" target="_blank" rel="noopener">Replit AI</a> (Free/Paid $7+/month) – AI-powered collaborative coding environment with code generation</li>
+<li><a href="https://sourcegraph.com/cody" target="_blank" rel="noopener">Sourcegraph Cody</a> (Free/Paid $9+/month) – AI coding assistant that understands your entire codebase</li>
+<li><a href="https://www.phind.com/" target="_blank" rel="noopener">Phind</a> (Free/Paid $20/month) – AI search engine specifically designed for developers and technical questions</li>
+</ul>
+</li>
+<li><h4 id="ai-content-creation">AI Content Creation & Writing</h4>
+<ul>
+<li><a href="https://www.grammarly.com/" target="_blank" rel="noopener">Grammarly</a> (Free/Paid $12+/month) – AI-powered writing assistant for grammar, style, and tone improvement</li>
+<li><a href="https://www.notion.so/product/ai" target="_blank" rel="noopener">Notion AI</a> (Paid $8+/month) – AI writing assistant integrated into Notion workspace for content creation</li>
+<li><a href="https://www.wordtune.com/" target="_blank" rel="noopener">Wordtune</a> (Free/Paid $13+/month) – AI writing companion for rewriting and improving text clarity</li>
+<li><a href="https://quillbot.com/" target="_blank" rel="noopener">QuillBot</a> (Free/Paid $8.33+/month) – AI paraphrasing tool for content rewriting and summarization</li>
+<li><a href="https://www.rytr.me/" target="_blank" rel="noopener">Rytr</a> (Free/Paid $9+/month) – AI writing assistant for blogs, emails, and marketing content</li>
+<li><a href="https://www.sudowrite.com/" target="_blank" rel="noopener">Sudowrite</a> (Paid $10+/month) – AI writing tool specifically designed for creative fiction and storytelling</li>
+<li><a href="https://bing.com/create" target="_blank" rel="noopener">Bing Create</a> (Free) – Microsoft's AI-powered content creation tool for various writing tasks</li>
+<li><a href="https://nouswise.com/" target="_blank" rel="noopener">Nouswise</a> (Paid) – AI content generation platform for professional writing and research</li>
+<li><a href="https://www.longshot.ai/" target="_blank" rel="noopener">LongShot AI</a> (Free/Paid $19+/month) – AI writing assistant for long-form content and SEO optimization</li>
+<li><a href="https://www.frase.io/" target="_blank" rel="noopener">Frase</a> (Paid $14.99+/month) – AI content optimization tool for SEO-focused writing and research</li>
+</ul>
+</li>
+<li><h4 id="ai-image-video-generation">AI Image & Video Generation</h4>
+<ul>
+<li><a href="https://www.bing.com/create" target="_blank" rel="noopener">DALL-E 3</a> (Free/Paid) – Advanced AI for generating high-quality digital images from text descriptions</li>
+<li><a href="https://www.midjourney.com/" target="_blank" rel="noopener">Midjourney</a> (Paid $10+/month) – AI art generator creating stunning, artistic images from text prompts</li>
+<li><a href="https://stability.ai/stable-diffusion" target="_blank" rel="noopener">Stable Diffusion</a> (Free/Paid) – Open-source AI image generation model for creating diverse visual content</li>
+<li><a href="https://www.adobe.com/products/firefly.html" target="_blank" rel="noopener">Adobe Firefly</a> (Free/Paid) – Adobe's AI-powered creative tools for image generation and editing</li>
+<li><a href="https://www.canva.com/ai-image-generator/" target="_blank" rel="noopener">Canva AI</a> (Free/Paid $12.99+/month) – AI image generator integrated into Canva's design platform</li>
+<li><a href="https://labs.google/fx/tools/flow" target="_blank" rel="noopener">Google Veo & Flow</a> (Free) – Google's AI tools for video content creation and editing</li>
+<li><a href="https://runwayml.com/" target="_blank" rel="noopener">Runway ML</a> (Free/Paid $12+/month) – AI-powered creative suite for video editing, image generation, and content creation</li>
+<li><a href="https://www.synthesia.io/" target="_blank" rel="noopener">Synthesia</a> (Paid $30+/month) – AI video generation platform for creating professional videos with AI avatars</li>
+<li><a href="https://www.d-id.com/" target="_blank" rel="noopener">D-ID</a> (Free/Paid $5.99+/month) – AI platform for creating talking head videos from photos</li>
+<li><a href="https://leonardo.ai/" target="_blank" rel="noopener">Leonardo AI</a> (Free/Paid $10+/month) – AI art generator focused on game assets and creative content</li>
+<li><a href="https://www.artbreeder.com/" target="_blank" rel="noopener">Artbreeder</a> (Free/Paid $8.99+/month) – Collaborative AI art creation platform for image breeding and evolution</li>
+<li><a href="https://www.remove.bg/" target="_blank" rel="noopener">Remove.bg</a> (Free/Paid $9+/month) – AI-powered background removal tool for images</li>
+</ul>
+</li>
+<li><h4 id="ai-audio-voice-tools">AI Audio & Voice Tools</h4>
+<ul>
+<li><a href="https://elevenlabs.io/" target="_blank" rel="noopener">ElevenLabs</a> (Free/Paid $5+/month) – Advanced AI voice synthesis and cloning platform for realistic speech generation</li>
+<li><a href="https://murf.ai/" target="_blank" rel="noopener">Murf AI</a> (Free/Paid $13+/month) – AI voice generator for creating professional voiceovers and narrations</li>
+<li><a href="https://www.descript.com/" target="_blank" rel="noopener">Descript</a> (Free/Paid $12+/month) – AI-powered audio and video editing with voice cloning capabilities</li>
+<li><a href="https://vocalremover.org/" target="_blank" rel="noopener">Vocal Remover</a> (Free) – AI tool for separating vocals from music tracks using advanced algorithms</li>
+<li><a href="https://www.resemble.ai/" target="_blank" rel="noopener">Resemble AI</a> (Paid $0.006/second) – Real-time voice cloning and speech synthesis platform</li>
+<li><a href="https://eddy.headliner.app/dashboard" target="_blank" rel="noopener">Headliner</a> (Free/Paid $9.99+/month) – AI tool for generating audio transcripts and social media content</li>
+<li><a href="https://www.speechify.com/" target="_blank" rel="noopener">Speechify</a> (Free/Paid $11.58+/month) – AI text-to-speech tool for converting written content to natural audio</li>
+<li><a href="https://www.naturalreaders.com/" target="_blank" rel="noopener">NaturalReader</a> (Free/Paid $9.99+/month) – AI text-to-speech software with natural-sounding voices</li>
+<li><a href="https://www.adobe.com/products/audition.html" target="_blank" rel="noopener">Adobe Audition AI</a> (Paid $20.99+/month) – Professional audio editing with AI-powered noise reduction and enhancement</li>
+<li><a href="https://www.krisp.ai/" target="_blank" rel="noopener">Krisp</a> (Free/Paid $8+/month) – AI-powered noise cancellation for calls and recordings</li>
+</ul>
+</li>
+<li><h4 id="ai-data-analytics">AI Data Analytics & Machine Learning</h4>
+<ul>
+<li><a href="https://huggingface.co/" target="_blank" rel="noopener">Hugging Face</a> (Free/Paid $9+/month) – Leading platform for machine learning models, datasets, and NLP tools</li>
+<li><a href="https://www.tensorflow.org/" target="_blank" rel="noopener">TensorFlow</a> (Free) – Google's open-source machine learning framework for building AI applications</li>
+<li><a href="https://pytorch.org/" target="_blank" rel="noopener">PyTorch</a> (Free) – Facebook's machine learning library for research and production AI development</li>
+<li><a href="https://www.dataiku.com/" target="_blank" rel="noopener">Dataiku</a> (Free/Paid Enterprise) – Data science platform for building and deploying machine learning models</li>
+<li><a href="https://www.h2o.ai/" target="_blank" rel="noopener">H2O.ai</a> (Free/Paid Enterprise) – Open-source machine learning platform for automated AI and analytics</li>
+<li><a href="https://www.databricks.com/" target="_blank" rel="noopener">Databricks</a> (Paid $0.07+/hour) – Unified analytics platform for big data and machine learning</li>
+<li><a href="https://www.palantir.com/" target="_blank" rel="noopener">Palantir</a> (Paid Enterprise) – Big data analytics platform for large-scale data integration and analysis</li>
+<li><a href="https://www.tableau.com/" target="_blank" rel="noopener">Tableau</a> (Paid $70+/month) – Data visualization platform with AI-powered analytics and insights</li>
+<li><a href="https://powerbi.microsoft.com/" target="_blank" rel="noopener">Power BI</a> (Free/Paid $10+/month) – Microsoft's business analytics tool with AI-driven data insights</li>
+<li><a href="https://www.alteryx.com/" target="_blank" rel="noopener">Alteryx</a> (Paid $4,950+/year) – Self-service data analytics platform with machine learning capabilities</li>
+</ul>
+</li>
+<li><h4 id="ai-business-productivity">AI Business & Productivity</h4>
+<ul>
+<li><a href="https://www.monday.com/ai/" target="_blank" rel="noopener">Monday.com AI</a> (Paid $8+/month) – AI-powered project management and workflow automation platform</li>
+<li><a href="https://www.clickup.com/ai" target="_blank" rel="noopener">ClickUp AI</a> (Free/Paid $7+/month) – AI writing assistant integrated into project management workflows</li>
+<li><a href="https://www.zapier.com/" target="_blank" rel="noopener">Zapier</a> (Free/Paid $19.99+/month) – Automation platform connecting apps and services with AI-powered workflows</li>
+<li><a href="https://www.microsoft.com/en-us/microsoft-365/copilot" target="_blank" rel="noopener">Microsoft 365 Copilot</a> (Paid $30/month) – AI assistant integrated across Microsoft Office applications</li>
+<li><a href="https://workspace.google.com/products/duet-ai/" target="_blank" rel="noopener">Google Workspace AI</a> (Paid $30+/month) – AI features integrated into Gmail, Docs, Sheets, and other Google tools</li>
+<li><a href="https://www.salesforce.com/products/einstein/" target="_blank" rel="noopener">Salesforce Einstein</a> (Paid $25+/month) – AI-powered CRM features for sales, marketing, and customer service</li>
+<li><a href="https://www.hubspot.com/artificial-intelligence" target="_blank" rel="noopener">HubSpot AI</a> (Free/Paid $45+/month) – AI tools for marketing, sales, and customer service automation</li>
+<li><a href="https://ai4k.eu/content/ai-tools-for-business/#products-menu" target="_blank" rel="noopener">AI Tools for Business</a> (Varies) – Curated collection of 65+ AI tools for small and medium businesses</li>
+<li><a href="https://www.otter.ai/" target="_blank" rel="noopener">Otter.ai</a> (Free/Paid $8.33+/month) – AI meeting transcription and note-taking assistant</li>
+<li><a href="https://www.fireflies.ai/" target="_blank" rel="noopener">Fireflies.ai</a> (Free/Paid $10+/month) – AI meeting assistant for recording, transcribing, and analyzing conversations</li>
+</ul>
+</li>
+<li><h4 id="ai-research-education">AI Research & Education</h4>
+<ul>
+<li><a href="https://notebooklm.google.com/" target="_blank" rel="noopener">NotebookLM</a> (Free) – Google's AI-powered research and note-taking assistant for analyzing documents</li>
+<li><a href="https://www.semantic-scholar.org/" target="_blank" rel="noopener">Semantic Scholar</a> (Free) – AI-powered academic search engine for scientific literature</li>
+<li><a href="https://www.elicit.org/" target="_blank" rel="noopener">Elicit</a> (Free/Paid $10+/month) – AI research assistant for finding and summarizing academic papers</li>
+<li><a href="https://www.consensus.app/" target="_blank" rel="noopener">Consensus</a> (Free/Paid $8.99+/month) – AI-powered search engine for scientific research and evidence</li>
+<li><a href="https://www.scholarai.io/" target="_blank" rel="noopener">ScholarAI</a> (Free/Paid) – AI assistant for academic research and paper analysis</li>
+<li><a href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank" rel="noopener">Coursera ML</a> (Free/Paid $39+/month) – Machine learning and AI courses from top universities</li>
+<li><a href="https://www.edx.org/learn/artificial-intelligence" target="_blank" rel="noopener">edX AI Courses</a> (Free/Paid $50+/course) – University-level AI and machine learning education</li>
+<li><a href="https://www.fast.ai/" target="_blank" rel="noopener">Fast.ai</a> (Free) – Practical deep learning courses and resources for coders</li>
+<li><a href="https://www.deeplearning.ai/" target="_blank" rel="noopener">DeepLearning.AI</a> (Free/Paid $39+/month) – AI education platform by Andrew Ng with specialized courses</li>
+<li><a href="https://www.kaggle.com/learn" target="_blank" rel="noopener">Kaggle Learn</a> (Free) – Free micro-courses on machine learning and data science</li>
+</ul>
+</li>
+<li><h4 id="ai-automation-workflows">AI Automation & Workflows</h4>
+<ul>
+<li><a href="https://github.com/Significant-Gravitas/Auto-GPT" target="_blank" rel="noopener">Auto-GPT</a> (Free) – Autonomous AI agent for automating complex tasks and workflows</li>
+<li><a href="https://www.funcburger.com/workflows/9c134c73-f72a-4838-959a-8498ae253588/clone" target="_blank" rel="noopener">ChatGPT Workflows</a> (Paid) – Pre-built automation workflows integrating ChatGPT API into business systems</li>
+<li><a href="https://swarms.apac.ai/en/latest/" target="_blank" rel="noopener">Swarms</a> (Free/Paid) – Multi-agent AI framework for collaborative decision making and task automation</li>
+<li><a href="https://microsoft.github.io/autogen/" target="_blank" rel="noopener">AutoGen</a> (Free) – Microsoft's framework for building conversational AI systems with multiple agents</li>
+<li><a href="https://www.make.com/" target="_blank" rel="noopener">Make (Integromat)</a> (Free/Paid $9+/month) – Visual automation platform with AI integrations for workflow automation</li>
+<li><a href="https://n8n.io/" target="_blank" rel="noopener">n8n</a> (Free/Paid $20+/month) – Open-source workflow automation tool with AI node integrations</li>
+<li><a href="https://www.activepieces.com/" target="_blank" rel="noopener">Activepieces</a> (Free/Paid $15+/month) – No-code automation platform with AI-powered workflow building</li>
+<li><a href="https://www.bardeen.ai/" target="_blank" rel="noopener">Bardeen</a> (Free/Paid $10+/month) – AI-powered browser automation for repetitive tasks</li>
+<li><a href="https://www.uipath.com/" target="_blank" rel="noopener">UiPath</a> (Free/Paid Enterprise) – Robotic Process Automation platform with AI capabilities</li>
+<li><a href="https://www.automation-anywhere.com/" target="_blank" rel="noopener">Automation Anywhere</a> (Paid Enterprise) – Enterprise RPA platform with AI-powered document processing</li>
+</ul>
+</li>
+<li><h4 id="ai-specialized-tools">AI Specialized Tools</h4>
+<ul>
+<li><a href="https://github.com/Mozilla-Ocho/llamafile" target="_blank" rel="noopener">llamafile</a> (Free) – Single-file executable for running large language models locally</li>
+<li><a href="https://app.myshell.ai/invite/16af8d" target="_blank" rel="noopener">MyShell.ai</a> (Free/Paid) – AI-powered platform for creating interactive chatbots and virtual assistants</li>
+<li><a href="https://flexgpt.io/app" target="_blank" rel="noopener">Flex-GPT</a> (Paid) – Flexible AI platform for custom GPT model training and fine-tuning</li>
+<li><a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude API</a> (Paid $0.80+/1M tokens) – Anthropic's API for integrating Claude AI into applications</li>
+<li><a href="https://openai.com/api/" target="_blank" rel="noopener">OpenAI API</a> (Paid $0.50+/1M tokens) – Access to GPT models and other OpenAI services via API</li>
+<li><a href="https://www.cohere.ai/" target="_blank" rel="noopener">Cohere</a> (Free/Paid $0.40+/1M tokens) – Enterprise AI platform for natural language processing and generation</li>
+<li><a href="https://www.ai21.com/" target="_blank" rel="noopener">AI21 Labs</a> (Free/Paid $0.80+/1M tokens) – Advanced language models and AI writing tools for enterprises</li>
+<li><a href="https://replicate.com/" target="_blank" rel="noopener">Replicate</a> (Paid $0.0002+/second) – Platform for running and deploying machine learning models in the cloud</li>
+<li><a href="https://www.together.ai/" target="_blank" rel="noopener">Together AI</a> (Paid $0.20+/1M tokens) – Platform for running open-source AI models at scale</li>
+<li><a href="https://www.anyscale.com/" target="_blank" rel="noopener">Anyscale</a> (Paid Enterprise) – Distributed computing platform for scaling AI and machine learning workloads</li>
+</ul>
+</li>
+<li><h4 id="ai-platforms-frameworks">AI Platforms & Frameworks</h4>
+<ul>
+<li><a href="https://www.langchain.com/" target="_blank" rel="noopener">LangChain</a> (Free) – Framework for developing applications with large language models</li>
+<li><a href="https://www.llamaindex.ai/" target="_blank" rel="noopener">LlamaIndex</a> (Free) – Data framework for connecting custom data sources to large language models</li>
+<li><a href="https://www.pinecone.io/" target="_blank" rel="noopener">Pinecone</a> (Free/Paid $70+/month) – Vector database for AI applications and semantic search</li>
+<li><a href="https://weaviate.io/" target="_blank" rel="noopener">Weaviate</a> (Free/Paid $25+/month) – Open-source vector database for AI-powered applications</li>
+<li><a href="https://www.chroma.com/" target="_blank" rel="noopener">Chroma</a> (Free) – Open-source embedding database for building AI applications</li>
+<li><a href="https://www.gradio.app/" target="_blank" rel="noopener">Gradio</a> (Free) – Python library for creating machine learning demos and web applications</li>
+<li><a href="https://streamlit.io/" target="_blank" rel="noopener">Streamlit</a> (Free/Paid $21+/month) – Framework for building and sharing data science and AI applications</li>
+<li><a href="https://www.weights-and-biases.com/" target="_blank" rel="noopener">Weights & Biases</a> (Free/Paid $50+/month) – MLOps platform for experiment tracking and model management</li>
+<li><a href="https://mlflow.org/" target="_blank" rel="noopener">MLflow</a> (Free) – Open-source platform for managing machine learning lifecycle</li>
+<li><a href="https://www.kubeflow.org/" target="_blank" rel="noopener">Kubeflow</a> (Free) – Machine learning toolkit for Kubernetes deployments</li>
+</ul>
+</li>
+<li><h4 id="ai-enterprise-solutions">AI Enterprise Solutions</h4>
+<ul>
+<li><a href="https://www.ibm.com/watson" target="_blank" rel="noopener">IBM Watson</a> (Paid Enterprise) – Enterprise AI platform for business automation and decision-making</li>
+<li><a href="https://aws.amazon.com/machine-learning/" target="_blank" rel="noopener">AWS AI Services</a> (Paid Usage-based) – Comprehensive suite of AI and machine learning services on AWS</li>
+<li><a href="https://azure.microsoft.com/en-us/products/ai-services/" target="_blank" rel="noopener">Azure AI</a> (Paid Usage-based) – Microsoft's cloud AI services for enterprise applications</li>
+<li><a href="https://cloud.google.com/ai" target="_blank" rel="noopener">Google Cloud AI</a> (Paid Usage-based) – Google's AI and machine learning services for enterprise</li>
+<li><a href="https://www.oracle.com/artificial-intelligence/" target="_blank" rel="noopener">Oracle AI</a> (Paid Enterprise) – Enterprise AI solutions integrated with Oracle's business applications</li>
+<li><a href="https://www.sap.com/products/artificial-intelligence.html" target="_blank" rel="noopener">SAP AI</a> (Paid Enterprise) – AI capabilities integrated into SAP's enterprise software suite</li>
+<li><a href="https://www.c3.ai/" target="_blank" rel="noopener">C3.ai</a> (Paid Enterprise) – Enterprise AI software platform for digital transformation</li>
+<li><a href="https://www.datarobot.com/" target="_blank" rel="noopener">DataRobot</a> (Paid Enterprise) – Automated machine learning platform for enterprise data science</li>
+<li><a href="https://www.domino.ai/" target="_blank" rel="noopener">Domino Data Lab</a> (Paid Enterprise) – Enterprise MLOps platform for data science teams</li>
+<li><a href="https://www.avanade.com/en/solutions/artificial-intelligence" target="_blank" rel="noopener">Avanade AI</a> (Paid Consulting) – AI consulting and implementation services for enterprises</li>
 </ul>
 </li>
 </ol>
@@ -881,6 +1073,286 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="https://www.unscreen.com/" target="_blank" rel="noopener">Unscreen</a> - remove green screen from videos</li>
 <li><a href="https://github.com/anandpawara/Real_Time_Image_Animation" target="_blank" rel="noopener">The Project</a> - a real-time application in OpenCV using the first-order model </li>
 <li><a href="https://squoosh.app/" target="_blank" rel="noopener">Squoosh.app</a> - an image compression web app that allows you to dive into the advanced options provided by various image compressors for .AVIF files</li>
+</ul>
+</li>
+<li><h4 id="digital-art-design">Digital Art & Design</h4>
+<ul>
+<li><a href="https://www.adobe.com/products/illustrator.html" target="_blank" rel="noopener">Adobe Illustrator</a> (Paid $20.99/month) – Industry-standard vector graphics editor for logos, icons, drawings, typography, and illustrations for print, web, video, and mobile</li>
+<li><a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener">Adobe Photoshop</a> (Paid $20.99/month) – Professional raster graphics editor for photo editing, digital painting, and graphic design</li>
+<li><a href="https://inkscape.org/" target="_blank" rel="noopener">Inkscape</a> (Free) – Open-source vector graphics editor with capabilities similar to Illustrator, CorelDraw, or Xara X</li>
+<li><a href="https://www.gimp.org/" target="_blank" rel="noopener">GIMP</a> (Free) – GNU Image Manipulation Program for photo retouching, image composition, and image authoring</li>
+<li><a href="https://krita.org/" target="_blank" rel="noopener">Krita</a> (Free) – Professional painting program designed for concept artists, illustrators, matte and texture artists, and the VFX industry</li>
+<li><a href="https://www.corel.com/en/products/coreldraw/" target="_blank" rel="noopener">CorelDRAW Graphics Suite</a> (Paid $499 or $24.50/month) – Professional vector illustration, layout, photo editing, and typography software</li>
+<li><a href="https://affinity.serif.com/en-us/designer/" target="_blank" rel="noopener">Affinity Designer</a> (Paid $69.99) – Professional vector graphic design software for desktop and iPad</li>
+<li><a href="https://affinity.serif.com/en-us/photo/" target="_blank" rel="noopener">Affinity Photo</a> (Paid $69.99) – Professional photo editing software for desktop and iPad</li>
+<li><a href="https://www.sketchbook.com/" target="_blank" rel="noopener">Autodesk SketchBook</a> (Free) – Digital drawing and painting software for artists and designers</li>
+<li><a href="https://www.clipstudio.net/en/" target="_blank" rel="noopener">Clip Studio Paint</a> (Paid $4.49/month) – Professional illustration and animation software popular among manga and comic artists</li>
+<li><a href="https://procreate.art/" target="_blank" rel="noopener">Procreate</a> (Paid $12.99 iPad only) – Digital painting app designed for creative professionals and artists on iPad</li>
+<li><a href="https://www.adobe.com/products/fresco.html" target="_blank" rel="noopener">Adobe Fresco</a> (Free/Paid $9.99/month) – Digital painting and drawing app with vector and raster brushes</li>
+<li><a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a> (Free/Paid $14.99/month) – Online design platform for creating graphics, presentations, posters, documents, and other visual content</li>
+<li><a href="https://www.figma.com/" target="_blank" rel="noopener">Figma</a> (Free/Paid $12/month) – Collaborative interface design tool for UI/UX design and prototyping</li>
+<li><a href="https://www.sketch.com/" target="_blank" rel="noopener">Sketch</a> (Paid $9/month) – Digital design toolkit for Mac focused on user interface and user experience design</li>
+<li><a href="https://www.adobe.com/products/xd.html" target="_blank" rel="noopener">Adobe XD</a> (Free/Paid $9.99/month) – User experience design software for web and mobile app design and prototyping</li>
+<li><a href="https://www.paintshoppro.com/" target="_blank" rel="noopener">Corel PaintShop Pro</a> (Paid $79.99) – Photo editing and graphic design software with AI-powered features</li>
+<li><a href="https://www.artrage.com/" target="_blank" rel="noopener">ArtRage</a> (Paid $79) – Digital painting software that simulates traditional media like oils, watercolors, and pastels</li>
+<li><a href="https://rebelle.maxon.net/" target="_blank" rel="noopener">Rebelle</a> (Paid $150) – Realistic watercolor, acrylic, wet and dry media painting software</li>
+<li><a href="https://www.paintstorm.com/" target="_blank" rel="noopener">PaintStorm Studio</a> (Paid $19) – Digital painting software with unique brush engine and animation capabilities</li>
+</ul>
+</li>
+<li><h4 id="music-production-daw">Music Production & DAW</h4>
+<ul>
+<li><a href="https://www.ableton.com/en/live/" target="_blank" rel="noopener">Ableton Live</a> (Paid $99-749) – Digital audio workstation for music production, recording, and live performance</li>
+<li><a href="https://www.image-line.com/fl-studio/" target="_blank" rel="noopener">FL Studio</a> (Paid $99-899) – Complete software music production environment with lifetime free updates</li>
+<li><a href="https://www.steinberg.net/cubase/" target="_blank" rel="noopener">Steinberg Cubase</a> (Paid $99-579) – Advanced music production system for composing, recording, editing, and mixing</li>
+<li><a href="https://www.avid.com/pro-tools" target="_blank" rel="noopener">Avid Pro Tools</a> (Paid $29.99/month) – Industry-standard digital audio workstation for professional music and audio production</li>
+<li><a href="https://www.apple.com/logic-pro/" target="_blank" rel="noopener">Logic Pro</a> (Paid $199.99 Mac only) – Professional music production software with complete collection of instruments, effects, and loops</li>
+<li><a href="https://www.presonus.com/products/Studio-One" target="_blank" rel="noopener">PreSonus Studio One</a> (Free/Paid $99-399) – Modern digital audio workstation with drag-and-drop functionality</li>
+<li><a href="https://www.reaper.fm/" target="_blank" rel="noopener">REAPER</a> (Paid $60-225) – Digital audio production application for multitrack audio and MIDI recording, editing, processing, mixing, and mastering</li>
+<li><a href="https://www.bandlab.com/" target="_blank" rel="noopener">BandLab</a> (Free) – Cloud-based music creation platform with social features and collaboration tools</li>
+<li><a href="https://www.audacityteam.org/" target="_blank" rel="noopener">Audacity</a> (Free) – Open-source, cross-platform audio software for multi-track recording and editing</li>
+<li><a href="https://ardour.org/" target="_blank" rel="noopener">Ardour</a> (Free/Paid Support) – Professional-grade digital audio workstation for Linux, macOS, and Windows</li>
+<li><a href="https://www.apple.com/mac/garageband/" target="_blank" rel="noopener">GarageBand</a> (Free Mac/iOS) – Music creation software with virtual instruments, presets for guitar and voice, and session drummer</li>
+<li><a href="https://www.native-instruments.com/en/products/maschine/" target="_blank" rel="noopener">Native Instruments Maschine</a> (Paid $599) – Groove production studio combining hardware controller with software</li>
+<li><a href="https://www.propellerheads.com/reason" target="_blank" rel="noopener">Reason Studios Reason</a> (Paid $19.99/month) – Music production software with virtual rack of synthesizers, samplers, and effects</li>
+<li><a href="https://www.bitwig.com/" target="_blank" rel="noopener">Bitwig Studio</a> (Paid $399) – Modern music production and performance software with modular approach</li>
+<li><a href="https://www.tracktion.com/products/waveform-free" target="_blank" rel="noopener">Tracktion T7</a> (Free) – Full-featured digital audio workstation with unlimited audio and MIDI tracks</li>
+<li><a href="https://lmms.io/" target="_blank" rel="noopener">LMMS</a> (Free) – Cross-platform music production software for creating melodies and beats, synthesizing and mixing sounds</li>
+<li><a href="https://www.bandlab.com/products/cakewalk" target="_blank" rel="noopener">Cakewalk by BandLab</a> (Free) – Professional music production suite with advanced MIDI and audio editing capabilities</li>
+<li><a href="https://www.motu.com/products/software/dp" target="_blank" rel="noopener">MOTU Digital Performer</a> (Paid $499) – Integrated digital audio and MIDI sequencing software</li>
+<li><a href="https://www.acoustica.com/mixcraft/" target="_blank" rel="noopener">Acoustica Mixcraft</a> (Paid $89-179) – Multi-track recording software with virtual instruments and effects</li>
+<li><a href="https://www.magix.com/us/music/music-maker/" target="_blank" rel="noopener">MAGIX Music Maker</a> (Free/Paid $59.99) – Music production software with loops, instruments, and effects for beginners</li>
+</ul>
+</li>
+<li><h4 id="video-editing-animation">Video Editing & Animation</h4>
+<ul>
+<li><a href="https://www.adobe.com/products/premiere.html" target="_blank" rel="noopener">Adobe Premiere Pro</a> (Paid $20.99/month) – Professional video editing software for film, TV, and web content creation</li>
+<li><a href="https://www.adobe.com/products/aftereffects.html" target="_blank" rel="noopener">Adobe After Effects</a> (Paid $20.99/month) – Digital visual effects, motion graphics, and compositing application</li>
+<li><a href="https://www.blackmagicdesign.com/products/davinciresolve/" target="_blank" rel="noopener">DaVinci Resolve</a> (Free/Paid $295) – Professional video editing, color correction, visual effects, and audio post-production</li>
+<li><a href="https://www.apple.com/final-cut-pro/" target="_blank" rel="noopener">Final Cut Pro</a> (Paid $299.99 Mac only) – Professional video editing software with advanced tools for editing, motion graphics, and delivery</li>
+<li><a href="https://www.avid.com/media-composer" target="_blank" rel="noopener">Avid Media Composer</a> (Free/Paid $23.99/month) – Professional video editing software used in film and television production</li>
+<li><a href="https://www.blender.org/" target="_blank" rel="noopener">Blender</a> (Free) – Open-source 3D creation suite supporting modeling, rigging, animation, simulation, rendering, compositing, and motion tracking</li>
+<li><a href="https://www.autodesk.com/products/maya/overview" target="_blank" rel="noopener">Autodesk Maya</a> (Paid $225/month) – 3D computer animation, modeling, simulation, and rendering software</li>
+<li><a href="https://www.autodesk.com/products/3ds-max/overview" target="_blank" rel="noopener">Autodesk 3ds Max</a> (Paid $225/month) – 3D modeling, animation, and rendering software for games, film, and motion graphics</li>
+<li><a href="https://www.maxon.net/en/cinema-4d" target="_blank" rel="noopener">Cinema 4D</a> (Paid $94/month) – 3D modeling, animation, and rendering software known for motion graphics</li>
+<li><a href="https://www.toonboom.com/products/harmony" target="_blank" rel="noopener">Toon Boom Harmony</a> (Paid $25-124/month) – Professional 2D animation software for traditional and paperless animation</li>
+<li><a href="https://www.adobe.com/products/animate.html" target="_blank" rel="noopener">Adobe Animate</a> (Paid $20.99/month) – Multimedia authoring and computer animation program for creating vector graphics and animation</li>
+<li><a href="https://opentoonz.github.io/e/" target="_blank" rel="noopener">OpenToonz</a> (Free) – Open-source 2D animation software used by Studio Ghibli and other professional studios</li>
+<li><a href="https://www.dragonframe.com/" target="_blank" rel="noopener">Dragonframe</a> (Paid $295-1295) – Stop motion animation software for professional filmmakers</li>
+<li><a href="https://kdenlive.org/" target="_blank" rel="noopener">Kdenlive</a> (Free) – Open-source video editor with multi-track editing and wide format support</li>
+<li><a href="https://www.openshot.org/" target="_blank" rel="noopener">OpenShot</a> (Free) – Cross-platform video editor with simple interface and powerful features</li>
+<li><a href="https://www.shotcut.org/" target="_blank" rel="noopener">Shotcut</a> (Free) – Cross-platform video editor with wide format support and advanced features</li>
+<li><a href="https://fxhome.com/hitfilm-express" target="_blank" rel="noopener">HitFilm Express</a> (Free) – Video editing and visual effects software with professional-grade VFX tools</li>
+<li><a href="https://www.lwks.com/" target="_blank" rel="noopener">Lightworks</a> (Free/Paid $24.99/month) – Professional video editing software used in Hollywood productions</li>
+<li><a href="https://www.vegascreativesoftware.com/" target="_blank" rel="noopener">VEGAS Pro</a> (Paid $399-799) – Professional video editing software with advanced audio editing capabilities</li>
+<li><a href="https://www.cyberlink.com/products/powerdirector-video-editing-software/features_en_US.html" target="_blank" rel="noopener">CyberLink PowerDirector</a> (Paid $99.99-139.99) – Consumer video editing software with AI-powered features</li>
+</ul>
+</li>
+<li><h4 id="movie-making-production">Movie Making & Production</h4>
+<ol>
+<li><h5 id="pre-production-planning">Pre-Production & Planning</h5>
+<ul>
+<li><a href="https://www.finaldraft.com/" target="_blank" rel="noopener">Final Draft</a> (Paid $249.99) – Industry-standard screenwriting software used by major Hollywood studios for script development and collaboration</li>
+<li><a href="https://www.writerduet.com/" target="_blank" rel="noopener">WriterDuet</a> (Free/Paid $11.99/month) – Professional screenwriting software with real-time collaboration features used in film production</li>
+<li><a href="https://www.studiobinder.com/" target="_blank" rel="noopener">StudioBinder</a> (Free/Paid $29-99/month) – Complete pre-production suite with script breakdown, shot lists, call sheets, and scheduling</li>
+<li><a href="https://www.entertainmentpartners.com/products/movie-magic-scheduling/" target="_blank" rel="noopener">Movie Magic Scheduling</a> (Paid $499) – Industry-standard scheduling software for film and TV production used by major studios</li>
+<li><a href="https://www.entertainmentpartners.com/products/movie-magic-budgeting/" target="_blank" rel="noopener">Movie Magic Budgeting</a> (Paid $499) – Professional budgeting software for film and television production</li>
+<li><a href="https://www.gorillasoftware.com/" target="_blank" rel="noopener">Gorilla Scheduling</a> (Paid $899) – Film scheduling and budgeting software used by independent and studio productions</li>
+<li><a href="https://www.castnote.com/" target="_blank" rel="noopener">CastNote</a> (Paid $29-99/month) – Casting management software for organizing auditions, callbacks, and talent databases</li>
+<li><a href="https://www.castingnetworks.com/" target="_blank" rel="noopener">Casting Networks</a> (Paid $68-168/month) – Professional casting platform used by major studios and casting directors</li>
+<li><a href="https://www.setkeeper.com/" target="_blank" rel="noopener">SetKeeper</a> (Paid $25-75/month) – Production management software for call sheets, crew management, and communication</li>
+<li><a href="https://www.yamdu.com/" target="_blank" rel="noopener">Yamdu</a> (Free/Paid $39-199/month) – Cloud-based production management platform for film and TV projects</li>
+</ul>
+</li>
+<li><h5 id="storyboard-previz">Storyboard & Previsualization</h5>
+<ul>
+<li><a href="https://www.toonboom.com/products/storyboard-pro" target="_blank" rel="noopener">Toon Boom Storyboard Pro</a> (Paid $53/month) – Professional storyboarding software used by major animation studios and film productions</li>
+<li><a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener">Adobe Photoshop</a> (Paid $20.99/month) – Industry-standard for digital storyboard creation and concept art in film production</li>
+<li><a href="https://www.foundry.com/products/modo" target="_blank" rel="noopener">Modo</a> (Paid $79/month) – 3D software used for previsualization and concept development in major film studios</li>
+<li><a href="https://www.autodesk.com/products/maya/overview" target="_blank" rel="noopener">Autodesk Maya</a> (Paid $225/month) – Industry-standard 3D software for previsualization, animation, and VFX in Hollywood productions</li>
+<li><a href="https://www.shotpro.com/" target="_blank" rel="noopener">ShotPro</a> (Paid $29.99) – 3D camera and staging app for directors and cinematographers to plan shots</li>
+<li><a href="https://www.frameforge.com/" target="_blank" rel="noopener">FrameForge</a> (Paid $399-799) – 3D storyboarding and previsualization software for film and television</li>
+<li><a href="https://www.powerproduction.com/" target="_blank" rel="noopener">PowerProduction StoryBoard Quick</a> (Paid $199-399) – Storyboarding software with pre-drawn characters and backgrounds</li>
+<li><a href="https://www.storyboarder.io/" target="_blank" rel="noopener">Storyboarder</a> (Free) – Open-source storyboarding software with drawing tools and shot planning features</li>
+<li><a href="https://www.celtx.com/" target="_blank" rel="noopener">Celtx</a> (Free/Paid $7.50-20/month) – Pre-production suite with storyboarding, shot lists, and scheduling tools</li>
+<li><a href="https://www.artemis-hd.com/" target="_blank" rel="noopener">Artemis HD</a> (Paid $29.99) – Director's viewfinder app for shot composition and lens selection</li>
+</ul>
+</li>
+<li><h5 id="production-management">Production Management</h5>
+<ul>
+<li><a href="https://www.setkeeper.com/" target="_blank" rel="noopener">SetKeeper</a> (Paid $25-75/month) – Production management software for call sheets, crew management, and daily operations</li>
+<li><a href="https://www.studiobinder.com/" target="_blank" rel="noopener">StudioBinder</a> (Free/Paid $29-99/month) – All-in-one production management with shot lists, call sheets, and crew communication</li>
+<li><a href="https://www.scenechronize.com/" target="_blank" rel="noopener">SceneChronize</a> (Paid $19.99/month) – Script supervision and continuity software for tracking shots and takes</li>
+<li><a href="https://www.scriptation.com/" target="_blank" rel="noopener">Scriptation</a> (Free/Paid $9.99/month) – Digital script annotation and note-taking app for directors and script supervisors</li>
+<li><a href="https://www.pomfort.com/silverstack/" target="_blank" rel="noopener">Silverstack</a> (Paid $690-1490) – Professional dailies and media management software used by major film productions</li>
+<li><a href="https://www.assimilateinc.com/products/scratch/" target="_blank" rel="noopener">Assimilate Scratch</a> (Paid $1000-5000) – Professional dailies and color grading software for film and TV post-production</li>
+<li><a href="https://www.redcine-x.com/" target="_blank" rel="noopener">REDCINE-X PRO</a> (Free) – Professional media management and processing software for RED camera footage</li>
+<li><a href="https://www.blackmagicdesign.com/products/davinciresolve/" target="_blank" rel="noopener">DaVinci Resolve</a> (Free/Paid $295) – Complete post-production suite with media management, editing, color, and audio</li>
+<li><a href="https://www.avid.com/media-composer" target="_blank" rel="noopener">Avid Media Composer</a> (Free/Paid $23.99/month) – Industry-standard editing system with advanced media management for large productions</li>
+<li><a href="https://www.adobe.com/products/premiere.html" target="_blank" rel="noopener">Adobe Premiere Pro</a> (Paid $20.99/month) – Professional video editing software with team collaboration features</li>
+</ul>
+</li>
+<li><h5 id="post-production-workflow">Post-Production Workflow</h5>
+<ul>
+<li><a href="https://www.avid.com/media-composer" target="_blank" rel="noopener">Avid Media Composer</a> (Free/Paid $23.99/month) – Industry-standard editing system used by major Hollywood studios for feature films and TV</li>
+<li><a href="https://www.adobe.com/products/premiere.html" target="_blank" rel="noopener">Adobe Premiere Pro</a> (Paid $20.99/month) – Professional video editing software with seamless Creative Cloud integration</li>
+<li><a href="https://www.blackmagicdesign.com/products/davinciresolve/" target="_blank" rel="noopener">DaVinci Resolve</a> (Free/Paid $295) – Complete post-production suite with editing, color grading, VFX, and audio mixing</li>
+<li><a href="https://www.apple.com/final-cut-pro/" target="_blank" rel="noopener">Final Cut Pro</a> (Paid $299.99 Mac only) – Professional editing software with advanced color grading and motion graphics</li>
+<li><a href="https://www.adobe.com/products/aftereffects.html" target="_blank" rel="noopener">Adobe After Effects</a> (Paid $20.99/month) – Industry-standard compositing and VFX software for motion graphics and visual effects</li>
+<li><a href="https://www.foundry.com/products/nuke" target="_blank" rel="noopener">Foundry Nuke</a> (Paid $4975-9750) – Professional compositing software used for VFX in major Hollywood blockbusters</li>
+<li><a href="https://www.autodesk.com/products/flame/overview" target="_blank" rel="noopener">Autodesk Flame</a> (Paid $4005/year) – High-end finishing and effects software for film and broadcast post-production</li>
+<li><a href="https://www.autodesk.com/products/smoke/overview" target="_blank" rel="noopener">Autodesk Smoke</a> (Paid $1620/year) – Professional editing and finishing software for broadcast and film</li>
+<li><a href="https://www.avid.com/pro-tools" target="_blank" rel="noopener">Avid Pro Tools</a> (Paid $29.99/month) – Industry-standard digital audio workstation for film and TV sound post-production</li>
+<li><a href="https://www.steinberg.net/nuendo/" target="_blank" rel="noopener">Steinberg Nuendo</a> (Paid $1999) – Professional audio post-production software for film, TV, and game audio</li>
+<li><a href="https://www.adobe.com/products/audition.html" target="_blank" rel="noopener">Adobe Audition</a> (Paid $20.99/month) – Professional audio editing and mixing software for post-production</li>
+<li><a href="https://www.fairlight.tv/" target="_blank" rel="noopener">Fairlight</a> (Integrated with DaVinci Resolve) – Professional audio post-production console and software system</li>
+<li><a href="https://www.filmlight.ltd.uk/products/baselight/baselight_overview.php" target="_blank" rel="noopener">FilmLight Baselight</a> (Paid $30000+) – High-end color grading system used by major post-production facilities</li>
+<li><a href="https://www.autodesk.com/products/lustre/overview" target="_blank" rel="noopener">Autodesk Lustre</a> (Paid $16000+) – Professional color grading and finishing system for film and broadcast</li>
+<li><a href="https://www.pomfort.com/livegrade/" target="_blank" rel="noopener">Pomfort LiveGrade</a> (Paid $1690-3490) – Professional on-set color grading and look management software</li>
+<li><a href="https://www.assimilateinc.com/products/scratch/" target="_blank" rel="noopener">Assimilate Scratch</a> (Paid $1000-5000) – Professional color grading and finishing software for film and TV</li>
+<li><a href="https://www.sgosoftware.com/products/mistika/" target="_blank" rel="noopener">SGO Mistika</a> (Paid $15000+) – High-end post-production suite for editing, color, VFX, and finishing</li>
+<li><a href="https://www.quantel.com/products/pablo-rio/" target="_blank" rel="noopener">Quantel Pablo Rio</a> (Paid $25000+) – Professional color grading and finishing system for broadcast and film</li>
+<li><a href="https://www.eyeonline.com/products/fusion/" target="_blank" rel="noopener">Blackmagic Fusion</a> (Free/Paid $295) – Professional compositing and VFX software integrated with DaVinci Resolve</li>
+<li><a href="https://www.thefoundry.co.uk/products/mari/" target="_blank" rel="noopener">Foundry Mari</a> (Paid $1799) – 3D texture painting software used for VFX and animation in major film productions</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><h4 id="photography-image-editing">Photography & Image Editing</h4>
+<ul>
+<li><a href="https://www.adobe.com/products/photoshop-lightroom.html" target="_blank" rel="noopener">Adobe Lightroom</a> (Paid $9.99/month) – Photo editing and organization software for photographers with RAW processing capabilities</li>
+<li><a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener">Adobe Photoshop</a> (Paid $20.99/month) – Industry-standard image editing software for photo manipulation, digital art, and graphic design</li>
+<li><a href="https://www.captureone.com/" target="_blank" rel="noopener">Capture One</a> (Paid $24/month) – Professional RAW image editing software with advanced color grading and tethering capabilities</li>
+<li><a href="https://luminar.skylum.com/" target="_blank" rel="noopener">Luminar AI</a> (Paid $79) – AI-powered photo editing software with intelligent enhancement tools</li>
+<li><a href="https://www.on1.com/products/photo-raw/" target="_blank" rel="noopener">ON1 Photo RAW</a> (Paid $99.99) – Complete photo editing solution with RAW processing, effects, and organization</li>
+<li><a href="https://www.darktable.org/" target="_blank" rel="noopener">darktable</a> (Free) – Open-source photography workflow application and RAW developer</li>
+<li><a href="https://rawtherapee.com/" target="_blank" rel="noopener">RawTherapee</a> (Free) – Powerful cross-platform RAW photo processing program</li>
+<li><a href="https://www.gimp.org/" target="_blank" rel="noopener">GIMP</a> (Free) – GNU Image Manipulation Program for photo retouching, image composition, and image authoring</li>
+<li><a href="https://affinity.serif.com/en-us/photo/" target="_blank" rel="noopener">Affinity Photo</a> (Paid $69.99) – Professional photo editing software for desktop and iPad</li>
+<li><a href="https://www.paintshoppro.com/" target="_blank" rel="noopener">Corel PaintShop Pro</a> (Paid $79.99) – Photo editing and graphic design software with AI-powered features</li>
+<li><a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a> (Free/Paid $14.99/month) – Online design platform with photo editing capabilities and templates</li>
+<li><a href="https://www.photopea.com/" target="_blank" rel="noopener">Photopea</a> (Free) – Browser-based photo editor supporting PSD, XCF, Sketch, XD, and CDR formats</li>
+<li><a href="https://www.remove.bg/" target="_blank" rel="noopener">Remove.bg</a> (Free/Paid) – AI-powered background removal tool for photos</li>
+<li><a href="https://www.topazlabs.com/" target="_blank" rel="noopener">Topaz Labs</a> (Paid $79.99-199.99) – AI-powered photo enhancement software including DeNoise AI, Sharpen AI, and Gigapixel AI</li>
+<li><a href="https://www.dxo.com/dxo-photolab/" target="_blank" rel="noopener">DxO PhotoLab</a> (Paid $129-219) – RAW photo editing software with advanced noise reduction and lens corrections</li>
+<li><a href="https://www.acdsee.com/en/products/photo-studio-ultimate/" target="_blank" rel="noopener">ACDSee Photo Studio Ultimate</a> (Paid $149.99) – Complete photo management and editing solution</li>
+<li><a href="https://www.cyberlink.com/products/photodirector-photo-editing-software/features_en_US.html" target="_blank" rel="noopener">CyberLink PhotoDirector</a> (Paid $99.99) – Photo editing software with AI-powered tools and creative effects</li>
+<li><a href="https://www.zoner.com/us/photo-studio" target="_blank" rel="noopener">Zoner Photo Studio X</a> (Paid $59) – Complete photo management and editing software</li>
+<li><a href="https://www.phase-one.com/en/Capture-One" target="_blank" rel="noopener">Phase One Capture One</a> (Paid $299) – Professional RAW converter and image editing software</li>
+<li><a href="https://www.exposure.software/" target="_blank" rel="noopener">Exposure X7</a> (Paid $149) – Creative photo editor with film emulation and artistic effects</li>
+</ul>
+</li>
+<li><h4 id="creative-writing-content">Creative Writing & Content</h4>
+<ol>
+<li><h5 id="screenplay-writing">Screenplay Writing Software</h5>
+<ul>
+<li><a href="https://www.finaldraft.com/" target="_blank" rel="noopener">Final Draft</a> (Paid $249.99) – Industry-standard screenwriting software for film, television, and theater with professional formatting and collaboration tools</li>
+<li><a href="https://www.literatureandlatte.com/scrivener/overview" target="_blank" rel="noopener">Scrivener</a> (Paid $59.99) – Writing software for authors and screenwriters with organizational tools, research capabilities, and screenplay formatting</li>
+<li><a href="https://www.storyist.com/" target="_blank" rel="noopener">Storyist</a> (Paid $59) – Writing software for novelists and screenwriters with story development tools and industry-standard script formatting</li>
+<li><a href="https://www.writerduet.com/" target="_blank" rel="noopener">WriterDuet</a> (Free/Paid $11.99/month) – Professional screenwriting software with real-time collaboration and industry-standard formatting</li>
+<li><a href="https://www.celtx.com/" target="_blank" rel="noopener">Celtx</a> (Free/Paid $7.50-20/month) – Screenwriting and pre-production software with script formatting, storyboarding, and scheduling tools</li>
+<li><a href="https://www.highland2.app/" target="_blank" rel="noopener">Highland</a> (Paid $49.99) – Screenwriting app that uses plain text with Fountain markup for distraction-free writing</li>
+<li><a href="https://www.trelby.org/" target="_blank" rel="noopener">Trelby</a> (Free) – Open-source screenwriting software with industry-standard formatting and character name database</li>
+<li><a href="https://kitscenarist.ru/en/" target="_blank" rel="noopener">KIT Scenarist</a> (Free) – Open-source screenwriting software with research tools, character development, and script analysis</li>
+<li><a href="https://www.amazon.com/gp/product/B00LWTRQHK" target="_blank" rel="noopener">Amazon Storywriter</a> (Free) – Cloud-based screenwriting tool with automatic formatting and Amazon Studios integration</li>
+<li><a href="https://www.studiobinder.com/script-writing-software/" target="_blank" rel="noopener">StudioBinder</a> (Free/Paid $29-99/month) – Screenwriting software integrated with production management tools for film and TV</li>
+</ul>
+</li>
+<li><h5 id="general-writing-tools">General Writing & Content Tools</h5>
+<ul>
+<li><a href="https://www.writerinabox.com/" target="_blank" rel="noopener">Writer in a Box</a> (Paid $59.95) – Creative writing software with story development tools and character management for novelists</li>
+<li><a href="https://www.notion.so/" target="_blank" rel="noopener">Notion</a> (Free/Paid $8/month) – All-in-one workspace for notes, tasks, wikis, and databases with collaborative features</li>
+<li><a href="https://obsidian.md/" target="_blank" rel="noopener">Obsidian</a> (Free/Paid $50/year) – Knowledge management and note-taking app with linking and graph view capabilities</li>
+<li><a href="https://www.ulysses.app/" target="_blank" rel="noopener">Ulysses</a> (Paid $5.99/month) – Writing app for Mac and iOS with distraction-free interface and publishing features</li>
+<li><a href="https://www.campfiretechnology.com/" target="_blank" rel="noopener">Campfire Write</a> (Paid $49.99) – Writing software designed for fiction writers with world-building and character development tools</li>
+<li><a href="https://www.artofwriting.com/" target="_blank" rel="noopener">yWriter</a> (Free) – Word processor designed for writers with scene and chapter organization</li>
+<li><a href="https://www.grammarly.com/" target="_blank" rel="noopener">Grammarly</a> (Free/Paid $12/month) – AI-powered writing assistant for grammar, spelling, and style checking</li>
+<li><a href="https://hemingwayapp.com/" target="_blank" rel="noopener">Hemingway Editor</a> (Free/Paid $19.99) – Writing app that highlights complex sentences and common errors</li>
+<li><a href="https://www.prowritingaid.com/" target="_blank" rel="noopener">ProWritingAid</a> (Free/Paid $79/year) – Grammar checker, style editor, and writing mentor in one package</li>
+<li><a href="https://www.worldanvil.com/" target="_blank" rel="noopener">World Anvil</a> (Free/Paid $5-25/month) – World-building and campaign management platform for writers and game masters</li>
+<li><a href="https://www.milanote.com/" target="_blank" rel="noopener">Milanote</a> (Free/Paid $12.50/month) – Visual project management tool for creative work and research organization</li>
+<li><a href="https://www.aeon.co/timeline" target="_blank" rel="noopener">Aeon Timeline</a> (Paid $65) – Timeline software for writers, project managers, and researchers</li>
+<li><a href="https://www.writeway.com/" target="_blank" rel="noopener">WriteWay</a> (Paid $19.99) – Distraction-free writing app with organizational features</li>
+<li><a href="https://www.manuskript.app/" target="_blank" rel="noopener">Manuskript</a> (Free) – Open-source tool for writers with outlining, character management, and plot development</li>
+<li><a href="https://www.bibisco.com/" target="_blank" rel="noopener">bibisco</a> (Free/Paid $25) – Novel writing software with character development and scene analysis tools</li>
+<li><a href="https://www.novlr.org/" target="_blank" rel="noopener">Novlr</a> (Free/Paid $10/month) – Cloud-based writing platform designed specifically for novelists</li>
+<li><a href="https://www.jasper.ai/" target="_blank" rel="noopener">Jasper AI</a> (Paid $49/month) – AI writing assistant for marketing copy, blog posts, and creative content</li>
+<li><a href="https://www.sudowrite.com/" target="_blank" rel="noopener">Sudowrite</a> (Paid $10-25/month) – AI writing assistant specifically designed for creative fiction writing</li>
+<li><a href="https://www.plottr.com/" target="_blank" rel="noopener">Plottr</a> (Paid $25) – Visual story planning software for outlining plots, characters, and timelines</li>
+<li><a href="https://www.atticus.io/" target="_blank" rel="noopener">Atticus</a> (Paid $147) – All-in-one book writing and formatting software for authors and publishers</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><h4 id="3d-modeling-rendering">3D Modeling & Rendering</h4>
+<ul>
+<li><a href="https://www.blender.org/" target="_blank" rel="noopener">Blender</a> (Free) – Open-source 3D creation suite supporting modeling, rigging, animation, simulation, rendering, compositing, and motion tracking</li>
+<li><a href="https://www.autodesk.com/products/maya/overview" target="_blank" rel="noopener">Autodesk Maya</a> (Paid $225/month) – 3D computer animation, modeling, simulation, and rendering software used in film and games</li>
+<li><a href="https://www.autodesk.com/products/3ds-max/overview" target="_blank" rel="noopener">Autodesk 3ds Max</a> (Paid $225/month) – 3D modeling, animation, and rendering software for games, film, and motion graphics</li>
+<li><a href="https://www.maxon.net/en/cinema-4d" target="_blank" rel="noopener">Cinema 4D</a> (Paid $94/month) – 3D modeling, animation, and rendering software known for motion graphics and visual effects</li>
+<li><a href="https://www.foundry.com/products/modo" target="_blank" rel="noopener">Modo</a> (Paid $79/month) – 3D modeling, texturing, and rendering application with advanced subdivision surface tools</li>
+<li><a href="https://www.sidefx.com/products/houdini/" target="_blank" rel="noopener">Houdini</a> (Free/Paid $269-4495) – 3D procedural software for modeling, rigging, animation, VFX, look development, lighting, and rendering</li>
+<li><a href="https://www.sketchup.com/" target="_blank" rel="noopener">SketchUp</a> (Free/Paid $119-299/year) – 3D modeling software for architectural, interior design, landscape architecture, and video game design</li>
+<li><a href="https://www.rhino3d.com/" target="_blank" rel="noopener">Rhino 3D</a> (Paid $995) – 3D computer graphics and computer-aided design application software</li>
+<li><a href="https://www.zbrushcentral.com/" target="_blank" rel="noopener">ZBrush</a> (Paid $39.95/month) – Digital sculpting tool that combines 3D/2.5D modeling, texturing, and painting</li>
+<li><a href="https://www.mudbox.com/" target="_blank" rel="noopener">Autodesk Mudbox</a> (Paid $10/month) – 3D sculpting and painting software for creating detailed characters and environments</li>
+<li><a href="https://www.keyshot.com/" target="_blank" rel="noopener">KeyShot</a> (Paid $99-1995) – Real-time ray tracing and global illumination rendering software</li>
+<li><a href="https://www.chaosgroup.com/vray" target="_blank" rel="noopener">V-Ray</a> (Paid $39-79/month) – 3D rendering software for visualization and computer graphics in industries including media, entertainment, film, and video games</li>
+<li><a href="https://www.otoy.com/render/octane-render/" target="_blank" rel="noopener">Octane Render</a> (Paid $19.99-699/month) – GPU-accelerated, unbiased, physically correct renderer</li>
+<li><a href="https://www.redshift3d.com/" target="_blank" rel="noopener">Redshift</a> (Paid $500) – GPU-accelerated biased renderer built to meet the specific demands of contemporary high-end production rendering</li>
+<li><a href="https://www.arnoldrenderer.com/" target="_blank" rel="noopener">Arnold</a> (Paid $45/month) – Advanced Monte Carlo ray tracing renderer built for the demands of feature-length animation and visual effects</li>
+<li><a href="https://www.luxcorerender.org/" target="_blank" rel="noopener">LuxCoreRender</a> (Free) – Physically based and unbiased rendering engine</li>
+<li><a href="https://www.cycles-renderer.org/" target="_blank" rel="noopener">Cycles</a> (Free) – Unbiased path tracing engine designed for animations and visual effects, integrated with Blender</li>
+<li><a href="https://www.substance3d.com/" target="_blank" rel="noopener">Substance 3D Suite</a> (Paid $19.99/month) – 3D texturing, modeling, and rendering tools including Painter, Designer, and Sampler</li>
+<li><a href="https://www.marmoset.co/toolbag/" target="_blank" rel="noopener">Marmoset Toolbag</a> (Paid $199) – Real-time material editor, renderer, and animation suite for 3D artists</li>
+<li><a href="https://www.daz3d.com/daz_studio" target="_blank" rel="noopener">DAZ Studio</a> (Free) – 3D figure customization, posing, and animation tool with extensive content library</li>
+</ul>
+</li>
+<li><h4 id="portfolio-showcase">Portfolio & Showcase Platforms</h4>
+<ul>
+<li><a href="https://www.behance.net/" target="_blank" rel="noopener">Behance</a> (Free) – Creative portfolio platform owned by Adobe for showcasing and discovering creative work</li>
+<li><a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a> (Free/Paid $8-12/month) – Community of designers sharing screenshots of their work, process, and projects</li>
+<li><a href="https://www.artstation.com/" target="_blank" rel="noopener">ArtStation</a> (Free/Paid $9.95/month) – Portfolio platform for games, film, media, and entertainment artists</li>
+<li><a href="https://www.deviantart.com/" target="_blank" rel="noopener">DeviantArt</a> (Free/Paid $4.95/month) – Online artwork, videography, and photography community platform</li>
+<li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> (Free) – Photo and video sharing social networking service popular among visual artists</li>
+<li><a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a> (Free) – Image sharing and discovery service for finding ideas and inspiration</li>
+<li><a href="https://www.flickr.com/" target="_blank" rel="noopener">Flickr</a> (Free/Paid $5.99/month) – Image hosting service and online community for photographers</li>
+<li><a href="https://500px.com/" target="_blank" rel="noopener">500px</a> (Free/Paid $13/month) – Photography community and marketplace for discovering, sharing, and selling photos</li>
+<li><a href="https://www.squarespace.com/" target="_blank" rel="noopener">Squarespace</a> (Paid $12-40/month) – Website builder with beautiful templates perfect for creative portfolios</li>
+<li><a href="https://www.wix.com/" target="_blank" rel="noopener">Wix</a> (Free/Paid $14-39/month) – Website builder with drag-and-drop functionality and portfolio templates</li>
+<li><a href="https://www.adobe.com/products/portfolio.html" target="_blank" rel="noopener">Adobe Portfolio</a> (Included with Creative Cloud) – Portfolio website builder integrated with Behance and Creative Cloud</li>
+<li><a href="https://www.format.com/" target="_blank" rel="noopener">Format</a> (Paid $6-25/month) – Portfolio website builder designed specifically for photographers and creative professionals</li>
+<li><a href="https://www.carbonmade.com/" target="_blank" rel="noopener">Carbonmade</a> (Free/Paid $12/month) – Simple portfolio website builder for creative professionals</li>
+<li><a href="https://www.crevado.com/" target="_blank" rel="noopener">Crevado</a> (Free/Paid $8-24/month) – Portfolio website builder with e-commerce capabilities for artists</li>
+<li><a href="https://www.pixpa.com/" target="_blank" rel="noopener">Pixpa</a> (Paid $5-25/month) – All-in-one platform for photographers and creative professionals to create portfolio websites</li>
+<li><a href="https://www.zenfolio.com/" target="_blank" rel="noopener">Zenfolio</a> (Paid $5-30/month) – Photography website builder with client galleries and e-commerce features</li>
+<li><a href="https://www.smugmug.com/" target="_blank" rel="noopener">SmugMug</a> (Paid $7-40/month) – Photo sharing service that allows users to upload photos and videos</li>
+<li><a href="https://www.tumblr.com/" target="_blank" rel="noopener">Tumblr</a> (Free) – Microblogging platform popular among artists for sharing visual content</li>
+<li><a href="https://www.etsy.com/" target="_blank" rel="noopener">Etsy</a> (Free to list/3.5% transaction fee) – E-commerce website focused on handmade or vintage items and craft supplies</li>
+<li><a href="https://society6.com/" target="_blank" rel="noopener">Society6</a> (Free) – Print-on-demand platform for artists to sell their designs on various products</li>
+</ul>
+</li>
+<li><h4 id="collaboration-project-management">Collaboration & Project Management</h4>
+<ul>
+<li><a href="https://www.figma.com/" target="_blank" rel="noopener">Figma</a> (Free/Paid $12/month) – Collaborative interface design tool with real-time collaboration features</li>
+<li><a href="https://www.invisionapp.com/" target="_blank" rel="noopener">InVision</a> (Free/Paid $7.95-99/month) – Digital product design platform with prototyping and collaboration tools</li>
+<li><a href="https://miro.com/" target="_blank" rel="noopener">Miro</a> (Free/Paid $8-16/month) – Online collaborative whiteboard platform for visual collaboration and brainstorming</li>
+<li><a href="https://www.notion.so/" target="_blank" rel="noopener">Notion</a> (Free/Paid $8/month) – All-in-one workspace for notes, tasks, wikis, and databases with team collaboration</li>
+<li><a href="https://trello.com/" target="_blank" rel="noopener">Trello</a> (Free/Paid $5-17.50/month) – Visual project management tool using boards, lists, and cards</li>
+<li><a href="https://asana.com/" target="_blank" rel="noopener">Asana</a> (Free/Paid $10.99-24.99/month) – Project management and team collaboration software</li>
+<li><a href="https://monday.com/" target="_blank" rel="noopener">Monday.com</a> (Paid $8-16/month) – Work operating system for managing projects, workflows, and team collaboration</li>
+<li><a href="https://slack.com/" target="_blank" rel="noopener">Slack</a> (Free/Paid $6.67-12.50/month) – Business communication platform with channels, direct messaging, and file sharing</li>
+<li><a href="https://discord.com/" target="_blank" rel="noopener">Discord</a> (Free/Paid $9.99/month) – Voice, video, and text communication service popular among creative communities</li>
+<li><a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" target="_blank" rel="noopener">Microsoft Teams</a> (Free/Paid $4-12.50/month) – Unified communication and collaboration platform</li>
+<li><a href="https://zoom.us/" target="_blank" rel="noopener">Zoom</a> (Free/Paid $14.99-19.99/month) – Video conferencing and online meeting platform</li>
+<li><a href="https://www.google.com/drive/" target="_blank" rel="noopener">Google Drive</a> (Free/Paid $1.99-9.99/month) – Cloud storage service with collaborative document editing</li>
+<li><a href="https://www.dropbox.com/" target="_blank" rel="noopener">Dropbox</a> (Free/Paid $9.99-25/month) – Cloud storage service with file synchronization and sharing</li>
+<li><a href="https://frame.io/" target="_blank" rel="noopener">Frame.io</a> (Paid $15-50/month) – Video collaboration platform for creative teams with review and approval workflows</li>
+<li><a href="https://www.wipster.io/" target="_blank" rel="noopener">Wipster</a> (Paid $15-35/month) – Video review and collaboration platform for creative teams</li>
+<li><a href="https://www.reviewboard.com/" target="_blank" rel="noopener">ReviewBoard</a> (Paid $15-35/month) – Creative review and approval platform for marketing and creative teams</li>
+<li><a href="https://www.conceptboard.com/" target="_blank" rel="noopener">Conceptboard</a> (Free/Paid $6-9.50/month) – Online whiteboard for visual collaboration and brainstorming</li>
+<li><a href="https://www.milanote.com/" target="_blank" rel="noopener">Milanote</a> (Free/Paid $12.50/month) – Visual project management tool for creative work and research organization</li>
+<li><a href="https://basecamp.com/" target="_blank" rel="noopener">Basecamp</a> (Paid $99/month) – Project management and team collaboration software with simple interface</li>
+<li><a href="https://www.airtable.com/" target="_blank" rel="noopener">Airtable</a> (Free/Paid $10-20/month) – Cloud collaboration service with spreadsheet-database hybrid functionality</li>
 </ul>
 </li>
 </ol>
@@ -1805,6 +2277,152 @@ Your writing assistant that never leaves your Mac. Powered by local AI models wi
 <li><a href="https://www.quotient.com/" target="_blank" rel="noopener">Quotient</a> (Paid) - CPQ (Configure, Price, Quote) software for complex product configurations</li>
 <li><a href="https://www.nusii.com/" target="_blank" rel="noopener">Nusii</a> (Paid) - Proposal software designed for agencies and freelancers with client approval workflows</li>
 <li><a href="https://www.bidsketch.com/" target="_blank" rel="noopener">Bidsketch</a> (Paid) - Proposal software with templates and client feedback management</li>
+</ul>
+</li>
+</ol>
+</section>
+
+<section id="analytics-data-science">
+<h2>Analytics & Data Science</h2>
+<ol>
+<li><h4 id="analytics-data-science">Analytics & Data Science</h4>
+<ul>
+<li><a href="https://analytics.google.com/" target="_blank" rel="noopener">Google Analytics</a> (Free/Paid) - Web analytics platform for tracking website performance and user behavior</li>
+<li><a href="https://app.posthog.com/" target="_blank" rel="noopener">PostHog</a> (Free/Paid) - Open-source product analytics platform for web and mobile apps</li>
+<li><a href="https://www.tableau.com/" target="_blank" rel="noopener">Tableau</a> (Free/Paid) - Leading data visualization and business intelligence platform</li>
+<li><a href="https://powerbi.microsoft.com/" target="_blank" rel="noopener">Microsoft Power BI</a> (Free/Paid) - Business analytics solution for data visualization and sharing insights</li>
+<li><a href="https://www.mixpanel.com/" target="_blank" rel="noopener">Mixpanel</a> (Free/Paid) - Advanced analytics platform for tracking user interactions and product usage</li>
+<li><a href="https://amplitude.com/" target="_blank" rel="noopener">Amplitude</a> (Free/Paid) - Product analytics platform for understanding user behavior and driving growth</li>
+<li><a href="https://www.hotjar.com/" target="_blank" rel="noopener">Hotjar</a> (Free/Paid) - Website heatmaps, session recordings, and user feedback tools</li>
+<li><a href="https://www.fullstory.com/" target="_blank" rel="noopener">FullStory</a> (Paid) - Digital experience analytics platform with session replay and heatmaps</li>
+<li><a href="https://www.segment.com/" target="_blank" rel="noopener">Segment</a> (Free/Paid) - Customer data platform for collecting, cleaning, and controlling data</li>
+<li><a href="https://www.looker.com/" target="_blank" rel="noopener">Looker</a> (Paid) - Modern business intelligence and data platform by Google Cloud</li>
+</ul>
+</li>
+<li><h4 id="machine-learning">Machine Learning</h4>
+<ul>
+<li><a href="https://www.tensorflow.org/" target="_blank" rel="noopener">TensorFlow</a> (Free) - Open-source machine learning framework by Google</li>
+<li><a href="https://pytorch.org/" target="_blank" rel="noopener">PyTorch</a> (Free) - Open-source machine learning library developed by Facebook</li>
+<li><a href="https://scikit-learn.org/" target="_blank" rel="noopener">Scikit-learn</a> (Free) - Machine learning library for Python with simple and efficient tools</li>
+<li><a href="https://keras.io/" target="_blank" rel="noopener">Keras</a> (Free) - High-level neural networks API for deep learning</li>
+<li><a href="https://www.h2o.ai/" target="_blank" rel="noopener">H2O.ai</a> (Free/Paid) - Open-source machine learning platform for enterprises</li>
+<li><a href="https://aws.amazon.com/sagemaker/" target="_blank" rel="noopener">Amazon SageMaker</a> (Paid) - Fully managed machine learning service by AWS</li>
+<li><a href="https://cloud.google.com/ai-platform" target="_blank" rel="noopener">Google AI Platform</a> (Paid) - Machine learning platform for building and deploying ML models</li>
+<li><a href="https://azure.microsoft.com/en-us/services/machine-learning/" target="_blank" rel="noopener">Azure Machine Learning</a> (Paid) - Cloud-based machine learning service by Microsoft</li>
+<li><a href="https://www.datarobot.com/" target="_blank" rel="noopener">DataRobot</a> (Paid) - Automated machine learning platform for enterprises</li>
+<li><a href="https://www.databricks.com/" target="_blank" rel="noopener">Databricks</a> (Paid) - Unified analytics platform for big data and machine learning</li>
+</ul>
+</li>
+<li><h4 id="data-visualization">Data Visualization</h4>
+<ul>
+<li><a href="https://d3js.org/" target="_blank" rel="noopener">D3.js</a> (Free) - JavaScript library for creating dynamic, interactive data visualizations</li>
+<li><a href="https://plotly.com/" target="_blank" rel="noopener">Plotly</a> (Free/Paid) - Interactive graphing library for Python, R, and JavaScript</li>
+<li><a href="https://www.qlik.com/us/products/qlikview" target="_blank" rel="noopener">QlikView</a> (Paid) - Business intelligence and data visualization platform</li>
+<li><a href="https://www.sisense.com/" target="_blank" rel="noopener">Sisense</a> (Paid) - Business intelligence software for complex data analysis</li>
+<li><a href="https://www.chartjs.org/" target="_blank" rel="noopener">Chart.js</a> (Free) - Simple yet flexible JavaScript charting library</li>
+<li><a href="https://observablehq.com/" target="_blank" rel="noopener">Observable</a> (Free/Paid) - Platform for collaborative data visualization and analysis</li>
+<li><a href="https://www.metabase.com/" target="_blank" rel="noopener">Metabase</a> (Free/Paid) - Open-source business intelligence tool for data visualization</li>
+<li><a href="https://grafana.com/" target="_blank" rel="noopener">Grafana</a> (Free/Paid) - Open-source platform for monitoring and observability</li>
+<li><a href="https://superset.apache.org/" target="_blank" rel="noopener">Apache Superset</a> (Free) - Modern data exploration and visualization platform</li>
+<li><a href="https://www.domo.com/" target="_blank" rel="noopener">Domo</a> (Paid) - Cloud-based business intelligence platform</li>
+</ul>
+</li>
+<li><h4 id="data-science-tools">Data Science Tools</h4>
+<ul>
+<li><a href="https://jupyter.org/" target="_blank" rel="noopener">Jupyter Notebook</a> (Free) - Interactive computing environment for data science and research</li>
+<li><a href="https://www.anaconda.com/" target="_blank" rel="noopener">Anaconda</a> (Free/Paid) - Python and R distribution for data science and machine learning</li>
+<li><a href="https://www.rstudio.com/" target="_blank" rel="noopener">RStudio</a> (Free/Paid) - Integrated development environment for R programming</li>
+<li><a href="https://pandas.pydata.org/" target="_blank" rel="noopener">Pandas</a> (Free) - Data manipulation and analysis library for Python</li>
+<li><a href="https://numpy.org/" target="_blank" rel="noopener">NumPy</a> (Free) - Fundamental package for scientific computing with Python</li>
+<li><a href="https://www.knime.com/" target="_blank" rel="noopener">KNIME</a> (Free/Paid) - Open-source analytics platform for data science</li>
+<li><a href="https://rapidminer.com/" target="_blank" rel="noopener">RapidMiner</a> (Free/Paid) - Data science platform for teams</li>
+<li><a href="https://www.alteryx.com/" target="_blank" rel="noopener">Alteryx</a> (Paid) - Self-service data analytics platform</li>
+<li><a href="https://www.sas.com/" target="_blank" rel="noopener">SAS</a> (Paid) - Advanced analytics, business intelligence and data management</li>
+<li><a href="https://www.spss.com/" target="_blank" rel="noopener">SPSS</a> (Paid) - Statistical software package for data analysis</li>
+</ul>
+</li>
+<li><h4 id="data-science-certifications">Data Science Certifications</h4>
+<ul>
+<li><a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" rel="noopener">Google Data Analytics Certificate</a> (Paid) - Professional certificate program for data analytics</li>
+<li><a href="https://www.coursera.org/specializations/data-science-python" target="_blank" rel="noopener">Applied Data Science with Python</a> (Paid) - University of Michigan specialization on Coursera</li>
+<li><a href="https://www.edx.org/professional-certificate/harvardx-data-science" target="_blank" rel="noopener">Harvard Data Science Certificate</a> (Free/Paid) - Professional certificate from Harvard University</li>
+<li><a href="https://aws.amazon.com/certification/certified-data-analytics-specialty/" target="_blank" rel="noopener">AWS Certified Data Analytics</a> (Paid) - Specialty certification for data analytics on AWS</li>
+<li><a href="https://cloud.google.com/certification/data-engineer" target="_blank" rel="noopener">Google Cloud Data Engineer</a> (Paid) - Professional certification for data engineering</li>
+<li><a href="https://www.microsoft.com/en-us/learning/azure-data-scientist-associate.aspx" target="_blank" rel="noopener">Azure Data Scientist Associate</a> (Paid) - Microsoft certification for data science</li>
+<li><a href="https://www.tableau.com/learn/certification" target="_blank" rel="noopener">Tableau Certification</a> (Paid) - Professional certification for Tableau skills</li>
+<li><a href="https://www.sas.com/en_us/certification.html" target="_blank" rel="noopener">SAS Certification</a> (Paid) - Professional certification for SAS analytics</li>
+<li><a href="https://www.cloudera.com/about/training/certification.html" target="_blank" rel="noopener">Cloudera Certification</a> (Paid) - Big data and machine learning certifications</li>
+<li><a href="https://www.databricks.com/learn/certification" target="_blank" rel="noopener">Databricks Certification</a> (Paid) - Certification for Apache Spark and data engineering</li>
+</ul>
+</li>
+<li><h4 id="data-science-resources">Data Science Resources</h4>
+<ul>
+<li><a href="https://www.kaggle.com/" target="_blank" rel="noopener">Kaggle</a> (Free) - Platform for data science competitions, datasets, and learning</li>
+<li><a href="https://github.com/academic/awesome-datascience" target="_blank" rel="noopener">Awesome Data Science</a> (Free) - Curated list of data science resources and tools</li>
+<li><a href="https://www.datacamp.com/" target="_blank" rel="noopener">DataCamp</a> (Free/Paid) - Interactive learning platform for data science and analytics</li>
+<li><a href="https://www.coursera.org/browse/data-science" target="_blank" rel="noopener">Coursera Data Science</a> (Free/Paid) - Online courses and specializations in data science</li>
+<li><a href="https://www.edx.org/learn/data-science" target="_blank" rel="noopener">edX Data Science</a> (Free/Paid) - University-level data science courses</li>
+<li><a href="https://www.udacity.com/school-of-data-science" target="_blank" rel="noopener">Udacity Data Science</a> (Paid) - Nanodegree programs in data science and machine learning</li>
+<li><a href="https://towardsdatascience.com/" target="_blank" rel="noopener">Towards Data Science</a> (Free) - Medium publication for data science articles and tutorials</li>
+<li><a href="https://www.kdnuggets.com/" target="_blank" rel="noopener">KDnuggets</a> (Free) - Leading site on AI, analytics, big data, data mining, and data science</li>
+<li><a href="https://www.analyticsvidhya.com/" target="_blank" rel="noopener">Analytics Vidhya</a> (Free/Paid) - Community platform for analytics and data science professionals</li>
+<li><a href="https://datasciencecentral.com/" target="_blank" rel="noopener">Data Science Central</a> (Free) - Online resource portal for data practitioners</li>
+</ul>
+</li>
+<li><h4 id="data-science-books">Data Science Books</h4>
+<ul>
+<li><a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/" target="_blank" rel="noopener">Hands-On Machine Learning</a> (Paid) - Comprehensive guide to machine learning with Python</li>
+<li><a href="https://www.oreilly.com/library/view/python-for-data/9781491957653/" target="_blank" rel="noopener">Python for Data Analysis</a> (Paid) - Essential tools for working with data in Python</li>
+<li><a href="https://www.statlearning.com/" target="_blank" rel="noopener">Introduction to Statistical Learning</a> (Free PDF) - Accessible overview of statistical learning methods</li>
+<li><a href="https://web.stanford.edu/~hastie/ElemStatLearn/" target="_blank" rel="noopener">Elements of Statistical Learning</a> (Free PDF) - Comprehensive reference for statistical learning</li>
+<li><a href="https://www.oreilly.com/library/view/data-science-from/9781492041122/" target="_blank" rel="noopener">Data Science from Scratch</a> (Paid) - Building data science tools from first principles</li>
+<li><a href="https://www.manning.com/books/deep-learning-with-python" target="_blank" rel="noopener">Deep Learning with Python</a> (Paid) - Practical guide to deep learning with Keras</li>
+<li><a href="https://www.oreilly.com/library/view/building-machine-learning/9781492045106/" target="_blank" rel="noopener">Building Machine Learning Powered Applications</a> (Paid) - End-to-end guide to ML product development</li>
+<li><a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/" target="_blank" rel="noopener">Designing Data-Intensive Applications</a> (Paid) - Principles behind reliable, scalable systems</li>
+<li><a href="https://www.oreilly.com/library/view/the-hundred-page/9781492092506/" target="_blank" rel="noopener">The Hundred-Page Machine Learning Book</a> (Paid) - Concise overview of machine learning</li>
+<li><a href="https://www.oreilly.com/library/view/storytelling-with-data/9781119002253/" target="_blank" rel="noopener">Storytelling with Data</a> (Paid) - Guide to effective data visualization and communication</li>
+</ul>
+</li>
+<li><h4 id="data-science-conferences">Data Science Conferences</h4>
+<ul>
+<li><a href="https://www.strata.com/" target="_blank" rel="noopener">Strata Data Conference</a> (Paid) - Premier conference for data science and big data</li>
+<li><a href="https://pydata.org/" target="_blank" rel="noopener">PyData</a> (Paid) - Global network of conferences for Python data science community</li>
+<li><a href="https://www.kdnuggets.com/meetings/" target="_blank" rel="noopener">KDD Conference</a> (Paid) - ACM SIGKDD Conference on Knowledge Discovery and Data Mining</li>
+<li><a href="https://nips.cc/" target="_blank" rel="noopener">NeurIPS</a> (Paid) - Conference on Neural Information Processing Systems</li>
+<li><a href="https://icml.cc/" target="_blank" rel="noopener">ICML</a> (Paid) - International Conference on Machine Learning</li>
+<li><a href="https://www.datacouncil.ai/" target="_blank" rel="noopener">Data Council</a> (Paid) - Community-driven conferences for data professionals</li>
+<li><a href="https://www.re-work.co/events" target="_blank" rel="noopener">RE•WORK</a> (Paid) - AI and deep learning conferences and summits</li>
+<li><a href="https://www.odsc.com/" target="_blank" rel="noopener">ODSC</a> (Free/Paid) - Open Data Science Conference</li>
+<li><a href="https://www.dataengconf.com/" target="_blank" rel="noopener">DataEngConf</a> (Paid) - Conference focused on data engineering</li>
+<li><a href="https://www.mlconf.com/" target="_blank" rel="noopener">MLconf</a> (Paid) - Machine learning conference series</li>
+</ul>
+</li>
+<li><h4 id="data-science-jobs">Data Science Jobs</h4>
+<ul>
+<li><a href="https://www.kaggle.com/jobs" target="_blank" rel="noopener">Kaggle Jobs</a> (Free) - Data science job board by Kaggle</li>
+<li><a href="https://jobs.lever.co/search?team=Data%20Science" target="_blank" rel="noopener">Lever Data Science Jobs</a> (Free) - Data science positions across companies</li>
+<li><a href="https://www.indeed.com/q-data-scientist-jobs.html" target="_blank" rel="noopener">Indeed Data Science</a> (Free) - Data science job listings on Indeed</li>
+<li><a href="https://www.glassdoor.com/Jobs/data-scientist-jobs-SRCH_KO0,14.htm" target="_blank" rel="noopener">Glassdoor Data Science</a> (Free) - Data science jobs with salary insights</li>
+<li><a href="https://www.linkedin.com/jobs/data-scientist-jobs/" target="_blank" rel="noopener">LinkedIn Data Science</a> (Free) - Professional network for data science careers</li>
+<li><a href="https://angel.co/jobs#find/f!%7B%22types%22%3A%5B%22full-time%22%5D%2C%22roles%22%3A%5B%22Data%20Scientist%22%5D%7D" target="_blank" rel="noopener">AngelList Data Science</a> (Free) - Startup data science opportunities</li>
+<li><a href="https://www.ziprecruiter.com/Jobs/Data-Scientist" target="_blank" rel="noopener">ZipRecruiter Data Science</a> (Free) - Data science job search platform</li>
+<li><a href="https://www.monster.com/jobs/search/?q=data-scientist" target="_blank" rel="noopener">Monster Data Science</a> (Free) - Data science career opportunities</li>
+<li><a href="https://www.dice.com/jobs/q-data+scientist-jobs" target="_blank" rel="noopener">Dice Data Science</a> (Free) - Tech-focused job board for data science</li>
+<li><a href="https://www.careerbuilder.com/jobs-data-scientist" target="_blank" rel="noopener">CareerBuilder Data Science</a> (Free) - Data science job listings and career resources</li>
+</ul>
+</li>
+<li><h4 id="data-science-communities">Data Science Communities</h4>
+<ul>
+<li><a href="https://www.reddit.com/r/datascience/" target="_blank" rel="noopener">r/datascience</a> (Free) - Reddit community for data science discussions</li>
+<li><a href="https://www.reddit.com/r/MachineLearning/" target="_blank" rel="noopener">r/MachineLearning</a> (Free) - Reddit community for machine learning</li>
+<li><a href="https://stackoverflow.com/questions/tagged/data-science" target="_blank" rel="noopener">Stack Overflow Data Science</a> (Free) - Q&A platform for data science programming</li>
+<li><a href="https://www.datasciencecentral.com/group/forum" target="_blank" rel="noopener">Data Science Central Forum</a> (Free) - Professional community for data practitioners</li>
+<li><a href="https://www.kaggle.com/discussion" target="_blank" rel="noopener">Kaggle Discussion</a> (Free) - Community discussions on data science topics</li>
+<li><a href="https://discord.gg/datascience" target="_blank" rel="noopener">Data Science Discord</a> (Free) - Real-time chat community for data scientists</li>
+<li><a href="https://www.meetup.com/topics/data-science/" target="_blank" rel="noopener">Data Science Meetups</a> (Free) - Local data science meetup groups worldwide</li>
+<li><a href="https://www.facebook.com/groups/DataScienceGroup/" target="_blank" rel="noopener">Data Science Facebook Groups</a> (Free) - Social media communities for data science</li>
+<li><a href="https://twitter.com/search?q=%23datascience" target="_blank" rel="noopener">Data Science Twitter</a> (Free) - Follow data science conversations and experts</li>
+<li><a href="https://www.quora.com/topic/Data-Science" target="_blank" rel="noopener">Quora Data Science</a> (Free) - Q&A platform for data science knowledge sharing</li>
 </ul>
 </li>
 </ol>
