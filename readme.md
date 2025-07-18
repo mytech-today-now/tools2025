@@ -18,7 +18,17 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <a href="#most-users">Most useful to most users</a>
 <ul>
 <li><a href="#browser-add-ins">Browser Add-ins</a></li>
-<li><a href="#browsers">Browsers</a></li>
+<li><a href="#browsers">Browsers</a>
+<ul>
+<li><a href="#mainstream-browsers">Mainstream Browsers</a></li>
+<li><a href="#privacy-focused-browsers">Privacy-Focused Browsers</a></li>
+<li><a href="#developer-power-user-browsers">Developer & Power User Browsers</a></li>
+<li><a href="#lightweight-alternative-browsers">Lightweight & Alternative Browsers</a></li>
+<li><a href="#specialized-experimental-browsers">Specialized & Experimental Browsers</a></li>
+<li><a href="#mobile-optimized-browsers">Mobile-Optimized Browsers</a></li>
+<li><a href="#enterprise-security-browsers">Enterprise & Security-Focused Browsers</a></li>
+</ul>
+</li>
 <li><a href="#office-productivity">Office Productivity</a></li>
 <li><a href="#additional-office-productivity">Additional Office Productivity</a></li>
 <li><a href="#replacement-apps">Replacement Apps</a></li>
@@ -265,6 +275,8 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 </ul>
 </li>
 <li><h4 id="browsers">Browsers</h4>
+<ol>
+<li><h5 id="mainstream-browsers">Mainstream Browsers</h5>
 <ul>
 <li><a href="https://www.google.com/chrome/" target="_blank" rel="noopener">Chrome</a> – Google’s mainstream browser.</li>
 <li><a href="https://www.chromium.org/Home/" target="_blank" rel="noopener">Chromium</a> – Open‑source Chrome build.</li>
@@ -274,8 +286,9 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="https://brave.com/download/" target="_blank" rel="noopener">Brave</a> – Privacy‑focused browser with ad‑blocking.</li>
 <li><a href="https://vivaldi.com/" target="_blank" rel="noopener">Vivaldi</a> – Highly customizable browser.</li>
 <li><a href="https://www.radsix.com/" target="_blank" rel="noopener">Nessie</a> – Minimalist browser prototype.</li>
-<li><a href="https://www.brow.sh/" target="_blank" rel="noopener">brow.sh</a> – Text‑based browser via SSH.</li>
-<li><strong>Privacy-Focused Browsers:</strong>
+</ul>
+</li>
+<li><h5 id="privacy-focused-browsers">Privacy-Focused Browsers</h5>
 <ul>
 <li><a href="https://www.torproject.org/download/" target="_blank" rel="noopener">Tor Browser</a> (Free) – Anonymous browsing through Tor network with maximum privacy protection, onion routing, and resistance to surveillance and censorship</li>
 <li><a href="https://duckduckgo.com/app" target="_blank" rel="noopener">DuckDuckGo Browser</a> (Free) – Privacy-focused mobile and desktop browser with tracker blocking, forced encryption, and private search integration</li>
@@ -283,13 +296,13 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="https://librewolf.net/" target="_blank" rel="noopener">LibreWolf</a> (Free) – Independent Firefox fork focused on privacy, security, and freedom with pre-configured privacy settings and removed telemetry</li>
 </ul>
 </li>
-<li><strong>Developer & Power User Browsers:</strong>
+<li><h5 id="developer-power-user-browsers">Developer & Power User Browsers</h5>
 <ul>
 <li><a href="https://www.maxthon.com/" target="_blank" rel="noopener">Maxthon</a> (Free) – Cloud-powered browser with cross-device synchronization, split-screen browsing, and advanced resource management features</li>
 <li><a href="https://www.seamonkey-project.org/" target="_blank" rel="noopener">SeaMonkey</a> (Free) – All-in-one internet suite combining web browser, email client, HTML editor, and IRC chat in single application</li>
 </ul>
 </li>
-<li><strong>Lightweight & Alternative Browsers:</strong>
+<li><h5 id="lightweight-alternative-browsers">Lightweight & Alternative Browsers</h5>
 <ul>
 <li><a href="https://www.palemoon.org/" target="_blank" rel="noopener">Pale Moon</a> (Free) – Lightweight Firefox-based browser optimized for efficiency with classic interface and reduced resource consumption</li>
 <li><a href="https://www.srware.net/iron/" target="_blank" rel="noopener">SRWare Iron</a> (Free) – Chromium-based browser with enhanced privacy features and removed Google tracking components</li>
@@ -298,14 +311,16 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="https://midori-browser.org/" target="_blank" rel="noopener">Midori</a> (Free) – Fast, lightweight browser using WebKit engine with focus on simplicity and low system requirements</li>
 </ul>
 </li>
-<li><strong>Specialized & Experimental Browsers:</strong>
+<li><h5 id="specialized-experimental-browsers">Specialized & Experimental Browsers</h5>
 <ul>
 <li><a href="https://lynx.browser.org/" target="_blank" rel="noopener">Lynx</a> (Free) – Text-only browser for command-line environments, ideal for accessibility, low-bandwidth connections, and server administration</li>
 <li><a href="https://www.netsurf-browser.org/" target="_blank" rel="noopener">NetSurf</a> (Free) – Lightweight browser with custom rendering engine designed for embedded systems and older hardware</li>
 <li><a href="https://www.qutebrowser.org/" target="_blank" rel="noopener">qutebrowser</a> (Free) – Keyboard-driven browser with Vim-style key bindings and minimal GUI for efficient navigation and control</li>
+<li><a href="https://www.radsix.com/" target="_blank" rel="noopener">Nessie</a> – Minimalist browser prototype for experimental web browsing experiences</li>
+<li><a href="https://www.brow.sh/" target="_blank" rel="noopener">brow.sh</a> – Text‑based browser via SSH for remote server browsing and terminal-based web access</li>
 </ul>
 </li>
-<li><strong>Mobile-Optimized Browsers:</strong>
+<li><h5 id="mobile-optimized-browsers">Mobile-Optimized Browsers</h5>
 <ul>
 <li><a href="https://www.opera.com/mobile/operamini" target="_blank" rel="noopener">Opera Mini</a> (Free) – Data-saving mobile browser with server-side compression, offline reading, and optimized performance for slow connections</li>
 <li><a href="https://www.ucweb.com/" target="_blank" rel="noopener">UC Browser</a> (Free) – Popular mobile browser with data compression, download acceleration, and social features for emerging markets</li>
@@ -313,7 +328,7 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="https://kiwibrowser.com/" target="_blank" rel="noopener">Kiwi Browser</a> (Free) – Chromium-based mobile browser supporting desktop Chrome extensions and advanced customization options</li>
 </ul>
 </li>
-<li><strong>Enterprise & Security-Focused Browsers:</strong>
+<li><h5 id="enterprise-security-browsers">Enterprise & Security-Focused Browsers</h5>
 <ul>
 <li><a href="https://www.mozilla.org/firefox/enterprise/" target="_blank" rel="noopener">Firefox ESR</a> (Free) – Extended Support Release for enterprise environments with long-term stability and centralized management capabilities</li>
 <li><a href="https://www.google.com/chrome/browser/desktop/index.html?extra=devchannel" target="_blank" rel="noopener">Chrome Enterprise</a> (Free/Paid Management) – Enterprise version with advanced security policies, centralized management, and compliance features</li>
@@ -321,7 +336,7 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="https://www.comodo.com/home/browsers-toolbars/browser.php" target="_blank" rel="noopener">Comodo Dragon</a> (Free) – Security-enhanced Chromium browser with malware protection, privacy features, and domain validation technology</li>
 </ul>
 </li>
-</ul>
+</ol>
 </li>
 <li><h4 id="office-productivity">Office Productivity</h4>
 <ul>
