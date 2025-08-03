@@ -1018,6 +1018,43 @@
             toc.addEventListener('focusin', () => TOCInteraction.handleFocus());
             toc.addEventListener('focusout', () => TOCInteraction.handleBlur());
 
+            // Add event listeners to TOC list and items to prevent flashing when hovering over content
+            const tocList = toc.querySelector('ul');
+            if (tocList) {
+                // Prevent mouse leave events when moving within the TOC content
+                tocList.addEventListener('mouseenter', (event) => {
+                    event.stopPropagation();
+                    TOCState.isHovered = true;
+                    // Clear any pending leave timeout
+                    if (TOCInteraction.leaveTimeout) {
+                        clearTimeout(TOCInteraction.leaveTimeout);
+                        TOCInteraction.leaveTimeout = null;
+                    }
+                });
+
+                // Handle mouse leave from the list content
+                tocList.addEventListener('mouseleave', (event) => {
+                    // Only trigger leave if we're actually leaving the entire TOC area
+                    if (!toc.contains(event.relatedTarget)) {
+                        TOCInteraction.handleMouseLeave();
+                    }
+                });
+
+                // Add listeners to all TOC links to maintain hover state
+                const tocLinks = tocList.querySelectorAll('a');
+                tocLinks.forEach(link => {
+                    link.addEventListener('mouseenter', (event) => {
+                        event.stopPropagation();
+                        TOCState.isHovered = true;
+                        // Clear any pending leave timeout
+                        if (TOCInteraction.leaveTimeout) {
+                            clearTimeout(TOCInteraction.leaveTimeout);
+                            TOCInteraction.leaveTimeout = null;
+                        }
+                    });
+                });
+            }
+
             // Touch events for mobile
             tocTitle.addEventListener('touchstart', TouchHandler.handleTouchStart, { passive: false });
             tocTitle.addEventListener('touchend', TouchHandler.handleTouchEnd);

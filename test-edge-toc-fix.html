@@ -77,26 +77,32 @@
         <ol>
             <li>Open this page in Microsoft Edge browser</li>
             <li>Scroll down to make the TOC sticky (it should appear at the top)</li>
-            <li>Hover over the sticky TOC title repeatedly</li>
+            <li><strong>Check positioning:</strong> Verify the sticky TOC is centered in the viewport, not on the right edge</li>
+            <li>Hover over the sticky TOC title to expand it</li>
+            <li><strong>Test lower lines:</strong> Hover over the lower TOC lines (subsections) - they should NOT cause flashing</li>
             <li>Move your mouse in and out of the TOC area quickly</li>
+            <li>Try hovering over different parts of the expanded TOC content</li>
             <li>Observe that the TOC should expand/collapse smoothly without flashing</li>
         </ol>
         
         <h3>Expected Behavior:</h3>
         <ul>
-            <li>Smooth transitions when hovering over the sticky TOC</li>
-            <li>No rapid flashing between expanded/collapsed states</li>
-            <li>Stable hover detection in Edge browser</li>
-            <li>Content should remain selectable when expanded</li>
+            <li><strong>Proper positioning:</strong> Sticky TOC should be centered in viewport, not on right edge</li>
+            <li><strong>Smooth transitions:</strong> No rapid flashing when hovering over any part of the TOC</li>
+            <li><strong>Stable hover on lower lines:</strong> Hovering over subsections should not cause flashing</li>
+            <li><strong>Consistent behavior:</strong> All TOC content should be hoverable without state conflicts</li>
+            <li><strong>Selectable content:</strong> Users should be able to click on any TOC link</li>
         </ul>
         
         <h3>Fixes Applied:</h3>
         <ul>
-            <li>Added transition state management to prevent rapid state changes</li>
-            <li>Implemented Edge browser detection with longer hover delays</li>
-            <li>Added timeout management to prevent conflicting animations</li>
-            <li>Enhanced CSS with hardware acceleration and backface visibility</li>
-            <li>Separated transition properties for better control</li>
+            <li><strong>Positioning fixes:</strong> Enhanced centering mechanism for Edge browsers</li>
+            <li><strong>Hover area expansion:</strong> Added event listeners to TOC content and links</li>
+            <li><strong>Flashing prevention:</strong> Improved hover state management for nested elements</li>
+            <li><strong>Transition state management:</strong> Prevent rapid state changes during animations</li>
+            <li><strong>Edge browser detection:</strong> Specific optimizations for Edge Legacy and Chromium</li>
+            <li><strong>Hardware acceleration:</strong> CSS optimizations for smoother rendering</li>
+            <li><strong>Event propagation:</strong> Proper handling of mouse events on child elements</li>
         </ul>
     </div>
 

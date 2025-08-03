@@ -1005,13 +1005,24 @@
       overflow: visible;
       max-width: 800px; /* Maintain max-width when sticky */
       width: 90%; /* Responsive width with margins */
+      /* Fix Edge positioning issues */
+      box-sizing: border-box;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      /* Ensure proper centering calculation */
+      margin-left: 0 !important;
+      margin-right: 0 !important;
     }
 
     /* Expanded state when hovering over sticky TOC */
-    nav.toc.toc-sticky:hover {
+    nav.toc.toc-sticky:hover,
+    nav.toc.toc-sticky:focus-within {
       max-height: 80vh;
       border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
       box-shadow: var(--shadow-medium);
+      /* Prevent flashing by ensuring stable hover area */
+      overflow: visible !important;
     }
 
     /* TOC header styling - Centered title */
@@ -1270,7 +1281,8 @@
     }
 
     /* TOC list visible state on hover when sticky - Edge browser optimized */
-    nav.toc.toc-sticky:hover > ul {
+    nav.toc.toc-sticky:hover > ul,
+    nav.toc.toc-sticky:focus-within > ul {
       opacity: 1; /* Fully visible */
       visibility: visible; /* Visible */
       transform: translateY(0); /* Normal position */
@@ -1286,6 +1298,23 @@
       -webkit-backface-visibility: hidden;
       transform-style: preserve-3d;
       -webkit-transform-style: preserve-3d;
+      /* Prevent flashing when hovering over list items */
+      pointer-events: auto !important;
+    }
+
+    /* Ensure TOC list items don't trigger collapse when hovered */
+    nav.toc.toc-sticky:hover > ul li,
+    nav.toc.toc-sticky:hover > ul li a,
+    nav.toc.toc-sticky:focus-within > ul li,
+    nav.toc.toc-sticky:focus-within > ul li a {
+      pointer-events: auto !important;
+    }
+
+    /* Maintain hover state when interacting with nested elements */
+    nav.toc.toc-sticky ul:hover,
+    nav.toc.toc-sticky li:hover,
+    nav.toc.toc-sticky a:hover {
+      /* Keep parent hover state active */
     }
 
     /* Enhanced scrollable behavior for sticky TOC */
@@ -1830,9 +1859,23 @@
       z-index: 10;
     }
 
-    /* Edge browser specific hover stabilization */
+    /* Edge browser specific hover stabilization and positioning fixes */
     @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
       /* Edge Legacy specific fixes */
+      nav.toc.toc-sticky {
+        /* Fix positioning in Edge Legacy */
+        left: 50% !important;
+        right: auto !important;
+        -ms-transform: translateX(-50%) !important;
+        transform: translateX(-50%) !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        /* Ensure proper width */
+        max-width: 800px !important;
+        width: 90% !important;
+        box-sizing: border-box !important;
+      }
+
       nav.toc.toc-sticky:hover > ul {
         transition-delay: 0.1s !important;
         animation: none !important;
@@ -1844,11 +1887,21 @@
       }
     }
 
-    /* Modern Edge (Chromium) hover stabilization */
+    /* Modern Edge (Chromium) hover stabilization and positioning fixes */
     @supports ((-webkit-appearance: none) and (not (-moz-appearance: none))) {
       nav.toc.toc-sticky {
         /* Prevent rapid hover state changes */
         transition: all 0.4s ease !important;
+        /* Fix Edge positioning issues */
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        -webkit-transform: translateX(-50%) !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        /* Ensure proper width calculation */
+        max-width: min(800px, 90vw) !important;
+        width: auto !important;
       }
 
       nav.toc.toc-sticky:hover > ul {
