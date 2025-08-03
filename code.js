@@ -853,16 +853,19 @@
             // Initialize nested list interactions
             NestedListManager.init();
 
+            // Initialize header anchor links
+            HeaderAnchorLinks.init();
+
             // Add event listeners
             toc.addEventListener('mouseenter', () => TOCInteraction.handleMouseEnter());
             toc.addEventListener('mouseleave', () => TOCInteraction.handleMouseLeave());
             toc.addEventListener('focusin', () => TOCInteraction.handleFocus());
             toc.addEventListener('focusout', () => TOCInteraction.handleBlur());
-            
+
             // Touch events for mobile
             tocTitle.addEventListener('touchstart', TouchHandler.handleTouchStart, { passive: false });
             tocTitle.addEventListener('touchend', TouchHandler.handleTouchEnd);
-            
+
             // Window resize handler
             window.addEventListener('resize', handleResize);
 
@@ -871,8 +874,8 @@
 
             // Mark as initialized
             TOCState.initialized = true;
-            
-            console.log('[TOC Module] Successfully initialized sticky TOC functionality');
+
+            console.log('[TOC Module] Successfully initialized sticky TOC functionality and header anchor links');
             
         } catch (error) {
             logError('module', 2, `Initialization error: ${error.message}`, 0, 0);
@@ -960,6 +963,219 @@
     };
 
     /**
+     * Header Anchor Links Module
+     * Adds clickable anchor links to headers for easy URL sharing
+     */
+    const HeaderAnchorLinks = {
+        /**
+         * Initialize header anchor links
+         */
+        init() {
+            try {
+                // Find all headers with IDs
+                const headers = document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]');
+
+                console.log(`[Header Anchors] Found ${headers.length} headers with IDs`);
+
+                if (headers.length === 0) {
+                    console.log('[Header Anchors] No headers with IDs found');
+                    return;
+                }
+
+                headers.forEach((header, index) => {
+                    console.log(`[Header Anchors] Processing header ${index + 1}: ${header.tagName} with ID "${header.id}"`);
+                    this.addAnchorLink(header);
+                });
+
+                console.log(`[Header Anchors] Successfully added anchor links to ${headers.length} headers`);
+
+            } catch (error) {
+                console.error('[Header Anchors] Init error:', error);
+                logError('anchors', 1, `Header anchor init error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Add anchor link to a header
+         * @param {Element} header - The header element
+         */
+        addAnchorLink(header) {
+            try {
+                const headerId = header.getAttribute('id');
+                if (!headerId) {
+                    console.log('[Header Anchors] Header has no ID, skipping');
+                    return;
+                }
+
+                // Check if anchor link already exists
+                if (header.querySelector('.header-anchor-link')) {
+                    console.log(`[Header Anchors] Anchor link already exists for header "${headerId}"`);
+                    return;
+                }
+
+                console.log(`[Header Anchors] Adding anchor link for header "${headerId}"`);
+
+                // Create anchor link element
+                const anchorLink = document.createElement('a');
+                anchorLink.className = 'header-anchor-link';
+                anchorLink.href = `#${headerId}`;
+
+                // Use SVG icon for better cross-browser compatibility
+                anchorLink.innerHTML = `
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/>
+                    </svg>
+                `;
+
+                anchorLink.setAttribute('aria-label', `Link to ${header.textContent.trim()}`);
+                anchorLink.setAttribute('title', 'Copy link to this section');
+                anchorLink.setAttribute('tabindex', '0');
+
+                // Add click handler for copy functionality
+                anchorLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    console.log(`[Header Anchors] Anchor link clicked for "${headerId}"`);
+                    this.copyAnchorLink(headerId, header.textContent.trim());
+                });
+
+                // Add keyboard support
+                anchorLink.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        console.log(`[Header Anchors] Anchor link activated via keyboard for "${headerId}"`);
+                        this.copyAnchorLink(headerId, header.textContent.trim());
+                    }
+                });
+
+                // Insert the anchor link at the beginning of the header
+                header.insertBefore(anchorLink, header.firstChild);
+                console.log(`[Header Anchors] Successfully added anchor link for "${headerId}"`);
+
+            } catch (error) {
+                console.error('[Header Anchors] Add anchor link error:', error);
+                logError('anchors', 2, `Add anchor link error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Copy anchor link to clipboard
+         * @param {string} headerId - The header ID
+         * @param {string} headerText - The header text for notification
+         */
+        async copyAnchorLink(headerId, headerText) {
+            try {
+                const url = `${window.location.origin}${window.location.pathname}#${headerId}`;
+
+                // Try modern clipboard API first
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(url);
+                    this.showCopyNotification(`Link copied: ${headerText}`);
+                } else {
+                    // Fallback for older browsers
+                    this.fallbackCopyToClipboard(url);
+                    this.showCopyNotification(`Link copied: ${headerText}`);
+                }
+
+                // Update URL hash without scrolling
+                if (window.history && window.history.replaceState) {
+                    window.history.replaceState(null, null, `#${headerId}`);
+                }
+
+            } catch (error) {
+                logError('anchors', 3, `Copy anchor link error: ${error.message}`, 0, 0);
+                this.showCopyNotification('Failed to copy link', true);
+            }
+        },
+
+        /**
+         * Fallback copy method for older browsers
+         * @param {string} text - Text to copy
+         */
+        fallbackCopyToClipboard(text) {
+            try {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                textArea.style.top = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+
+                if (!successful) {
+                    throw new Error('Copy command failed');
+                }
+            } catch (error) {
+                throw new Error(`Fallback copy failed: ${error.message}`);
+            }
+        },
+
+        /**
+         * Show copy notification
+         * @param {string} message - Notification message
+         * @param {boolean} isError - Whether this is an error notification
+         */
+        showCopyNotification(message, isError = false) {
+            try {
+                // Remove existing notification
+                const existing = document.querySelector('.copy-notification');
+                if (existing) {
+                    existing.remove();
+                }
+
+                // Create notification element
+                const notification = document.createElement('div');
+                notification.className = 'copy-notification';
+                notification.textContent = message;
+
+                if (isError) {
+                    notification.style.background = 'var(--danger-color)';
+                }
+
+                document.body.appendChild(notification);
+
+                // Show notification
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 10);
+
+                // Hide and remove notification
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.remove();
+                        }
+                    }, 300);
+                }, 3000);
+
+            } catch (error) {
+                logError('anchors', 4, `Show notification error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Update anchor links when content changes
+         */
+        refresh() {
+            try {
+                // Remove existing anchor links
+                const existingLinks = document.querySelectorAll('.header-anchor-link');
+                existingLinks.forEach(link => link.remove());
+
+                // Re-initialize
+                this.init();
+
+            } catch (error) {
+                logError('anchors', 5, `Refresh anchor links error: ${error.message}`, 0, 0);
+            }
+        }
+    };
+
+    /**
      * Public API for external access
      */
     window.StickyTOC = {
@@ -1007,6 +1223,10 @@
                     console.error('[TOC Module] collapseAll error:', error);
                 }
             }
+        },
+        anchors: {
+            init: () => HeaderAnchorLinks.init(),
+            refresh: () => HeaderAnchorLinks.refresh()
         },
         debug: DebugUtils,
         getLastError: () => TOCState.lastError

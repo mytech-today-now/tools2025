@@ -1638,6 +1638,129 @@
       outline-offset: 2px;
     }
 
+    /* ========================================
+       HEADER ANCHOR LINK STYLES
+       ======================================== */
+
+    /* Header anchor link container */
+    h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
+      position: relative;
+      scroll-margin-top: 80px; /* Account for sticky TOC */
+    }
+
+    /* Anchor link icon */
+    .header-anchor-link {
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      color: var(--primary-color);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--border-radius);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--light-border);
+      box-shadow: var(--shadow-light);
+      font-size: 14px;
+      z-index: 10;
+    }
+
+    /* SVG icon styling */
+    .header-anchor-link svg {
+      width: 14px;
+      height: 14px;
+      transition: all 0.3s ease;
+    }
+
+    /* Show anchor link on header hover */
+    h1[id]:hover .header-anchor-link,
+    h2[id]:hover .header-anchor-link,
+    h3[id]:hover .header-anchor-link,
+    h4[id]:hover .header-anchor-link,
+    h5[id]:hover .header-anchor-link,
+    h6[id]:hover .header-anchor-link {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Anchor link hover state */
+    .header-anchor-link:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: var(--shadow-medium);
+    }
+
+    .header-anchor-link:hover svg {
+      transform: scale(1.1);
+    }
+
+    /* Anchor link focus state for accessibility */
+    .header-anchor-link:focus {
+      opacity: 1;
+      visibility: visible;
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+
+    /* Responsive adjustments for anchor links */
+    @media (max-width: 768px) {
+      .header-anchor-link {
+        left: -25px;
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+      }
+
+      h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
+        scroll-margin-top: 60px; /* Smaller margin for mobile */
+      }
+    }
+
+    /* Copy notification */
+    .copy-notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--success-color);
+      color: white;
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-medium);
+      z-index: 9999;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .copy-notification.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Ensure headers have enough left margin for anchor links */
+    main h1[id], main h2[id], main h3[id], main h4[id], main h5[id], main h6[id],
+    li h1[id], li h2[id], li h3[id], li h4[id], li h5[id], li h6[id] {
+      margin-left: 35px;
+    }
+
+    @media (max-width: 768px) {
+      main h1[id], main h2[id], main h3[id], main h4[id], main h5[id], main h6[id],
+      li h1[id], li h2[id], li h3[id], li h4[id], li h5[id], li h6[id] {
+        margin-left: 30px;
+      }
+    }
+
     /* Focus-within state for keyboard navigation - only when sticky */
     nav.toc.toc-sticky:focus-within > ul {
       opacity: 1;
