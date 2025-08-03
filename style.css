@@ -979,6 +979,16 @@
       overflow: visible; /* Allow nested lists to expand */
       transition: all 0.3s ease;
       text-align: left; /* Left-justified content */
+      /* Prevent Edge browser from creating columns */
+      column-count: unset !important;
+      column-width: unset !important;
+      columns: unset !important;
+      -webkit-column-count: unset !important;
+      -webkit-column-width: unset !important;
+      -webkit-columns: unset !important;
+      -moz-column-count: unset !important;
+      -moz-column-width: unset !important;
+      -moz-columns: unset !important;
     }
 
     /* Sticky state when scrolled past original position */
@@ -1048,6 +1058,16 @@
       transition: all 0.3s ease;
       max-width: 100%;
       text-align: left; /* Left-justify the list content */
+      /* Prevent Edge browser from creating columns */
+      column-count: unset !important;
+      column-width: unset !important;
+      columns: unset !important;
+      -webkit-column-count: unset !important;
+      -webkit-column-width: unset !important;
+      -webkit-columns: unset !important;
+      -moz-column-count: unset !important;
+      -moz-column-width: unset !important;
+      -moz-columns: unset !important;
     }
 
     /* All nested lists styling */
@@ -1055,6 +1075,16 @@
       list-style: none !important;
       margin: 0 !important;
       padding: 0 !important;
+      /* Prevent Edge browser from creating columns */
+      column-count: unset !important;
+      column-width: unset !important;
+      columns: unset !important;
+      -webkit-column-count: unset !important;
+      -webkit-column-width: unset !important;
+      -webkit-columns: unset !important;
+      -moz-column-count: unset !important;
+      -moz-column-width: unset !important;
+      -moz-columns: unset !important;
     }
 
     /* Nested TOC lists - Completely collapsed by default */
@@ -1184,6 +1214,16 @@
       overflow: hidden;
       transition: all 0.3s ease;
       text-align: left; /* Maintain left alignment when sticky */
+      /* Prevent Edge browser from creating columns in sticky mode */
+      column-count: unset !important;
+      column-width: unset !important;
+      columns: unset !important;
+      -webkit-column-count: unset !important;
+      -webkit-column-width: unset !important;
+      -webkit-columns: unset !important;
+      -moz-column-count: unset !important;
+      -moz-column-width: unset !important;
+      -moz-columns: unset !important;
     }
 
     /* Nested lists in sticky TOC - Completely collapsed by default */
@@ -1636,6 +1676,87 @@
     nav.toc:focus-within {
       outline: 2px solid var(--primary-color); /* Clear focus indicator */
       outline-offset: 2px;
+    }
+
+    /* Edge browser specific fixes for TOC column behavior */
+    @supports (-ms-ime-align: auto) {
+      /* Edge Legacy specific styles */
+      nav.toc,
+      nav.toc > ul,
+      nav.toc ul {
+        column-count: 1 !important;
+        column-width: auto !important;
+        columns: 1 !important;
+        -webkit-column-count: 1 !important;
+        -webkit-column-width: auto !important;
+        -webkit-columns: 1 !important;
+        -moz-column-count: 1 !important;
+        -moz-column-width: auto !important;
+        -moz-columns: 1 !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+
+    /* Modern Edge (Chromium-based) specific fixes */
+    @supports ((-webkit-appearance: none) and (not (-moz-appearance: none))) {
+      nav.toc,
+      nav.toc > ul,
+      nav.toc ul {
+        column-count: 1 !important;
+        column-width: auto !important;
+        columns: 1 !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+      }
+    }
+
+    /* Universal Edge browser fix - Force single column layout */
+    nav.toc,
+    nav.toc > ul,
+    nav.toc ul,
+    nav.toc.toc-sticky,
+    nav.toc.toc-sticky > ul,
+    nav.toc.toc-sticky ul {
+      /* Force single column layout */
+      column-count: 1 !important;
+      column-width: auto !important;
+      columns: 1 !important;
+      -webkit-column-count: 1 !important;
+      -webkit-column-width: auto !important;
+      -webkit-columns: 1 !important;
+      -moz-column-count: 1 !important;
+      -moz-column-width: auto !important;
+      -moz-columns: 1 !important;
+      /* Ensure proper block layout */
+      display: block !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      /* Prevent any column behavior */
+      column-fill: auto !important;
+      column-gap: 0 !important;
+      column-rule: none !important;
+      column-span: none !important;
+      break-inside: auto !important;
+      page-break-inside: auto !important;
+      /* Force vertical layout */
+      writing-mode: horizontal-tb !important;
+      direction: ltr !important;
+    }
+
+    /* Ensure TOC list items stay in single column */
+    nav.toc li,
+    nav.toc.toc-sticky li {
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
+      column-break-inside: avoid !important;
+      -webkit-column-break-inside: avoid !important;
+      display: block !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
     }
 
     /* ========================================

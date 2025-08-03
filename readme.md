@@ -1,14 +1,14 @@
 <article>
 <header>
 <img src="https://plus.unsplash.com/premium_photo-1677009835876-4a29ddc4cc2c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Tools 2025">
-<h1 id="tools2025">Tools 2025</h1>
+<h1>Tools 2025</h1>
 <p>
 Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for Essential Business Applications, Development Tools, Productivity Software, Security Solutions, and Professional Digital Services. From AI-powered coding assistants and enterprise ERP systems to marketing automation platforms and cybersecurity tools - find the perfect software solutions for developers, IT professionals, business executives, marketers, designers, and technical specialists across all industries and skill levels.
 </p>
-<h4 id="tools2025">Github Readme.md: <a href="https://github.com/mytech-today-now/tools2025" target="_blank" rel="noopener">Tools 2025</a></h4>
-<h4 id="tools2025">myTech.Today: <a href="https://mytech.today/tools2025/" target="_blank" rel="noopener">Tools 2025</a></h4>
-<h4 id="tools2025"><a href="https://mytech.today/why-passwords-matter/" target="_blank" rel="noopener">Why Passwords Matter</h4>
-<h4 id="tools2025"><a href="https://mytech.today/why-ai-first-apps-will-rule-the-future/" target="_blank" rel="noopener">Why AI-First Apps Will Rule the Future</h4>
+<h4>Github Readme.md: <a href="https://github.com/mytech-today-now/tools2025" target="_blank" rel="noopener">Tools 2025</a></h4>
+<h4>myTech.Today: <a href="https://mytech.today/tools2025/" target="_blank" rel="noopener">Tools 2025</a></h4>
+<h4><a href="https://mytech.today/why-passwords-matter/" target="_blank" rel="noopener">Why Passwords Matter</h4>
+<h4><a href="https://mytech.today/why-ai-first-apps-will-rule-the-future/" target="_blank" rel="noopener">Why AI-First Apps Will Rule the Future</h4>
 </header>
 <nav class="toc">
 <h2>Table of Contents</h2>
@@ -244,6 +244,68 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="#edi-training-certification">EDI Training & Certification</a></li>
 </ul>
 </li>
+<li>
+<a href="#realestate">Real Estate, Construction & Facilities</a>
+<ul>
+<li><a href="#realestate-systems">Real Estate Systems</a></li>
+<li><a href="#realestate-tools">Real Estate Tools</a></li>
+<li>
+<a href="#realestate-landlord-tenant">Landlord & Tenant Management</a>
+<ul>
+<li><a href="#tenant-screening-background">Tenant Screening & Background Checks</a></li>
+<li><a href="#rent-collection-payment">Rent Collection & Payment Processing</a></li>
+<li><a href="#lease-management-signatures">Lease Management & Digital Signatures</a></li>
+<li><a href="#maintenance-request-tracking">Maintenance Request Tracking</a></li>
+<li><a href="#financial-reporting-accounting">Financial Reporting & Accounting</a></li>
+<li><a href="#property-marketing-listing">Property Marketing & Listing</a></li>
+<li><a href="#tenant-communication-portals">Tenant Communication Portals</a></li>
+<li><a href="#credit-reporting-tenants">Credit Reporting for Tenants</a></li>
+<li><a href="#landlord-credit-reporting">Landlord Credit Reporting Services</a></li>
+<li><a href="#market-analysis-pricing">Market Analysis & Pricing Tools</a></li>
+</ul>
+</li>
+<li>
+<a href="#construction-building">Construction & Building</a>
+<ul>
+<li><a href="#construction-websites">Construction Websites & Platforms</a></li>
+<li><a href="#construction-software">Construction Software & Management</a></li>
+<li><a href="#construction-tools">Construction Tools & Equipment</a></li>
+<li><a href="#construction-project-management">Project Management & Scheduling</a></li>
+<li><a href="#construction-estimating-bidding">Estimating & Bidding</a></li>
+<li><a href="#construction-design-cad">Design & CAD Software</a></li>
+<li><a href="#construction-safety-compliance">Safety & Compliance</a></li>
+<li><a href="#construction-materials-suppliers">Materials & Suppliers</a></li>
+<li><a href="#road-construction">Road Construction & Infrastructure</a></li>
+<li><a href="#demolition-services">Demolition Services</a></li>
+</ul>
+</li>
+<li>
+<a href="#facilities-maintenance">Facilities Maintenance</a>
+<ul>
+<li><a href="#facilities-management-software">Facilities Management Software</a></li>
+<li><a href="#maintenance-scheduling">Maintenance Scheduling & Work Orders</a></li>
+<li><a href="#asset-management">Asset Management & Tracking</a></li>
+<li><a href="#energy-management">Energy Management & Monitoring</a></li>
+<li><a href="#hvac-systems">HVAC Systems & Monitoring</a></li>
+<li><a href="#security-access-control">Security & Access Control</a></li>
+<li><a href="#cleaning-janitorial">Cleaning & Janitorial Services</a></li>
+<li><a href="#space-management">Space Management & Optimization</a></li>
+<li><a href="#vendor-management">Vendor & Contractor Management</a></li>
+<li><a href="#compliance-reporting">Compliance & Reporting</a></li>
+</ul>
+</li>
+<li><a href="#realestate-integrations">Real Estate Integrations</a></li>
+<li><a href="#realestate-consulting">Real Estate Consulting</a></li>
+<li><a href="#realestate-training">Real Estate Training</a></li>
+<li><a href="#realestate-certifications">Real Estate Certifications</a></li>
+<li><a href="#realestate-resources">Real Estate Resources</a></li>
+<li><a href="#realestate-software-development">Real Estate Software Development</a></li>
+<li><a href="#realestate-implementation">Real Estate Implementation</a></li>
+<li><a href="#realestate-migration">Real Estate Migration</a></li>
+<li><a href="#realestate-support">Real Estate Support</a></li>
+<li><a href="#realestate-other">Real Estate Other</a></li>
+</ul>
+</li>
 </ul>
 </nav>
 <main>
@@ -272,6 +334,7 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="https://chrome.google.com/webstore/detail/babelshelf/hagchccjngldonihokhncngknojhabgc" target="_blank" rel="noopener">Babelshelf</a> (chrome) - Highlight to save books from anywhere on the web</li>
 <li><a href="https://github.com/jhlyeung/rumin-web-clipper#rumin-web-clipper" target="_blank" rel="noopener">Rumin Web Clipper</a> (chrome) - Browser extension for <a href="https://getrumin.com" rel="nofollow noopener" target="_blank">Rumin</a> which allows you to save learnings from online resources. (<a href="https://chrome.google.com/webstore/detail/rumin/eboiffdknchlbeboepkadciilgmaojbj" rel="nofollow noopener" target="_blank">Chrome Web Store link</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/rumin/" rel="nofollow noopener" target="_blank">Firefox Add-on link</a>)</li>
 <li><a href="https://vimium.github.io/" target="_blank" rel="noopener">Vimium</a> - a Google Chrome extension which provides keyboard shortcuts for navigation and control in the spirit of the Vim editor</li>
+<li><a href="https://chromewebstore.google.com/detail/monochromate-the-best-gre/hafcajcllbjnoolpfngclfmmgpikdhlm?pli=1" target="_blank" rel="noopener">Monochromate - The Best Greyscale Extension</a> - Monochromate is a Google Chrome extension that converts any website into a greyscale image. It's the best greyscale extension for Chrome.</li>
 </ul>
 </li>
 <li><h4 id="browsers">Browsers</h4>
@@ -869,6 +932,8 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><h4 id="ai-coding-development">AI Coding & Development</h4>
 <ul>
 <li><a href="https://github.com/features/copilot/" target="_blank" rel="noopener">GitHub Copilot</a> (Paid $10/month) – AI pair programmer that suggests code completions and entire functions in real-time</li>
+<li><a href="https://www.trynia.ai/" target="_blank" rel="noopener">Nia</a> (Paid $10/month) – Nia is an MCP that gives more developer context to coding agents. It improved Cursor’s performance by 27% by indexing extra documentation and codebases that coding agents can't.</li>
+<li><a href="https://www.augmentcode.com/" target="_blank" rel="noopener">Augment AI</a> – AI-powered coding assistant that provides intelligent code completion, analysis, and development tools.</li>
 <li><a href="https://codeium.com/" target="_blank" rel="noopener">Codeium</a> (Free/Paid $12+/month) – Free AI code completion tool supporting 70+ programming languages</li>
 <li><a href="https://www.tabnine.com/" target="_blank" rel="noopener">Tabnine</a> (Free/Paid $12+/month) – AI code assistant with advanced code completion and generation</li>
 <li><a href="https://aws.amazon.com/codewhisperer/" target="_blank" rel="noopener">Amazon CodeWhisperer</a> (Free/Paid) – AI coding companion for AWS development and general programming</li>
@@ -1263,6 +1328,7 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <li><a href="https://www.zoner.com/us/photo-studio" target="_blank" rel="noopener">Zoner Photo Studio X</a> (Paid $59) – Complete photo management and editing software</li>
 <li><a href="https://www.phase-one.com/en/Capture-One" target="_blank" rel="noopener">Phase One Capture One</a> (Paid $299) – Professional RAW converter and image editing software</li>
 <li><a href="https://www.exposure.software/" target="_blank" rel="noopener">Exposure X7</a> (Paid $149) – Creative photo editor with film emulation and artistic effects</li>
+<li><a href="https://www.squareimages.co/en" target="_blank" rel="noopener">square images</a> (Free/Paid $10.99/month) – Online photo editing and design tool with templates and effects</li>
 </ul>
 </li>
 <li><h4 id="general-writing-tools">General Writing & Content Tools</h4>
@@ -2026,6 +2092,7 @@ Your writing assistant that never leaves your Mac. Powered by local AI models wi
 <li><h4 id="seo-analytics">SEO & Analytics</h4>
 <ul>
 <li><a href="https://www.narative.co/articles/building-product-market-fit-with-relationship-marketing" target="_blank" rel="noopener">Building product-market fit with relationship marketing</a> - This guide will teach you how to sustainably acquire new users, use marketing automation to onboard them into your product and grow them into satisfied, profitable customers through an approach called <i>relationship marketing</i></li>
+<li><a href="https://brandkiit.com/" target="_blank" rel="noopener">brandkiit</a> - Skip the boring part of building products. Generate a brand kit in seconds with AI.</li>
 <li><a href="http://socialkfactor.com/" target="_blank" rel="noopener">Social K-factor marketing virility through social media math</a></li>
 <li><a href="https://www.forentrepreneurs.com/lessons-learnt-viral-marketing/" target="_blank" rel="noopener">"Lessons Learned – Viral Marketing"</a> - A short study of this web site reveals that a hugely important factor for success in startup companies is finding ways to acquire customers at a low cost</li>
 <li><a href="https://visible.vc/blog/k-factor-what-is-your-saas-companys-viral-coefficient/" target="_blank" rel="noopener">"K Factor: What is your SaaS Company’s Viral Coefficient?"</a> - by <a href="https://visible.vc/blog/author/mike/" target="_blank" rel="noopener">Mike Preuss </a>- What is the K Factor/ Viral Coefficient? The K factor or viral coefficient measures how many new, secondary users, an individual new user helps you acquire over their lifetime</li>
@@ -3230,6 +3297,632 @@ Your writing assistant that never leaves your Mac. Powered by local AI models wi
 </li>
 </ol>
 </section>
+
+<section id="realestate">
+<h2>Real Estate, Construction & Facilities</h2>
+<ol>
+<li><h4 id="realestate-systems">Real Estate Systems</h4>
+<ul>
+<li><a href="https://www.mls.com/" target="_blank" rel="noopener">MLS.com</a> (Paid $50+/month) - Multiple Listing Service platform for property listings and market data</li>
+<li><a href="https://www.realtor.com/" target="_blank" rel="noopener">Realtor.com</a> (Free/Paid $10+/month) - National real estate listing platform and market insights</li>
+<li><a href="https://www.zillow.com/" target="_blank" rel="noopener">Zillow</a> (Free/Paid $20+/month) - Real estate marketplace with Zestimate valuations and market analytics</li>
+<li><a href="https://www.redfin.com/" target="_blank" rel="noopener">Redfin</a> (Free/Paid $15+/month) - Real estate brokerage platform with market data and analytics</li>
+<li><a href="https://www.trulia.com/" target="_blank" rel="noopener">Trulia</a> (Free) - Real estate search platform with neighborhood insights and market trends</li>
+<li><a href="https://www.homes.com/" target="_blank" rel="noopener">Homes.com</a> (Free/Paid $25+/month) - Real estate listing platform with advanced search capabilities</li>
+<li><a href="https://www.loopnet.com/" target="_blank" rel="noopener">LoopNet</a> (Free/Paid $50+/month) - Commercial real estate marketplace and listing platform</li>
+<li><a href="https://www.crexi.com/" target="_blank" rel="noopener">Crexi</a> (Free/Paid $100+/month) - Commercial real estate marketplace and analytics platform</li>
+<li><a href="https://www.reonomy.com/" target="_blank" rel="noopener">Reonomy</a> (Paid $200+/month) - Commercial real estate data and analytics platform</li>
+<li><a href="https://www.costar.com/" target="_blank" rel="noopener">CoStar</a> (Paid $500+/month) - Commercial real estate information and analytics platform</li>
+</ul>
+</li>
+<li><h4 id="realestate-tools">Real Estate Tools</h4>
+<ul>
+<li><a href="https://www.docusign.com/" target="_blank" rel="noopener">DocuSign</a> (Paid $10+/month) - Electronic signature platform for real estate transactions</li>
+<li><a href="https://www.dotloop.com/" target="_blank" rel="noopener">Dotloop</a> (Paid $49+/month) - Real estate transaction management platform</li>
+<li><a href="https://www.skyslope.com/" target="_blank" rel="noopener">SkySlope</a> (Paid $39+/month) - Real estate transaction and compliance management</li>
+<li><a href="https://www.zipforms.com/" target="_blank" rel="noopener">zipForms</a> (Paid $12+/month) - Real estate forms and transaction management</li>
+<li><a href="https://www.propertyradar.com/" target="_blank" rel="noopener">PropertyRadar</a> (Paid $49+/month) - Real estate prospecting and lead generation platform</li>
+<li><a href="https://www.reikit.com/" target="_blank" rel="noopener">REI Kit</a> (Paid $97+/month) - Real estate investment analysis and deal management</li>
+<li><a href="https://www.biggerpockets.com/calculators" target="_blank" rel="noopener">BiggerPockets Calculators</a> (Free/Paid $5+/month) - Real estate investment calculators and analysis tools</li>
+<li><a href="https://www.rentometer.com/" target="_blank" rel="noopener">Rentometer</a> (Free/Paid $9.99+/month) - Rental market analysis and pricing tools</li>
+<li><a href="https://www.rentspree.com/" target="_blank" rel="noopener">RentSpree</a> (Free/Paid $10+/month) - Rental listing and application management platform</li>
+<li><a href="https://www.apartments.com/" target="_blank" rel="noopener">Apartments.com</a> (Free/Paid $50+/month) - Apartment rental marketplace and management tools</li>
+<li><a href="https://www.buildium.com/" target="_blank" rel="noopener">Buildium</a> (Paid $50+/month) - Property management software for landlords and property managers</li>
+<li><a href="https://www.appfolio.com/" target="_blank" rel="noopener">AppFolio</a> (Paid $280+/month) - Property management and real estate investment software</li>
+<li><a href="https://www.yardi.com/" target="_blank" rel="noopener">Yardi</a> (Paid $200+/month) - Property management and real estate investment platform</li>
+<li><a href="https://www.realpage.com/" target="_blank" rel="noopener">RealPage</a> (Paid $150+/month) - Property management and rental optimization software</li>
+</ul>
+</li>
+<li><h4 id="realestate-landlord-tenant">Landlord & Tenant Management</h4>
+<ol>
+<li><h5 id="tenant-screening-background">Tenant Screening & Background Checks</h5>
+<ul>
+<li><a href="https://www.smartmove.com/" target="_blank" rel="noopener">SmartMove</a> (Paid $25+/report) - Tenant screening service with credit checks, background checks, and income verification</li>
+<li><a href="https://www.mysmartmove.com/" target="_blank" rel="noopener">TransUnion SmartMove</a> (Paid $25+/report) - Comprehensive tenant screening and credit reporting</li>
+<li><a href="https://www.rentprep.com/" target="_blank" rel="noopener">RentPrep</a> (Paid $18+/report) - Tenant screening service with background checks and eviction history</li>
+<li><a href="https://www.e-renter.com/" target="_blank" rel="noopener">E-Renter</a> (Paid $9.95+/report) - Online tenant screening and background check services</li>
+<li><a href="https://www.tenantverification.com/" target="_blank" rel="noopener">Tenant Verification Service</a> (Paid $19.95+/report) - Employment and income verification for landlords</li>
+<li><a href="https://www.cozy.co/" target="_blank" rel="noopener">Cozy</a> (Free/Paid $35+/month) - Free property management platform with integrated tenant screening</li>
+<li><a href="https://www.avail.co/" target="_blank" rel="noopener">Avail</a> (Free/Paid $5+/month) - Landlord software with comprehensive tenant screening tools</li>
+<li><a href="https://www.turbotenant.com/" target="_blank" rel="noopener">TurboTenant</a> (Free/Paid $35+/month) - Landlord platform with built-in tenant screening services</li>
+<li><a href="https://www.buildium.com/" target="_blank" rel="noopener">Buildium</a> (Paid $50+/month) - Property management software with integrated tenant screening</li>
+<li><a href="https://www.realpage.com/" target="_blank" rel="noopener">RealPage</a> (Paid $150+/month) - Property management with advanced tenant screening and leasing tools</li>
+</ul>
+</li>
+<li><h5 id="rent-collection-payment">Rent Collection & Payment Processing</h5>
+<ul>
+<li><a href="https://www.erentpayment.com/" target="_blank" rel="noopener">eRentPayment</a> (Paid $2.95+/transaction) - Online rent payment processing platform</li>
+<li><a href="https://www.payrent.com/" target="_blank" rel="noopener">PayRent</a> (Paid $2.95+/transaction) - Rent payment platform with automatic collection and reporting</li>
+<li><a href="https://www.cozy.co/" target="_blank" rel="noopener">Cozy</a> (Free/Paid $35+/month) - Free rent collection with ACH and credit card processing</li>
+<li><a href="https://www.avail.co/" target="_blank" rel="noopener">Avail</a> (Free/Paid $5+/month) - Free rent collection with tenant payment tracking</li>
+<li><a href="https://www.turbotenant.com/" target="_blank" rel="noopener">TurboTenant</a> (Free/Paid $35+/month) - Online rent collection with automatic reminders</li>
+<li><a href="https://www.buildium.com/" target="_blank" rel="noopener">Buildium</a> (Paid $50+/month) - Automated rent collection with late fee management</li>
+<li><a href="https://www.appfolio.com/" target="_blank" rel="noopener">AppFolio</a> (Paid $280+/month) - Property management platform with online rent payments and ACH processing</li>
+<li><a href="https://www.rentecdirect.com/" target="_blank" rel="noopener">RentecDirect</a> (Paid $35+/month) - Rent collection software with automatic payment processing</li>
+<li><a href="https://www.tenantcloud.com/" target="_blank" rel="noopener">TenantCloud</a> (Free/Paid $15+/month) - Online rent collection with multiple payment options</li>
+<li><a href="https://www.innago.com/" target="_blank" rel="noopener">Innago</a> (Free/Paid $5+/month) - Free rent collection with ACH and credit card processing</li>
+</ul>
+</li>
+<li><h5 id="lease-management-signatures">Lease Management & Digital Signatures</h5>
+<ul>
+<li><a href="https://www.docusign.com/" target="_blank" rel="noopener">DocuSign</a> (Paid $10+/month) - Electronic signature platform for lease agreements and documents</li>
+<li><a href="https://www.dotloop.com/" target="_blank" rel="noopener">Dotloop</a> (Paid $49+/month) - Real estate transaction management with digital signatures</li>
+<li><a href="https://www.skyslope.com/" target="_blank" rel="noopener">SkySlope</a> (Paid $39+/month) - Digital transaction management for lease agreements</li>
+<li><a href="https://www.zipforms.com/" target="_blank" rel="noopener">zipForms</a> (Paid $12+/month) - Real estate forms and lease management with e-signatures</li>
+<li><a href="https://www.buildium.com/" target="_blank" rel="noopener">Buildium</a> (Paid $50+/month) - Lease management with digital signature integration</li>
+<li><a href="https://www.appfolio.com/" target="_blank" rel="noopener">AppFolio</a> (Paid $280+/month) - Comprehensive lease management with e-signature capabilities</li>
+<li><a href="https://www.rentmanager.com/" target="_blank" rel="noopener">Rent Manager</a> (Paid $100+/month) - Property management software with lease tracking and digital signatures</li>
+<li><a href="https://www.propertyware.com/" target="_blank" rel="noopener">Propertyware</a> (Paid $250+/month) - Lease management platform with document automation</li>
+<li><a href="https://www.cozy.co/" target="_blank" rel="noopener">Cozy</a> (Free/Paid $35+/month) - Free lease management with basic digital signature features</li>
+<li><a href="https://www.avail.co/" target="_blank" rel="noopener">Avail</a> (Free/Paid $5+/month) - Lease creation and management with e-signature integration</li>
+</ul>
+</li>
+<li><h5 id="maintenance-request-tracking">Maintenance Request Tracking</h5>
+<ul>
+<li><a href="https://www.buildium.com/" target="_blank" rel="noopener">Buildium</a> (Paid $50+/month) - Comprehensive maintenance request tracking with vendor management</li>
+<li><a href="https://www.appfolio.com/" target="_blank" rel="noopener">AppFolio</a> (Paid $280+/month) - Maintenance coordination with tenant portal and vendor communication</li>
+<li><a href="https://www.propertyware.com/" target="_blank" rel="noopener">Propertyware</a> (Paid $250+/month) - Maintenance management with work order tracking and scheduling</li>
+<li><a href="https://www.yardi.com/products/breeze/" target="_blank" rel="noopener">Yardi Breeze</a> (Paid $100+/month) - Maintenance request system with tenant and vendor portals</li>
+<li><a href="https://www.cozy.co/" target="_blank" rel="noopener">Cozy</a> (Free/Paid $35+/month) - Basic maintenance request tracking through tenant portal</li>
+<li><a href="https://www.doorloop.com/" target="_blank" rel="noopener">DoorLoop</a> (Paid $49+/month) - Maintenance tracking with photo uploads and vendor management</li>
+<li><a href="https://www.rentecdirect.com/" target="_blank" rel="noopener">RentecDirect</a> (Paid $35+/month) - Work order management with maintenance scheduling</li>
+<li><a href="https://www.tenantcloud.com/" target="_blank" rel="noopener">TenantCloud</a> (Free/Paid $15+/month) - Maintenance request system with priority tracking</li>
+<li><a href="https://www.hemlane.com/" target="_blank" rel="noopener">Hemlane</a> (Paid $30+/month) - Maintenance coordination with vetted contractor network</li>
+<li><a href="https://www.mynd.co/" target="_blank" rel="noopener">Mynd</a> (Paid $89+/month) - Full-service maintenance management with 24/7 support</li>
+</ul>
+</li>
+<li><h5 id="financial-reporting-accounting">Financial Reporting & Accounting</h5>
+<ul>
+<li><a href="https://www.buildium.com/" target="_blank" rel="noopener">Buildium</a> (Paid $50+/month) - Comprehensive financial reporting with tax preparation features</li>
+<li><a href="https://www.appfolio.com/" target="_blank" rel="noopener">AppFolio</a> (Paid $280+/month) - Advanced accounting with automated financial statements</li>
+<li><a href="https://www.rentmanager.com/" target="_blank" rel="noopener">Rent Manager</a> (Paid $100+/month) - Property accounting with detailed financial reporting</li>
+<li><a href="https://www.propertyware.com/" target="_blank" rel="noopener">Propertyware</a> (Paid $250+/month) - Real estate accounting with owner portal and reporting</li>
+<li><a href="https://www.stessa.com/" target="_blank" rel="noopener">Stessa</a> (Free/Paid $10+/month) - Real estate investment tracking with tax optimization</li>
+<li><a href="https://www.landlordstudio.com/" target="_blank" rel="noopener">Landlord Studio</a> (Free/Paid $15+/month) - Property management app with expense tracking and tax reporting</li>
+<li><a href="https://www.propertymatrix.com/" target="_blank" rel="noopener">Property Matrix</a> (Paid $89+/month) - Financial management with detailed profit and loss reporting</li>
+<li><a href="https://www.rentecdirect.com/" target="_blank" rel="noopener">RentecDirect</a> (Paid $35+/month) - Accounting software with automated financial reports</li>
+<li><a href="https://www.quickbooks.com/real-estate/" target="_blank" rel="noopener">QuickBooks for Real Estate</a> (Paid $25+/month) - Accounting software with real estate specific features</li>
+<li><a href="https://www.simplifyem.com/" target="_blank" rel="noopener">SimplifyEm</a> (Paid $4+/month per unit) - Simple financial tracking with income and expense reporting</li>
+</ul>
+</li>
+<li><h5 id="property-marketing-listing">Property Marketing & Listing</h5>
+<ul>
+<li><a href="https://www.zillow.com/rental-manager/" target="_blank" rel="noopener">Zillow Rental Manager</a> (Free/Paid $9.99+/month) - Property listing with wide market reach</li>
+<li><a href="https://www.apartments.com/property-management/" target="_blank" rel="noopener">Apartments.com Property Management</a> (Paid $50+/month) - Rental listing with professional photography services</li>
+<li><a href="https://www.rentals.com/landlord-tools/" target="_blank" rel="noopener">Rentals.com Landlord Tools</a> (Paid $50+/month) - Property marketing with syndication to multiple sites</li>
+<li><a href="https://www.rent.com/landlord/" target="_blank" rel="noopener">Rent.com Landlord</a> (Paid $30+/month) - Property marketing with lead management tools</li>
+<li><a href="https://www.padmapper.com/landlord/" target="_blank" rel="noopener">PadMapper Landlord</a> (Free/Paid $20+/month) - Map-based property listing platform</li>
+<li><a href="https://www.rentspree.com/" target="_blank" rel="noopener">RentSpree</a> (Free/Paid $10+/month) - Rental listing with application management</li>
+<li><a href="https://www.rentler.com/" target="_blank" rel="noopener">Rentler</a> (Free/Paid $25+/month) - Property listing with tenant screening integration</li>
+<li><a href="https://www.turbotenant.com/" target="_blank" rel="noopener">TurboTenant</a> (Free/Paid $35+/month) - Property marketing with automated listing syndication</li>
+<li><a href="https://www.cozy.co/" target="_blank" rel="noopener">Cozy</a> (Free/Paid $35+/month) - Free property listing with application processing</li>
+<li><a href="https://www.avail.co/" target="_blank" rel="noopener">Avail</a> (Free/Paid $5+/month) - Property marketing with customizable listing templates</li>
+</ul>
+</li>
+<li><h5 id="tenant-communication-portals">Tenant Communication Portals</h5>
+<ul>
+<li><a href="https://www.buildium.com/" target="_blank" rel="noopener">Buildium</a> (Paid $50+/month) - Comprehensive tenant portal with messaging and document sharing</li>
+<li><a href="https://www.appfolio.com/" target="_blank" rel="noopener">AppFolio</a> (Paid $280+/month) - Advanced tenant portal with mobile app and communication tools</li>
+<li><a href="https://www.propertyware.com/" target="_blank" rel="noopener">Propertyware</a> (Paid $250+/month) - Tenant portal with maintenance requests and payment processing</li>
+<li><a href="https://www.yardi.com/products/breeze/" target="_blank" rel="noopener">Yardi Breeze</a> (Paid $100+/month) - Tenant communication platform with mobile access</li>
+<li><a href="https://www.doorloop.com/" target="_blank" rel="noopener">DoorLoop</a> (Paid $49+/month) - Tenant portal with messaging and document management</li>
+<li><a href="https://www.rentecdirect.com/" target="_blank" rel="noopener">RentecDirect</a> (Paid $35+/month) - Tenant portal with communication and payment features</li>
+<li><a href="https://www.tenantcloud.com/" target="_blank" rel="noopener">TenantCloud</a> (Free/Paid $15+/month) - Tenant communication platform with messaging and announcements</li>
+<li><a href="https://www.landlordstudio.com/" target="_blank" rel="noopener">Landlord Studio</a> (Free/Paid $15+/month) - Mobile tenant communication with messaging and notifications</li>
+<li><a href="https://www.simplifyem.com/" target="_blank" rel="noopener">SimplifyEm</a> (Paid $4+/month per unit) - Simple tenant communication with rent reminders</li>
+<li><a href="https://www.innago.com/" target="_blank" rel="noopener">Innago</a> (Free/Paid $5+/month) - Free tenant portal with messaging and payment features</li>
+</ul>
+</li>
+<li><h5 id="credit-reporting-tenants">Credit Reporting for Tenants</h5>
+<ul>
+<li><a href="https://www.tellus.com/" target="_blank" rel="noopener">Tellus</a> (Free/Paid $10+/month) - Rent reporting platform to help tenants build credit history</li>
+<li><a href="https://www.renttrack.com/" target="_blank" rel="noopener">RentTrack</a> (Paid $6.95+/month) - Rent payment reporting service for credit building</li>
+<li><a href="https://www.creditkarma.com/rentreporting" target="_blank" rel="noopener">Credit Karma Rent Reporting</a> (Free) - Free rent reporting to help tenants build credit</li>
+<li><a href="https://www.experian.com/consumer-products/rent-reporting.html" target="_blank" rel="noopener">Experian RentBureau</a> (Paid $24.95+/month) - Rent reporting to Experian credit bureau</li>
+<li><a href="https://www.rentreporters.com/" target="_blank" rel="noopener">Rent Reporters</a> (Paid $94.95+/year) - Rent payment reporting to all three credit bureaus</li>
+<li><a href="https://www.levelcredit.com/" target="_blank" rel="noopener">LevelCredit</a> (Paid $6.95+/month) - Rent and utility payment reporting for credit building</li>
+<li><a href="https://www.pymnts.com/news/alternative-financial-services/2021/boom-pay-launches-rent-reporting-service/" target="_blank" rel="noopener">Boom Pay</a> (Paid $4.95+/month) - Rent payment reporting with credit monitoring</li>
+<li><a href="https://www.rentometer.com/credit-reporting" target="_blank" rel="noopener">Rentometer Credit</a> (Paid $9.99+/month) - Rent reporting with market analysis tools</li>
+<li><a href="https://www.cozy.co/" target="_blank" rel="noopener">Cozy</a> (Free/Paid $35+/month) - Optional rent reporting features for tenants</li>
+<li><a href="https://www.avail.co/" target="_blank" rel="noopener">Avail</a> (Free/Paid $5+/month) - Rent reporting integration for tenant credit building</li>
+</ul>
+</li>
+<li><h5 id="landlord-credit-reporting">Landlord Credit Reporting Services</h5>
+<ul>
+<li><a href="https://www.experian.com/landlord/rent-reporting.html" target="_blank" rel="noopener">Experian RentBureau for Landlords</a> (Paid $19.95+/month) - Direct landlord reporting to Experian credit bureau with bulk tenant reporting</li>
+<li><a href="https://www.equifax.com/business/rent-reporting/" target="_blank" rel="noopener">Equifax Rent Reporting</a> (Paid $25+/month) - Landlord-initiated rent payment reporting to Equifax credit files</li>
+<li><a href="https://www.transunion.com/business/rent-reporting" target="_blank" rel="noopener">TransUnion Rent Reporting</a> (Paid $30+/month) - Direct reporting service for landlords to update tenant credit histories</li>
+<li><a href="https://www.creditbuildercard.com/landlords" target="_blank" rel="noopener">Credit Builder Card for Landlords</a> (Paid $15+/month per tenant) - Landlord-managed credit reporting with payment tracking</li>
+<li><a href="https://www.rentreporters.com/landlords/" target="_blank" rel="noopener">Rent Reporters for Landlords</a> (Paid $149.95+/year) - Landlord service to report tenant payments to all three credit bureaus</li>
+<li><a href="https://www.pymnts.com/news/alternative-financial-services/2021/boom-pay-launches-rent-reporting-service/" target="_blank" rel="noopener">Boom Pay Landlord Services</a> (Paid $9.95+/month per tenant) - Landlord-initiated rent reporting with payment processing integration</li>
+<li><a href="https://www.levelcredit.com/landlords/" target="_blank" rel="noopener">LevelCredit for Landlords</a> (Paid $12.95+/month per tenant) - Comprehensive landlord reporting service for rent and utility payments</li>
+<li><a href="https://www.creditkarma.com/business/rent-reporting" target="_blank" rel="noopener">Credit Karma Business Rent Reporting</a> (Paid $5+/month per tenant) - Landlord platform for reporting tenant payment histories</li>
+<li><a href="https://www.buildium.com/credit-reporting/" target="_blank" rel="noopener">Buildium Credit Reporting</a> (Paid $50+/month + $5/tenant) - Integrated credit reporting within property management platform</li>
+<li><a href="https://www.appfolio.com/credit-reporting/" target="_blank" rel="noopener">AppFolio Credit Services</a> (Paid $280+/month + $10/tenant) - Property management with built-in landlord credit reporting</li>
+<li><a href="https://www.propertyware.com/credit-reporting/" target="_blank" rel="noopener">Propertyware Credit Reporting</a> (Paid $250+/month + $8/tenant) - Landlord credit reporting integrated with property management</li>
+<li><a href="https://www.yardi.com/products/credit-reporting/" target="_blank" rel="noopener">Yardi Credit Reporting</a> (Paid $100+/month + $6/tenant) - Automated tenant credit reporting for property managers</li>
+<li><a href="https://www.cozy.co/credit-reporting/" target="_blank" rel="noopener">Cozy Credit Reporting</a> (Paid $35+/month + $3/tenant) - Landlord-initiated credit reporting with free property management</li>
+<li><a href="https://www.avail.co/credit-reporting/" target="_blank" rel="noopener">Avail Credit Services</a> (Paid $5+/month + $4/tenant) - Simple landlord credit reporting with tenant management</li>
+<li><a href="https://www.turbotenant.com/credit-reporting/" target="_blank" rel="noopener">TurboTenant Credit Reporting</a> (Paid $35+/month + $5/tenant) - Landlord platform with integrated tenant credit reporting</li>
+<li><a href="https://www.rentecdirect.com/credit-reporting/" target="_blank" rel="noopener">RentecDirect Credit Services</a> (Paid $35+/month + $7/tenant) - Property management with landlord-controlled credit reporting</li>
+<li><a href="https://www.tenantcloud.com/credit-reporting/" target="_blank" rel="noopener">TenantCloud Credit Reporting</a> (Paid $15+/month + $3/tenant) - Landlord credit reporting with tenant portal integration</li>
+<li><a href="https://www.doorloop.com/credit-reporting/" target="_blank" rel="noopener">DoorLoop Credit Services</a> (Paid $49+/month + $4/tenant) - Automated credit reporting with maintenance and payment tracking</li>
+<li><a href="https://www.innago.com/credit-reporting/" target="_blank" rel="noopener">Innago Credit Reporting</a> (Paid $5+/month + $2/tenant) - Affordable landlord credit reporting with free base platform</li>
+<li><a href="https://www.landlordcreditbureau.com/" target="_blank" rel="noopener">Landlord Credit Bureau</a> (Paid $99+/year + $1/report) - Specialized credit reporting service exclusively for landlords and property managers</li>
+</ul>
+</li>
+<li><h5 id="market-analysis-pricing">Market Analysis & Pricing Tools</h5>
+<ul>
+<li><a href="https://www.rentometer.com/" target="_blank" rel="noopener">Rentometer</a> (Free/Paid $9.99+/month) - Rental market analysis and pricing tools for landlords</li>
+<li><a href="https://www.rentspree.com/market-analysis" target="_blank" rel="noopener">RentSpree Market Analysis</a> (Free/Paid $10+/month) - Local rental market data and pricing insights</li>
+<li><a href="https://www.zillow.com/research/data/" target="_blank" rel="noopener">Zillow Research</a> (Free) - Market data and rental price trends</li>
+<li><a href="https://www.apartments.com/research/" target="_blank" rel="noopener">Apartments.com Research</a> (Free/Paid) - Rental market reports and pricing data</li>
+<li><a href="https://www.realpage.com/analytics/" target="_blank" rel="noopener">RealPage Analytics</a> (Paid $150+/month) - Advanced rental market analytics and pricing optimization</li>
+<li><a href="https://www.costar.com/products/apartments" target="_blank" rel="noopener">CoStar Apartments</a> (Paid $500+/month) - Commercial apartment market data and analysis</li>
+<li><a href="https://www.yardi.com/products/yardi-matrix/" target="_blank" rel="noopener">Yardi Matrix</a> (Paid $200+/month) - Multifamily market intelligence and analytics</li>
+<li><a href="https://www.rentdata.org/" target="_blank" rel="noopener">RentData</a> (Free/Paid $50+/month) - Rental market data and comparative analysis</li>
+<li><a href="https://www.apartmentlist.com/research/" target="_blank" rel="noopener">Apartment List Research</a> (Free) - Rental market trends and pricing reports</li>
+<li><a href="https://www.buildium.com/pricing-tools/" target="_blank" rel="noopener">Buildium Pricing Tools</a> (Paid $50+/month) - Integrated market analysis within property management platform</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><h4 id="construction-building">Construction & Building</h4>
+<ol>
+<li><h5 id="construction-websites">Construction Websites & Platforms</h5>
+<ul>
+<li><a href="https://www.constructionconnect.com/" target="_blank" rel="noopener">ConstructConnect</a> (Paid $200+/month) - Construction project leads, bidding, and networking platform</li>
+<li><a href="https://www.buildertrend.com/" target="_blank" rel="noopener">BuilderTrend</a> (Paid $99+/month) - Construction project management and customer communication platform</li>
+<li><a href="https://www.procore.com/" target="_blank" rel="noopener">Procore</a> (Paid $375+/month) - Construction management platform for projects of all sizes</li>
+<li><a href="https://www.autodesk.com/products/construction-cloud" target="_blank" rel="noopener">Autodesk Construction Cloud</a> (Paid $300+/month) - Integrated construction management and collaboration platform</li>
+<li><a href="https://www.planswift.com/" target="_blank" rel="noopener">PlanSwift</a> (Paid $1,795+/license) - Construction takeoff and estimating software</li>
+<li><a href="https://www.sage.com/en-us/products/sage-100-contractor/" target="_blank" rel="noopener">Sage 100 Contractor</a> (Paid $1,500+/license) - Construction accounting and project management</li>
+<li><a href="https://www.viewpoint.com/" target="_blank" rel="noopener">Viewpoint</a> (Paid $500+/month) - Construction ERP and project management software</li>
+<li><a href="https://www.foundation.software/" target="_blank" rel="noopener">Foundation Software</a> (Paid $400+/month) - Construction accounting and project management</li>
+<li><a href="https://www.cmic.com/" target="_blank" rel="noopener">CMiC</a> (Paid $800+/month) - Enterprise construction management and ERP platform</li>
+<li><a href="https://www.jonas.com/construction/" target="_blank" rel="noopener">JONAS Construction</a> (Paid $300+/month) - Construction management and accounting software</li>
+</ul>
+</li>
+<li><h5 id="construction-software">Construction Software & Management</h5>
+<ul>
+<li><a href="https://www.monday.com/construction/" target="_blank" rel="noopener">Monday.com Construction</a> (Paid $8+/user/month) - Project management platform adapted for construction</li>
+<li><a href="https://www.smartsheet.com/construction" target="_blank" rel="noopener">Smartsheet Construction</a> (Paid $14+/user/month) - Work management platform for construction projects</li>
+<li><a href="https://www.fieldwire.com/" target="_blank" rel="noopener">Fieldwire</a> (Free/Paid $39+/month) - Construction field management and plan viewing app</li>
+<li><a href="https://www.raken.com/" target="_blank" rel="noopener">Raken</a> (Paid $99+/month) - Daily reporting and field management for construction</li>
+<li><a href="https://www.punchlistusa.com/" target="_blank" rel="noopener">PunchListUSA</a> (Paid $29+/month) - Construction punch list and quality control management</li>
+<li><a href="https://www.cosential.com/" target="_blank" rel="noopener">Cosential</a> (Paid $150+/user/month) - Construction CRM and business development platform</li>
+<li><a href="https://www.buildermt.com/" target="_blank" rel="noopener">BuilderMT</a> (Paid $79+/month) - Construction project management for home builders</li>
+<li><a href="https://www.co-construct.com/" target="_blank" rel="noopener">CoConstruct</a> (Paid $99+/month) - Custom home building project management</li>
+<li><a href="https://www.jobprogress.com/" target="_blank" rel="noopener">JobProgress</a> (Paid $49+/month) - Contractor management and customer communication platform</li>
+<li><a href="https://www.contractorforeman.com/" target="_blank" rel="noopener">Contractor Foreman</a> (Paid $49+/month) - Construction project management and scheduling</li>
+</ul>
+</li>
+<li><h5 id="construction-tools">Construction Tools & Equipment</h5>
+<ul>
+<li><a href="https://www.homedepot.com/c/tool_and_truck_rental" target="_blank" rel="noopener">Home Depot Tool Rental</a> (Paid $30+/day) - Construction tool and equipment rental</li>
+<li><a href="https://www.unitedrentals.com/" target="_blank" rel="noopener">United Rentals</a> (Paid $50+/day) - Heavy equipment and tool rental for construction</li>
+<li><a href="https://www.sunbeltrentals.com/" target="_blank" rel="noopener">Sunbelt Rentals</a> (Paid $40+/day) - Construction equipment rental and services</li>
+<li><a href="https://www.herc.com/" target="_blank" rel="noopener">Herc Rentals</a> (Paid $60+/day) - Equipment rental for construction and industrial projects</li>
+<li><a href="https://www.bigrentz.com/" target="_blank" rel="noopener">BigRentz</a> (Paid $35+/day) - Online construction equipment rental marketplace</li>
+<li><a href="https://www.equipmentshare.com/" target="_blank" rel="noopener">EquipmentShare</a> (Paid $45+/day) - Construction equipment rental with telematics</li>
+<li><a href="https://www.caterpillar.com/en/products/new/equipment.html" target="_blank" rel="noopener">Caterpillar Equipment</a> (Paid $100,000+) - Heavy construction machinery and equipment</li>
+<li><a href="https://www.johndeere.com/en/construction-forestry/" target="_blank" rel="noopener">John Deere Construction</a> (Paid $80,000+) - Construction and forestry equipment</li>
+<li><a href="https://www.komatsu.com/" target="_blank" rel="noopener">Komatsu</a> (Paid $120,000+) - Construction and mining equipment</li>
+<li><a href="https://www.volvoce.com/" target="_blank" rel="noopener">Volvo Construction Equipment</a> (Paid $90,000+) - Heavy construction machinery</li>
+</ul>
+</li>
+<li><h5 id="construction-project-management">Project Management & Scheduling</h5>
+<ul>
+<li><a href="https://www.primavera.oracle.com/" target="_blank" rel="noopener">Oracle Primavera</a> (Paid $1,800+/license) - Enterprise project portfolio management for construction</li>
+<li><a href="https://www.microsoft.com/en-us/microsoft-365/project/project-management-software" target="_blank" rel="noopener">Microsoft Project</a> (Paid $10+/user/month) - Project scheduling and management software</li>
+<li><a href="https://www.asta.com/" target="_blank" rel="noopener">Asta Powerproject</a> (Paid $2,500+/license) - Construction project planning and scheduling</li>
+<li><a href="https://www.synchro.com/" target="_blank" rel="noopener">Synchro</a> (Paid $3,000+/license) - 4D construction planning and scheduling</li>
+<li><a href="https://www.bentley.com/en/products/brands/synchro" target="_blank" rel="noopener">Bentley Synchro</a> (Paid $4,000+/license) - Construction modeling and scheduling</li>
+<li><a href="https://www.tilos.de/" target="_blank" rel="noopener">TILOS</a> (Paid $2,200+/license) - Linear construction project scheduling</li>
+<li><a href="https://www.fasttrack.com/" target="_blank" rel="noopener">FastTrack Schedule</a> (Paid $399+/license) - Project scheduling for construction</li>
+<li><a href="https://www.suretrak.com/" target="_blank" rel="noopener">SureTrak</a> (Paid $495+/license) - Project management for small to medium construction projects</li>
+<li><a href="https://www.4projects.com/" target="_blank" rel="noopener">4Projects</a> (Paid $50+/user/month) - Construction collaboration and project management</li>
+<li><a href="https://www.aconex.com/" target="_blank" rel="noopener">Aconex</a> (Paid $100+/user/month) - Construction project collaboration platform</li>
+</ul>
+</li>
+<li><h5 id="construction-estimating-bidding">Estimating & Bidding</h5>
+<ul>
+<li><a href="https://www.bluebeam.com/" target="_blank" rel="noopener">Bluebeam Revu</a> (Paid $349+/license) - PDF markup and takeoff software for construction</li>
+<li><a href="https://www.onscreen-takeoff.com/" target="_blank" rel="noopener">On-Screen Takeoff</a> (Paid $1,695+/license) - Digital takeoff and estimating software</li>
+<li><a href="https://www.stack.com/" target="_blank" rel="noopener">STACK</a> (Paid $1,999+/year) - Cloud-based takeoff and estimating platform</li>
+<li><a href="https://www.esticom.com/" target="_blank" rel="noopener">Esticom</a> (Paid $149+/month) - Electrical estimating and project management</li>
+<li><a href="https://www.accubid.com/" target="_blank" rel="noopener">AccuBid</a> (Paid $2,495+/license) - Electrical estimating software</li>
+<li><a href="https://www.trimble.com/construction/estimation/" target="_blank" rel="noopener">Trimble Estimation</a> (Paid $2,000+/license) - Construction estimating and takeoff software</li>
+<li><a href="https://www.heavybid.com/" target="_blank" rel="noopener">HeavyBid</a> (Paid $3,500+/license) - Heavy civil construction estimating</li>
+<li><a href="https://www.hcss.com/heavyjob/" target="_blank" rel="noopener">HCSS HeavyJob</a> (Paid $150+/month) - Heavy construction project management and estimating</li>
+<li><a href="https://www.rsmeans.com/" target="_blank" rel="noopener">RSMeans Data</a> (Paid $500+/year) - Construction cost data and estimating resources</li>
+<li><a href="https://www.craftsman-book.com/" target="_blank" rel="noopener">Craftsman Book Company</a> (Paid $50-200/book) - Construction cost estimating guides and references</li>
+</ul>
+</li>
+<li><h5 id="construction-design-cad">Design & CAD Software</h5>
+<ul>
+<li><a href="https://www.autodesk.com/products/autocad/overview" target="_blank" rel="noopener">AutoCAD</a> (Paid $1,775+/year) - 2D and 3D CAD software for construction design</li>
+<li><a href="https://www.autodesk.com/products/revit/overview" target="_blank" rel="noopener">Autodesk Revit</a> (Paid $2,545+/year) - Building Information Modeling (BIM) software</li>
+<li><a href="https://www.sketchup.com/" target="_blank" rel="noopener">SketchUp</a> (Free/Paid $299+/year) - 3D modeling software for construction and architecture</li>
+<li><a href="https://www.bentley.com/en/products/brands/microstation" target="_blank" rel="noopener">Bentley MicroStation</a> (Paid $2,500+/license) - CAD software for infrastructure design</li>
+<li><a href="https://www.tekla.com/" target="_blank" rel="noopener">Tekla Structures</a> (Paid $5,000+/license) - Structural BIM software for construction</li>
+<li><a href="https://www.graphisoft.com/solutions/archicad/" target="_blank" rel="noopener">ARCHICAD</a> (Paid $3,600+/license) - BIM software for architects and construction</li>
+<li><a href="https://www.vectorworks.net/" target="_blank" rel="noopener">Vectorworks</a> (Paid $2,895+/license) - CAD and BIM software for construction design</li>
+<li><a href="https://www.rhino3d.com/" target="_blank" rel="noopener">Rhino 3D</a> (Paid $995+/license) - 3D modeling software for construction and design</li>
+<li><a href="https://www.solidworks.com/" target="_blank" rel="noopener">SOLIDWORKS</a> (Paid $3,995+/license) - 3D CAD software for construction and engineering</li>
+<li><a href="https://www.chief-architect.com/" target="_blank" rel="noopener">Chief Architect</a> (Paid $2,695+/license) - Home design and construction software</li>
+</ul>
+</li>
+<li><h5 id="construction-safety-compliance">Safety & Compliance</h5>
+<ul>
+<li><a href="https://www.safetymeeting.com/" target="_blank" rel="noopener">SafetyMeeting.com</a> (Paid $99+/month) - Construction safety training and toolbox talks</li>
+<li><a href="https://www.isnetworld.com/" target="_blank" rel="noopener">ISNetworld</a> (Paid $500+/year) - Contractor safety and compliance management</li>
+<li><a href="https://www.avetta.com/" target="_blank" rel="noopener">Avetta</a> (Paid $300+/month) - Supply chain risk management and contractor compliance</li>
+<li><a href="https://www.veriforce.com/" target="_blank" rel="noopener">Veriforce</a> (Paid $400+/month) - Contractor management and safety compliance</li>
+<li><a href="https://www.safesite.com/" target="_blank" rel="noopener">Safesite</a> (Paid $5+/user/month) - Construction safety management and incident reporting</li>
+<li><a href="https://www.ehsinsight.com/" target="_blank" rel="noopener">EHS Insight</a> (Paid $8+/user/month) - Environmental health and safety management</li>
+<li><a href="https://www.intelex.com/" target="_blank" rel="noopener">Intelex</a> (Paid $12+/user/month) - EHS and quality management software</li>
+<li><a href="https://www.cority.com/" target="_blank" rel="noopener">Cority</a> (Paid $15+/user/month) - EHS and risk management platform</li>
+<li><a href="https://www.osha.gov/" target="_blank" rel="noopener">OSHA</a> (Free) - Occupational Safety and Health Administration resources</li>
+<li><a href="https://www.nsc.org/" target="_blank" rel="noopener">National Safety Council</a> (Free/Paid $200+/course) - Safety training and resources</li>
+</ul>
+</li>
+<li><h5 id="construction-materials-suppliers">Materials & Suppliers</h5>
+<ul>
+<li><a href="https://www.homedepot.com/c/pro" target="_blank" rel="noopener">Home Depot Pro</a> (Free/Paid) - Construction materials and supplies for professionals</li>
+<li><a href="https://www.lowes.com/l/pro-services.html" target="_blank" rel="noopener">Lowe's Pro Services</a> (Free/Paid) - Professional construction materials and services</li>
+<li><a href="https://www.menards.com/" target="_blank" rel="noopener">Menards</a> (Free/Paid) - Building materials and construction supplies</li>
+<li><a href="https://www.84lumber.com/" target="_blank" rel="noopener">84 Lumber</a> (Free/Paid) - Lumber and building materials supplier</li>
+<li><a href="https://www.builderssurplus.com/" target="_blank" rel="noopener">Builder's Surplus</a> (Free/Paid) - Discount building materials and supplies</li>
+<li><a href="https://www.supplyworks.com/" target="_blank" rel="noopener">SupplyWorks</a> (Paid) - Construction supply chain management platform</li>
+<li><a href="https://www.buildingconnected.com/" target="_blank" rel="noopener">BuildingConnected</a> (Free/Paid $99+/month) - Construction bidding and supplier network</li>
+<li><a href="https://www.constructionbook.com/" target="_blank" rel="noopener">ConstructionBook</a> (Free/Paid $29+/month) - Construction supplier and contractor directory</li>
+<li><a href="https://www.usg.com/" target="_blank" rel="noopener">USG</a> (Free/Paid) - Building materials manufacturer and supplier</li>
+<li><a href="https://www.owenscorning.com/" target="_blank" rel="noopener">Owens Corning</a> (Free/Paid) - Insulation and building materials manufacturer</li>
+</ul>
+</li>
+<li><h5 id="road-construction">Road Construction & Infrastructure</h5>
+<ul>
+<li><a href="https://www.caterpillar.com/en/products/new/equipment/off-highway-trucks.html" target="_blank" rel="noopener">Caterpillar Road Equipment</a> (Paid $200,000+) - Heavy equipment for road construction</li>
+<li><a href="https://www.wirtgen-group.com/" target="_blank" rel="noopener">Wirtgen Group</a> (Paid $300,000+) - Road construction and rehabilitation equipment</li>
+<li><a href="https://www.volvoce.com/global/en/products/articulated-haulers/" target="_blank" rel="noopener">Volvo Articulated Haulers</a> (Paid $250,000+) - Heavy hauling equipment for road construction</li>
+<li><a href="https://www.trimble.com/construction/civil-engineering/" target="_blank" rel="noopener">Trimble Civil Engineering</a> (Paid $5,000+/license) - Road design and construction software</li>
+<li><a href="https://www.bentley.com/en/products/brands/openroads" target="_blank" rel="noopener">Bentley OpenRoads</a> (Paid $4,500+/license) - Road and highway design software</li>
+<li><a href="https://www.autodesk.com/products/civil-3d/overview" target="_blank" rel="noopener">AutoCAD Civil 3D</a> (Paid $2,315+/year) - Civil engineering design software</li>
+<li><a href="https://www.carlsonsw.com/" target="_blank" rel="noopener">Carlson Software</a> (Paid $3,500+/license) - Civil engineering and surveying software</li>
+<li><a href="https://www.agtek.com/" target="_blank" rel="noopener">AGTEK</a> (Paid $2,500+/license) - Earthwork takeoff and GPS modeling software</li>
+<li><a href="https://www.hcss.com/plans/" target="_blank" rel="noopener">HCSS Plans</a> (Paid $200+/month) - Digital plan management for heavy construction</li>
+<li><a href="https://www.infotech-enterprises.com/" target="_blank" rel="noopener">InfoTech</a> (Paid $1,500+/license) - Road construction estimating and project management</li>
+</ul>
+</li>
+<li><h5 id="demolition-services">Demolition Services</h5>
+<ul>
+<li><a href="https://www.nda.demolition.org/" target="_blank" rel="noopener">National Demolition Association</a> (Free/Paid $500+/year) - Professional demolition industry resources</li>
+<li><a href="https://www.demolitionassociation.com/" target="_blank" rel="noopener">Demolition Association</a> (Free/Paid $300+/year) - Demolition industry networking and resources</li>
+<li><a href="https://www.caterpillar.com/en/products/new/equipment/demolition.html" target="_blank" rel="noopener">Caterpillar Demolition Equipment</a> (Paid $150,000+) - Heavy demolition machinery</li>
+<li><a href="https://www.komatsu.com/CompanyInfo/profile/demolition/" target="_blank" rel="noopener">Komatsu Demolition</a> (Paid $180,000+) - Demolition equipment and machinery</li>
+<li><a href="https://www.volvoce.com/global/en/products/demolition-equipment/" target="_blank" rel="noopener">Volvo Demolition Equipment</a> (Paid $160,000+) - Specialized demolition machinery</li>
+<li><a href="https://www.liebherr.com/en/usa/products/construction-machines/demolition-equipment/demolition-equipment.html" target="_blank" rel="noopener">Liebherr Demolition</a> (Paid $200,000+) - High-reach demolition equipment</li>
+<li><a href="https://www.atlas-copco.com/en-us/construction-equipment/demolition-tools" target="_blank" rel="noopener">Atlas Copco Demolition Tools</a> (Paid $5,000+) - Hydraulic demolition tools and attachments</li>
+<li><a href="https://www.npkce.com/" target="_blank" rel="noopener">NPK Construction Equipment</a> (Paid $15,000+) - Hydraulic demolition attachments</li>
+<li><a href="https://www.rammerusa.com/" target="_blank" rel="noopener">Rammer</a> (Paid $8,000+) - Hydraulic breakers and demolition attachments</li>
+<li><a href="https://www.demolitionmagazine.com/" target="_blank" rel="noopener">Demolition Magazine</a> (Free/Paid $50+/year) - Industry news and resources for demolition professionals</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><h4 id="facilities-maintenance">Facilities Maintenance</h4>
+<ol>
+<li><h5 id="facilities-management-software">Facilities Management Software</h5>
+<ul>
+<li><a href="https://www.servicenow.com/products/facilities-service-management.html" target="_blank" rel="noopener">ServiceNow Facilities</a> (Paid $100+/user/month) - Enterprise facilities service management platform</li>
+<li><a href="https://www.ibm.com/products/maximo" target="_blank" rel="noopener">IBM Maximo</a> (Paid $150+/user/month) - Enterprise asset management and facilities maintenance</li>
+<li><a href="https://www.archibus.com/" target="_blank" rel="noopener">ARCHIBUS</a> (Paid $50+/user/month) - Integrated workplace management system</li>
+<li><a href="https://www.planon.com/" target="_blank" rel="noopener">Planon</a> (Paid $75+/user/month) - Integrated workplace management and facilities software</li>
+<li><a href="https://www.fm-systems.com/" target="_blank" rel="noopener">FM:Systems</a> (Paid $40+/user/month) - Facilities and space management software</li>
+<li><a href="https://www.tririga.com/" target="_blank" rel="noopener">IBM TRIRIGA</a> (Paid $120+/user/month) - Real estate and facilities management platform</li>
+<li><a href="https://www.spacewell.com/" target="_blank" rel="noopener">Spacewell</a> (Paid $30+/user/month) - Workplace management and facilities software</li>
+<li><a href="https://www.facilitiesnet.com/" target="_blank" rel="noopener">FacilitiesNet</a> (Free/Paid $200+/year) - Facilities management resources and software directory</li>
+<li><a href="https://www.maintenance.org/" target="_blank" rel="noopener">Maintenance.org</a> (Free/Paid $150+/year) - Maintenance and facilities management resources</li>
+<li><a href="https://www.ifma.org/" target="_blank" rel="noopener">IFMA</a> (Free/Paid $300+/year) - International Facility Management Association resources</li>
+</ul>
+</li>
+<li><h5 id="maintenance-scheduling">Maintenance Scheduling & Work Orders</h5>
+<ul>
+<li><a href="https://www.upkeep.com/" target="_blank" rel="noopener">UpKeep</a> (Free/Paid $35+/user/month) - Mobile-first maintenance management and work order system</li>
+<li><a href="https://www.fiix.com/" target="_blank" rel="noopener">Fiix</a> (Paid $45+/user/month) - Cloud-based maintenance management software</li>
+<li><a href="https://www.hippo.com/" target="_blank" rel="noopener">Hippo CMMS</a> (Paid $30+/user/month) - Computerized maintenance management system</li>
+<li><a href="https://www.maintenance.com/" target="_blank" rel="noopener">Maintenance.com</a> (Paid $25+/user/month) - Web-based maintenance management software</li>
+<li><a href="https://www.emaint.com/" target="_blank" rel="noopener">eMaint</a> (Paid $40+/user/month) - Enterprise maintenance management platform</li>
+<li><a href="https://www.limblecmms.com/" target="_blank" rel="noopener">Limble CMMS</a> (Paid $25+/user/month) - Modern maintenance management software</li>
+<li><a href="https://www.fracttal.com/" target="_blank" rel="noopener">Fracttal</a> (Paid $35+/user/month) - Asset management and maintenance platform</li>
+<li><a href="https://www.workorder.com/" target="_blank" rel="noopener">WorkOrder.com</a> (Paid $20+/user/month) - Work order management and scheduling</li>
+<li><a href="https://www.servicechannel.com/" target="_blank" rel="noopener">ServiceChannel</a> (Paid $50+/location/month) - Facilities management and vendor coordination</li>
+<li><a href="https://www.corrigo.com/" target="_blank" rel="noopener">Corrigo</a> (Paid $40+/location/month) - Facilities maintenance and work order management</li>
+</ul>
+</li>
+<li><h5 id="asset-management">Asset Management & Tracking</h5>
+<ul>
+<li><a href="https://www.assetpanda.com/" target="_blank" rel="noopener">AssetPanda</a> (Paid $4+/asset/month) - Cloud-based asset tracking and management</li>
+<li><a href="https://www.wasp.com/" target="_blank" rel="noopener">Wasp AssetCloud</a> (Paid $199+/month) - Asset tracking with barcode and RFID technology</li>
+<li><a href="https://www.ezofficeinventory.com/" target="_blank" rel="noopener">EZOfficeInventory</a> (Paid $35+/user/month) - Asset and inventory management software</li>
+<li><a href="https://www.assetsonar.com/" target="_blank" rel="noopener">Asset Sonar</a> (Paid $3+/asset/month) - Simple asset tracking and management</li>
+<li><a href="https://www.manageengine.com/products/asset-explorer/" target="_blank" rel="noopener">ManageEngine AssetExplorer</a> (Paid $995+/license) - IT asset management software</li>
+<li><a href="https://www.lansweeper.com/" target="_blank" rel="noopener">Lansweeper</a> (Paid $1+/asset/month) - IT asset discovery and inventory management</li>
+<li><a href="https://www.freshworks.com/freshservice/asset-management/" target="_blank" rel="noopener">Freshservice Asset Management</a> (Paid $19+/user/month) - IT asset management within service desk</li>
+<li><a href="https://www.cherwell.com/products/it-asset-management/" target="_blank" rel="noopener">Cherwell Asset Management</a> (Paid $52+/user/month) - Enterprise IT asset management</li>
+<li><a href="https://www.servicenow.com/products/it-asset-management.html" target="_blank" rel="noopener">ServiceNow Asset Management</a> (Paid $100+/user/month) - Enterprise asset lifecycle management</li>
+<li><a href="https://www.flexera.com/products/software-asset-management/" target="_blank" rel="noopener">Flexera</a> (Paid $5+/asset/month) - Software asset management and optimization</li>
+</ul>
+</li>
+<li><h5 id="energy-management">Energy Management & Monitoring</h5>
+<ul>
+<li><a href="https://www.schneider-electric.com/en/work/solutions/for-business/energy-management/" target="_blank" rel="noopener">Schneider Electric EcoStruxure</a> (Paid $500+/month) - Energy management and automation platform</li>
+<li><a href="https://www.siemens.com/global/en/products/buildings/automation/desigo.html" target="_blank" rel="noopener">Siemens Desigo</a> (Paid $1,000+/month) - Building automation and energy management</li>
+<li><a href="https://www.honeywell.com/us/en/products-services/buildings" target="_blank" rel="noopener">Honeywell Building Solutions</a> (Paid $800+/month) - Building automation and energy management</li>
+<li><a href="https://www.johnsoncontrols.com/buildings" target="_blank" rel="noopener">Johnson Controls</a> (Paid $600+/month) - Building efficiency and energy management</li>
+<li><a href="https://www.energystar.gov/buildings/tools-and-resources/portfolio-manager" target="_blank" rel="noopener">ENERGY STAR Portfolio Manager</a> (Free) - Energy performance tracking and benchmarking</li>
+<li><a href="https://www.lucidconnects.com/" target="_blank" rel="noopener">Lucid</a> (Paid $2+/sq ft/year) - Building performance and energy management software</li>
+<li><a href="https://www.energycap.com/" target="_blank" rel="noopener">EnergyCAP</a> (Paid $1,500+/month) - Utility bill management and energy analysis</li>
+<li><a href="https://www.facilitiesnet.com/energyefficiency" target="_blank" rel="noopener">FacilitiesNet Energy</a> (Free/Paid $200+/year) - Energy management resources and tools</li>
+<li><a href="https://www.gridpoint.com/" target="_blank" rel="noopener">GridPoint</a> (Paid $300+/month) - Energy management and demand response platform</li>
+<li><a href="https://www.entouch.net/" target="_blank" rel="noopener">Entouch</a> (Paid $250+/month) - Energy management and facility automation</li>
+</ul>
+</li>
+<li><h5 id="hvac-systems">HVAC Systems & Monitoring</h5>
+<ul>
+<li><a href="https://www.carrier.com/commercial/en/us/software-solutions/" target="_blank" rel="noopener">Carrier Commercial HVAC</a> (Paid $500+/month) - Commercial HVAC systems and controls</li>
+<li><a href="https://www.trane.com/commercial/north-america/us/en/controls-and-automation.html" target="_blank" rel="noopener">Trane Building Automation</a> (Paid $400+/month) - HVAC controls and building automation</li>
+<li><a href="https://www.york.com/commercial-equipment" target="_blank" rel="noopener">York Commercial HVAC</a> (Paid $350+/month) - Commercial heating and cooling systems</li>
+<li><a href="https://www.lennoxcommercial.com/" target="_blank" rel="noopener">Lennox Commercial</a> (Paid $300+/month) - Commercial HVAC equipment and controls</li>
+<li><a href="https://www.daikincomfort.com/commercial" target="_blank" rel="noopener">Daikin Commercial</a> (Paid $450+/month) - Commercial HVAC systems and solutions</li>
+<li><a href="https://www.mitsubishicomfort.com/commercial" target="_blank" rel="noopener">Mitsubishi Electric Commercial</a> (Paid $400+/month) - VRF and commercial HVAC systems</li>
+<li><a href="https://www.belimo.com/" target="_blank" rel="noopener">Belimo</a> (Paid $200+/month) - HVAC actuators and control valves</li>
+<li><a href="https://www.distech-controls.com/" target="_blank" rel="noopener">Distech Controls</a> (Paid $300+/month) - Building automation and HVAC controls</li>
+<li><a href="https://www.reliable-controls.com/" target="_blank" rel="noopener">Reliable Controls</a> (Paid $250+/month) - Building automation and HVAC control systems</li>
+<li><a href="https://www.bacnet.org/" target="_blank" rel="noopener">BACnet</a> (Free) - Building automation and control network protocol</li>
+</ul>
+</li>
+<li><h5 id="security-access-control">Security & Access Control</h5>
+<ul>
+<li><a href="https://www.honeywell.com/us/en/products-services/security" target="_blank" rel="noopener">Honeywell Security</a> (Paid $500+/month) - Integrated security and access control systems</li>
+<li><a href="https://www.boschsecurity.com/" target="_blank" rel="noopener">Bosch Security Systems</a> (Paid $400+/month) - Video surveillance and access control</li>
+<li><a href="https://www.axis.com/" target="_blank" rel="noopener">Axis Communications</a> (Paid $300+/month) - Network video surveillance solutions</li>
+<li><a href="https://www.hikvision.com/" target="_blank" rel="noopener">Hikvision</a> (Paid $250+/month) - Video surveillance and security systems</li>
+<li><a href="https://www.genetec.com/" target="_blank" rel="noopener">Genetec</a> (Paid $600+/month) - Unified security platform for access control and video</li>
+<li><a href="https://www.lenel.com/" target="_blank" rel="noopener">Lenel</a> (Paid $500+/month) - Access control and security management systems</li>
+<li><a href="https://www.hid.com/" target="_blank" rel="noopener">HID Global</a> (Paid $200+/month) - Identity and access management solutions</li>
+<li><a href="https://www.dormakaba.com/" target="_blank" rel="noopener">dormakaba</a> (Paid $300+/month) - Access control and security solutions</li>
+<li><a href="https://www.assa-abloy.com/" target="_blank" rel="noopener">ASSA ABLOY</a> (Paid $250+/month) - Door opening solutions and access control</li>
+<li><a href="https://www.stanley-pam.com/" target="_blank" rel="noopener">Stanley PAM</a> (Paid $400+/month) - Physical access management systems</li>
+</ul>
+</li>
+<li><h5 id="cleaning-janitorial">Cleaning & Janitorial Services</h5>
+<ul>
+<li><a href="https://www.janiking.com/" target="_blank" rel="noopener">Jani-King</a> (Paid $0.05+/sq ft) - Commercial cleaning and janitorial services</li>
+<li><a href="https://www.coverall.com/" target="_blank" rel="noopener">Coverall</a> (Paid $0.04+/sq ft) - Commercial cleaning and disinfection services</li>
+<li><a href="https://www.servicemaster.com/" target="_blank" rel="noopener">ServiceMaster</a> (Paid $0.06+/sq ft) - Commercial cleaning and restoration services</li>
+<li><a href="https://www.cleannet.com/" target="_blank" rel="noopener">CleanNet</a> (Paid $0.05+/sq ft) - Commercial cleaning franchise network</li>
+<li><a href="https://www.anagoinc.com/" target="_blank" rel="noopener">Anago Cleaning Systems</a> (Paid $0.04+/sq ft) - Commercial cleaning and janitorial services</li>
+<li><a href="https://www.swipeclock.com/industries/janitorial/" target="_blank" rel="noopener">SwipeClock Janitorial</a> (Paid $2+/employee/month) - Time tracking for cleaning staff</li>
+<li><a href="https://www.janitorialmanager.com/" target="_blank" rel="noopener">Janitorial Manager</a> (Paid $27+/month) - Cleaning business management software</li>
+<li><a href="https://www.cleantelligent.com/" target="_blank" rel="noopener">Cleantelligent</a> (Paid $1+/1000 sq ft/month) - Cleaning operations management platform</li>
+<li><a href="https://www.swept.com/" target="_blank" rel="noopener">Swept</a> (Paid $29+/location/month) - Cleaning task management and quality control</li>
+<li><a href="https://www.issa.com/" target="_blank" rel="noopener">ISSA</a> (Free/Paid $200+/year) - International Sanitary Supply Association resources</li>
+</ul>
+</li>
+<li><h5 id="space-management">Space Management & Optimization</h5>
+<ul>
+<li><a href="https://www.envoy.com/products/desks/" target="_blank" rel="noopener">Envoy Desks</a> (Paid $2+/desk/month) - Desk booking and space management</li>
+<li><a href="https://www.robinhq.com/" target="_blank" rel="noopener">Robin</a> (Paid $3+/desk/month) - Workplace scheduling and space management</li>
+<li><a href="https://www.condecosoftware.com/" target="_blank" rel="noopener">Condeco</a> (Paid $4+/user/month) - Meeting room and desk booking software</li>
+<li><a href="https://www.meetingroom365.com/" target="_blank" rel="noopener">MeetingRoom365</a> (Paid $2+/room/month) - Meeting room booking and management</li>
+<li><a href="https://www.yarooms.com/" target="_blank" rel="noopener">Yarooms</a> (Paid $3+/user/month) - Meeting room and desk booking platform</li>
+<li><a href="https://www.skedda.com/" target="_blank" rel="noopener">Skedda</a> (Free/Paid $99+/month) - Space booking and scheduling software</li>
+<li><a href="https://www.spaceti.com/" target="_blank" rel="noopener">Spaceti</a> (Paid $1+/sq ft/month) - Smart building and space analytics platform</li>
+<li><a href="https://www.density.io/" target="_blank" rel="noopener">Density</a> (Paid $5+/sensor/month) - People counting and space utilization analytics</li>
+<li><a href="https://www.locatee.com/" target="_blank" rel="noopener">Locatee</a> (Paid $2+/employee/month) - Workplace analytics and space optimization</li>
+<li><a href="https://www.spacewell.com/solutions/space-management/" target="_blank" rel="noopener">Spacewell Space Management</a> (Paid $30+/user/month) - Integrated space management platform</li>
+</ul>
+</li>
+<li><h5 id="vendor-management">Vendor & Contractor Management</h5>
+<ul>
+<li><a href="https://www.servicechannel.com/" target="_blank" rel="noopener">ServiceChannel</a> (Paid $50+/location/month) - Facilities vendor management and coordination</li>
+<li><a href="https://www.corrigo.com/" target="_blank" rel="noopener">Corrigo</a> (Paid $40+/location/month) - Vendor management and work order coordination</li>
+<li><a href="https://www.workiz.com/" target="_blank" rel="noopener">Workiz</a> (Paid $35+/user/month) - Field service management for contractors</li>
+<li><a href="https://www.jobber.com/" target="_blank" rel="noopener">Jobber</a> (Paid $29+/user/month) - Home service business management software</li>
+<li><a href="https://www.housecallpro.com/" target="_blank" rel="noopener">Housecall Pro</a> (Paid $49+/month) - Home service business management platform</li>
+<li><a href="https://www.servicetitan.com/" target="_blank" rel="noopener">ServiceTitan</a> (Paid $99+/user/month) - Home service business management software</li>
+<li><a href="https://www.fieldedge.com/" target="_blank" rel="noopener">FieldEdge</a> (Paid $79+/user/month) - Field service management for contractors</li>
+<li><a href="https://www.simpleservice.com/" target="_blank" rel="noopener">simPRO</a> (Paid $69+/user/month) - Trade contractor management software</li>
+<li><a href="https://www.vonigo.com/" target="_blank" rel="noopener">Vonigo</a> (Paid $49+/user/month) - Service business management platform</li>
+<li><a href="https://www.mhelpdesk.com/" target="_blank" rel="noopener">mHelpDesk</a> (Paid $169+/month) - Field service management and scheduling</li>
+</ul>
+</li>
+<li><h5 id="compliance-reporting">Compliance & Reporting</h5>
+<ul>
+<li><a href="https://www.ehs.com/" target="_blank" rel="noopener">EHS.com</a> (Paid $8+/user/month) - Environmental health and safety compliance</li>
+<li><a href="https://www.sphera.com/" target="_blank" rel="noopener">Sphera</a> (Paid $15+/user/month) - Risk management and compliance platform</li>
+<li><a href="https://www.enablon.com/" target="_blank" rel="noopener">Enablon</a> (Paid $12+/user/month) - Sustainability and compliance management</li>
+<li><a href="https://www.gensuite.com/" target="_blank" rel="noopener">Gensuite</a> (Paid $10+/user/month) - EHS and sustainability management platform</li>
+<li><a href="https://www.velocityehs.com/" target="_blank" rel="noopener">VelocityEHS</a> (Paid $6+/user/month) - Environmental health and safety software</li>
+<li><a href="https://www.dakota.com/" target="_blank" rel="noopener">Dakota Software</a> (Paid $5,000+/license) - EHS and compliance management software</li>
+<li><a href="https://www.processmap.com/" target="_blank" rel="noopener">ProcessMAP</a> (Paid $8+/user/month) - Risk and compliance management platform</li>
+<li><a href="https://www.enhesa.com/" target="_blank" rel="noopener">Enhesa</a> (Paid $2,000+/year) - Regulatory compliance and EHS intelligence</li>
+<li><a href="https://www.epa.gov/" target="_blank" rel="noopener">EPA</a> (Free) - Environmental Protection Agency compliance resources</li>
+<li><a href="https://www.osha.gov/compliance-assistance" target="_blank" rel="noopener">OSHA Compliance</a> (Free) - Occupational safety compliance assistance</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><h4 id="realestate-integrations">Real Estate Integrations</h4>
+<ul>
+<li><a href="https://www.zapier.com/apps/categories/real-estate" target="_blank" rel="noopener">Zapier Real Estate</a> (Free/Paid $20+/month) - Automation integrations for real estate workflows</li>
+<li><a href="https://www.rets.org/" target="_blank" rel="noopener">RETS</a> (Free) - Real Estate Transaction Standard for MLS data integration</li>
+<li><a href="https://www.bridgedataoutput.com/" target="_blank" rel="noopener">Bridge Interactive</a> (Paid $100+/month) - MLS data integration and API services</li>
+<li><a href="https://www.mlsgrid.com/" target="_blank" rel="noopener">MLS Grid</a> (Paid $200+/month) - National MLS data aggregation and integration platform</li>
+<li><a href="https://www.sparkapi.com/" target="_blank" rel="noopener">Spark API</a> (Paid $50+/month) - Real estate data API and integration platform</li>
+<li><a href="https://www.simplyrets.com/" target="_blank" rel="noopener">SimplyRETS</a> (Paid $49+/month) - MLS data API for real estate websites and applications</li>
+<li><a href="https://www.rentals.com/api" target="_blank" rel="noopener">Rentals.com API</a> (Paid $100+/month) - Rental listing data integration and syndication</li>
+<li><a href="https://www.walkthrough.com/" target="_blank" rel="noopener">Walkthrough</a> (Paid $29+/month) - Virtual tour integration for real estate listings</li>
+<li><a href="https://www.matterport.com/" target="_blank" rel="noopener">Matterport</a> (Paid $69+/month) - 3D virtual tour creation and integration platform</li>
+<li><a href="https://www.zillow.com/z/zestimate/" target="_blank" rel="noopener">Zillow Zestimate API</a> (Free/Paid) - Property valuation data integration</li>
+</ul>
+</li>
+<li><h4 id="realestate-consulting">Real Estate Consulting</h4>
+<ul>
+<li><a href="https://www.kw.com/" target="_blank" rel="noopener">Keller Williams</a> (Paid $500+/hour) - Real estate brokerage and consulting services</li>
+<li><a href="https://www.remax.com/" target="_blank" rel="noopener">RE/MAX</a> (Paid $400+/hour) - Real estate consulting and brokerage services</li>
+<li><a href="https://www.coldwellbanker.com/" target="_blank" rel="noopener">Coldwell Banker</a> (Paid $450+/hour) - Real estate consulting and market analysis</li>
+<li><a href="https://www.century21.com/" target="_blank" rel="noopener">Century 21</a> (Paid $350+/hour) - Real estate consulting and transaction services</li>
+<li><a href="https://www.cushmanwakefield.com/" target="_blank" rel="noopener">Cushman & Wakefield</a> (Paid $800+/hour) - Commercial real estate consulting and advisory</li>
+<li><a href="https://www.cbre.com/" target="_blank" rel="noopener">CBRE</a> (Paid $1000+/hour) - Commercial real estate services and consulting</li>
+<li><a href="https://www.jll.com/" target="_blank" rel="noopener">JLL</a> (Paid $900+/hour) - Real estate investment and consulting services</li>
+<li><a href="https://www.colliers.com/" target="_blank" rel="noopener">Colliers</a> (Paid $700+/hour) - Commercial real estate consulting and advisory</li>
+<li><a href="https://www.marcusmillichap.com/" target="_blank" rel="noopener">Marcus & Millichap</a> (Paid $600+/hour) - Commercial real estate investment consulting</li>
+<li><a href="https://www.biggerpockets.com/pro" target="_blank" rel="noopener">BiggerPockets Pro</a> (Paid $39+/month) - Real estate investment education and consulting</li>
+</ul>
+</li>
+<li><h4 id="realestate-training">Real Estate Training</h4>
+<ul>
+<li><a href="https://www.realestateexpress.com/" target="_blank" rel="noopener">Real Estate Express</a> (Paid $200+/course) - Real estate licensing and continuing education</li>
+<li><a href="https://www.kaplanrealestate.com/" target="_blank" rel="noopener">Kaplan Real Estate</a> (Paid $300+/course) - Real estate education and exam preparation</li>
+<li><a href="https://www.aceable.com/real-estate/" target="_blank" rel="noopener">Aceable Real Estate</a> (Paid $199+/course) - Online real estate licensing courses</li>
+<li><a href="https://www.realestatetrainingsolutions.com/" target="_blank" rel="noopener">Real Estate Training Solutions</a> (Paid $150+/course) - Professional real estate education</li>
+<li><a href="https://www.theceshop.com/" target="_blank" rel="noopener">The CE Shop</a> (Paid $99+/course) - Real estate continuing education and licensing</li>
+<li><a href="https://www.reiclub.com/" target="_blank" rel="noopener">REI Club</a> (Paid $97+/month) - Real estate investment education and training</li>
+<li><a href="https://www.fortunebuilders.com/" target="_blank" rel="noopener">FortuneBuilders</a> (Paid $2000+/course) - Real estate investment education and mentoring</li>
+<li><a href="https://www.biggerpockets.com/bootcamp" target="_blank" rel="noopener">BiggerPockets Bootcamp</a> (Paid $497+/course) - Real estate investment training programs</li>
+<li><a href="https://www.reinetwork.com/" target="_blank" rel="noopener">REI Network</a> (Paid $197+/month) - Real estate investment education and networking</li>
+<li><a href="https://www.udemy.com/topic/real-estate/" target="_blank" rel="noopener">Udemy Real Estate</a> (Paid $50-200/course) - Online real estate courses and training</li>
+</ul>
+</li>
+<li><h4 id="realestate-certifications">Real Estate Certifications</h4>
+<ul>
+<li><a href="https://www.nar.realtor/designations-and-certifications" target="_blank" rel="noopener">NAR Designations</a> (Paid $300+/certification) - National Association of Realtors professional certifications</li>
+<li><a href="https://www.ccim.com/" target="_blank" rel="noopener">CCIM</a> (Paid $2000+/certification) - Certified Commercial Investment Member designation</li>
+<li><a href="https://www.cpmresidential.org/" target="_blank" rel="noopener">CPM</a> (Paid $1500+/certification) - Certified Property Manager designation</li>
+<li><a href="https://www.irem.org/certifications" target="_blank" rel="noopener">IREM Certifications</a> (Paid $800+/certification) - Institute of Real Estate Management certifications</li>
+<li><a href="https://www.sior.com/" target="_blank" rel="noopener">SIOR</a> (Paid $3000+/certification) - Society of Industrial and Office Realtors designation</li>
+<li><a href="https://www.crs.com/" target="_blank" rel="noopener">CRS</a> (Paid $1000+/certification) - Certified Residential Specialist designation</li>
+<li><a href="https://www.gri.net/" target="_blank" rel="noopener">GRI</a> (Paid $500+/certification) - Graduate Realtor Institute designation</li>
+<li><a href="https://www.abrchicago.com/" target="_blank" rel="noopener">ABR</a> (Paid $400+/certification) - Accredited Buyer's Representative designation</li>
+<li><a href="https://www.sres.org/" target="_blank" rel="noopener">SRES</a> (Paid $600+/certification) - Seniors Real Estate Specialist designation</li>
+<li><a href="https://www.militaryrelocationpro.com/" target="_blank" rel="noopener">MRP</a> (Paid $300+/certification) - Military Relocation Professional certification</li>
+</ul>
+</li>
+<li><h4 id="realestate-resources">Real Estate Resources</h4>
+<ul>
+<li><a href="https://www.nar.realtor/" target="_blank" rel="noopener">National Association of Realtors</a> (Free/Paid $150+/year) - Professional real estate organization and resources</li>
+<li><a href="https://www.biggerpockets.com/" target="_blank" rel="noopener">BiggerPockets</a> (Free/Paid $39+/month) - Real estate investment community and resources</li>
+<li><a href="https://www.inman.com/" target="_blank" rel="noopener">Inman</a> (Free/Paid $99+/month) - Real estate news and industry insights</li>
+<li><a href="https://www.realtor.org/" target="_blank" rel="noopener">Realtor.org</a> (Free) - Real estate industry news and professional resources</li>
+<li><a href="https://www.housingwire.com/" target="_blank" rel="noopener">HousingWire</a> (Free/Paid $199+/year) - Real estate and mortgage industry news</li>
+<li><a href="https://www.rismedia.com/" target="_blank" rel="noopener">RISMedia</a> (Free/Paid $149+/year) - Real estate industry news and resources</li>
+<li><a href="https://www.realestatemagazine.com/" target="_blank" rel="noopener">Real Estate Magazine</a> (Free/Paid $29+/year) - Real estate industry publication</li>
+<li><a href="https://www.census.gov/construction/nrc/" target="_blank" rel="noopener">US Census Housing Data</a> (Free) - Government housing statistics and market data</li>
+<li><a href="https://www.freddiemac.com/research" target="_blank" rel="noopener">Freddie Mac Research</a> (Free) - Housing market research and economic analysis</li>
+<li><a href="https://www.fanniemae.com/research-and-insights" target="_blank" rel="noopener">Fannie Mae Research</a> (Free) - Housing market insights and economic forecasts</li>
+</ul>
+</li>
+<li><h4 id="realestate-software-development">Real Estate Software Development</h4>
+<ul>
+<li><a href="https://developers.rets.org/" target="_blank" rel="noopener">RETS Developers</a> (Free) - Real Estate Transaction Standard development resources</li>
+<li><a href="https://www.sparkapi.com/docs" target="_blank" rel="noopener">Spark API Documentation</a> (Free/Paid) - Real estate data API development resources</li>
+<li><a href="https://www.simplyrets.com/documentation" target="_blank" rel="noopener">SimplyRETS Documentation</a> (Free/Paid) - MLS data API development guides</li>
+<li><a href="https://www.bridgedataoutput.com/developers" target="_blank" rel="noopener">Bridge Interactive Developers</a> (Paid) - MLS data integration development platform</li>
+<li><a href="https://www.zillow.com/howto/api/APIOverview.htm" target="_blank" rel="noopener">Zillow API</a> (Free/Paid) - Property data API for developers</li>
+<li><a href="https://www.rentals.com/api-documentation" target="_blank" rel="noopener">Rentals.com API Docs</a> (Paid) - Rental data API development resources</li>
+<li><a href="https://www.walkscore.com/professional/api.php" target="_blank" rel="noopener">Walk Score API</a> (Paid $200+/month) - Walkability data API for real estate applications</li>
+<li><a href="https://www.onboard-apis.com/" target="_blank" rel="noopener">Onboard APIs</a> (Paid $100+/month) - Real estate data APIs and development tools</li>
+<li><a href="https://www.attomdata.com/api/" target="_blank" rel="noopener">ATTOM Data API</a> (Paid $500+/month) - Property data and analytics API platform</li>
+<li><a href="https://www.corelogic.com/solutions/apis.aspx" target="_blank" rel="noopener">CoreLogic APIs</a> (Paid $1000+/month) - Property data and analytics API services</li>
+</ul>
+</li>
+<li><h4 id="realestate-implementation">Real Estate Implementation</h4>
+<ul>
+<li><a href="https://www.chime.me/" target="_blank" rel="noopener">Chime Technologies</a> (Paid $5000+/project) - Real estate technology implementation and consulting</li>
+<li><a href="https://www.boomtownroi.com/" target="_blank" rel="noopener">BoomTown</a> (Paid $1000+/month) - Real estate lead generation and CRM implementation</li>
+<li><a href="https://www.followupboss.com/" target="_blank" rel="noopener">Follow Up Boss</a> (Paid $69+/month) - Real estate CRM implementation and setup</li>
+<li><a href="https://www.wise-agent.com/" target="_blank" rel="noopener">Wise Agent</a> (Paid $29+/month) - Real estate CRM and transaction management implementation</li>
+<li><a href="https://www.topproducer.com/" target="_blank" rel="noopener">Top Producer</a> (Paid $40+/month) - Real estate CRM and marketing automation implementation</li>
+<li><a href="https://www.realvolve.com/" target="_blank" rel="noopener">Realvolve</a> (Paid $59+/month) - Real estate workflow and CRM implementation</li>
+<li><a href="https://www.liondesk.com/" target="_blank" rel="noopener">LionDesk</a> (Paid $25+/month) - Real estate CRM implementation and training</li>
+<li><a href="https://www.kvcore.com/" target="_blank" rel="noopener">kvCORE</a> (Paid $199+/month) - Real estate platform implementation and setup</li>
+<li><a href="https://www.chimecrm.com/" target="_blank" rel="noopener">Chime CRM</a> (Paid $39+/month) - Real estate CRM implementation and customization</li>
+<li><a href="https://www.realgeeks.com/" target="_blank" rel="noopener">Real Geeks</a> (Paid $249+/month) - Real estate website and lead generation implementation</li>
+</ul>
+</li>
+<li><h4 id="realestate-migration">Real Estate Migration</h4>
+<ul>
+<li><a href="https://www.mlsmigration.com/" target="_blank" rel="noopener">MLS Migration Services</a> (Paid $2000+/project) - MLS data migration and integration services</li>
+<li><a href="https://www.realestatedatamigration.com/" target="_blank" rel="noopener">Real Estate Data Migration</a> (Paid $1500+/project) - Property data migration and conversion</li>
+<li><a href="https://www.crmtransfer.com/" target="_blank" rel="noopener">CRM Transfer</a> (Paid $500+/project) - Real estate CRM data migration services</li>
+<li><a href="https://www.propertybase.com/migration" target="_blank" rel="noopener">Propertybase Migration</a> (Paid $1000+/project) - Real estate platform migration services</li>
+<li><a href="https://www.salesforce.com/products/platform/migration/" target="_blank" rel="noopener">Salesforce Migration</a> (Paid $2000+/project) - Real estate Salesforce migration and setup</li>
+<li><a href="https://www.hubspot.com/migration" target="_blank" rel="noopener">HubSpot Migration</a> (Paid $1500+/project) - Real estate HubSpot CRM migration services</li>
+<li><a href="https://www.pipedrive.com/migration" target="_blank" rel="noopener">Pipedrive Migration</a> (Paid $800+/project) - Real estate Pipedrive CRM migration</li>
+<li><a href="https://www.zoho.com/crm/migration/" target="_blank" rel="noopener">Zoho CRM Migration</a> (Paid $600+/project) - Real estate Zoho CRM data migration</li>
+<li><a href="https://www.contactually.com/migration" target="_blank" rel="noopener">Contactually Migration</a> (Paid $1000+/project) - Real estate relationship management migration</li>
+<li><a href="https://www.realvolve.com/migration" target="_blank" rel="noopener">Realvolve Migration</a> (Paid $750+/project) - Real estate workflow platform migration</li>
+</ul>
+</li>
+<li><h4 id="realestate-support">Real Estate Support</h4>
+<ul>
+<li><a href="https://www.realestatewebmasters.com/support/" target="_blank" rel="noopener">Real Estate Webmasters</a> (Paid $200+/month) - Real estate website support and maintenance</li>
+<li><a href="https://www.placester.com/support/" target="_blank" rel="noopener">Placester Support</a> (Paid $99+/month) - Real estate website platform support</li>
+<li><a href="https://www.idxbroker.com/support" target="_blank" rel="noopener">IDX Broker Support</a> (Paid $39+/month) - MLS integration and IDX support services</li>
+<li><a href="https://www.diversesolutions.com/support/" target="_blank" rel="noopener">Diverse Solutions</a> (Paid $150+/month) - Real estate technology support and consulting</li>
+<li><a href="https://www.realgeeks.com/support/" target="_blank" rel="noopener">Real Geeks Support</a> (Paid $249+/month) - Real estate lead generation platform support</li>
+<li><a href="https://www.boomtownroi.com/support/" target="_blank" rel="noopener">BoomTown Support</a> (Paid $1000+/month) - Real estate platform technical support</li>
+<li><a href="https://www.followupboss.com/support/" target="_blank" rel="noopener">Follow Up Boss Support</a> (Paid $69+/month) - Real estate CRM support and training</li>
+<li><a href="https://www.chime.me/support/" target="_blank" rel="noopener">Chime Technologies Support</a> (Paid $200+/hour) - Real estate technology support services</li>
+<li><a href="https://www.kvcore.com/support/" target="_blank" rel="noopener">kvCORE Support</a> (Paid $199+/month) - Real estate platform support and training</li>
+<li><a href="https://www.realvolve.com/support/" target="_blank" rel="noopener">Realvolve Support</a> (Paid $59+/month) - Real estate workflow platform support</li>
+</ul>
+</li>
+<li><h4 id="realestate-other">Real Estate Other</h4>
+<ul>
+<li><a href="https://www.rocketmortgage.com/" target="_blank" rel="noopener">Rocket Mortgage</a> (Free/Paid) - Online mortgage lending and pre-approval platform</li>
+<li><a href="https://www.quickenloans.com/" target="_blank" rel="noopener">Quicken Loans</a> (Free/Paid) - Mortgage lending and refinancing services</li>
+<li><a href="https://www.lendingclub.com/" target="_blank" rel="noopener">LendingClub</a> (Free/Paid) - Personal and real estate investment loans</li>
+<li><a href="https://www.fundrise.com/" target="_blank" rel="noopener">Fundrise</a> (Paid $10+/month) - Real estate investment platform and REIT investing</li>
+<li><a href="https://www.realtymogul.com/" target="_blank" rel="noopener">RealtyMogul</a> (Paid $5000+/investment) - Commercial real estate investment platform</li>
+<li><a href="https://www.yieldstreet.com/" target="_blank" rel="noopener">YieldStreet</a> (Paid $10000+/investment) - Alternative real estate investment platform</li>
+<li><a href="https://www.roofstock.com/" target="_blank" rel="noopener">Roofstock</a> (Free/Paid) - Single-family rental property investment marketplace</li>
+<li><a href="https://www.homevestors.com/" target="_blank" rel="noopener">HomeVestors</a> (Free/Paid) - House buying and real estate investment franchise</li>
+<li><a href="https://www.opendoor.com/" target="_blank" rel="noopener">Opendoor</a> (Free/Paid) - iBuying platform for quick home sales and purchases</li>
+<li><a href="https://www.offerpad.com/" target="_blank" rel="noopener">Offerpad</a> (Free/Paid) - Real estate technology platform for buying and selling homes</li>
+<li><a href="https://www.compass.com/" target="_blank" rel="noopener">Compass</a> (Free/Paid) - Real estate technology platform and brokerage services</li>
+<li><a href="https://www.purplebricks.com/" target="_blank" rel="noopener">Purplebricks</a> (Paid $3000+/transaction) - Online real estate brokerage platform</li>
+<li><a href="https://www.homelight.com/" target="_blank" rel="noopener">HomeLight</a> (Free/Paid) - Real estate agent matching and home selling platform</li>
+<li><a href="https://www.clever.com/" target="_blank" rel="noopener">Clever</a> (Free/Paid) - Real estate agent matching with reduced commission rates</li>
+<li><a href="https://www.hauseit.com/" target="_blank" rel="noopener">Hauseit</a> (Paid $3000+/transaction) - For sale by owner and discount real estate services</li>
+</ul>
+</li>
+</ol>
+</section>
+
 <section>
 <h2>Tags:</h2>
 <div class="tags-container">
@@ -3243,7 +3936,9 @@ Your writing assistant that never leaves your Mac. Powered by local AI models wi
 <a href="https://mytech.today/tags/cad/" target="_blank" rel="noopener" class="tag">CAD</a>
 <a href="https://mytech.today/tags/cloud/" target="_blank" rel="noopener" class="tag">Cloud</a>
 <a href="https://mytech.today/tags/coding/" target="_blank" rel="noopener" class="tag">Coding</a>
+<a href="https://mytech.today/tags/commercial-real-estate/" target="_blank" rel="noopener" class="tag">Commercial Real Estate</a>
 <a href="https://mytech.today/tags/communication/" target="_blank" rel="noopener" class="tag">Communication</a>
+<a href="https://mytech.today/tags/credit-reporting/" target="_blank" rel="noopener" class="tag">Credit Reporting</a>
 <a href="https://mytech.today/tags/crm/" target="_blank" rel="noopener" class="tag">CRM</a>
 <a href="https://mytech.today/tags/css/" target="_blank" rel="noopener" class="tag">CSS</a>
 <a href="https://mytech.today/tags/cybersecurity/" target="_blank" rel="noopener" class="tag">Cybersecurity</a>
@@ -3278,14 +3973,19 @@ Your writing assistant that never leaves your Mac. Powered by local AI models wi
 <a href="https://mytech.today/tags/performance/" target="_blank" rel="noopener" class="tag">Performance</a>
 <a href="https://mytech.today/tags/productivity/" target="_blank" rel="noopener" class="tag">Productivity</a>
 <a href="https://mytech.today/tags/programming/" target="_blank" rel="noopener" class="tag">Programming</a>
+<a href="https://mytech.today/tags/property-management/" target="_blank" rel="noopener" class="tag">Property Management</a>
 <a href="https://mytech.today/tags/python/" target="_blank" rel="noopener" class="tag">Python</a>
+<a href="https://mytech.today/tags/real-estate/" target="_blank" rel="noopener" class="tag">Real Estate</a>
 <a href="https://mytech.today/tags/remote-access/" target="_blank" rel="noopener" class="tag">Remote Access</a>
+<a href="https://mytech.today/tags/rental-management/" target="_blank" rel="noopener" class="tag">Rental Management</a>
+<a href="https://mytech.today/tags/rent-collection/" target="_blank" rel="noopener" class="tag">Rent Collection</a>
 <a href="https://mytech.today/tags/search/" target="_blank" rel="noopener" class="tag">Search</a>
 <a href="https://mytech.today/tags/security/" target="_blank" rel="noopener" class="tag">Security</a>
 <a href="https://mytech.today/tags/seo/" target="_blank" rel="noopener" class="tag">SEO</a>
 <a href="https://mytech.today/tags/social-media/" target="_blank" rel="noopener" class="tag">Social Media</a>
 <a href="https://mytech.today/tags/software/" target="_blank" rel="noopener" class="tag">Software</a>
 <a href="https://mytech.today/tags/system-administration/" target="_blank" rel="noopener" class="tag">System Administration</a>
+<a href="https://mytech.today/tags/tenant-screening/" target="_blank" rel="noopener" class="tag">Tenant Screening</a>
 <a href="https://mytech.today/tags/testing/" target="_blank" rel="noopener" class="tag">Testing</a>
 <a href="https://mytech.today/tags/tools/" target="_blank" rel="noopener" class="tag">Tools</a>
 <a href="https://mytech.today/tags/version-control/" target="_blank" rel="noopener" class="tag">Version Control</a>
