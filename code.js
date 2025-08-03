@@ -353,6 +353,47 @@
         },
 
         /**
+         * Dynamically adjust scroll area when nested content expands
+         * @param {Element} tocList - The TOC list element
+         */
+        adjustScrollForExpandedContent(tocList) {
+            try {
+                if (!tocList) return;
+
+                // Force recalculation of scroll dimensions
+                tocList.style.height = 'auto';
+
+                // Get the actual content height after expansion
+                const contentHeight = tocList.scrollHeight;
+                const maxAllowedHeight = window.innerHeight - 80; // Account for sticky header
+
+                // Set appropriate height and enable scrolling if needed
+                if (contentHeight > maxAllowedHeight) {
+                    tocList.style.maxHeight = `${maxAllowedHeight}px`;
+                    tocList.style.overflowY = 'auto';
+                    tocList.style.overflowX = 'hidden';
+                } else {
+                    tocList.style.maxHeight = 'none';
+                    tocList.style.overflowY = 'visible';
+                }
+
+                // Update scroll indicator
+                this.updateScrollIndicator(tocList);
+
+                // Ensure the scroll position allows access to all content
+                setTimeout(() => {
+                    if (tocList.scrollHeight > tocList.clientHeight) {
+                        // If content is cut off, ensure we can scroll to see it
+                        tocList.scrollTop = Math.min(tocList.scrollTop, tocList.scrollHeight - tocList.clientHeight);
+                    }
+                }, 50);
+
+            } catch (error) {
+                logError('scroll', 7, `Adjust scroll for expanded content error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
          * Handle TOC internal scrolling for accessibility
          * @param {Event} event - Scroll event
          */
@@ -573,6 +614,18 @@
                 nestedList.setAttribute('aria-hidden', 'false');
                 parentItem.classList.add('nested-expanded');
 
+                // If we're in sticky mode, adjust scroll area for expanded content
+                const toc = parentItem.closest('nav.toc');
+                if (toc && toc.classList.contains('toc-sticky')) {
+                    const tocList = toc.querySelector('ul.toc-scrollable');
+                    if (tocList) {
+                        // Delay adjustment to allow CSS transitions to complete
+                        setTimeout(() => {
+                            ScrollManager.adjustScrollForExpandedContent(tocList);
+                        }, 100);
+                    }
+                }
+
                 // Dispatch custom event
                 const event = new CustomEvent('nestedListExpand', {
                     detail: { parentItem, nestedList }
@@ -597,6 +650,18 @@
                 nestedList.setAttribute('aria-hidden', 'true');
                 parentItem.classList.remove('nested-expanded');
 
+                // If we're in sticky mode, readjust scroll area after collapse
+                const toc = parentItem.closest('nav.toc');
+                if (toc && toc.classList.contains('toc-sticky')) {
+                    const tocList = toc.querySelector('ul.toc-scrollable');
+                    if (tocList) {
+                        // Delay adjustment to allow CSS transitions to complete
+                        setTimeout(() => {
+                            ScrollManager.adjustScrollForExpandedContent(tocList);
+                        }, 100);
+                    }
+                }
+
                 // Dispatch custom event
                 const event = new CustomEvent('nestedListCollapse', {
                     detail: { parentItem, nestedList }
@@ -613,6 +678,10 @@
      * TOC interaction management
      */
     const TOCInteraction = {
+        hoverTimeout: null,
+        leaveTimeout: null,
+        isTransitioning: false,
+
         /**
          * Toggle TOC expansion state
          */
@@ -625,7 +694,7 @@
                 }
 
                 TOCState.isExpanded = !TOCState.isExpanded;
-                
+
                 if (TOCState.isExpanded) {
                     toc.classList.add('toc-expanded');
                     toc.setAttribute('aria-expanded', 'true');
@@ -646,36 +715,84 @@
         },
 
         /**
-         * Handle mouse enter event
+         * Handle mouse enter event with Edge browser stability fixes
          */
         handleMouseEnter() {
             try {
+                // Clear any pending leave timeout to prevent flashing
+                if (this.leaveTimeout) {
+                    clearTimeout(this.leaveTimeout);
+                    this.leaveTimeout = null;
+                }
+
+                // Prevent rapid state changes during transitions
+                if (this.isTransitioning) {
+                    return;
+                }
+
                 TOCState.isHovered = true;
 
-                // Delay expansion slightly to prevent accidental triggers
-                setTimeout(() => {
-                    if (TOCState.isHovered && !ViewportUtils.isMobile()) {
+                // Clear any existing hover timeout
+                if (this.hoverTimeout) {
+                    clearTimeout(this.hoverTimeout);
+                }
+
+                // Delay expansion with longer timeout for Edge stability
+                const delay = this.isEdgeBrowser() ? TOCConfig.timing.hoverDelay + 100 : TOCConfig.timing.hoverDelay;
+
+                this.hoverTimeout = setTimeout(() => {
+                    if (TOCState.isHovered && !ViewportUtils.isMobile() && !this.isTransitioning) {
                         this.expandTOC();
                     }
-                }, TOCConfig.timing.hoverDelay);
+                    this.hoverTimeout = null;
+                }, delay);
             } catch (error) {
                 logError('nav', 3, `Mouse enter error: ${error.message}`, 0, 0);
             }
         },
 
         /**
-         * Handle mouse leave event
+         * Handle mouse leave event with Edge browser stability fixes
          */
         handleMouseLeave() {
             try {
-                TOCState.isHovered = false;
-                
-                if (!TOCState.isFocused && !ViewportUtils.isMobile()) {
-                    this.collapseTOC();
+                // Clear any pending hover timeout to prevent flashing
+                if (this.hoverTimeout) {
+                    clearTimeout(this.hoverTimeout);
+                    this.hoverTimeout = null;
                 }
+
+                // Prevent rapid state changes during transitions
+                if (this.isTransitioning) {
+                    return;
+                }
+
+                TOCState.isHovered = false;
+
+                // Clear any existing leave timeout
+                if (this.leaveTimeout) {
+                    clearTimeout(this.leaveTimeout);
+                }
+
+                // Delay collapse with longer timeout for Edge stability
+                const delay = this.isEdgeBrowser() ? 200 : 100;
+
+                this.leaveTimeout = setTimeout(() => {
+                    if (!TOCState.isHovered && !TOCState.isFocused && !ViewportUtils.isMobile() && !this.isTransitioning) {
+                        this.collapseTOC();
+                    }
+                    this.leaveTimeout = null;
+                }, delay);
             } catch (error) {
                 logError('nav', 4, `Mouse leave error: ${error.message}`, 0, 0);
             }
+        },
+
+        /**
+         * Detect if running in Edge browser
+         */
+        isEdgeBrowser() {
+            return /Edge|Edg/.test(navigator.userAgent);
         },
 
         /**
@@ -706,32 +823,65 @@
         },
 
         /**
-         * Expand TOC programmatically
+         * Expand TOC programmatically with transition state management
          */
         expandTOC() {
-            if (!TOCState.isExpanded) {
-                this.toggleExpansion();
+            try {
+                if (!TOCState.isExpanded && !this.isTransitioning) {
+                    this.isTransitioning = true;
+                    this.toggleExpansion();
 
-                // Update scroll indicator after expansion
-                setTimeout(() => {
-                    const toc = safeQuerySelector(TOCConfig.selectors.toc);
-                    if (toc && TOCState.isSticky) {
-                        const tocList = toc.querySelector('ul.toc-scrollable');
-                        if (tocList) {
-                            ScrollManager.updateScrollIndicator(tocList);
+                    // Update scroll indicator after expansion
+                    setTimeout(() => {
+                        const toc = safeQuerySelector(TOCConfig.selectors.toc);
+                        if (toc && TOCState.isSticky) {
+                            const tocList = toc.querySelector('ul.toc-scrollable');
+                            if (tocList) {
+                                ScrollManager.updateScrollIndicator(tocList);
+                            }
                         }
-                    }
-                }, TOCConfig.timing.transitionDuration);
+                        this.isTransitioning = false;
+                    }, TOCConfig.timing.transitionDuration);
+                }
+            } catch (error) {
+                this.isTransitioning = false;
+                logError('nav', 14, `Expand TOC error: ${error.message}`, 0, 0);
             }
         },
 
         /**
-         * Collapse TOC programmatically
+         * Collapse TOC programmatically with transition state management
          */
         collapseTOC() {
-            if (TOCState.isExpanded) {
-                this.toggleExpansion();
+            try {
+                if (TOCState.isExpanded && !this.isTransitioning) {
+                    this.isTransitioning = true;
+                    this.toggleExpansion();
+
+                    // Reset transition state after animation completes
+                    setTimeout(() => {
+                        this.isTransitioning = false;
+                    }, TOCConfig.timing.transitionDuration);
+                }
+            } catch (error) {
+                this.isTransitioning = false;
+                logError('nav', 15, `Collapse TOC error: ${error.message}`, 0, 0);
             }
+        },
+
+        /**
+         * Clean up timeouts when component is destroyed
+         */
+        cleanup() {
+            if (this.hoverTimeout) {
+                clearTimeout(this.hoverTimeout);
+                this.hoverTimeout = null;
+            }
+            if (this.leaveTimeout) {
+                clearTimeout(this.leaveTimeout);
+                this.leaveTimeout = null;
+            }
+            this.isTransitioning = false;
         }
     };
 
@@ -856,9 +1006,15 @@
             // Initialize header anchor links
             HeaderAnchorLinks.init();
 
-            // Add event listeners
-            toc.addEventListener('mouseenter', () => TOCInteraction.handleMouseEnter());
-            toc.addEventListener('mouseleave', () => TOCInteraction.handleMouseLeave());
+            // Add event listeners with Edge browser optimizations
+            if (TOCInteraction.isEdgeBrowser()) {
+                // Use passive listeners for better performance in Edge
+                toc.addEventListener('mouseenter', () => TOCInteraction.handleMouseEnter(), { passive: true });
+                toc.addEventListener('mouseleave', () => TOCInteraction.handleMouseLeave(), { passive: true });
+            } else {
+                toc.addEventListener('mouseenter', () => TOCInteraction.handleMouseEnter());
+                toc.addEventListener('mouseleave', () => TOCInteraction.handleMouseLeave());
+            }
             toc.addEventListener('focusin', () => TOCInteraction.handleFocus());
             toc.addEventListener('focusout', () => TOCInteraction.handleBlur());
 
@@ -871,6 +1027,11 @@
 
             // Scroll handler for sticky behavior - this is the key missing piece
             window.addEventListener('scroll', () => ScrollManager.handleScroll(), { passive: true });
+
+            // Cleanup on page unload to prevent memory leaks
+            window.addEventListener('beforeunload', () => {
+                TOCInteraction.cleanup();
+            });
 
             // Mark as initialized
             TOCState.initialized = true;
@@ -1185,6 +1346,7 @@
         expand: () => TOCInteraction.expandTOC(),
         collapse: () => TOCInteraction.collapseTOC(),
         toggle: () => TOCInteraction.toggleExpansion(),
+        cleanup: () => TOCInteraction.cleanup(),
         nested: {
             init: () => NestedListManager.init(),
             expandAll: () => {

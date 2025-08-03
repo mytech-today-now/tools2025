@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Browser TOC Flashing Fix Test</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Test-specific styles */
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .test-info {
+            background: #f0f8ff;
+            border: 1px solid #0066cc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .test-content {
+            height: 200vh; /* Make page scrollable to test sticky behavior */
+            padding: 20px;
+        }
+        
+        .test-section {
+            margin: 40px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        /* Debug info styles */
+        .debug-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 9999;
+            max-width: 300px;
+        }
+        
+        .browser-info {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .state-info {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info">
+        <div class="browser-info">Browser: <span id="browser-name">Detecting...</span></div>
+        <div class="state-info">
+            <div>TOC Sticky: <span id="sticky-state">false</span></div>
+            <div>TOC Expanded: <span id="expanded-state">false</span></div>
+            <div>Is Hovered: <span id="hover-state">false</span></div>
+            <div>Is Transitioning: <span id="transition-state">false</span></div>
+        </div>
+    </div>
+
+    <div class="test-info">
+        <h1>Edge Browser TOC Flashing Fix Test</h1>
+        <p><strong>Purpose:</strong> This test verifies that the sticky TOC no longer flashes between states in Microsoft Edge.</p>
+        
+        <h3>Test Instructions:</h3>
+        <ol>
+            <li>Open this page in Microsoft Edge browser</li>
+            <li>Scroll down to make the TOC sticky (it should appear at the top)</li>
+            <li>Hover over the sticky TOC title repeatedly</li>
+            <li>Move your mouse in and out of the TOC area quickly</li>
+            <li>Observe that the TOC should expand/collapse smoothly without flashing</li>
+        </ol>
+        
+        <h3>Expected Behavior:</h3>
+        <ul>
+            <li>Smooth transitions when hovering over the sticky TOC</li>
+            <li>No rapid flashing between expanded/collapsed states</li>
+            <li>Stable hover detection in Edge browser</li>
+            <li>Content should remain selectable when expanded</li>
+        </ul>
+        
+        <h3>Fixes Applied:</h3>
+        <ul>
+            <li>Added transition state management to prevent rapid state changes</li>
+            <li>Implemented Edge browser detection with longer hover delays</li>
+            <li>Added timeout management to prevent conflicting animations</li>
+            <li>Enhanced CSS with hardware acceleration and backface visibility</li>
+            <li>Separated transition properties for better control</li>
+        </ul>
+    </div>
+
+    <!-- Table of Contents -->
+    <nav class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#section1">Test Section 1</a>
+                <ul>
+                    <li><a href="#subsection1-1">Subsection 1.1</a></li>
+                    <li><a href="#subsection1-2">Subsection 1.2</a></li>
+                    <li><a href="#subsection1-3">Subsection 1.3</a></li>
+                </ul>
+            </li>
+            <li><a href="#section2">Test Section 2</a>
+                <ul>
+                    <li><a href="#subsection2-1">Subsection 2.1</a></li>
+                    <li><a href="#subsection2-2">Subsection 2.2</a></li>
+                </ul>
+            </li>
+            <li><a href="#section3">Test Section 3</a></li>
+            <li><a href="#section4">Test Section 4</a>
+                <ul>
+                    <li><a href="#subsection4-1">Subsection 4.1</a></li>
+                    <li><a href="#subsection4-2">Subsection 4.2</a></li>
+                    <li><a href="#subsection4-3">Subsection 4.3</a></li>
+                    <li><a href="#subsection4-4">Subsection 4.4</a></li>
+                </ul>
+            </li>
+            <li><a href="#section5">Test Section 5</a></li>
+        </ul>
+    </nav>
+
+    <div class="test-content">
+        <div class="test-section" id="section1">
+            <h2>Test Section 1</h2>
+            <p>This is the first test section. Scroll down to see the TOC become sticky.</p>
+            
+            <h3 id="subsection1-1">Subsection 1.1</h3>
+            <p>Content for subsection 1.1. This content helps test the nested TOC behavior.</p>
+            
+            <h3 id="subsection1-2">Subsection 1.2</h3>
+            <p>Content for subsection 1.2. More content to make the page scrollable.</p>
+            
+            <h3 id="subsection1-3">Subsection 1.3</h3>
+            <p>Content for subsection 1.3. Additional content for testing purposes.</p>
+        </div>
+
+        <div class="test-section" id="section2">
+            <h2>Test Section 2</h2>
+            <p>This is the second test section. The TOC should be sticky by now.</p>
+            
+            <h3 id="subsection2-1">Subsection 2.1</h3>
+            <p>Content for subsection 2.1. Test the hover behavior on the sticky TOC.</p>
+            
+            <h3 id="subsection2-2">Subsection 2.2</h3>
+            <p>Content for subsection 2.2. Try hovering quickly over the TOC title.</p>
+        </div>
+
+        <div class="test-section" id="section3">
+            <h2>Test Section 3</h2>
+            <p>This is the third test section. Continue testing the TOC behavior.</p>
+            <p>Move your mouse in and out of the sticky TOC area rapidly to test for flashing.</p>
+        </div>
+
+        <div class="test-section" id="section4">
+            <h2>Test Section 4</h2>
+            <p>This is the fourth test section with multiple subsections.</p>
+            
+            <h3 id="subsection4-1">Subsection 4.1</h3>
+            <p>Content for subsection 4.1. Test nested list expansion in sticky mode.</p>
+            
+            <h3 id="subsection4-2">Subsection 4.2</h3>
+            <p>Content for subsection 4.2. Hover over parent items with nested lists.</p>
+            
+            <h3 id="subsection4-3">Subsection 4.3</h3>
+            <p>Content for subsection 4.3. Verify smooth transitions.</p>
+            
+            <h3 id="subsection4-4">Subsection 4.4</h3>
+            <p>Content for subsection 4.4. Final subsection for testing.</p>
+        </div>
+
+        <div class="test-section" id="section5">
+            <h2>Test Section 5</h2>
+            <p>This is the final test section. The TOC fixes should be working properly by now.</p>
+            <p>If you see any flashing or rapid state changes in Edge, the fix may need further adjustment.</p>
+        </div>
+    </div>
+
+    <script src="code.js"></script>
+    <script>
+        // Debug information display
+        function updateDebugInfo() {
+            // Detect browser
+            const isEdge = /Edge|Edg/.test(navigator.userAgent);
+            const isChrome = /Chrome/.test(navigator.userAgent) && !/Edge|Edg/.test(navigator.userAgent);
+            const isFirefox = /Firefox/.test(navigator.userAgent);
+            const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome|Edge|Edg/.test(navigator.userAgent);
+            
+            let browserName = 'Unknown';
+            if (isEdge) browserName = 'Microsoft Edge';
+            else if (isChrome) browserName = 'Google Chrome';
+            else if (isFirefox) browserName = 'Mozilla Firefox';
+            else if (isSafari) browserName = 'Safari';
+            
+            document.getElementById('browser-name').textContent = browserName;
+            
+            // Update TOC state information
+            if (window.StickyTOC && window.StickyTOC.state) {
+                document.getElementById('sticky-state').textContent = window.StickyTOC.state.isSticky;
+                document.getElementById('expanded-state').textContent = window.StickyTOC.state.isExpanded;
+                document.getElementById('hover-state').textContent = window.StickyTOC.state.isHovered;
+            }
+        }
+        
+        // Initialize debug info
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDebugInfo();
+            setInterval(updateDebugInfo, 100); // Update every 100ms
+        });
+        
+        // Log TOC events for debugging
+        document.addEventListener('tocStickyChange', function(event) {
+            console.log('[Test] TOC sticky state changed:', event.detail.isSticky);
+        });
+        
+        document.addEventListener('tocToggle', function(event) {
+            console.log('[Test] TOC toggle:', event.detail.expanded);
+        });
+    </script>
+</body>
+</html>

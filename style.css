@@ -1212,7 +1212,7 @@
       border-top: 1px solid var(--light-border);
       max-height: 0;
       overflow: hidden;
-      transition: all 0.3s ease;
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
       text-align: left; /* Maintain left alignment when sticky */
       /* Prevent Edge browser from creating columns in sticky mode */
       column-count: unset !important;
@@ -1223,6 +1223,10 @@
       -webkit-columns: unset !important;
       -moz-column-count: unset !important;
       -moz-column-width: unset !important;
+      /* Edge browser stability improvements */
+      will-change: opacity, visibility, transform, max-height;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
       -moz-columns: unset !important;
     }
 
@@ -1265,13 +1269,23 @@
       display: none;
     }
 
-    /* TOC list visible state on hover when sticky */
+    /* TOC list visible state on hover when sticky - Edge browser optimized */
     nav.toc.toc-sticky:hover > ul {
       opacity: 1; /* Fully visible */
       visibility: visible; /* Visible */
       transform: translateY(0); /* Normal position */
       max-height: calc(100vh - 80px); /* Allow expansion minus title height */
       overflow-y: auto; /* Scroll if needed */
+      overflow-x: hidden; /* Prevent horizontal scroll */
+      /* Ensure dynamic height adjustment for expanded content */
+      height: auto !important;
+      min-height: 0 !important;
+      /* Edge browser stability fixes */
+      will-change: opacity, visibility, transform, max-height;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
     }
 
     /* Enhanced scrollable behavior for sticky TOC */
@@ -1339,7 +1353,7 @@
 
     /* Show nested lists on parent hover in sticky mode with proper spacing */
     nav.toc.toc-sticky li:hover > ul {
-      max-height: 300px; /* Generous max-height for expansion */
+      max-height: none !important; /* Remove height restriction for full expansion */
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
@@ -1351,6 +1365,9 @@
       margin-top: var(--spacing-xs) !important;
       line-height: normal;
       font-size: inherit;
+      /* Ensure the expanded content is fully accessible */
+      height: auto !important;
+      overflow: visible !important;
     }
 
     /* Restore individual list items when parent is hovered in sticky TOC */
@@ -1740,6 +1757,11 @@
       column-gap: 0 !important;
       column-rule: none !important;
       column-span: none !important;
+      /* Edge browser stability fixes for flashing */
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       break-inside: auto !important;
       page-break-inside: auto !important;
       /* Force vertical layout */
@@ -1757,6 +1779,85 @@
       display: block !important;
       width: 100% !important;
       box-sizing: border-box !important;
+    }
+
+    /* Enhanced scrollable TOC behavior for dynamic content */
+    nav.toc.toc-sticky ul.toc-scrollable {
+      /* Allow dynamic height adjustment */
+      height: auto !important;
+      min-height: 0 !important;
+      /* Smooth transitions for height changes */
+      transition: max-height 0.3s ease, height 0.3s ease !important;
+      /* Ensure proper scrolling behavior */
+      scroll-behavior: smooth;
+      /* Prevent content from being cut off */
+      contain: none !important;
+    }
+
+    /* When nested content is expanded, ensure scroll area adjusts */
+    nav.toc.toc-sticky:hover ul.toc-scrollable {
+      /* Remove height restrictions when hovering to allow full expansion */
+      max-height: calc(100vh - 80px) !important;
+      /* Ensure scrolling is available */
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+    }
+
+    /* Ensure expanded nested lists are fully accessible in sticky mode */
+    nav.toc.toc-sticky li.nested-expanded > ul {
+      /* Remove any height restrictions on expanded nested lists */
+      max-height: none !important;
+      height: auto !important;
+      /* Ensure visibility */
+      overflow: visible !important;
+      /* Smooth expansion */
+      transition: all 0.3s ease !important;
+    }
+
+    /* Scroll indicator for sticky TOC when content overflows */
+    nav.toc.toc-sticky ul.toc-scrollable[data-scrollable="true"]::after {
+      content: "⇅ Scroll for more";
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(248, 249, 250, 0.9), transparent);
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      padding: var(--spacing-xs);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* Edge browser specific hover stabilization */
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+      /* Edge Legacy specific fixes */
+      nav.toc.toc-sticky:hover > ul {
+        transition-delay: 0.1s !important;
+        animation: none !important;
+      }
+
+      nav.toc.toc-sticky > ul {
+        transition-delay: 0s !important;
+        animation: none !important;
+      }
+    }
+
+    /* Modern Edge (Chromium) hover stabilization */
+    @supports ((-webkit-appearance: none) and (not (-moz-appearance: none))) {
+      nav.toc.toc-sticky {
+        /* Prevent rapid hover state changes */
+        transition: all 0.4s ease !important;
+      }
+
+      nav.toc.toc-sticky:hover > ul {
+        transition: opacity 0.4s ease 0.1s, visibility 0.4s ease 0.1s, transform 0.4s ease 0.1s, max-height 0.4s ease 0.1s !important;
+      }
+
+      nav.toc.toc-sticky > ul {
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, max-height 0.3s ease !important;
+      }
     }
 
     /* ========================================
