@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refactored Modules Test</title>
+    <style>
+        /* CSS Custom Properties for consistent theming */
+        :root {
+            --primary-color: #557ea1;
+            --secondary-color: #10a37f;
+            --tertiary-color: #8b5a3c;
+            --background-color: #193959;
+            --text-color: #2c3e50;
+            --text-light: #ffffff;
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --border-radius: 4px;
+            --shadow-light: 0 2px 4px rgba(0, 75, 141, 0.1);
+        }
+
+        /* Basic reset and typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            /* Default tri-lateral background - will be enhanced by gradient controller */
+            background:
+                radial-gradient(ellipse at 20% 30%, rgba(139, 90, 60, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg,
+                    var(--background-color) 0%,
+                    var(--primary-color) 35%,
+                    var(--tertiary-color) 70%,
+                    #0f2a44 100%);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 200vh; /* Make page scrollable for testing */
+        }
+
+        /* Unified Header Styles */
+        #unified-header {
+            position: fixed;
+            top: 3vh;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            z-index: 1000;
+            padding: var(--spacing-md) 0;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            overflow: hidden;
+        }
+
+        #unified-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: transparent;
+            z-index: -1;
+        }
+
+        #unified-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: -1;
+        }
+
+        .unified-header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-main-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--spacing-md);
+        }
+
+        .brand-section .site-name {
+            font-size: 2rem;
+            font-weight: 900;
+            color: white;
+            text-decoration: none;
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 rgba(0, 0, 0, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .nav-section {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-sm);
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .header-info-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: var(--spacing-sm);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Content styles */
+        .content {
+            padding: var(--spacing-xl);
+            margin-top: 120px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: var(--spacing-xl);
+            margin: var(--spacing-xl) 0;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+        }
+
+        h1, h2, h3 {
+            margin-bottom: var(--spacing-md);
+            color: white;
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Table of Contents styles */
+        nav.toc {
+            position: fixed;
+            top: 200px;
+            right: 20px;
+            width: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+        }
+
+        nav.toc h2 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+            cursor: pointer;
+        }
+
+        nav.toc ul {
+            list-style: none;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        nav.toc.toc-expanded ul {
+            opacity: 1;
+            max-height: 300px;
+        }
+
+        nav.toc a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            padding: var(--spacing-xs);
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+        }
+
+        nav.toc a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        /* Debug info */
+        .debug-info {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            font-family: monospace;
+            font-size: 0.8rem;
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body>
+    <!-- Unified Header -->
+    <div id="unified-header">
+        <div class="unified-header-container">
+            <div class="header-main-row">
+                <div class="brand-section">
+                    <a href="#" class="site-name">MyTech.Today</a>
+                </div>
+                <div class="nav-section">
+                    <ul class="nav-links">
+                        <li><a href="#section1">Home</a></li>
+                        <li><a href="#section2">About</a></li>
+                        <li><a href="#section3">Services</a></li>
+                        <li><a href="#section4">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-info-row">
+                <div class="location-info">
+                    <span>📌 Barrington, IL 60010</span>
+                </div>
+                <div class="contact-section">
+                    <a href="tel:8477674914" class="contact-link">📞 (847) 767-4914</a>
+                    <a href="mailto:sales@mytech.today" class="contact-link">📧 sales@mytech.today</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <nav class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#section1">Introduction</a></li>
+            <li><a href="#section2">Features</a></li>
+            <li><a href="#section3">Implementation</a></li>
+            <li><a href="#section4">Testing</a></li>
+            <li><a href="#section5">Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="section" id="section1">
+            <h1>Refactored JavaScript Modules with Tri-Lateral Gradient</h1>
+            <p>This page demonstrates the refactored JavaScript modules with separated concerns:</p>
+            <ul>
+                <li><strong>Sticky Header:</strong> Transparent blur background, no gradient</li>
+                <li><strong>Page Background:</strong> Dynamic tri-lateral gradient with increased contrast</li>
+                <li><strong>Table of Contents:</strong> Independent functionality</li>
+                <li><strong>Gradient Controller:</strong> Manages complex page background colors</li>
+            </ul>
+            <p><strong>Tri-Lateral Gradient Colors:</strong></p>
+            <ul>
+                <li><strong>Primary:</strong> Blue (#557ea1) - Cool professional tone</li>
+                <li><strong>Secondary:</strong> Teal (#10a37f) - Fresh accent color</li>
+                <li><strong>Tertiary:</strong> Warm Brown (#8b5a3c) - Complementary warm contrast</li>
+            </ul>
+        </div>
+
+        <div class="section" id="section2">
+            <h2>Tri-Lateral Gradient Features</h2>
+            <p>The header has a transparent background with backdrop blur effect. The page background receives a complex tri-lateral gradient that:</p>
+            <ul>
+                <li>Uses three complementary colors for visual richness</li>
+                <li>Combines linear and radial gradients for depth</li>
+                <li>Gets progressively darker with increased contrast as you scroll</li>
+                <li>Automatically extracts and darkens current theme colors</li>
+            </ul>
+            <p>Scroll down to see the tri-lateral gradient effect intensify. The header remains transparent while the page background becomes more dramatic.</p>
+        </div>
+
+        <div class="section" id="section3">
+            <h2>Implementation Details</h2>
+            <p>The gradient controller extracts colors from CSS custom properties and generates darker versions for the page background. The header uses pure backdrop-filter blur without any background color.</p>
+            <p>This creates a modern glassmorphism effect where the header appears to float above the content with a blur effect.</p>
+        </div>
+
+        <div class="section" id="section4">
+            <h2>Testing</h2>
+            <p>Continue scrolling to test the gradient progression. The background should get darker as you scroll, while the header maintains its transparent blur appearance.</p>
+            <p>The table of contents on the right can be expanded by hovering or clicking on it.</p>
+        </div>
+
+        <div class="section" id="section5">
+            <h2>Conclusion</h2>
+            <p>The refactored modules provide better separation of concerns, improved maintainability, and a more modern visual design with the transparent header and dynamic page background.</p>
+            <p>Each module can be developed and tested independently, making the codebase more robust and scalable.</p>
+        </div>
+
+        <!-- More content to make page scrollable -->
+        <div class="section">
+            <h2>Additional Content</h2>
+            <p>This is additional content to make the page longer and test the scroll-based gradient effect.</p>
+            <p>Keep scrolling to see how the background gradient continues to evolve.</p>
+        </div>
+
+        <div class="section">
+            <h2>Final Section</h2>
+            <p>This is the final section. The background should be at its darkest here.</p>
+            <p>The header should still maintain its transparent blur effect regardless of scroll position.</p>
+        </div>
+    </div>
+
+    <!-- Debug Information -->
+    <div class="debug-info">
+        <div>Scroll Progress: <span id="scroll-progress">0%</span></div>
+        <div>Gradient Progress: <span id="gradient-progress">0%</span></div>
+        <div>Header Sticky: <span id="header-sticky">false</span></div>
+        <div>TOC Expanded: <span id="toc-expanded">false</span></div>
+        <div>Primary Color: <span id="primary-color">#557ea1</span></div>
+        <div>Secondary Color: <span id="secondary-color">#10a37f</span></div>
+        <div>Tertiary Color: <span id="tertiary-color">#8b5a3c</span></div>
+    </div>
+
+    <!-- Include the refactored modules -->
+    <script src="utilities.js"></script>
+    <script src="sticky-header.js"></script>
+    <script src="table-of-contents.js"></script>
+    <script src="gradient-controller.js"></script>
+    <script src="main.js"></script>
+
+    <!-- Debug script to update debug info -->
+    <script>
+        document.addEventListener('gradientUpdate', (event) => {
+            const { scrollProgress, gradientProgress, colors } = event.detail;
+            document.getElementById('scroll-progress').textContent = Math.round(scrollProgress * 100) + '%';
+            document.getElementById('gradient-progress').textContent = Math.round(gradientProgress * 100) + '%';
+
+            // Update color information if available
+            if (colors) {
+                document.getElementById('primary-color').textContent = colors.primary;
+                document.getElementById('secondary-color').textContent = colors.secondary;
+                document.getElementById('tertiary-color').textContent = colors.tertiary;
+            }
+        });
+
+        document.addEventListener('headerStickyChange', (event) => {
+            document.getElementById('header-sticky').textContent = event.detail.isSticky;
+        });
+
+        document.addEventListener('tocToggle', (event) => {
+            document.getElementById('toc-expanded').textContent = event.detail.expanded;
+        });
+
+        // Enable gradient debug mode
+        if (window.GradientController) {
+            window.GradientController.debug.enable();
+        }
+
+        // Log tri-lateral gradient information
+        console.log('Tri-lateral gradient colors:');
+        console.log('Primary (Blue):', getComputedStyle(document.documentElement).getPropertyValue('--primary-color'));
+        console.log('Secondary (Teal):', getComputedStyle(document.documentElement).getPropertyValue('--secondary-color'));
+        console.log('Tertiary (Brown):', getComputedStyle(document.documentElement).getPropertyValue('--tertiary-color'));
+    </script>
+</body>
+</html>

@@ -10,303 +10,77 @@ Discover the Ultimate 2025 Software Directory: Your Comprehensive Resource for E
 <h4><a href="https://mytech.today/why-passwords-matter/" target="_blank" rel="noopener">Why Passwords Matter</h4>
 <h4><a href="https://mytech.today/why-ai-first-apps-will-rule-the-future/" target="_blank" rel="noopener">Why AI-First Apps Will Rule the Future</h4>
 </header>
-<nav class="toc">
-<h2>Table of Contents</h2>
-<ul>
-<li><a href="#introduction">Introduction</a></li>
-<li>
-<a href="#most-users">Most useful to most users</a>
-<ul>
-<li><a href="#browser-add-ins">Browser Add-ins</a></li>
-<li><a href="#browsers">Browsers</a>
-<ul>
-<li><a href="#mainstream-browsers">Mainstream Browsers</a></li>
-<li><a href="#privacy-focused-browsers">Privacy-Focused Browsers</a></li>
-<li><a href="#developer-power-user-browsers">Developer & Power User Browsers</a></li>
-<li><a href="#lightweight-alternative-browsers">Lightweight & Alternative Browsers</a></li>
-<li><a href="#specialized-experimental-browsers">Specialized & Experimental Browsers</a></li>
-<li><a href="#mobile-optimized-browsers">Mobile-Optimized Browsers</a></li>
-<li><a href="#enterprise-security-browsers">Enterprise & Security-Focused Browsers</a></li>
-</ul>
-</li>
-<li><a href="#office-productivity">Office Productivity</a></li>
-<li><a href="#additional-office-productivity">Additional Office Productivity</a></li>
-<li><a href="#replacement-apps">Replacement Apps</a></li>
-<li><a href="#search-engines">Search Engines</a></li>
-<li><a href="#web-tools">Web Tools</a></li>
-</ul>
-</li>
-<li>
-<a href="#programmers">Most useful for programmers</a>
-<ul>
-<li><a href="#ides-text-editors">IDEs & Text Editors</a></li>
-<li><a href="#devops-version-control">DevOps & Version Control</a></li>
-<li><a href="#databases">Databases</a></li>
-<li><a href="#tools">Tools</a></li>
-<li><a href="#blockchain-tools">Blockchain Tools</a></li>
-<li><a href="#resources">Resources</a></li>
-</ul>
-</li>
-<li>
-<a href="#game">Most useful for video game developers</a>
-<ul>
-<li><a href="#video-game-development">Video Game Development</a></li>
-<li><a href="#video-game-miscellaneous-tools">Video Game Miscellaneous Tools</a></li>
-<li><a href="#3d-modeling-and-printing">3D Modeling and Printing</a></li>
-<li><a href="#cad">CAD</a></li>
-</ul>
-</li>
-<li>
-<a href="#web-designers">Most useful for web designers/creators</a>
-<ul>
-<li><a href="#web-services">Web Services</a></li>
-<li><a href="#web-design-services">Web Design Services</a></li>
-<li><a href="#web-frameworks">Web Frameworks</a></li>
-<li><a href="#javascript-libraries-frameworks">JavaScript Libraries & Frameworks</a></li>
-<li><a href="#css-frameworks">CSS Frameworks</a></li>
-</ul>
-</li>
-<li>
-<a href="#ai">Most useful AI tools</a>
-<ul>
-<li><a href="#ai-assistants-tools">AI Assistants & Tools</a></li>
-<li><a href="#ai-coding-development">AI Coding & Development</a></li>
-<li><a href="#ai-content-creation">AI Content Creation & Writing</a></li>
-<li><a href="#ai-image-video-generation">AI Image & Video Generation</a></li>
-<li><a href="#ai-audio-voice-tools">AI Audio & Voice Tools</a></li>
-<li><a href="#ai-data-analytics">AI Data Analytics & Machine Learning</a></li>
-<li><a href="#ai-business-productivity">AI Business & Productivity</a></li>
-<li><a href="#ai-research-education">AI Research & Education</a></li>
-<li><a href="#ai-automation-workflows">AI Automation & Workflows</a></li>
-<li><a href="#ai-specialized-tools">AI Specialized Tools</a></li>
-<li><a href="#ai-platforms-frameworks">AI Platforms & Frameworks</a></li>
-<li><a href="#ai-enterprise-solutions">AI Enterprise Solutions</a></li>
-</ul>
-</li>
-<li>
-<a href="#artists">Most useful for artists</a>
-<ul>
-<li><a href="#audio-streaming-players">Audio Streaming Players</a></li>
-<li><a href="#audio-visual-tools">Audio & Visual Tools</a></li>
-<li><a href="#digital-art-design">Digital Art & Design</a></li>
-<li><a href="#music-production-daw">Music Production & DAW</a></li>
-<li><a href="#video-editing-animation">Video Editing & Animation</a></li>
-<li><a href="#movie-making-production">Movie Making & Production</a>
-<ul>
-<li><a href="#screenplay-writing">Screenplay Writing Software</a></li>
-<li><a href="#pre-production-planning">Pre-Production & Planning</a></li>
-<li><a href="#storyboard-previz">Storyboard & Previsualization</a></li>
-<li><a href="#production-management">Production Management</a></li>
-<li><a href="#post-production-workflow">Post-Production Workflow</a></li>
-</ul>
-</li>
-<li><a href="#photography-image-editing">Photography & Image Editing</a></li>
-<li><a href="#general-writing-tools">General Writing & Content Tools</a></li>
-<li><a href="#3d-modeling-rendering">3D Modeling & Rendering</a></li>
-<li><a href="#portfolio-showcase">Portfolio & Showcase Platforms</a></li>
-<li><a href="#collaboration-project-management">Collaboration & Project Management</a></li>
-<li><a href="#stock-resources-assets">Stock Resources & Assets</a></li>
-<li><a href="#learning-tutorials">Learning & Tutorials</a></li>
-</ul>
-</li>
-<li>
-<a href="#it-technicians">Most useful for IT technicians</a>
-<ul>
-<li><a href="#security-networking">Security & Networking</a></li>
-<li><a href="#system-monitoring-performance">System Monitoring & Performance</a></li>
-<li><a href="#hardware-diagnostics-disk-management">Hardware Diagnostics & Disk Management</a></li>
-<li><a href="#system-administration-automation">System Administration & Automation Tools</a></li>
-<li><a href="#remote-access-connectivity">Remote Access & Connectivity</a></li>
-<li><a href="#backup-recovery">Backup & Recovery</a></li>
-<li><a href="#virtualization-cloud">Virtualization & Cloud</a></li>
-<li><a href="#password-management-security">Password Management & Security</a></li>
-<li><a href="#documentation-ticketing">Documentation & Ticketing</a></li>
-</ul>
-</li>
-<li>
-<a href="#mac">Most useful for Mac/iOS Users</a>
-<ul>
-<li><a href="#macos-system-tools">macOS System Tools & Development</a></li>
-<li><a href="#security-antivirus">Security & Anti-Virus</a></li>
-<li><a href="#macos-apps">Apps</a></li>
-<li><a href="#macos-other-tools">Other Tools</a></li>
-<li><a href="#macos-creative-media">Creative & Media Tools</a></li>
-<li><a href="#macos-backup-cloud">Backup & Cloud Storage</a></li>
-<li><a href="#macos-network-remote-access">Network & Remote Access Tools</a></li>
-</ul>
-</li>
-<li>
-<a href="#linux">Most useful for Linux users</a>
-<ul>
-<li><a href="#linux-development">Development & Programming Tools</a></li>
-<li><a href="#linux-command-line">Command Line & Terminal Tools</a></li>
-<li><a href="#linux-window-managers">Window Managers & Desktop Environments</a></li>
-<li><a href="#linux-system-administration">System Administration & IT Tools</a></li>
-<li><a href="#linux-networking-security">Networking & Security Tools</a></li>
-<li><a href="#linux-multimedia-graphics">Multimedia & Graphics</a></li>
-<li><a href="#linux-office-productivity">Office & Productivity</a></li>
-<li><a href="#linux-web-browsers-internet">Web Browsers & Internet</a></li>
-<li><a href="#linux-file-management">File Management & Utilities</a></li>
-<li><a href="#linux-database-data-management">Database & Data Management</a></li>
-<li><a href="#linux-backup-synchronization">Backup & Synchronization</a></li>
-<li><a href="#linux-server-web-development">Server & Web Development</a></li>
-<li><a href="#linux-gaming-entertainment">Gaming & Entertainment</a></li>
-<li><a href="#linux-education-research">Education & Research Tools</a></li>
-<li><a href="#linux-communication-collaboration">Communication & Collaboration</a></li>
-<li><a href="#linux-specialized-tools">Specialized Tools for IT Professionals</a></li>
-<li><a href="#linux-automation-scripting">Automation & Scripting</a></li>
-<li><a href="#linux-legacy-compatibility">Legacy & Compatibility Tools</a></li>
-</ul>
-</li>
-<li>
-<a href="#marketers">Most useful for marketers/SEO/advertising/sales</a>
-<ul>
-<li><a href="#seo-analytics">SEO & Analytics</a></li>
-<li><a href="#social-media-management">Social Media Management</a></li>
-<li><a href="#email-marketing">Email Marketing & Automation</a></li>
-<li><a href="#paid-advertising">Paid Advertising & PPC</a></li>
-<li><a href="#crm-lead-management">CRM & Lead Management</a></li>
-<li><a href="#analytics-conversion-optimization">Analytics & Conversion Optimization</a></li>
-<li><a href="#content-marketing-seo">Content Marketing & SEO Writing</a></li>
-<li><a href="#affiliate-influencer-marketing">Affiliate & Influencer Marketing</a></li>
-<li><a href="#email-marketing-workflows">Marketing Automation & Workflows</a></li>
-<li><a href="#sales-customer-service">Sales & Customer Service</a></li>
-</ul>
-</li>
-<li>
-<a href="#others">Other Tools</a>
-<ul>
-<li><a href="#website-monitoring-uptime">Website Monitoring & Uptime</a></li>
-<li><a href="#people-search-background-research">People Search & Background Research</a></li>
-<li><a href="#business-communication-voip">Business Communication & VoIP</a></li>
-<li><a href="#web-scraping-data-extraction">Web Scraping & Data Extraction</a></li>
-<li><a href="#web-performance-testing">Web Performance Testing</a></li>
-<li><a href="#web-security-testing">Web Security Testing</a></li>
-</ul>
-</li>
-<li>
-<a href="#analytics-data-science">Anaylitics & Data Science</a>
-<ul>
-<li><a href="#analytics-data-science">Analytics & Data Science</a></li>
-<li><a href="#machine-learning">Machine Learning</a></li>
-<li><a href="#data-visualization">Data Visualization</a></li>
-<li><a href="#data-science-tools">Data Science Tools</a></li>
-<li><a href="#data-science-certifications">Data Science Certifications</a></li>
-<li><a href="#data-science-resources">Data Science Resources</a></li>
-<li><a href="#data-science-books">Data Science Books</a></li>
-<li><a href="#data-science-conferences">Data Science Conferences</a></li>
-<li><a href="#data-science-jobs">Data Science Jobs</a></li>
-<li><a href="#data-science-communities">Data Science Communities</a></li>
-</ul>
-</li>
-<li>
-<a href="#investment">Investment Tools</a>
-<ul>
-<li><a href="#research-analysis">Research & Analysis</a></li>
-<li><a href="#due-diligence">Due Diligence & Legal</a></li>
-<li><a href="#portfolio-management">Portfolio Management & Tracking</a></li>
-<li><a href="#financial-modeling">Financial Modeling & Valuation</a></li>
-<li><a href="#deal-sourcing">Deal Sourcing & Networking</a></li>
-<li><a href="#ceo-tools">CEO & Executive Tools</a></li>
-<li><a href="#cto-tools">CTO & Technical Leadership Tools</a></li>
-<li><a href="#cfo-tools">CFO & Financial Management Tools</a></li>
-<li><a href="#angel-investor-tools">Angel Investor Specific Tools</a></li>
-<li><a href="#vc-tools">Venture Capital & Growth Stage Tools</a></li>
-<li><a href="#market-intelligence">Market Intelligence & Competitive Analysis</a></li>
-<li><a href="#investor-communication">Investor Communication & Reporting</a></li>
-</ul>
-</li>
-<li>
-<a href="#erp">ERP Systems and Tools</a>
-<ul>
-<li><a href="#erp-systems">ERP Systems</a></li>
-<li><a href="#erp-tools">ERP Tools</a></li>
-<li><a href="#erp-integrations">ERP Integrations</a></li>
-<li><a href="#erp-consulting">ERP Consulting</a></li>
-<li><a href="#erp-training">ERP Training</a></li>
-<li><a href="#erp-certifications">ERP Certifications</a></li>
-<li><a href="#erp-resources">ERP Resources</a></li>
-<li><a href="#erp-software-development">ERP Software Development</a></li>
-<li><a href="#erp-implementation">ERP Implementation</a></li>
-<li><a href="#erp-migration">ERP Migration</a></li>
-</ul>
-</li>
-<li>
-<a href="#edi">EDI Systems and Tools</a>
-<ul>
-<li><a href="#edi-systems">EDI Systems</a></li>
-<li><a href="#edi-translation-software">EDI Translation Software</a></li>
-<li><a href="#edi-communication-protocols">EDI Communication Protocols</a></li>
-<li><a href="#edi-standards-compliance">EDI Standards & Compliance</a></li>
-<li><a href="#edi-integration-platforms">EDI Integration Platforms</a></li>
-<li><a href="#edi-testing-validation">EDI Testing & Validation</a></li>
-<li><a href="#edi-managed-services">EDI Managed Services</a></li>
-<li><a href="#edi-training-certification">EDI Training & Certification</a></li>
-</ul>
-</li>
-<li>
-<a href="#realestate">Real Estate, Construction & Facilities</a>
-<ul>
-<li><a href="#realestate-systems">Real Estate Systems</a></li>
-<li><a href="#realestate-tools">Real Estate Tools</a></li>
-<li>
-<a href="#realestate-landlord-tenant">Landlord & Tenant Management</a>
-<ul>
-<li><a href="#tenant-screening-background">Tenant Screening & Background Checks</a></li>
-<li><a href="#rent-collection-payment">Rent Collection & Payment Processing</a></li>
-<li><a href="#lease-management-signatures">Lease Management & Digital Signatures</a></li>
-<li><a href="#maintenance-request-tracking">Maintenance Request Tracking</a></li>
-<li><a href="#financial-reporting-accounting">Financial Reporting & Accounting</a></li>
-<li><a href="#property-marketing-listing">Property Marketing & Listing</a></li>
-<li><a href="#tenant-communication-portals">Tenant Communication Portals</a></li>
-<li><a href="#credit-reporting-tenants">Credit Reporting for Tenants</a></li>
-<li><a href="#landlord-credit-reporting">Landlord Credit Reporting Services</a></li>
-<li><a href="#market-analysis-pricing">Market Analysis & Pricing Tools</a></li>
-</ul>
-</li>
-<li>
-<a href="#construction-building">Construction & Building</a>
-<ul>
-<li><a href="#construction-websites">Construction Websites & Platforms</a></li>
-<li><a href="#construction-software">Construction Software & Management</a></li>
-<li><a href="#construction-tools">Construction Tools & Equipment</a></li>
-<li><a href="#construction-project-management">Project Management & Scheduling</a></li>
-<li><a href="#construction-estimating-bidding">Estimating & Bidding</a></li>
-<li><a href="#construction-design-cad">Design & CAD Software</a></li>
-<li><a href="#construction-safety-compliance">Safety & Compliance</a></li>
-<li><a href="#construction-materials-suppliers">Materials & Suppliers</a></li>
-<li><a href="#road-construction">Road Construction & Infrastructure</a></li>
-<li><a href="#demolition-services">Demolition Services</a></li>
-</ul>
-</li>
-<li>
-<a href="#facilities-maintenance">Facilities Maintenance</a>
-<ul>
-<li><a href="#facilities-management-software">Facilities Management Software</a></li>
-<li><a href="#maintenance-scheduling">Maintenance Scheduling & Work Orders</a></li>
-<li><a href="#asset-management">Asset Management & Tracking</a></li>
-<li><a href="#energy-management">Energy Management & Monitoring</a></li>
-<li><a href="#hvac-systems">HVAC Systems & Monitoring</a></li>
-<li><a href="#security-access-control">Security & Access Control</a></li>
-<li><a href="#cleaning-janitorial">Cleaning & Janitorial Services</a></li>
-<li><a href="#space-management">Space Management & Optimization</a></li>
-<li><a href="#vendor-management">Vendor & Contractor Management</a></li>
-<li><a href="#compliance-reporting">Compliance & Reporting</a></li>
-</ul>
-</li>
-<li><a href="#realestate-integrations">Real Estate Integrations</a></li>
-<li><a href="#realestate-consulting">Real Estate Consulting</a></li>
-<li><a href="#realestate-training">Real Estate Training</a></li>
-<li><a href="#realestate-certifications">Real Estate Certifications</a></li>
-<li><a href="#realestate-resources">Real Estate Resources</a></li>
-<li><a href="#realestate-software-development">Real Estate Software Development</a></li>
-<li><a href="#realestate-implementation">Real Estate Implementation</a></li>
-<li><a href="#realestate-migration">Real Estate Migration</a></li>
-<li><a href="#realestate-support">Real Estate Support</a></li>
-<li><a href="#realestate-other">Real Estate Other</a></li>
-</ul>
-</li>
-</ul>
+<!-- Enhanced Navigation System -->
+<nav class="enhanced-nav" id="enhanced-nav">
+  <div class="nav-header">
+    <h2>🧭 Navigate Tools 2025</h2>
+    <div class="nav-controls">
+      <button id="search-toggle" class="nav-btn" title="Search Tools">🔍</button>
+      <button id="categories-toggle" class="nav-btn active" title="Browse Categories">📂</button>
+      <button id="toc-toggle" class="nav-btn" title="Table of Contents">📋</button>
+    </div>
+  </div>
+
+  <!-- Search Panel -->
+  <div class="nav-panel search-panel" id="search-panel">
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search for tools, categories, or features..." autocomplete="off">
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+
+  <!-- Categories Panel -->
+  <div class="nav-panel categories-panel active" id="categories-panel">
+    <div class="category-grid">
+      <div class="category-card" data-target="most-users">
+        <div class="category-icon">👥</div>
+        <h3>Most Users</h3>
+        <p>Essential tools for everyone</p>
+      </div>
+      <div class="category-card" data-target="programmers">
+        <div class="category-icon">💻</div>
+        <h3>Programmers</h3>
+        <p>Development tools & IDEs</p>
+      </div>
+      <div class="category-card" data-target="game">
+        <div class="category-icon">🎮</div>
+        <h3>Game Developers</h3>
+        <p>Game development tools</p>
+      </div>
+      <div class="category-card" data-target="web-designers">
+        <div class="category-icon">🎨</div>
+        <h3>Web Designers</h3>
+        <p>Design & web tools</p>
+      </div>
+      <div class="category-card" data-target="ai">
+        <div class="category-icon">🤖</div>
+        <h3>AI Tools</h3>
+        <p>Artificial intelligence</p>
+      </div>
+      <div class="category-card" data-target="artists">
+        <div class="category-icon">🎭</div>
+        <h3>Artists</h3>
+        <p>Creative & media tools</p>
+      </div>
+      <div class="category-card" data-target="it-technicians">
+        <div class="category-icon">🔧</div>
+        <h3>IT Technicians</h3>
+        <p>System administration</p>
+      </div>
+      <div class="category-card" data-target="marketers">
+        <div class="category-icon">📈</div>
+        <h3>Marketers</h3>
+        <p>Marketing & SEO tools</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOC Panel -->
+  <div class="nav-panel toc-panel" id="toc-panel">
+    <div class="toc-container">
+      <!-- Simplified TOC will be generated here -->
+    </div>
+  </div>
 </nav>
 <main>
 <section id="introduction">
