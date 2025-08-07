@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dust Effect Integration Example</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Example of how to integrate dust effect with existing content */
+        .content-area {
+            position: relative;
+            z-index: 2; /* Ensure content appears above dust */
+            background: rgba(255, 255, 255, 0.95);
+            padding: var(--spacing-xl);
+            margin: var(--spacing-lg) auto;
+            max-width: 800px;
+            border-radius: var(--border-radius-large);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* Optional: Add a subtle backdrop to enhance dust visibility */
+        .dust-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.02);
+            z-index: -0.5;
+            pointer-events: none;
+        }
+
+        /* Dust effect customization for this page */
+        :root {
+            --dust-opacity: 0.12;
+            --dust-brightness: 0.25;
+            --dust-density: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Optional backdrop to enhance dust visibility -->
+    <div class="dust-backdrop"></div>
+
+    <!-- Unified Header -->
+    <header id="unified-header">
+        <div class="unified-header-container">
+            <div class="header-main-row">
+                <div class="site-branding">
+                    <h1 class="site-title">
+                        <a href="#" rel="home">myTech.Today</a>
+                    </h1>
+                    <p class="site-description">Dust Effect Integration</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content-area">
+        <h1>Dust Effect Integration Example</h1>
+        
+        <p>This page demonstrates how to integrate the dust effect with existing content. The dust particles create a subtle atmospheric layer that enhances the visual depth without being distracting.</p>
+
+        <h2>Integration Steps</h2>
+        <ol>
+            <li>Include the dust.js script in your page</li>
+            <li>Ensure your content has appropriate z-index values</li>
+            <li>Optionally customize the CSS variables for your design</li>
+            <li>The effect will auto-initialize when the DOM is ready</li>
+        </ol>
+
+        <h2>Customization</h2>
+        <p>You can customize the dust effect by adjusting the CSS custom properties:</p>
+        
+        <pre><code>:root {
+  --dust-opacity: 0.12;     /* Lower for subtlety */
+  --dust-brightness: 0.25;  /* Dimmer particles */
+  --dust-density: 0.6;      /* Fewer particles */
+}</code></pre>
+
+        <h2>Performance</h2>
+        <p>The dust effect is optimized for performance:</p>
+        <ul>
+            <li>Automatically disabled on mobile devices</li>
+            <li>Respects user motion preferences</li>
+            <li>Pauses when tab is not visible</li>
+            <li>Uses GPU acceleration for smooth animation</li>
+        </ul>
+
+        <h2>Browser Compatibility</h2>
+        <p>The dust effect requires WebGL support and will gracefully degrade on unsupported browsers. Three.js is automatically loaded if not already present.</p>
+
+        <div style="height: 100vh; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.8); border-radius: var(--border-radius-large); margin-top: var(--spacing-xl);">
+            <div style="text-align: center;">
+                <h3>Scroll to See Dust in Motion</h3>
+                <p>The dust particles create a subtle floating effect that becomes more noticeable as you scroll and the background gradient changes.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts - Include dust.js with other modules -->
+    <script src="utilities.js"></script>
+    <script src="gradient-controller.js"></script>
+    <script src="dust.js"></script>
+    <script src="sticky-header.js"></script>
+    <script src="main.js"></script>
+
+    <!-- Optional: Custom dust control -->
+    <script>
+        // Example of custom dust control
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for dust effect to initialize
+            setTimeout(function() {
+                if (window.DustEffect) {
+                    console.log('Dust effect initialized:', window.DustEffect.getState());
+                    
+                    // Example: Adjust dust based on time of day
+                    const hour = new Date().getHours();
+                    if (hour >= 18 || hour <= 6) {
+                        // Evening/night - more subtle
+                        window.DustEffect.setOpacity(0.08);
+                        window.DustEffect.setBrightness(0.2);
+                    } else {
+                        // Day - slightly more visible
+                        window.DustEffect.setOpacity(0.15);
+                        window.DustEffect.setBrightness(0.3);
+                    }
+                }
+            }, 1000);
+        });
+
+        // Example: Respond to scroll events
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            if (!window.DustEffect) return;
+            
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
+            lastScrollTop = scrollTop;
+
+            // Optional: Adjust dust opacity based on scroll position
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollProgress = Math.min(scrollTop / maxScroll, 1);
+            
+            // Increase dust visibility as user scrolls down
+            const baseOpacity = 0.12;
+            const maxOpacity = 0.20;
+            const newOpacity = baseOpacity + (scrollProgress * (maxOpacity - baseOpacity));
+            
+            window.DustEffect.setOpacity(newOpacity);
+        });
+    </script>
+</body>
+</html>

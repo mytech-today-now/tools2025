@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOC Changes Test</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="utilities.js" defer></script>
+    <script src="sticky-header.js" defer></script>
+    <script src="table-of-contents.js" defer></script>
+    <script src="gradient-controller.js" defer></script>
+    <script src="anchors.js" defer></script>
+    <script src="dust.js" defer></script>
+    <script src="main.js" defer></script>
+    <style>
+        /* Test styles to verify changes */
+        body {
+            padding-top: 120px;
+            min-height: 200vh; /* Make page scrollable to test sticky behavior */
+        }
+        
+        .test-content {
+            padding: 2rem;
+            margin: 2rem 0;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+        }
+        
+        .test-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(240, 240, 240, 0.8);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Unified Header -->
+    <div id="unified-header">
+        <div class="unified-header-container">
+            <div class="header-main-row">
+                <div class="brand-section">
+                    <a href="#" class="site-name">Test Site</a>
+                    <span class="site-tagline">Testing TOC Changes</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <article>
+        <header>
+            <h1>TOC Changes Test</h1>
+            <p>This page tests the updated TOC functionality with blur background, no borders, no list icons, and 30% wider dropdown.</p>
+        </header>
+
+        <!-- Test TOC -->
+        <nav class="toc" id="literal-toc">
+            <div class="toc-title-bar">
+                <h2>Table of Contents</h2>
+            </div>
+            <div class="toc-content">
+                <div class="toc-scroll-container">
+                    <ul>
+                        <li><a href="#section1">Section 1: Basic Content</a>
+                            <ul>
+                                <li><a href="#subsection1-1">Subsection 1.1</a></li>
+                                <li><a href="#subsection1-2">Subsection 1.2</a></li>
+                                <li><a href="#subsection1-3">Subsection 1.3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section2">Section 2: Advanced Features</a>
+                            <ul>
+                                <li><a href="#subsection2-1">Subsection 2.1</a></li>
+                                <li><a href="#subsection2-2">Subsection 2.2</a>
+                                    <ul>
+                                        <li><a href="#subsection2-2-1">Sub-subsection 2.2.1</a></li>
+                                        <li><a href="#subsection2-2-2">Sub-subsection 2.2.2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#section3">Section 3: Testing</a></li>
+                        <li><a href="#section4">Section 4: Validation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="test-content">
+                <h2>Testing Instructions</h2>
+                <p>Scroll down to make the TOC sticky, then hover over the "Table of Contents" title to see the dropdown with the following improvements:</p>
+                <ul>
+                    <li>✅ Dropdown appears on hover of the TOC title</li>
+                    <li>✅ Background is blur instead of white</li>
+                    <li>✅ No list-style icons (bullets) on list items</li>
+                    <li>✅ No borders on the TOC dropdown</li>
+                    <li>✅ Width is 30% wider than before</li>
+                </ul>
+            </div>
+
+            <div class="test-section" id="section1">
+                <h2>Section 1: Basic Content</h2>
+                <p>This is the first section of content to test the TOC functionality.</p>
+                
+                <div id="subsection1-1">
+                    <h3>Subsection 1.1</h3>
+                    <p>Content for subsection 1.1</p>
+                </div>
+                
+                <div id="subsection1-2">
+                    <h3>Subsection 1.2</h3>
+                    <p>Content for subsection 1.2</p>
+                </div>
+                
+                <div id="subsection1-3">
+                    <h3>Subsection 1.3</h3>
+                    <p>Content for subsection 1.3</p>
+                </div>
+            </div>
+
+            <div class="test-section" id="section2">
+                <h2>Section 2: Advanced Features</h2>
+                <p>This section tests nested TOC items.</p>
+                
+                <div id="subsection2-1">
+                    <h3>Subsection 2.1</h3>
+                    <p>Content for subsection 2.1</p>
+                </div>
+                
+                <div id="subsection2-2">
+                    <h3>Subsection 2.2</h3>
+                    <p>Content for subsection 2.2 with nested items</p>
+                    
+                    <div id="subsection2-2-1">
+                        <h4>Sub-subsection 2.2.1</h4>
+                        <p>Content for sub-subsection 2.2.1</p>
+                    </div>
+                    
+                    <div id="subsection2-2-2">
+                        <h4>Sub-subsection 2.2.2</h4>
+                        <p>Content for sub-subsection 2.2.2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-section" id="section3">
+                <h2>Section 3: Testing</h2>
+                <p>Additional content to test scrolling and sticky behavior.</p>
+            </div>
+
+            <div class="test-section" id="section4">
+                <h2>Section 4: Validation</h2>
+                <p>Final section to validate all TOC functionality works correctly.</p>
+            </div>
+
+            <div class="test-content">
+                <h2>Test Results</h2>
+                <p>After testing, verify that:</p>
+                <ol>
+                    <li>The TOC becomes sticky when scrolling</li>
+                    <li>Hovering over "Table of Contents" shows the dropdown</li>
+                    <li>The dropdown has a blur background effect</li>
+                    <li>No bullet points or list icons are visible</li>
+                    <li>No borders are visible on the dropdown</li>
+                    <li>The dropdown is noticeably wider than before</li>
+                    <li>Nested items expand properly on hover</li>
+                    <li>Links work correctly when clicked</li>
+                </ol>
+            </div>
+        </main>
+    </article>
+</body>
+</html>

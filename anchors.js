@@ -6,6 +6,9 @@
 (function() {
     'use strict';
 
+    // State tracking
+    let initialized = false;
+
     // Configuration
     const config = {
         // Icon to display (using Unicode link symbol)
@@ -15,7 +18,7 @@
         
         // CSS classes
         anchorClass: 'anchor-link',
-        iconClass: 'anchor-icon',
+        iconClass: 'header-anchor-link',
         
         // Selector for elements to process (elements with id attributes)
         selector: '[id]',
@@ -56,10 +59,17 @@
         const icon = document.createElement('a');
         icon.className = config.iconClass;
         icon.href = getCurrentPageUrl() + '#' + targetId;
-        icon.innerHTML = config.icon;
+
+        // Use SVG icon to match existing CSS
+        icon.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/>
+            </svg>
+        `;
+
         icon.title = 'Copy link to this section';
         icon.setAttribute('aria-label', 'Copy link to this section');
-        
+
         // Prevent default link behavior
         icon.addEventListener('click', function(e) {
             e.preventDefault();
@@ -203,17 +213,22 @@
      * Add anchor icon to an element
      */
     function addAnchorToElement(element) {
+        const id = element.getAttribute('id');
+        console.log(`[Anchors] Processing element with ID: ${id}, tag: ${element.tagName}`);
+
         if (shouldExcludeElement(element)) {
+            console.log(`[Anchors] Excluding element: ${id}`);
             return;
         }
 
-        const id = element.getAttribute('id');
         if (!id) {
+            console.log('[Anchors] Element has no ID, skipping');
             return;
         }
 
         // Skip if anchor already exists
         if (element.querySelector('.' + config.iconClass)) {
+            console.log(`[Anchors] Anchor already exists for: ${id}`);
             return;
         }
 
@@ -225,29 +240,7 @@
         // Create and insert anchor icon
         const anchorIcon = createAnchorIcon(id);
         
-        // Position the icon to the left of the element
-        anchorIcon.style.cssText = `
-            position: absolute;
-            left: -25px;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0;
-            transition: opacity 0.2s ease;
-            text-decoration: none;
-            color: #666;
-            font-size: 16px;
-            line-height: 1;
-            cursor: pointer;
-        `;
-
-        // Add hover effects
-        element.addEventListener('mouseenter', function() {
-            anchorIcon.style.opacity = '1';
-        });
-
-        element.addEventListener('mouseleave', function() {
-            anchorIcon.style.opacity = '0';
-        });
+        // CSS styling and hover effects are handled by the stylesheet
 
         // Insert the icon
         element.appendChild(anchorIcon);
@@ -260,14 +253,25 @@
      * Initialize anchors for all eligible elements
      */
     function initializeAnchors() {
+        console.log('[Anchors] Initializing anchors...');
         const elements = document.querySelectorAll(config.selector);
+        console.log(`[Anchors] Found ${elements.length} elements with IDs`);
         elements.forEach(addAnchorToElement);
+        console.log('[Anchors] Initialization complete');
     }
 
     /**
      * Initialize when DOM is ready
      */
     function init() {
+        if (initialized) {
+            console.log('[Anchors] Already initialized, skipping');
+            return;
+        }
+
+        console.log('[Anchors] Starting initialization...');
+        initialized = true;
+
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', initializeAnchors);
         } else {
@@ -305,7 +309,8 @@
 
     // Expose public API
     window.Anchors = {
-        init: initializeAnchors,
+        init: init,
+        initializeAnchors: initializeAnchors,
         addToElement: addAnchorToElement,
         config: config
     };

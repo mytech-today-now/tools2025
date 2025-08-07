@@ -3,188 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticky TOC Test - Cross-Browser Compatibility</title>
+    <title>Sticky TOC Test</title>
     <link rel="stylesheet" href="style.css">
-    <script src="code.js" defer></script>
     <style>
-        /* Test-specific styles */
+        /* Test page specific styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
         .test-content {
-            height: 200vh;
-            background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
             padding: 2rem;
-            margin-top: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .test-section {
             margin-bottom: 3rem;
             padding: 2rem;
-            background: white;
+            background: #f8f9fa;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
-        .browser-info {
+        h1, h2, h3 {
+            color: #1a365d;
+        }
+        
+        /* Simulate header */
+        #unified-header {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(0,0,0,0.8);
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: rgba(25, 57, 89, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 10px;
-            border-radius: 4px;
-            font-size: 12px;
-            z-index: 10000;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <!-- WordPress Pre-Header -->
-    <div id="pre-header">
-        <div class="wrap-safari">
-            <nav id="pre-header-core" class="main-navigation">
-                <div id="pre-header-links-inner" class="header-links">
-                    <ul class="menu">
-                        <li class="menu-item"><a href="#home">Home</a></li>
-                        <li class="menu-item"><a href="#about">About</a></li>
-                        <li class="menu-item"><a href="#services">Services</a></li>
-                        <li class="menu-item"><a href="mailto:test@example.com">Email</a></li>
-                        <li class="menu-item"><a href="tel:+1234567890">Phone</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
+    <!-- Simulated header -->
+    <header id="unified-header">
+        Test Header with Blur
+    </header>
 
-    <article>
-        <header>
-            <h1>Sticky TOC Cross-Browser Test</h1>
-            <p>This page tests the sticky TOC functionality across Edge, Chrome, Safari, and Firefox.</p>
-        </header>
+    <!-- Test TOC -->
+    <nav class="toc toc-sticky">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#section1">Section 1: Introduction</a>
+                <ul>
+                    <li><a href="#section1-1">1.1 Overview</a></li>
+                    <li><a href="#section1-2">1.2 Purpose</a></li>
+                </ul>
+            </li>
+            <li><a href="#section2">Section 2: Main Content</a>
+                <ul>
+                    <li><a href="#section2-1">2.1 Features</a></li>
+                    <li><a href="#section2-2">2.2 Benefits</a>
+                        <ul>
+                            <li><a href="#section2-2-1">2.2.1 Performance</a></li>
+                            <li><a href="#section2-2-2">2.2.2 Usability</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#section3">Section 3: Conclusion</a></li>
+        </ul>
+    </nav>
 
-        <!-- Table of Contents with ID -->
-        <nav class="toc" id="toc">
-            <h2>Table of Contents</h2>
+    <!-- Test content -->
+    <main class="test-content">
+        <div class="test-section" id="section1">
+            <h1>Section 1: Introduction</h1>
+            <p>This is a test page to verify the sticky TOC behavior. The TOC should:</p>
             <ul>
-                <li><a href="#section1">Section 1: Introduction</a></li>
-                <li>
-                    <a href="#section2">Section 2: Features</a>
-                    <ul>
-                        <li><a href="#section2-1">2.1 Sticky Positioning</a></li>
-                        <li><a href="#section2-2">2.2 Pre-Header Integration</a></li>
-                        <li><a href="#section2-3">2.3 Responsive Design</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#section3">Section 3: Browser Compatibility</a>
-                    <ul>
-                        <li><a href="#section3-1">3.1 Chrome</a></li>
-                        <li><a href="#section3-2">3.2 Firefox</a></li>
-                        <li><a href="#section3-3">3.3 Safari</a></li>
-                        <li><a href="#section3-4">3.4 Edge</a></li>
-                    </ul>
-                </li>
-                <li><a href="#section4">Section 4: Testing Instructions</a></li>
-                <li><a href="#section5">Section 5: Conclusion</a></li>
+                <li>Be collapsed by default when sticky</li>
+                <li>Not interfere with page navigation when collapsed</li>
+                <li>Use borderless blur without white tinting</li>
+                <li>Expand on hover with proper blur effects</li>
+                <li>Have sub-items with blur instead of white backgrounds on hover</li>
             </ul>
-        </nav>
-
-        <main>
-            <div class="test-content">
-                <section id="section1" class="test-section">
-                    <h2>Section 1: Introduction</h2>
-                    <p>This test page demonstrates the sticky TOC functionality that positions the table of contents between the WordPress pre-header and the main body content.</p>
-                    <p>The TOC should become sticky when you scroll past its original position, positioning itself below the pre-header.</p>
-                </section>
-
-                <section id="section2" class="test-section">
-                    <h2>Section 2: Features</h2>
-                    <p>The enhanced TOC includes several key features:</p>
-                    
-                    <div id="section2-1">
-                        <h3>2.1 Sticky Positioning</h3>
-                        <p>The TOC becomes fixed when scrolled past its original position, staying visible as you navigate the page.</p>
-                    </div>
-                    
-                    <div id="section2-2">
-                        <h3>2.2 Pre-Header Integration</h3>
-                        <p>The TOC positions itself below the WordPress pre-header, maintaining proper visual hierarchy.</p>
-                    </div>
-                    
-                    <div id="section2-3">
-                        <h3>2.3 Responsive Design</h3>
-                        <p>The positioning adapts to different screen sizes and pre-header heights.</p>
-                    </div>
-                </section>
-
-                <section id="section3" class="test-section">
-                    <h2>Section 3: Browser Compatibility</h2>
-                    <p>This implementation has been tested across major browsers:</p>
-                    
-                    <div id="section3-1">
-                        <h3>3.1 Chrome</h3>
-                        <p>Full support for all features including CSS custom properties and modern positioning.</p>
-                    </div>
-                    
-                    <div id="section3-2">
-                        <h3>3.2 Firefox</h3>
-                        <p>Excellent compatibility with all sticky positioning and responsive features.</p>
-                    </div>
-                    
-                    <div id="section3-3">
-                        <h3>3.3 Safari</h3>
-                        <p>Works well with webkit-specific prefixes for optimal performance.</p>
-                    </div>
-                    
-                    <div id="section3-4">
-                        <h3>3.4 Edge</h3>
-                        <p>Enhanced with specific fixes for Edge browser positioning and hover stability.</p>
-                    </div>
-                </section>
-
-                <section id="section4" class="test-section">
-                    <h2>Section 4: Testing Instructions</h2>
-                    <ol>
-                        <li>Scroll down to see the TOC become sticky below the pre-header</li>
-                        <li>Hover over the sticky TOC to see the expanded menu</li>
-                        <li>Test on different screen sizes (desktop, tablet, mobile)</li>
-                        <li>Verify the TOC stays between pre-header and content</li>
-                        <li>Check that nested menu items expand properly</li>
-                    </ol>
-                </section>
-
-                <section id="section5" class="test-section">
-                    <h2>Section 5: Conclusion</h2>
-                    <p>The sticky TOC implementation successfully positions the table of contents between the WordPress pre-header and the main content across all major browsers.</p>
-                    <p>Key achievements:</p>
-                    <ul>
-                        <li>Cross-browser compatibility (Edge, Chrome, Safari, Firefox)</li>
-                        <li>Responsive design that adapts to different screen sizes</li>
-                        <li>Proper positioning below WordPress pre-header</li>
-                        <li>Smooth animations and hover effects</li>
-                        <li>Accessibility support with keyboard navigation</li>
-                    </ul>
-                </section>
+            
+            <div id="section1-1">
+                <h2>1.1 Overview</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-        </main>
-    </article>
+            
+            <div id="section1-2">
+                <h2>1.2 Purpose</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
 
-    <!-- Browser Detection for Testing -->
-    <div class="browser-info" id="browser-info">
-        <script>
-            const browserInfo = document.getElementById('browser-info');
-            const userAgent = navigator.userAgent;
-            let browser = 'Unknown';
+        <div class="test-section" id="section2">
+            <h1>Section 2: Main Content</h1>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             
-            if (userAgent.includes('Edg')) browser = 'Edge';
-            else if (userAgent.includes('Chrome')) browser = 'Chrome';
-            else if (userAgent.includes('Safari') && !userAgent.includes('Chrome')) browser = 'Safari';
-            else if (userAgent.includes('Firefox')) browser = 'Firefox';
+            <div id="section2-1">
+                <h2>2.1 Features</h2>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
             
-            browserInfo.innerHTML = `Browser: ${browser}<br>Viewport: ${window.innerWidth}x${window.innerHeight}`;
+            <div id="section2-2">
+                <h2>2.2 Benefits</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                
+                <div id="section2-2-1">
+                    <h3>2.2.1 Performance</h3>
+                    <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.</p>
+                </div>
+                
+                <div id="section2-2-2">
+                    <h3>2.2.2 Usability</h3>
+                    <p>Explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section" id="section3">
+            <h1>Section 3: Conclusion</h1>
+            <p>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+            <p>Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
+        </div>
+
+        <!-- Add more content to test scrolling -->
+        <div class="test-section">
+            <h2>Additional Content</h2>
+            <p>This section provides additional content to test the sticky behavior when scrolling.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </main>
+
+    <script src="table-of-contents.js"></script>
+    <script>
+        // Initialize TOC when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add sticky class to simulate sticky behavior
+            const toc = document.querySelector('.toc');
+            if (toc) {
+                toc.classList.add('toc-sticky');
+                document.body.classList.add('toc-sticky-active');
+            }
             
-            window.addEventListener('resize', () => {
-                browserInfo.innerHTML = `Browser: ${browser}<br>Viewport: ${window.innerWidth}x${window.innerHeight}`;
-            });
-        </script>
-    </div>
+            // Initialize TOC if the function exists
+            if (typeof window.TableOfContents !== 'undefined') {
+                window.TableOfContents.init();
+            }
+        });
+    </script>
 </body>
 </html>

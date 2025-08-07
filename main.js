@@ -6,7 +6,7 @@
  * 
  * @author myTech.Today
  * @version 1.0.0
- * @requires sticky-header.js, table-of-contents.js, gradient-controller.js, utilities.js
+ * @requires sticky-header.js, table-of-contents.js, gradient-controller.js, utilities.js, dust.js
  */
 
 (function() {
@@ -21,7 +21,9 @@
             utilities: false,
             stickyHeader: false,
             tableOfContents: false,
-            gradientController: false
+            gradientController: false,
+            anchors: false,
+            dustEffect: false
         },
         errors: [],
         startTime: null
@@ -55,6 +57,18 @@
                 global: 'GradientController',
                 required: false,
                 dependencies: ['utilities']
+            },
+            {
+                name: 'anchors',
+                global: 'Anchors',
+                required: false,
+                dependencies: []
+            },
+            {
+                name: 'dustEffect',
+                global: 'DustEffect',
+                required: false,
+                dependencies: []
             }
         ],
         timing: {

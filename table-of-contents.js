@@ -1,12 +1,12 @@
 /**
  * Table of Contents Module
- * 
- * Handles table of contents functionality with expansion, nested lists,
- * accessibility features, and responsive behavior.
- * 
+ *
+ * Handles table of contents functionality with sticky behavior, expansion/collapse,
+ * nested lists, scrollable content, accessibility features, and responsive behavior.
+ *
  * @author myTech.Today
- * @version 1.0.0
- * @requires DOM API, CSS Transitions
+ * @version 2.0.0
+ * @requires DOM API, CSS Transitions, Intersection Observer API
  */
 
 (function() {
@@ -18,11 +18,17 @@
      */
     const TOCState = {
         isExpanded: false,
+        isSticky: false,
         isHovered: false,
         isFocused: false,
+        isScrollable: false,
         touchStartTime: 0,
         lastError: null,
-        initialized: false
+        initialized: false,
+        stickyThreshold: 0,
+        originalPosition: null,
+        expandedHeight: 0,
+        collapsedHeight: 60
     };
 
     /**
@@ -36,23 +42,36 @@
             tocNestedList: 'nav.toc li ul',
             tocParentItems: 'nav.toc li:has(ul)',
             tocLinks: 'nav.toc a',
-            mainContent: 'main'
+            mainContent: 'main',
+            stickyHeader: 'header',
+            body: 'body'
         },
         classes: {
             expanded: 'toc-expanded',
+            sticky: 'toc-sticky',
+            collapsed: 'toc-collapsed',
             nestedExpanded: 'nested-expanded',
-            hasNested: 'has-nested'
+            hasNested: 'has-nested',
+            scrollable: 'toc-scrollable',
+            bodySticky: 'toc-sticky-active'
         },
         timing: {
             hoverDelay: 150,
             nestedHoverDelay: 100,
             touchThreshold: 300,
-            transitionDuration: 300
+            transitionDuration: 300,
+            scrollDebounce: 16
         },
         breakpoints: {
             mobile: 768,
             desktop: 1200
-        }
+        },
+        maxHeight: {
+            mobile: '50vh',
+            tablet: '60vh',
+            desktop: '70vh'
+        },
+        debug: false
     };
 
     /**
@@ -115,6 +134,14 @@
         },
 
         /**
+         * Get current viewport height
+         * @returns {number} Viewport height in pixels
+         */
+        getHeight() {
+            return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        },
+
+        /**
          * Check if current viewport is mobile
          * @returns {boolean} True if mobile viewport
          */
@@ -128,6 +155,205 @@
          */
         isDesktop() {
             return this.getWidth() >= TOCConfig.breakpoints.desktop;
+        },
+
+        /**
+         * Get appropriate max height for current viewport
+         * @returns {string} CSS max-height value
+         */
+        getMaxHeight() {
+            if (this.isMobile()) {
+                return TOCConfig.maxHeight.mobile;
+            } else if (this.isDesktop()) {
+                return TOCConfig.maxHeight.desktop;
+            } else {
+                return TOCConfig.maxHeight.tablet;
+            }
+        }
+    };
+
+    // StickyManager removed - sticky functionality disabled
+
+    /**
+     * Scrollable content management for TOC
+     */
+    const ScrollableManager = {
+        /**
+         * Initialize scrollable behavior
+         */
+        init() {
+            try {
+                this.setupScrollableContainer();
+                this.updateScrollableState();
+
+            } catch (error) {
+                logError('scrollable', 1, `Scrollable manager init error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Setup scrollable container
+         */
+        setupScrollableContainer() {
+            try {
+                const tocList = safeQuerySelector(TOCConfig.selectors.tocList);
+                if (!tocList) return;
+
+                // Add scrollable class
+                tocList.classList.add(TOCConfig.classes.scrollable);
+
+                // Add scroll event listeners for scroll indicators
+                tocList.addEventListener('scroll', this.handleScroll.bind(this));
+
+            } catch (error) {
+                logError('scrollable', 2, `Container setup error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Handle scroll events within TOC
+         * @param {Event} event - Scroll event
+         */
+        handleScroll(event) {
+            try {
+                const container = event.target;
+                const isScrollable = container.scrollHeight > container.clientHeight;
+
+                // Update scrollable indicator
+                container.setAttribute('data-scrollable', isScrollable.toString());
+
+            } catch (error) {
+                logError('scrollable', 3, `Scroll handler error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Update scrollable state based on content and viewport
+         */
+        updateScrollableState() {
+            try {
+                const tocList = safeQuerySelector(TOCConfig.selectors.tocList);
+                if (!tocList) return;
+
+                // Calculate if content needs scrolling
+                const maxHeight = this.calculateMaxHeight();
+                const contentHeight = this.calculateContentHeight();
+
+                TOCState.isScrollable = contentHeight > maxHeight;
+
+                // Update container attributes
+                tocList.setAttribute('data-scrollable', TOCState.isScrollable.toString());
+
+                // Set max height for sticky mode
+                if (TOCState.isSticky) {
+                    tocList.style.maxHeight = ViewportUtils.getMaxHeight();
+                }
+
+            } catch (error) {
+                logError('scrollable', 4, `State update error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Calculate maximum allowed height for TOC content
+         * @returns {number} Maximum height in pixels
+         */
+        calculateMaxHeight() {
+            try {
+                const viewportHeight = ViewportUtils.getHeight();
+                const maxHeightPercent = ViewportUtils.isMobile() ? 0.5 : 0.7;
+
+                return Math.floor(viewportHeight * maxHeightPercent);
+
+            } catch (error) {
+                logError('scrollable', 5, `Max height calculation error: ${error.message}`, 0, 0);
+                return 400; // Fallback
+            }
+        },
+
+        /**
+         * Calculate total content height
+         * @returns {number} Content height in pixels
+         */
+        calculateContentHeight() {
+            try {
+                const tocList = safeQuerySelector(TOCConfig.selectors.tocList);
+                if (!tocList) return 0;
+
+                // Temporarily expand all nested lists to get full height
+                const expandedItems = [];
+                const nestedLists = tocList.querySelectorAll('li ul');
+
+                nestedLists.forEach(list => {
+                    const parent = list.closest('li');
+                    if (parent && !parent.classList.contains(TOCConfig.classes.nestedExpanded)) {
+                        parent.classList.add(TOCConfig.classes.nestedExpanded);
+                        expandedItems.push(parent);
+                    }
+                });
+
+                // Get scroll height
+                const contentHeight = tocList.scrollHeight;
+
+                // Restore original state
+                expandedItems.forEach(item => {
+                    item.classList.remove(TOCConfig.classes.nestedExpanded);
+                });
+
+                return contentHeight;
+
+            } catch (error) {
+                logError('scrollable', 6, `Content height calculation error: ${error.message}`, 0, 0);
+                return 0;
+            }
+        },
+
+        /**
+         * Scroll to specific element within TOC
+         * @param {Element} element - Element to scroll to
+         */
+        scrollToElement(element) {
+            try {
+                const tocList = safeQuerySelector(TOCConfig.selectors.tocList);
+                if (!tocList || !element) return;
+
+                const elementRect = element.getBoundingClientRect();
+                const containerRect = tocList.getBoundingClientRect();
+
+                const scrollTop = tocList.scrollTop + elementRect.top - containerRect.top - 20;
+
+                tocList.scrollTo({
+                    top: scrollTop,
+                    behavior: 'smooth'
+                });
+
+            } catch (error) {
+                logError('scrollable', 7, `Scroll to element error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Ensure expanded nested content is visible
+         * @param {Element} parentItem - Parent item that was expanded
+         */
+        ensureNestedVisible(parentItem) {
+            try {
+                if (!TOCState.isSticky || !TOCState.isScrollable) return;
+
+                const nestedList = parentItem.querySelector('ul');
+                if (!nestedList) return;
+
+                // Wait for expansion animation to complete
+                setTimeout(() => {
+                    const lastNestedItem = nestedList.querySelector('li:last-child');
+                    if (lastNestedItem) {
+                        this.scrollToElement(lastNestedItem);
+                    }
+                }, TOCConfig.timing.transitionDuration);
+
+            } catch (error) {
+                logError('scrollable', 8, `Nested visibility error: ${error.message}`, 0, 0);
+            }
         }
     };
 
@@ -323,9 +549,19 @@
                 nestedList.setAttribute('aria-hidden', 'false');
                 parentItem.classList.add(TOCConfig.classes.nestedExpanded);
 
+                // Sticky functionality disabled - no special handling needed
+
+                // Update scrollable state
+                ScrollableManager.updateScrollableState();
+
                 // Dispatch custom event
                 const event = new CustomEvent('nestedListExpand', {
-                    detail: { parentItem, nestedList }
+                    detail: {
+                        parentItem,
+                        nestedList,
+                        isSticky: false, // Always false since sticky is disabled
+                        isScrollable: TOCState.isScrollable
+                    }
                 });
                 document.dispatchEvent(event);
 
@@ -347,9 +583,16 @@
                 nestedList.setAttribute('aria-hidden', 'true');
                 parentItem.classList.remove(TOCConfig.classes.nestedExpanded);
 
+                // Update scrollable state
+                ScrollableManager.updateScrollableState();
+
                 // Dispatch custom event
                 const event = new CustomEvent('nestedListCollapse', {
-                    detail: { parentItem, nestedList }
+                    detail: {
+                        parentItem,
+                        nestedList,
+                        isSticky: false // Always false since sticky is disabled
+                    }
                 });
                 document.dispatchEvent(event);
 
@@ -418,19 +661,28 @@
                     return;
                 }
 
+                // Sticky functionality disabled - allow normal toggle
                 TOCState.isExpanded = !TOCState.isExpanded;
 
                 if (TOCState.isExpanded) {
                     toc.classList.add(TOCConfig.classes.expanded);
+                    toc.classList.remove(TOCConfig.classes.collapsed);
                     toc.setAttribute('aria-expanded', 'true');
                 } else {
                     toc.classList.remove(TOCConfig.classes.expanded);
+                    toc.classList.add(TOCConfig.classes.collapsed);
                     toc.setAttribute('aria-expanded', 'false');
                 }
 
+                // Update scrollable state
+                ScrollableManager.updateScrollableState();
+
                 // Dispatch custom event for other components
                 const event = new CustomEvent('tocToggle', {
-                    detail: { expanded: TOCState.isExpanded }
+                    detail: {
+                        expanded: TOCState.isExpanded,
+                        isSticky: false // Always false since sticky is disabled
+                    }
                 });
                 document.dispatchEvent(event);
 
@@ -446,7 +698,7 @@
             try {
                 TOCState.isHovered = true;
 
-                // Delay expansion slightly to prevent accidental triggers
+                // Sticky functionality disabled - use standard expansion only
                 setTimeout(() => {
                     if (TOCState.isHovered && !ViewportUtils.isMobile()) {
                         this.expandTOC();
@@ -478,6 +730,8 @@
         handleFocus() {
             try {
                 TOCState.isFocused = true;
+
+                // Sticky functionality disabled - use standard expansion only
                 this.expandTOC();
             } catch (error) {
                 logError('nav', 5, `Focus error: ${error.message}`, 0, 0);
@@ -515,7 +769,9 @@
             if (TOCState.isExpanded) {
                 this.toggleExpansion();
             }
-        }
+        },
+
+        // Sticky TOC methods removed - functionality disabled
     };
 
     /**
@@ -590,17 +846,31 @@
             clearTimeout(window.tocResizeTimeout);
             window.tocResizeTimeout = setTimeout(() => {
 
+                // Sticky functionality disabled
+                // StickyManager.recalculate();
+
+                // Update scrollable state
+                ScrollableManager.updateScrollableState();
+
                 // Reset state on viewport change
                 if (ViewportUtils.isMobile() && TOCState.isExpanded) {
                     TOCInteraction.collapseTOC();
                 }
 
+                // Sticky positioning disabled
+                // if (TOCState.isSticky) {
+                //     StickyManager.positionStickyTOC();
+                // }
+
                 // Dispatch resize event for other components
                 const event = new CustomEvent('tocResize', {
                     detail: {
                         width: ViewportUtils.getWidth(),
+                        height: ViewportUtils.getHeight(),
                         isMobile: ViewportUtils.isMobile(),
-                        isDesktop: ViewportUtils.isDesktop()
+                        isDesktop: ViewportUtils.isDesktop(),
+                        isSticky: false, // Always false since sticky is disabled
+                        isScrollable: TOCState.isScrollable
                     }
                 });
                 document.dispatchEvent(event);
@@ -630,10 +900,10 @@
                 return;
             }
 
-            // Initialize accessibility
+            // Initialize core managers (sticky functionality disabled)
+            // StickyManager.init(); // Disabled sticky functionality
+            ScrollableManager.init();
             AccessibilityManager.init();
-
-            // Initialize nested list interactions
             NestedListManager.init();
 
             // Add event listeners
@@ -649,10 +919,17 @@
             // Window resize handler
             window.addEventListener('resize', handleResize);
 
+            // Header sticky change listener disabled (sticky functionality removed)
+            // document.addEventListener('headerStickyChange', (event) => {
+            //     if (TOCState.isSticky) {
+            //         StickyManager.positionStickyTOC();
+            //     }
+            // });
+
             // Mark as initialized
             TOCState.initialized = true;
 
-            console.log('[TOC Module] Successfully initialized table of contents functionality');
+            console.log('[TOC Module] Successfully initialized table of contents functionality with sticky behavior');
 
         } catch (error) {
             logError('module', 2, `Initialization error: ${error.message}`, 0, 0);
@@ -669,6 +946,12 @@
         expand: () => TOCInteraction.expandTOC(),
         collapse: () => TOCInteraction.collapseTOC(),
         toggle: () => TOCInteraction.toggleExpansion(),
+        // Sticky functionality removed
+        scrollable: {
+            updateState: () => ScrollableManager.updateScrollableState(),
+            scrollToElement: (element) => ScrollableManager.scrollToElement(element),
+            isScrollable: () => TOCState.isScrollable
+        },
         nested: {
             init: () => NestedListManager.init(),
             expandAll: () => NestedListManager.expandAll(),

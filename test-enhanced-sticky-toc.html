@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced TOC Test (Sticky Disabled)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional test styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Test header */
+        header {
+            background: linear-gradient(135deg, #004b8d, #0066cc);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 100;
+        }
+
+        /* Test content */
+        .test-content {
+            padding: 2rem;
+            max-width: 1200px; /* Match TOC width */
+            margin: 0 auto;
+        }
+
+        .test-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            min-height: 400px;
+        }
+
+        .test-section h2 {
+            color: #004b8d;
+            border-bottom: 2px solid #004b8d;
+            padding-bottom: 0.5rem;
+        }
+
+        .test-section h3 {
+            color: #0066cc;
+            margin-top: 2rem;
+        }
+
+        .test-section h4 {
+            color: #0080ff;
+            margin-top: 1.5rem;
+        }
+
+        /* Status indicator */
+        .status-indicator {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 10000;
+            max-width: 300px;
+            line-height: 1.4;
+        }
+
+        /* Scroll position indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 75, 141, 0.9);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 10000;
+        }
+
+        /* Add more content to test scrolling */
+        .spacer {
+            height: 200px;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Status Indicator -->
+    <div class="status-indicator" id="statusIndicator">
+        TOC Status: Loading...
+    </div>
+
+    <!-- Scroll Position Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator">
+        Scroll: 0px
+    </div>
+
+    <!-- Test Header -->
+    <header>
+        <h1>Enhanced TOC Test (Sticky Disabled)</h1>
+        <p>Test the enhanced TOC functionality with nested lists and scrollable content (sticky behavior disabled)</p>
+    </header>
+
+    <!-- Enhanced Sticky TOC -->
+    <nav class="toc" id="enhanced-toc">
+        <h2>Table of Contents</h2>
+        <ul class="toc-scrollable">
+            <li><a href="#section1">Section 1: Introduction</a>
+                <ul>
+                    <li><a href="#section1-1">1.1 Overview</a></li>
+                    <li><a href="#section1-2">1.2 Features</a>
+                        <ul>
+                            <li><a href="#section1-2-1">1.2.1 Sticky Behavior</a></li>
+                            <li><a href="#section1-2-2">1.2.2 Scrollable Content</a></li>
+                            <li><a href="#section1-2-3">1.2.3 Nested Expansion</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section1-3">1.3 Implementation</a></li>
+                </ul>
+            </li>
+            <li><a href="#section2">Section 2: Advanced Features</a>
+                <ul>
+                    <li><a href="#section2-1">2.1 Responsive Design</a></li>
+                    <li><a href="#section2-2">2.2 Accessibility</a>
+                        <ul>
+                            <li><a href="#section2-2-1">2.2.1 Keyboard Navigation</a></li>
+                            <li><a href="#section2-2-2">2.2.2 Screen Reader Support</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section2-3">2.3 Performance</a></li>
+                </ul>
+            </li>
+            <li><a href="#section3">Section 3: Configuration</a>
+                <ul>
+                    <li><a href="#section3-1">3.1 Basic Setup</a></li>
+                    <li><a href="#section3-2">3.2 Advanced Options</a>
+                        <ul>
+                            <li><a href="#section3-2-1">3.2.1 Timing Settings</a></li>
+                            <li><a href="#section3-2-2">3.2.2 Breakpoints</a></li>
+                            <li><a href="#section3-2-3">3.2.3 Styling Options</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section3-3">3.3 Integration</a></li>
+                </ul>
+            </li>
+            <li><a href="#section4">Section 4: Testing</a>
+                <ul>
+                    <li><a href="#section4-1">4.1 Unit Tests</a></li>
+                    <li><a href="#section4-2">4.2 Integration Tests</a></li>
+                    <li><a href="#section4-3">4.3 Browser Compatibility</a>
+                        <ul>
+                            <li><a href="#section4-3-1">4.3.1 Modern Browsers</a></li>
+                            <li><a href="#section4-3-2">4.3.2 Legacy Support</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#section5">Section 5: Troubleshooting</a>
+                <ul>
+                    <li><a href="#section5-1">5.1 Common Issues</a></li>
+                    <li><a href="#section5-2">5.2 Debug Mode</a></li>
+                    <li><a href="#section5-3">5.3 Performance Tips</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Spacer content -->
+    <div class="spacer">Enhanced TOC with nested lists and scrollable content</div>
+    <div class="spacer">Sticky functionality has been disabled</div>
+
+    <!-- Test Content -->
+    <main class="test-content">
+        <div class="test-section" id="section1">
+            <h2>Section 1: Introduction</h2>
+            <p>This section demonstrates the enhanced sticky TOC functionality. The TOC should become sticky when you scroll past it, and collapse into a compact header with "Table of Contents" centered below the sticky header.</p>
+            
+            <h3 id="section1-1">1.1 Overview</h3>
+            <p>The enhanced TOC provides a seamless user experience with smooth transitions between expanded and collapsed states.</p>
+            
+            <h3 id="section1-2">1.2 Features</h3>
+            <p>Key features include sticky positioning, scrollable content, and nested list expansion on hover.</p>
+            
+            <h4 id="section1-2-1">1.2.1 Sticky Behavior</h4>
+            <p>When the bottom of the TOC scrolls to the bottom of the sticky header, it merges into a blurred background.</p>
+            
+            <h4 id="section1-2-2">1.2.2 Scrollable Content</h4>
+            <p>Long TOC content becomes scrollable with custom scrollbars and scroll indicators.</p>
+            
+            <h4 id="section1-2-3">1.2.3 Nested Expansion</h4>
+            <p>Parent items expand to show sub-items on hover, with automatic scroll adjustment.</p>
+            
+            <h3 id="section1-3">1.3 Implementation</h3>
+            <p>The implementation uses modern JavaScript with intersection observers and CSS transitions.</p>
+        </div>
+
+        <div class="test-section" id="section2">
+            <h2>Section 2: Advanced Features</h2>
+            <p>This section covers the advanced features of the enhanced sticky TOC.</p>
+            
+            <h3 id="section2-1">2.1 Responsive Design</h3>
+            <p>The TOC adapts to different screen sizes with appropriate max heights and touch interactions.</p>
+            
+            <h3 id="section2-2">2.2 Accessibility</h3>
+            <p>Full accessibility support with ARIA attributes and keyboard navigation.</p>
+            
+            <h4 id="section2-2-1">2.2.1 Keyboard Navigation</h4>
+            <p>Navigate the TOC using Tab, Enter, Space, and Escape keys.</p>
+            
+            <h4 id="section2-2-2">2.2.2 Screen Reader Support</h4>
+            <p>Proper ARIA labels and state announcements for screen readers.</p>
+            
+            <h3 id="section2-3">2.3 Performance</h3>
+            <p>Optimized with requestAnimationFrame and debounced scroll handlers.</p>
+        </div>
+
+        <div class="test-section" id="section3">
+            <h2>Section 3: Configuration</h2>
+            <p>Configuration options for customizing the TOC behavior.</p>
+            
+            <h3 id="section3-1">3.1 Basic Setup</h3>
+            <p>Simple setup with default configuration options.</p>
+            
+            <h3 id="section3-2">3.2 Advanced Options</h3>
+            <p>Advanced configuration for fine-tuning behavior.</p>
+            
+            <h4 id="section3-2-1">3.2.1 Timing Settings</h4>
+            <p>Customize hover delays and transition durations.</p>
+            
+            <h4 id="section3-2-2">3.2.2 Breakpoints</h4>
+            <p>Define responsive breakpoints for different devices.</p>
+            
+            <h4 id="section3-2-3">3.2.3 Styling Options</h4>
+            <p>Customize colors, spacing, and visual effects.</p>
+            
+            <h3 id="section3-3">3.3 Integration</h3>
+            <p>Integration with existing websites and frameworks.</p>
+        </div>
+
+        <div class="test-section" id="section4">
+            <h2>Section 4: Testing</h2>
+            <p>Testing procedures and compatibility information.</p>
+            
+            <h3 id="section4-1">4.1 Unit Tests</h3>
+            <p>Individual component testing with Jest and testing utilities.</p>
+            
+            <h3 id="section4-2">4.2 Integration Tests</h3>
+            <p>End-to-end testing with Cypress or similar tools.</p>
+            
+            <h3 id="section4-3">4.3 Browser Compatibility</h3>
+            <p>Compatibility across modern and legacy browsers.</p>
+            
+            <h4 id="section4-3-1">4.3.1 Modern Browsers</h4>
+            <p>Full feature support in Chrome, Firefox, Safari, and Edge.</p>
+            
+            <h4 id="section4-3-2">4.3.2 Legacy Support</h4>
+            <p>Graceful degradation for older browsers.</p>
+        </div>
+
+        <div class="test-section" id="section5">
+            <h2>Section 5: Troubleshooting</h2>
+            <p>Common issues and solutions for the enhanced sticky TOC.</p>
+            
+            <h3 id="section5-1">5.1 Common Issues</h3>
+            <p>Frequently encountered problems and their solutions.</p>
+            
+            <h3 id="section5-2">5.2 Debug Mode</h3>
+            <p>Enable debug mode to troubleshoot issues.</p>
+            
+            <h3 id="section5-3">5.3 Performance Tips</h3>
+            <p>Optimize performance for large documents.</p>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="utilities.js"></script>
+    <script src="sticky-header.js"></script>
+    <script src="table-of-contents.js"></script>
+    
+    <script>
+        // Status indicator updates
+        function updateStatus() {
+            const indicator = document.getElementById('statusIndicator');
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            const toc = window.TableOfContents;
+
+            // Update scroll position
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollIndicator.textContent = `Scroll: ${Math.round(scrollTop)}px`;
+
+            if (toc && toc.state) {
+                const status = `
+                    Sticky: Disabled |
+                    Expanded: ${toc.state.isExpanded ? 'Yes' : 'No'} |
+                    Scrollable: ${toc.state.isScrollable ? 'Yes' : 'No'} |
+                    Hovered: ${toc.state.isHovered ? 'Yes' : 'No'} |
+                    Functionality: Normal TOC Only
+                `;
+                indicator.textContent = status;
+            }
+        }
+
+        // Enable debug mode
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.TableOfContents && window.TableOfContents.config) {
+                window.TableOfContents.config.debug = true;
+            }
+        });
+
+        // Update status every 100ms
+        setInterval(updateStatus, 100);
+
+        // Also update on scroll for immediate feedback
+        window.addEventListener('scroll', updateStatus);
+
+        // Listen for TOC events
+        document.addEventListener('tocStickyChange', (event) => {
+            console.log('TOC Sticky Change:', event.detail);
+        });
+
+        document.addEventListener('tocStickyExpand', (event) => {
+            console.log('TOC Sticky Expand:', event.detail);
+        });
+
+        document.addEventListener('tocStickyCollapse', (event) => {
+            console.log('TOC Sticky Collapse:', event.detail);
+        });
+
+        document.addEventListener('nestedListExpand', (event) => {
+            console.log('Nested List Expand:', event.detail);
+        });
+
+        document.addEventListener('nestedListCollapse', (event) => {
+            console.log('Nested List Collapse:', event.detail);
+        });
+    </script>
+</body>
+</html>
