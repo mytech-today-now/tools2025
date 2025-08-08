@@ -1,0 +1,338 @@
+/**
+ * Enhanced Table of Contents CSS
+ * 
+ * Provides sophisticated styling for the Enhanced TOC module with:
+ * - Blurred, borderless backgrounds
+ * - Sticky positioning with smooth transitions
+ * - Hover-based expansion effects
+ * - Nested sub-item indentation
+ * - Responsive design with muted scroll bars
+ * 
+ * @author myTech.Today
+ * @version 1.0.0
+ */
+
+/* CSS Custom Properties for Enhanced TOC */
+:root {
+    --enhanced-toc-primary: #004b8d;
+    --enhanced-toc-primary-light: rgba(0, 75, 141, 0.1);
+    --enhanced-toc-primary-medium: rgba(0, 75, 141, 0.3);
+    --enhanced-toc-text: #333;
+    --enhanced-toc-text-light: #666;
+    --enhanced-toc-bg: rgba(255, 255, 255, 0.95);
+    --enhanced-toc-bg-hover: rgba(255, 255, 255, 0.98);
+    --enhanced-toc-border: rgba(0, 75, 141, 0.2);
+    --enhanced-toc-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --enhanced-toc-blur: 20px;
+    --enhanced-toc-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --enhanced-toc-spacing-xs: 0.25rem;
+    --enhanced-toc-spacing-sm: 0.5rem;
+    --enhanced-toc-spacing-md: 1rem;
+    --enhanced-toc-spacing-lg: 1.5rem;
+    --enhanced-toc-spacing-xl: 2rem;
+}
+
+/* Base Enhanced TOC Styling */
+.enhanced-toc {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: var(--enhanced-toc-spacing-lg) 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    z-index: 100;
+}
+
+/* Enhanced TOC Title */
+.enhanced-toc-title {
+    margin: 0;
+    padding: var(--enhanced-toc-spacing-md) var(--enhanced-toc-spacing-lg);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--enhanced-toc-text);
+    background: var(--enhanced-toc-bg);
+    backdrop-filter: blur(var(--enhanced-toc-blur));
+    -webkit-backdrop-filter: blur(var(--enhanced-toc-blur));
+    border-radius: 8px 8px 0 0;
+    user-select: none;
+    cursor: default;
+}
+
+/* Enhanced TOC Content Container */
+.enhanced-toc-content {
+    background: var(--enhanced-toc-bg);
+    backdrop-filter: blur(var(--enhanced-toc-blur));
+    -webkit-backdrop-filter: blur(var(--enhanced-toc-blur));
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    transition: var(--enhanced-toc-transition);
+}
+
+/* Scrollable Container */
+.enhanced-toc-scrollable {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--enhanced-toc-primary-medium) transparent;
+}
+
+/* Webkit Scrollbar Styling */
+.enhanced-toc-scrollable::-webkit-scrollbar {
+    width: 6px;
+}
+
+.enhanced-toc-scrollable::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.enhanced-toc-scrollable::-webkit-scrollbar-thumb {
+    background: var(--enhanced-toc-primary-medium);
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.enhanced-toc-scrollable::-webkit-scrollbar-thumb:hover {
+    background: var(--enhanced-toc-primary);
+}
+
+/* TOC Items */
+.enhanced-toc-item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* TOC Links */
+.enhanced-toc-link {
+    display: block;
+    padding: var(--enhanced-toc-spacing-sm) var(--enhanced-toc-spacing-lg);
+    color: var(--enhanced-toc-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--enhanced-toc-transition);
+    border-left: 3px solid transparent;
+    position: relative;
+}
+
+.enhanced-toc-link:hover,
+.enhanced-toc-link:focus {
+    background: var(--enhanced-toc-primary-light);
+    color: var(--enhanced-toc-primary);
+    border-left-color: var(--enhanced-toc-primary);
+    outline: none;
+}
+
+.enhanced-toc-link:active {
+    background: var(--enhanced-toc-primary-medium);
+    color: white;
+}
+
+/* Sub-items Container */
+.enhanced-toc-subitems {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    background: rgba(0, 75, 141, 0.02);
+}
+
+/* Sub-item Links */
+.enhanced-toc-subitem .enhanced-toc-link {
+    padding-left: calc(var(--enhanced-toc-spacing-lg) + var(--enhanced-toc-spacing-xl));
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--enhanced-toc-text-light);
+}
+
+.enhanced-toc-subitem .enhanced-toc-link:hover,
+.enhanced-toc-subitem .enhanced-toc-link:focus {
+    color: var(--enhanced-toc-primary);
+}
+
+/* Nested Sub-items (Level 3+) */
+.enhanced-toc-subitem .enhanced-toc-subitems .enhanced-toc-link {
+    padding-left: calc(var(--enhanced-toc-spacing-lg) + var(--enhanced-toc-spacing-xl) + var(--enhanced-toc-spacing-lg));
+    font-size: 0.9rem;
+}
+
+.enhanced-toc-subitem .enhanced-toc-subitems .enhanced-toc-subitem .enhanced-toc-link {
+    padding-left: calc(var(--enhanced-toc-spacing-lg) + var(--enhanced-toc-spacing-xl) + var(--enhanced-toc-spacing-xl));
+    font-size: 0.85rem;
+}
+
+/* Expanded Sub-items */
+.subitems-expanded > .enhanced-toc-subitems {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* Sticky TOC Styles */
+.enhanced-toc-sticky {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    max-width: 1200px;
+    margin: 0;
+    z-index: 1000;
+    box-shadow: var(--enhanced-toc-shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Collapsed Sticky State */
+.enhanced-toc-sticky.enhanced-toc-collapsed .enhanced-toc-content {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.enhanced-toc-sticky.enhanced-toc-collapsed .enhanced-toc-title {
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Expanded Sticky State */
+.enhanced-toc-sticky.enhanced-toc-expanded .enhanced-toc-content {
+    max-height: 70vh;
+    opacity: 1;
+    visibility: visible;
+}
+
+.enhanced-toc-sticky.enhanced-toc-expanded .enhanced-toc-title {
+    border-radius: 8px 8px 0 0;
+    background: var(--enhanced-toc-bg-hover);
+}
+
+/* Body Adjustments when TOC is Active */
+body.enhanced-toc-active {
+    transition: var(--enhanced-toc-transition);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .enhanced-toc-sticky {
+        width: calc(100% - 1rem);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .enhanced-toc-title {
+        font-size: 1rem;
+        padding: var(--enhanced-toc-spacing-sm) var(--enhanced-toc-spacing-md);
+    }
+    
+    .enhanced-toc-link {
+        padding: var(--enhanced-toc-spacing-xs) var(--enhanced-toc-spacing-md);
+        font-size: 0.9rem;
+    }
+    
+    .enhanced-toc-subitem .enhanced-toc-link {
+        padding-left: calc(var(--enhanced-toc-spacing-md) + var(--enhanced-toc-spacing-lg));
+        font-size: 0.85rem;
+    }
+    
+    .enhanced-toc-scrollable {
+        max-height: 50vh;
+    }
+    
+    .enhanced-toc-sticky.enhanced-toc-expanded .enhanced-toc-content {
+        max-height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .enhanced-toc-sticky {
+        width: calc(100% - 0.5rem);
+    }
+    
+    .enhanced-toc-title {
+        font-size: 0.9rem;
+        padding: var(--enhanced-toc-spacing-xs) var(--enhanced-toc-spacing-sm);
+    }
+    
+    .enhanced-toc-scrollable::-webkit-scrollbar {
+        width: 4px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .enhanced-toc-sticky {
+        width: calc(100% - 4rem);
+        max-width: 1400px;
+    }
+    
+    .enhanced-toc-title {
+        font-size: 1.3rem;
+        padding: var(--enhanced-toc-spacing-lg) var(--enhanced-toc-spacing-xl);
+    }
+    
+    .enhanced-toc-scrollable {
+        max-height: 70vh;
+    }
+    
+    .enhanced-toc-sticky.enhanced-toc-expanded .enhanced-toc-content {
+        max-height: 70vh;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .enhanced-toc {
+        border: 2px solid var(--enhanced-toc-primary);
+    }
+    
+    .enhanced-toc-title {
+        border-bottom: 2px solid var(--enhanced-toc-primary);
+    }
+    
+    .enhanced-toc-link {
+        border-left-width: 4px;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .enhanced-toc,
+    .enhanced-toc-title,
+    .enhanced-toc-content,
+    .enhanced-toc-link,
+    .enhanced-toc-subitems,
+    body.enhanced-toc-active {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Focus Indicators for Accessibility */
+.enhanced-toc-link:focus-visible {
+    outline: 2px solid var(--enhanced-toc-primary);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .enhanced-toc-sticky {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: none !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+    }
+    
+    .enhanced-toc-content {
+        max-height: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
