@@ -26,10 +26,16 @@
       --spacing-xl: 2rem;
       --spacing-xxl: 3rem;
 
+      /* Blur effect controls */
+      --blur-light: 5px;
+      --blur-medium: 10px;
+      --blur-heavy: 15px;
+      --blur-extra-heavy: 30px;
+
       /* Dust particle effect controls */
       /* https://woodenraft.games/blog/make-floating-dust-particles-on-gpu-in-threejs */
       --dust-particle-count: 350;
-      --dust-particle-size: 2.0;
+      --dust-particle-size: 3.0;
       --dust-opacity: 0.8;
       --dust-brightness: 0.8;
       --dust-density: 0.99;
@@ -139,6 +145,176 @@
       max-width: 100%;
       margin: 0 auto;
       padding: 0 var(--spacing-sm);
+    }
+
+    /* Section elements with blurred background matching unified header */
+    section {
+      position: relative !important;
+      backdrop-filter: blur(var(--blur-medium)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-medium)) !important;
+      border-radius: var(--border-radius-large) !important;
+      margin: var(--spacing-lg) 0 !important;
+      padding: var(--spacing-lg) !important;
+      overflow: hidden !important;
+    }
+
+    /* Pure blur effect without background color - sections are transparent like header */
+    section::before {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      /* No background color - pure transparency with blur */
+      background: transparent !important;
+      z-index: -1 !important;
+    }
+
+    /* Subtle overlay for better text readability (minimal like header) */
+    section::after {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      /* Very subtle overlay matching header */
+      background: rgba(0, 0, 0, 0.05) !important;
+      z-index: -1 !important;
+    }
+
+    /* ========================================
+       IFRAME CONTAINER STYLES
+       ======================================== */
+
+    /* Iframe container - provides consistent styling and responsive behavior */
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      margin: var(--spacing-lg) 0;
+      border-radius: var(--border-radius-large);
+      overflow: hidden;
+      backdrop-filter: blur(var(--blur-light));
+      -webkit-backdrop-filter: blur(var(--blur-light));
+      box-shadow: var(--shadow-medium);
+      transition: all 0.3s ease;
+    }
+
+    /* Hover effect for iframe containers */
+    .iframe-container:hover {
+      box-shadow: var(--shadow-heavy);
+      border-color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    /* Iframe styling within containers */
+    .iframe-container iframe {
+      width: 100%;
+      border: none;
+      border-radius: var(--border-radius);
+      background: transparent;
+      display: block;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Loading state for iframes */
+    .iframe-container iframe:not([src]) {
+      opacity: 0.5;
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading-shimmer 1.5s infinite;
+    }
+
+    /* Loading shimmer animation */
+    @keyframes loading-shimmer {
+      0% {
+        background-position: -200% 0;
+      }
+      100% {
+        background-position: 200% 0;
+      }
+    }
+
+    /* Responsive iframe containers */
+    @media (max-width: 768px) {
+      .iframe-container {
+        margin: var(--spacing-md) 0;
+        border-radius: var(--border-radius);
+        border-width: 1px;
+      }
+
+      .iframe-container:hover {
+        transform: none; /* Disable hover transform on mobile */
+      }
+    }
+
+    /* Special styling for newsletter iframe */
+    .iframe-container iframe[data-test-id="beehiiv-embed"] {
+      min-height: 620px;
+      background: transparent;
+    }
+
+    /* Iframe loading state */
+    .iframe-container.loading {
+      border-color: var(--secondary-color);
+      backdrop-filter: blur(var(--blur-medium));
+      -webkit-backdrop-filter: blur(var(--blur-medium));
+      background: rgba(16, 163, 127, 0.1);
+    }
+
+    .iframe-container.loading::after {
+      content: "Loading content...";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--text-color);
+      font-weight: 600;
+      text-align: center;
+      padding: var(--spacing-md);
+      backdrop-filter: blur(var(--blur-light));
+      -webkit-backdrop-filter: blur(var(--blur-light));
+      border-radius: var(--border-radius);
+      animation: pulse 1.5s infinite;
+    }
+
+    /* Iframe loaded state */
+    .iframe-container.loaded {
+      backdrop-filter: blur(var(--blur-light));
+      -webkit-backdrop-filter: blur(var(--blur-light));
+    }
+
+    /* Iframe error state */
+    .iframe-container.error {
+      border-color: var(--danger-color);
+      backdrop-filter: blur(var(--blur-medium));
+      -webkit-backdrop-filter: blur(var(--blur-medium));
+    }
+
+    .iframe-container.error::after {
+      content: "Content failed to load. Please refresh the page.";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--danger-color);
+      font-weight: 600;
+      text-align: center;
+      padding: var(--spacing-md);
+      backdrop-filter: blur(var(--blur-light));
+      -webkit-backdrop-filter: blur(var(--blur-light));
+      border-radius: var(--border-radius);
+    }
+
+    /* Pulse animation for loading state */
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
     }
 
     /* ========================================
@@ -545,6 +721,613 @@
     /* ========================================
        WORDPRESS INTEGRATION STYLES
        ======================================== */
+
+    /* ========================================
+       YESTERDAY.HTML PAGE SPECIFIC STYLES
+       ======================================== */
+
+    /* WordPress page body styling to match tools2025.html and homepage.html */
+    body.page-template-default,
+    body.page,
+    body.archive,
+    body.blog,
+    body.home {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--text-color);
+      line-height: 1.5;
+      min-height: 100vh;
+      position: relative;
+      /* Use the same gradient system as other pages */
+      --gradient-progress: 0;
+      --viewport-height: 100vh;
+      --page-height: 100vh;
+    }
+
+    /* Hide WordPress default header elements for yesterday.html */
+    body.page-template-default .site-header,
+    body.page-template-default .main-navigation,
+    body.page-template-default .site-branding,
+    body.page-template-default .header-wrap,
+    body.page-template-default #masthead,
+    body.archive .site-header,
+    body.archive .main-navigation,
+    body.archive .site-branding,
+    body.blog .site-header,
+    body.blog .main-navigation,
+    body.blog .site-branding {
+      display: none !important;
+    }
+
+    /* WordPress content area styling to match other pages */
+    body.page-template-default .site-content,
+    body.page-template-default .content-area,
+    body.page-template-default .site-main,
+    body.archive .site-content,
+    body.archive .content-area,
+    body.archive .site-main,
+    body.blog .site-content,
+    body.blog .content-area,
+    body.blog .site-main {
+      max-width: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    /* WordPress main content wrapper */
+    body.page-template-default main,
+    body.archive main,
+    body.blog main {
+      padding: var(--spacing-lg) var(--spacing-md) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      max-width: 1200px !important;
+      margin: 0 auto !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    /* WordPress article/entry content styling */
+    body.page-template-default article,
+    body.page-template-default .entry-content,
+    body.archive article,
+    body.archive .entry-content,
+    body.blog article,
+    body.blog .entry-content {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    /* WordPress page title styling to match other pages */
+    body.page-template-default .entry-title,
+    body.page-template-default h1.page-title,
+    body.archive .page-title,
+    body.archive .entry-title,
+    body.blog .page-title,
+    body.blog .entry-title {
+      color: rgba(255, 255, 255, 0.95) !important;
+      font-size: 2.5rem !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      margin: var(--spacing-xl) 0 !important;
+      padding: var(--spacing-lg) !important;
+      text-shadow:
+        -1px -1px 0 rgba(0, 0, 0, 0.7),
+        1px -1px 0 rgba(0, 0, 0, 0.7),
+        -1px 1px 0 rgba(0, 0, 0, 0.7),
+        1px 1px 0 rgba(0, 0, 0, 0.7),
+        0 0 15px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    /* WordPress content text styling */
+    body.page-template-default .entry-content p,
+    body.page-template-default .entry-content div,
+    body.archive .entry-content p,
+    body.archive .entry-content div,
+    body.blog .entry-content p,
+    body.blog .entry-content div {
+      color: var(--text-color) !important;
+      line-height: 1.6 !important;
+      margin-bottom: var(--spacing-md) !important;
+    }
+
+    /* WordPress link styling to match other pages */
+    body.page-template-default .entry-content a,
+    body.archive .entry-content a,
+    body.blog .entry-content a {
+      color: var(--text-link) !important;
+      text-decoration: none !important;
+      border-bottom: 1px dotted var(--text-color) !important;
+      transition: all 0.3s ease !important;
+    }
+
+    body.page-template-default .entry-content a:hover,
+    body.archive .entry-content a:hover,
+    body.blog .entry-content a:hover {
+      color: rgba(255, 255, 255, 0.9) !important;
+      border-bottom-color: var(--text-link) !important;
+    }
+
+    /* ========================================
+       UNIFIED HEADER FOR WORDPRESS PAGES
+       ======================================== */
+
+    /* Add unified header to WordPress pages if it doesn't exist */
+    body.page-template-default::before,
+    body.archive::before,
+    body.blog::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: auto;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    /* WordPress pages should have unified header structure */
+    body.page-template-default #unified-header,
+    body.archive #unified-header,
+    body.blog #unified-header {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      z-index: 9999 !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      transition: all 0.3s ease !important;
+    }
+
+    /* Unified header blur effect for WordPress pages */
+    body.page-template-default #unified-header::before,
+    body.archive #unified-header::before,
+    body.blog #unified-header::before {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      backdrop-filter: blur(var(--blur-medium)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-medium)) !important;
+      background: linear-gradient(
+        135deg,
+        rgba(25, 57, 89, 0.85) 0%,
+        rgba(39, 72, 105, 0.85) 100%
+      ) !important;
+      z-index: -1 !important;
+    }
+
+    /* WordPress page content margin to account for fixed header */
+    body.page-template-default,
+    body.archive,
+    body.blog {
+      margin-top: 120px !important;
+      padding-top: var(--spacing-lg) !important;
+    }
+
+    /* WordPress admin bar compatibility for yesterday.html */
+    body.admin-bar.page-template-default,
+    body.admin-bar.archive,
+    body.admin-bar.blog {
+      margin-top: 152px !important; /* 120px + 32px admin bar */
+    }
+
+    @media screen and (max-width: 782px) {
+      body.admin-bar.page-template-default,
+      body.admin-bar.archive,
+      body.admin-bar.blog {
+        margin-top: 166px !important; /* 120px + 46px mobile admin bar */
+      }
+    }
+
+    /* WordPress sidebar removal for clean layout */
+    body.page-template-default .sidebar,
+    body.page-template-default .widget-area,
+    body.page-template-default .secondary,
+    body.archive .sidebar,
+    body.archive .widget-area,
+    body.archive .secondary,
+    body.blog .sidebar,
+    body.blog .widget-area,
+    body.blog .secondary {
+      display: none !important;
+    }
+
+    /* WordPress footer styling to match other pages */
+    body.page-template-default .site-footer,
+    body.archive .site-footer,
+    body.blog .site-footer {
+      background: transparent !important;
+      border: none !important;
+      color: var(--text-color) !important;
+      padding: var(--spacing-xl) var(--spacing-md) !important;
+      text-align: center !important;
+      margin-top: var(--spacing-xxl) !important;
+      clear: both !important; /* Ensure footer appears after all floated content */
+    }
+
+    /* General footer positioning for yesterday.html */
+    footer {
+      clear: both !important;
+      margin-top: var(--spacing-xl) !important;
+    }
+
+    /* WordPress pagination styling */
+    body.page-template-default .pagination,
+    body.archive .pagination,
+    body.blog .pagination {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: var(--spacing-sm) !important;
+      margin: var(--spacing-xl) 0 !important;
+      padding: var(--spacing-lg) !important;
+    }
+
+    body.page-template-default .pagination a,
+    body.page-template-default .pagination span,
+    body.archive .pagination a,
+    body.archive .pagination span,
+    body.blog .pagination a,
+    body.blog .pagination span {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-width: 40px !important;
+      height: 40px !important;
+      padding: var(--spacing-sm) var(--spacing-md) !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+      backdrop-filter: blur(var(--blur-light)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-light)) !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: var(--border-radius) !important;
+      color: var(--text-color) !important;
+      text-decoration: none !important;
+      font-weight: 500 !important;
+      transition: all 0.3s ease !important;
+    }
+
+    body.page-template-default .pagination a:hover,
+    body.archive .pagination a:hover,
+    body.blog .pagination a:hover {
+      background: rgba(255, 255, 255, 0.2) !important;
+      border-color: var(--primary-color) !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* ========================================
+       WORDPRESS POST CONTENT STYLING
+       ======================================== */
+
+    /* WordPress post entries with blur backgrounds like other pages */
+    body.archive .post,
+    body.blog .post,
+    body.archive article,
+    body.blog article {
+      position: relative !important;
+      margin: var(--spacing-xl) 0 !important;
+      padding: var(--spacing-xl) !important;
+      border-radius: var(--border-radius-large) !important;
+      overflow: hidden !important;
+      backdrop-filter: blur(var(--blur-light)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-light)) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid var(--border-color) !important;
+      box-shadow: var(--shadow-medium) !important;
+      transition: all 0.3s ease !important;
+    }
+
+    body.archive .post:hover,
+    body.blog .post:hover,
+    body.archive article:hover,
+    body.blog article:hover {
+      backdrop-filter: blur(var(--blur-medium)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-medium)) !important;
+      background: rgba(255, 255, 255, 0.08) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: var(--shadow-heavy) !important;
+    }
+
+    /* WordPress post titles */
+    body.archive .entry-title a,
+    body.blog .entry-title a,
+    body.archive h2.entry-title a,
+    body.blog h2.entry-title a {
+      color: rgba(255, 255, 255, 0.95) !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      font-size: 1.5rem !important;
+      line-height: 1.3 !important;
+      text-shadow:
+        -1px -1px 0 rgba(0, 0, 0, 0.6),
+        1px -1px 0 rgba(0, 0, 0, 0.6),
+        -1px 1px 0 rgba(0, 0, 0, 0.6),
+        1px 1px 0 rgba(0, 0, 0, 0.6),
+        0 0 10px rgba(0, 0, 0, 0.3) !important;
+      transition: all 0.3s ease !important;
+      border-bottom: none !important;
+    }
+
+    body.archive .entry-title a:hover,
+    body.blog .entry-title a:hover,
+    body.archive h2.entry-title a:hover,
+    body.blog h2.entry-title a:hover {
+      color: rgba(255, 255, 255, 1) !important;
+      text-shadow:
+        -1px -1px 0 rgba(0, 0, 0, 0.8),
+        1px -1px 0 rgba(0, 0, 0, 0.8),
+        -1px 1px 0 rgba(0, 0, 0, 0.8),
+        1px 1px 0 rgba(0, 0, 0, 0.8),
+        0 0 15px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    /* WordPress post meta information */
+    body.archive .entry-meta,
+    body.blog .entry-meta,
+    body.archive .post-meta,
+    body.blog .post-meta {
+      color: var(--text-muted) !important;
+      font-size: 0.9rem !important;
+      margin-bottom: var(--spacing-md) !important;
+      text-shadow:
+        -1px -1px 0 rgba(0, 0, 0, 0.5),
+        1px -1px 0 rgba(0, 0, 0, 0.5),
+        -1px 1px 0 rgba(0, 0, 0, 0.5),
+        1px 1px 0 rgba(0, 0, 0, 0.5) !important;
+    }
+
+    body.archive .entry-meta a,
+    body.blog .entry-meta a,
+    body.archive .post-meta a,
+    body.blog .post-meta a {
+      color: var(--text-link) !important;
+      text-decoration: none !important;
+      border-bottom: 1px dotted var(--text-color) !important;
+    }
+
+    /* WordPress post excerpts */
+    body.archive .entry-summary,
+    body.blog .entry-summary,
+    body.archive .entry-content,
+    body.blog .entry-content {
+      color: var(--text-color) !important;
+      line-height: 1.6 !important;
+      margin-bottom: var(--spacing-lg) !important;
+    }
+
+    /* WordPress read more links */
+    body.archive .more-link,
+    body.blog .more-link,
+    body.archive .read-more,
+    body.blog .read-more {
+      display: inline-flex !important;
+      align-items: center !important;
+      padding: var(--spacing-sm) var(--spacing-md) !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+      backdrop-filter: blur(var(--blur-light)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-light)) !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: var(--border-radius) !important;
+      color: var(--text-color) !important;
+      text-decoration: none !important;
+      font-weight: 500 !important;
+      transition: all 0.3s ease !important;
+      margin-top: var(--spacing-md) !important;
+    }
+
+    body.archive .more-link:hover,
+    body.blog .more-link:hover,
+    body.archive .read-more:hover,
+    body.blog .read-more:hover {
+      background: rgba(255, 255, 255, 0.2) !important;
+      border-color: var(--primary-color) !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* ========================================
+       WORDPRESS RESPONSIVE STYLES
+       ======================================== */
+
+    /* Tablet responsive styles for WordPress pages */
+    @media screen and (max-width: 1024px) {
+      body.page-template-default main,
+      body.archive main,
+      body.blog main {
+        padding: var(--spacing-md) var(--spacing-sm) !important;
+        max-width: 100% !important;
+      }
+
+      body.page-template-default .entry-title,
+      body.page-template-default h1.page-title,
+      body.archive .page-title,
+      body.archive .entry-title,
+      body.blog .page-title,
+      body.blog .entry-title {
+        font-size: 2rem !important;
+        margin: var(--spacing-lg) 0 !important;
+        padding: var(--spacing-md) !important;
+      }
+
+      body.archive .post,
+      body.blog .post,
+      body.archive article,
+      body.blog article {
+        margin: var(--spacing-lg) 0 !important;
+        padding: var(--spacing-lg) !important;
+      }
+
+      body.archive .entry-title a,
+      body.blog .entry-title a,
+      body.archive h2.entry-title a,
+      body.blog h2.entry-title a {
+        font-size: 1.3rem !important;
+      }
+    }
+
+    /* Mobile responsive styles for WordPress pages */
+    @media screen and (max-width: 768px) {
+      body.page-template-default,
+      body.archive,
+      body.blog {
+        margin-top: 100px !important;
+        padding-top: var(--spacing-md) !important;
+      }
+
+      body.admin-bar.page-template-default,
+      body.admin-bar.archive,
+      body.admin-bar.blog {
+        margin-top: 146px !important; /* 100px + 46px mobile admin bar */
+      }
+
+      body.page-template-default main,
+      body.archive main,
+      body.blog main {
+        padding: var(--spacing-sm) !important;
+      }
+
+      body.page-template-default .entry-title,
+      body.page-template-default h1.page-title,
+      body.archive .page-title,
+      body.archive .entry-title,
+      body.blog .page-title,
+      body.blog .entry-title {
+        font-size: 1.75rem !important;
+        margin: var(--spacing-md) 0 !important;
+        padding: var(--spacing-sm) !important;
+      }
+
+      body.archive .post,
+      body.blog .post,
+      body.archive article,
+      body.blog article {
+        margin: var(--spacing-md) 0 !important;
+        padding: var(--spacing-md) !important;
+        border-radius: var(--border-radius) !important;
+      }
+
+      body.archive .entry-title a,
+      body.blog .entry-title a,
+      body.archive h2.entry-title a,
+      body.blog h2.entry-title a {
+        font-size: 1.2rem !important;
+      }
+
+      body.page-template-default .pagination,
+      body.archive .pagination,
+      body.blog .pagination {
+        flex-wrap: wrap !important;
+        gap: var(--spacing-xs) !important;
+        padding: var(--spacing-md) !important;
+      }
+
+      body.page-template-default .pagination a,
+      body.page-template-default .pagination span,
+      body.archive .pagination a,
+      body.archive .pagination span,
+      body.blog .pagination a,
+      body.blog .pagination span {
+        min-width: 35px !important;
+        height: 35px !important;
+        padding: var(--spacing-xs) var(--spacing-sm) !important;
+        font-size: 0.9rem !important;
+      }
+    }
+
+    /* Small mobile responsive styles */
+    @media screen and (max-width: 480px) {
+      body.page-template-default .entry-title,
+      body.page-template-default h1.page-title,
+      body.archive .page-title,
+      body.archive .entry-title,
+      body.blog .page-title,
+      body.blog .entry-title {
+        font-size: 1.5rem !important;
+      }
+
+      body.archive .entry-title a,
+      body.blog .entry-title a,
+      body.archive h2.entry-title a,
+      body.blog h2.entry-title a {
+        font-size: 1.1rem !important;
+      }
+
+      body.archive .post,
+      body.blog .post,
+      body.archive article,
+      body.blog article {
+        padding: var(--spacing-sm) !important;
+      }
+    }
+
+    /* High contrast mode support for WordPress pages */
+    @media (prefers-contrast: high) {
+      body.page-template-default .entry-title,
+      body.archive .page-title,
+      body.archive .entry-title,
+      body.blog .page-title,
+      body.blog .entry-title,
+      body.archive .entry-title a,
+      body.blog .entry-title a {
+        text-shadow:
+          -2px -2px 0 rgba(0, 0, 0, 1),
+          2px -2px 0 rgba(0, 0, 0, 1),
+          -2px 2px 0 rgba(0, 0, 0, 1),
+          2px 2px 0 rgba(0, 0, 0, 1) !important;
+      }
+
+      body.archive .post,
+      body.blog .post,
+      body.archive article,
+      body.blog article {
+        background: rgba(255, 255, 255, 0.15) !important;
+        border-color: rgba(255, 255, 255, 0.3) !important;
+      }
+    }
+
+    /* Reduced motion preferences for WordPress pages */
+    @media (prefers-reduced-motion: reduce) {
+      body.archive .post,
+      body.blog .post,
+      body.archive article,
+      body.blog article,
+      body.archive .more-link,
+      body.blog .more-link,
+      body.archive .read-more,
+      body.blog .read-more,
+      body.page-template-default .pagination a,
+      body.archive .pagination a,
+      body.blog .pagination a {
+        transition: none !important;
+        transform: none !important;
+      }
+
+      body.archive .post:hover,
+      body.blog .post:hover,
+      body.archive article:hover,
+      body.blog article:hover,
+      body.archive .more-link:hover,
+      body.blog .more-link:hover,
+      body.archive .read-more:hover,
+      body.blog .read-more:hover,
+      body.page-template-default .pagination a:hover,
+      body.archive .pagination a:hover,
+      body.blog .pagination a:hover {
+        transform: none !important;
+      }
+    }
 
     /* WordPress body classes and theme overrides */
     .wp-site-blocks,
@@ -1317,18 +2100,18 @@
     }
 
     body .grid-item.neumorphic {
-      background: linear-gradient(145deg, #ffffff, #f0f0f0) !important;
-      border: 1px solid var(--light-border) !important;
+      background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9)) !important;
+      border: 1px solid rgba(85, 126, 161, 0.3) !important;
       box-shadow:
-        8px 8px 16px rgba(0, 0, 0, 0.1),
-        -8px -8px 16px rgba(255, 255, 255, 0.8) !important;
+        8px 8px 16px rgba(0, 0, 0, 0.4),
+        -8px -8px 16px rgba(85, 126, 161, 0.1) !important;
     }
 
     body .grid-item.neumorphic:hover {
       transform: translateY(-2px) !important;
       box-shadow:
-        12px 12px 24px rgba(0, 0, 0, 0.15),
-        -12px -12px 24px rgba(255, 255, 255, 0.9) !important;
+        12px 12px 24px rgba(0, 0, 0, 0.6),
+        -12px -12px 24px rgba(85, 126, 161, 0.15) !important;
     }
 
     /* ========================================
@@ -2955,18 +3738,18 @@
     }
 
     .grid-item.neumorphic {
-      background: linear-gradient(145deg, #ffffff, #f0f0f0);
-      border: 1px solid var(--light-border);
+      background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9));
+      border: 1px solid rgba(85, 126, 161, 0.3);
       box-shadow:
-        8px 8px 16px rgba(0, 0, 0, 0.1),
-        -8px -8px 16px rgba(255, 255, 255, 0.8);
+        8px 8px 16px rgba(0, 0, 0, 0.4),
+        -8px -8px 16px rgba(85, 126, 161, 0.1);
     }
 
     .grid-item.neumorphic:hover {
       transform: translateY(-2px);
       box-shadow:
-        12px 12px 24px rgba(0, 0, 0, 0.15),
-        -12px -12px 24px rgba(255, 255, 255, 0.9);
+        12px 12px 24px rgba(0, 0, 0, 0.6),
+        -12px -12px 24px rgba(85, 126, 161, 0.15);
     }
 
     .horizontal {
@@ -3076,10 +3859,13 @@
 
     /* Footer and special sections */
     #footy {
-      background: var(--background-light);
+      background: transparent;
+      backdrop-filter: blur(var(--blur-light));
+      -webkit-backdrop-filter: blur(var(--blur-light));
       padding: var(--spacing-xl);
       margin-top: var(--spacing-xl);
-      border-top: 1px solid var(--light-border);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--border-radius);
     }
 
     .wrapper {
@@ -3551,17 +4337,29 @@
        BLOG POST MASONRY LAYOUT STYLES
        ======================================== */
 
-    /* Main masonry container */
+    /* Main masonry container - optimized for proper grid layout */
     #container.masonry {
       position: relative !important;
       width: 100% !important;
-      max-width: 800px !important;
+      max-width: 1400px !important; /* Increased to accommodate more items */
       margin: 0 auto !important;
-      padding: var(--spacing-md) !important;
-      /* Preserve masonry height from inline styles */
+      padding: 0 auto !important;
       box-sizing: border-box !important;
       /* Ensure clean layout */
-      overflow: hidden !important;
+      overflow: visible !important; /* Changed from hidden to visible */
+      display: block !important;
+      clear: both !important;
+    }
+
+    /* Override inline height styles on masonry container to prevent excessive whitespace */
+    #container.masonry[style] {
+      height: auto !important;
+      min-height: auto !important;
+    }
+
+    /* Force masonry container to fit content properly */
+    #container.masonry[style*="height"] {
+      height: auto !important;
     }
 
     /* Masonry column gap helper - defines the space between columns */
@@ -3576,31 +4374,60 @@
       z-index: -1 !important;
     }
 
-    /* Blog grid container - uniform layout */
+    /* Blog grid container - uniform layout with proper clearfix */
     #container.masonry {
       display: block !important;
-      overflow: hidden !important; /* Clear floats */
+      overflow: visible !important; /* Allow content to be visible */
     }
 
-    /* Blog grid items - uniform height and width */
+    /* Clearfix for masonry container */
+    #container.masonry::after {
+      content: "" !important;
+      display: table !important;
+      clear: both !important;
+    }
+
+    /* Blog grid items - robust 3-column layout with neumorphic effects */
     .blog-grid.element.column-3.masonry-brick {
       /* Use static positioning for uniform grid layout */
-      position: static !important;
-      width: calc((100% - (2 * var(--spacing-md))) / 3) !important;
+      position: relative !important;
+      width: 32% !important; /* Fixed percentage for reliable 3-column layout */
+      min-width: 300px !important; /* Minimum width to prevent collapse */
+      max-width: 400px !important; /* Maximum width for large screens */
       height: 450px !important; /* Fixed height for uniformity */
-      background: white !important;
+      padding: 0 !important;
+      margin: 0 1% var(--spacing-sm) 0 !important; /* Reduced margins for tighter layout */
       border-radius: var(--border-radius-large) !important;
-      box-shadow: var(--shadow-light) !important;
       transition: all 0.3s ease !important;
       overflow: hidden !important;
-      border: 1px solid var(--light-border) !important;
       box-sizing: border-box !important;
       /* Use flexbox for uniform layout */
       display: flex !important;
       flex-direction: column !important;
-      margin: 0 var(--spacing-md) var(--spacing-md) 0 !important;
       /* Use float for grid layout */
       float: left !important;
+
+      /* Neumorphic styling matching homepage.html */
+      background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9)) !important;
+      border: 1px solid rgba(85, 126, 161, 0.3) !important;
+      box-shadow:
+        8px 8px 16px rgba(0, 0, 0, 0.4),
+        -8px -8px 16px rgba(85, 126, 161, 0.1) !important;
+    }
+
+    /* Override inline positioning styles with higher specificity */
+    .blog-grid.element.column-3.masonry-brick[style] {
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      float: left !important;
+    }
+
+    /* More specific override for absolute positioning */
+    .blog-grid.element.column-3.masonry-brick[style*="position: absolute"] {
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
     }
 
     /* Remove every 3rd item's right margin for proper grid alignment */
@@ -3608,34 +4435,59 @@
       margin-right: 0 !important;
     }
 
+    /* Clear floats after every 3rd item to ensure proper row wrapping */
+    .blog-grid.element.column-3.masonry-brick:nth-child(3n)::after {
+      content: "" !important;
+      display: table !important;
+      clear: both !important;
+    }
+
     .blog-grid.element.column-3.masonry-brick:hover {
-      transform: translateY(-4px) !important;
-      box-shadow: var(--shadow-medium) !important;
-      border-color: var(--primary-color) !important;
+      transform: translateY(-2px) !important;
+      box-shadow:
+        12px 12px 24px rgba(0, 0, 0, 0.6),
+        -12px -12px 24px rgba(85, 126, 161, 0.15) !important;
     }
 
 
 
-    /* Blog article wrapper */
-    .blog-article {
+    /* Blog article wrapper - no padding or margin */
+    .blog-article,
+    article.blog-article,
+    article.post,
+    article[id*="post-"] {
       display: block !important;
       height: 100% !important;
       text-decoration: none !important;
       color: inherit !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border: none !important;
+      background: transparent !important;
     }
 
-    /* Entry header - hidden */
+    /* Entry header - visible for blog thumbnails */
     .entry-header {
-      display: none !important;
+      display: block !important;
+      position: relative !important;
+      width: 100% !important;
+      height: 200px !important;
+      overflow: hidden !important;
+      background: transparent !important;
+      border-radius: var(--border-radius-large) var(--border-radius-large) 0 0 !important;
     }
 
-    /* Blog thumbnail container */
+    /* Blog thumbnail container - ensure visibility */
     .blog-thumb {
       position: relative !important;
       overflow: hidden !important;
       width: 100% !important;
       height: 100% !important; /* Fill the entry-header completely */
-      background: var(--background-light) !important;
+      background: transparent !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      z-index: 1 !important;
     }
 
     .blog-thumb img {
@@ -3832,10 +4684,12 @@
       padding: var(--spacing-lg) 0 !important;
       list-style: none !important;
       border-top: 1px solid var(--light-border) !important;
+      clear: both !important; /* Ensure pagination appears after floated elements */
     }
 
     .pag.pag-start {
       margin-top: var(--spacing-xl) !important;
+      clear: both !important; /* Ensure pagination clears floated masonry items */
     }
 
     /* Pagination items */
@@ -3972,20 +4826,38 @@
     /* Tablet responsive styles */
     @media screen and (max-width: 1024px) {
       #container.masonry {
+        max-width: 1000px !important; /* Increased for tablets */
         padding: var(--spacing-md) var(--spacing-sm) !important;
       }
 
       .blog-grid.element.column-3.masonry-brick {
-        width: calc((100% - var(--spacing-sm)) / 2) !important;
+        width: 48% !important; /* Fixed percentage for reliable 2-column layout */
+        min-width: 280px !important; /* Minimum width for tablets */
+        max-width: 350px !important; /* Maximum width for tablets */
         height: 400px !important; /* Slightly smaller height for tablets */
-        /* Use static positioning for uniform grid on tablets */
-        position: static !important;
+        /* Use relative positioning for neumorphic effects on tablets */
+        position: relative !important;
         float: left !important;
-        margin: 0 var(--spacing-sm) var(--spacing-sm) 0 !important;
+        margin: 0 2% 8px 0 !important; /* Percentage-based margins */
+        padding: 0 !important;
+
+        /* Neumorphic styling for tablets */
+        background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9)) !important;
+        border: 1px solid rgba(85, 126, 161, 0.3) !important;
+        box-shadow:
+          8px 8px 16px rgba(0, 0, 0, 0.4),
+          -8px -8px 16px rgba(85, 126, 161, 0.1) !important;
       }
 
       .blog-grid.element.column-3.masonry-brick:nth-child(2n) {
         margin-right: 0 !important;
+      }
+
+      /* Clear floats after every 2nd item on tablets */
+      .blog-grid.element.column-3.masonry-brick:nth-child(2n)::after {
+        content: "" !important;
+        display: table !important;
+        clear: both !important;
       }
 
       /* Maintain uniform header height on tablets */
@@ -4016,11 +4888,29 @@
 
       .blog-grid.element.column-3.masonry-brick {
         width: 100% !important;
+        min-width: auto !important; /* Remove min-width constraint on mobile */
+        max-width: none !important; /* Remove max-width constraint on mobile */
         height: 350px !important; /* Smaller height for mobile */
-        /* Use static positioning for mobile stacking */
-        position: static !important;
+        /* Use relative positioning for neumorphic effects on mobile */
+        position: relative !important;
         float: none !important;
-        margin: 0 0 var(--spacing-md) 0 !important;
+        margin: 0 0 8px 0 !important; /* Simple bottom margin only */
+        padding: 0 !important;
+
+        /* Neumorphic styling for mobile */
+        background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9)) !important;
+        border: 1px solid rgba(85, 126, 161, 0.3) !important;
+        box-shadow:
+          6px 6px 12px rgba(0, 0, 0, 0.4),
+          -6px -6px 12px rgba(85, 126, 161, 0.1) !important;
+      }
+
+      /* Override inline styles on mobile */
+      .blog-grid.element.column-3.masonry-brick[style] {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        float: none !important;
       }
 
       /* Maintain uniform header height on mobile */
@@ -4125,12 +5015,22 @@
     /* Ensure proper masonry layout on larger screens */
     @media screen and (min-width: 1200px) {
       .blog-grid.element.column-3.masonry-brick {
-        width: calc((100% - (2 * var(--spacing-lg))) / 3) !important;
+        width: 31% !important; /* Slightly smaller for better fit on large screens */
+        min-width: 320px !important; /* Larger minimum for desktop */
+        max-width: 450px !important; /* Larger maximum for desktop */
         height: 480px !important; /* Larger height for desktop */
-        /* Use static positioning for uniform grid */
-        position: static !important;
+        /* Use relative positioning for neumorphic effects */
+        position: relative !important;
         float: left !important;
-        margin: 0 var(--spacing-lg) var(--spacing-lg) 0 !important;
+        margin: 0 1.5% 10px 0 !important; /* Slightly larger margins for desktop */
+        padding: 0 !important;
+
+        /* Enhanced neumorphic styling for large screens */
+        background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9)) !important;
+        border: 1px solid rgba(85, 126, 161, 0.3) !important;
+        box-shadow:
+          10px 10px 20px rgba(0, 0, 0, 0.4),
+          -10px -10px 20px rgba(85, 126, 161, 0.1) !important;
       }
 
       #container.masonry {
@@ -4143,15 +5043,25 @@
     /* Keeping 3-column layout even on very large screens */
     @media screen and (min-width: 1600px) {
       #container.masonry {
-        max-width: 800px !important;
+        max-width: 1400px !important; /* Increased for more items */
         padding: var(--spacing-xl) !important;
       }
 
       .blog-grid.element.column-3.masonry-brick {
-        /* Keep 3-column layout but with more spacing */
-        width: calc((100% - (2 * var(--spacing-xl))) / 3) !important;
+        /* Keep 3-column layout with optimal spacing for extra large screens */
+        width: 30% !important; /* Optimal width for 3-column on very large screens */
+        min-width: 350px !important; /* Larger minimum for extra large screens */
+        max-width: 500px !important; /* Larger maximum for extra large screens */
         height: 500px !important; /* Even larger height for extra large screens */
-        margin: 0 var(--spacing-xl) var(--spacing-xl) 0 !important;
+        margin: 0 2% 12px 0 !important; /* Larger margins for extra large screens */
+        padding: 0 !important;
+
+        /* Premium neumorphic styling for extra large screens */
+        background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9)) !important;
+        border: 1px solid rgba(85, 126, 161, 0.3) !important;
+        box-shadow:
+          12px 12px 24px rgba(0, 0, 0, 0.4),
+          -12px -12px 24px rgba(85, 126, 161, 0.1) !important;
       }
     }
 
@@ -4738,6 +5648,26 @@
       #unified-header.header-scrolled::before {
         background: rgba(25, 57, 89, 0.95) !important;
       }
+
+      /* Blog posts fallback - minimal background for readability */
+      .blog-posts {
+        background: rgba(0, 0, 0, 0.1) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+
+      .blog-posts ul li {
+        background: rgba(255, 255, 255, 0.05) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+
+      /* Fallback for section elements */
+      section::before {
+        background: rgba(25, 57, 89, 0.1) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
     }
 
     /* High contrast mode support for header */
@@ -4778,7 +5708,11 @@
     /* High contrast mode support */
     @media (prefers-contrast: high) {
       .blog-grid.element.column-3.masonry-brick {
-        border: 2px solid var(--text-color) !important;
+        background: linear-gradient(145deg, rgba(25, 57, 89, 0.9), rgba(15, 42, 68, 1)) !important;
+        border: 2px solid rgba(85, 126, 161, 0.6) !important;
+        box-shadow:
+          10px 10px 20px rgba(0, 0, 0, 0.6),
+          -10px -10px 20px rgba(85, 126, 161, 0.2) !important;
       }
 
       .image-overlay {
@@ -4795,306 +5729,194 @@
        BLOG POST LIST STYLES
        ======================================== */
 
-    /* Main blog post list container */
-    .blog-post-list {
-      background: linear-gradient(145deg, #ffffff, #f8f9fa);
-      border: 1px solid var(--light-border);
-      border-radius: var(--border-radius-large);
-      padding: var(--spacing-xl);
-      margin: var(--spacing-xl) 0;
-      box-shadow: var(--shadow-light);
-      transition: all 0.3s ease;
+    /* Blog posts section - container with fixed header and scrollable content */
+    .blog-posts {
+      position: relative !important;
+      width: 100% !important;
+      max-width: 800px !important;
+      height: 60vh !important;
+      margin: var(--spacing-xl) auto !important;
+      padding: var(--spacing-xl) !important;
+      border-radius: var(--border-radius-large) !important;
+      overflow: hidden !important;
+      backdrop-filter: blur(var(--blur-medium)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-medium)) !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      display: flex !important;
+      flex-direction: column !important;
     }
 
-    .blog-post-list:hover {
-      box-shadow: var(--shadow-medium);
-      transform: translateY(-2px);
+
+
+    /* Blog posts section heading - fixed header that doesn't scroll */
+    .blog-posts h2 {
+      color: rgba(255, 255, 255, 0.95) !important;
+      font-size: 2rem !important;
+      font-weight: 700 !important;
+      margin: 0 0 var(--spacing-md) 0 !important;
+      padding-bottom: var(--spacing-md) !important;
+      text-align: center !important;
+      position: relative !important;
+      z-index: 2 !important;
+      flex-shrink: 0 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+      text-shadow:
+        -1px -1px 0 rgba(0, 0, 0, 0.6),
+        1px -1px 0 rgba(0, 0, 0, 0.6),
+        -1px 1px 0 rgba(0, 0, 0, 0.6),
+        1px 1px 0 rgba(0, 0, 0, 0.6),
+        0 0 10px rgba(0, 0, 0, 0.3) !important;
     }
 
-    /* Blog post header section */
-    .blog-post-header {
-      margin-bottom: var(--spacing-lg);
-      text-align: center;
-      border-bottom: 2px solid var(--primary-color);
-      padding-bottom: var(--spacing-md);
-    }
-
-    .blog-post-header h3 {
-      color: var(--primary-color) !important;
-      font-size: 1.75rem !important;
-      font-weight: 600 !important;
-      margin: 0 !important;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    }
-
-    .blog-post-header h3 a {
-      color: var(--primary-color) !important;
-      text-decoration: none !important;
-      transition: all 0.3s ease !important;
-      border-bottom: none !important;
-    }
-
-    .blog-post-header h3 a:hover {
-      color: #003a6b !important;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Blog post actual list container */
-    .blog-post-actual-list {
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: var(--border-radius);
-      padding: var(--spacing-lg);
-      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.05);
-      max-height: 500px;
-      overflow-y: auto;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    /* Custom scrollbar styling for blog post list */
-    .blog-post-actual-list::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    .blog-post-actual-list::-webkit-scrollbar-track {
-      background: rgba(0, 0, 0, 0.05);
-      border-radius: var(--border-radius);
-    }
-
-    .blog-post-actual-list::-webkit-scrollbar-thumb {
-      background: var(--primary-color);
-      border-radius: var(--border-radius);
-      transition: background 0.3s ease;
-    }
-
-    .blog-post-actual-list::-webkit-scrollbar-thumb:hover {
-      background: #003a6b;
-    }
-
-    /* Firefox scrollbar styling */
-    .blog-post-actual-list {
-      scrollbar-width: thin;
-      scrollbar-color: var(--primary-color) rgba(0, 0, 0, 0.05);
-    }
-
-    /* Fade effect at bottom to indicate scrollable content */
-    .blog-post-actual-list::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 20px;
-      background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
-      pointer-events: none;
-      border-radius: 0 0 var(--border-radius) var(--border-radius);
-    }
-
-    /* Main list styling */
-    .blog-post-actual-list > ul {
+    /* Blog posts list styling - scrollable content area */
+    .blog-posts ul {
       list-style: none !important;
       margin: 0 !important;
-      padding: 0 !important;
+      padding: var(--spacing-md) 0 var(--spacing-md) 0 !important;
       display: flex;
       flex-direction: column;
       gap: var(--spacing-sm);
-    }
-
-    /* Individual blog post list items */
-    .blog-post-actual-list > ul > li {
-      background: linear-gradient(145deg, #ffffff, #f5f5f5);
-      border: 1px solid var(--light-border);
-      border-radius: var(--border-radius);
-      padding: var(--spacing-md);
-      transition: all 0.3s ease;
       position: relative;
-      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
+      z-index: 1;
+      flex: 1 !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      /* Smooth scrolling behavior */
+      scroll-behavior: smooth;
+      /* Custom scrollbar styling for better UX */
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
     }
 
-    .blog-post-actual-list > ul > li:hover {
-      background: linear-gradient(145deg, #f8f9fa, #e9ecef);
-      border-color: var(--primary-color);
-      transform: translateX(4px);
-      box-shadow: 4px 4px 12px rgba(0, 75, 141, 0.15);
+    /* Custom scrollbar styling for blog posts list - webkit browsers */
+    .blog-posts ul::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .blog-posts ul::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: var(--border-radius);
+    }
+
+    .blog-posts ul::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: var(--border-radius);
+      transition: background 0.3s ease;
+      backdrop-filter: blur(var(--blur-light));
+      -webkit-backdrop-filter: blur(var(--blur-light));
+    }
+
+    .blog-posts ul::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Individual blog post list items with medium blur background, no colors or borders */
+    .blog-posts ul li {
+      background: transparent !important;
+      border: none !important;
+      border-radius: var(--border-radius) !important;
+      padding: calc(var(--spacing-md) + 2px) var(--spacing-md) calc(var(--spacing-md) + 4px) var(--spacing-md) !important;
+      margin-bottom: var(--spacing-sm) !important;
+      transition: all 0.3s ease !important;
+      position: relative !important;
+      backdrop-filter: blur(var(--blur-medium)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-medium)) !important;
+      overflow: visible !important;
+      box-shadow: none !important;
+      line-height: 1.6 !important;
+      min-height: 2.5em !important;
+    }
+
+    .blog-posts ul li:hover {
+      transform: translateX(4px) !important;
+    }
+
+    /* Responsive adjustments for blog posts container */
+    @media (max-width: 1024px) {
+      .blog-posts {
+        max-width: 90% !important;
+        padding: var(--spacing-lg) !important;
+      }
+
+      .blog-posts h2 {
+        font-size: 1.8rem !important;
+        padding-bottom: var(--spacing-sm) !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .blog-posts {
+        max-width: 95% !important;
+        height: 50vh !important;
+        padding: var(--spacing-md) !important;
+      }
+
+      .blog-posts h2 {
+        font-size: 1.6rem !important;
+        margin-bottom: var(--spacing-sm) !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .blog-posts {
+        max-width: 100% !important;
+        height: 45vh !important;
+        padding: var(--spacing-sm) !important;
+        margin: var(--spacing-lg) 0 !important;
+      }
+
+      .blog-posts h2 {
+        font-size: 1.4rem !important;
+        margin-bottom: var(--spacing-xs) !important;
+        padding-bottom: var(--spacing-xs) !important;
+      }
+
+      .blog-posts ul {
+        padding-top: var(--spacing-sm) !important;
+        padding-bottom: var(--spacing-sm) !important;
+      }
+
+      /* Mobile scrollbar adjustments */
+      .blog-posts ul::-webkit-scrollbar {
+        width: 6px; /* Thinner scrollbar for mobile */
+      }
+    }
+
+    /* Desktop scrollbar adjustments */
+    @media (min-width: 1025px) {
+      .blog-posts ul::-webkit-scrollbar {
+        width: 8px; /* Consistent scrollbar width for desktop */
+      }
     }
 
     /* Blog post links */
-    .blog-post-actual-list > ul > li > a {
-      color: var(--text-color) !important;
+    .blog-posts ul li a {
+      color: rgba(255, 255, 255, 0.9) !important;
       text-decoration: none !important;
       font-weight: 500 !important;
-      line-height: 1.5 !important;
+      line-height: 1.6 !important;
       display: block !important;
       transition: all 0.3s ease !important;
       border-bottom: none !important;
       font-size: 1rem !important;
+      position: relative;
+      z-index: 1;
+      padding: 2px 0 4px 0 !important;
+      overflow: visible !important;
+      text-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.6);
     }
 
-    .blog-post-actual-list > ul > li > a:hover {
-      color: var(--primary-color) !important;
+    .blog-posts ul li a:hover {
+      color: rgba(255, 255, 255, 1) !important;
       font-weight: 600 !important;
+      text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.8);
     }
 
-    /* Nested list styling for sub-categories */
-    .blog-post-actual-list ul ul {
-      list-style: none !important;
-      margin: var(--spacing-md) 0 0 var(--spacing-lg) !important;
-      padding: 0 !important;
-      border-left: 3px solid var(--primary-color);
-      padding-left: var(--spacing-md) !important;
-      background: rgba(0, 75, 141, 0.02);
-      border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    }
 
-    .blog-post-actual-list ul ul li {
-      background: linear-gradient(145deg, #f8f9fa, #ffffff) !important;
-      border: 1px solid rgba(0, 75, 141, 0.1) !important;
-      border-radius: var(--border-radius) !important;
-      padding: var(--spacing-sm) var(--spacing-md) !important;
-      margin-bottom: var(--spacing-xs) !important;
-      transition: all 0.3s ease !important;
-      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05) !important;
-    }
-
-    .blog-post-actual-list ul ul li:hover {
-      background: linear-gradient(145deg, #e3f2fd, #f8f9fa) !important;
-      border-color: var(--primary-color) !important;
-      transform: translateX(2px) !important;
-      box-shadow: 2px 2px 6px rgba(0, 75, 141, 0.1) !important;
-    }
-
-    .blog-post-actual-list ul ul li a {
-      color: var(--text-light) !important;
-      font-size: 0.95rem !important;
-      font-weight: 500 !important;
-    }
-
-    .blog-post-actual-list ul ul li a:hover {
-      color: var(--primary-color) !important;
-      font-weight: 600 !important;
-    }
-
-    /* Blog post list responsive styles */
-    @media screen and (max-width: 768px) {
-      .blog-post-list {
-        padding: var(--spacing-lg);
-        margin: var(--spacing-lg) 0;
-      }
-
-      .blog-post-header h3 {
-        font-size: 1.5rem !important;
-      }
-
-      .blog-post-actual-list {
-        padding: var(--spacing-md);
-        max-height: 400px;
-      }
-
-      .blog-post-actual-list > ul > li {
-        padding: var(--spacing-sm) var(--spacing-md);
-      }
-
-      .blog-post-actual-list > ul > li > a {
-        font-size: 0.95rem !important;
-      }
-
-      .blog-post-actual-list ul ul {
-        margin-left: var(--spacing-md) !important;
-        padding-left: var(--spacing-sm) !important;
-      }
-
-      .blog-post-actual-list ul ul li {
-        padding: var(--spacing-xs) var(--spacing-sm) !important;
-      }
-
-      .blog-post-actual-list ul ul li a {
-        font-size: 0.9rem !important;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      .blog-post-list {
-        padding: var(--spacing-md);
-        margin: var(--spacing-md) 0;
-      }
-
-      .blog-post-header {
-        margin-bottom: var(--spacing-md);
-        padding-bottom: var(--spacing-sm);
-      }
-
-      .blog-post-header h3 {
-        font-size: 1.25rem !important;
-      }
-
-      .blog-post-actual-list {
-        padding: var(--spacing-sm);
-        max-height: 300px;
-      }
-
-      .blog-post-actual-list > ul {
-        gap: var(--spacing-xs);
-      }
-
-      .blog-post-actual-list > ul > li {
-        padding: var(--spacing-sm);
-      }
-
-      .blog-post-actual-list > ul > li > a {
-        font-size: 0.9rem !important;
-        line-height: 1.4 !important;
-      }
-
-      .blog-post-actual-list ul ul {
-        margin-left: var(--spacing-sm) !important;
-        padding-left: var(--spacing-xs) !important;
-      }
-
-      .blog-post-actual-list ul ul li a {
-        font-size: 0.85rem !important;
-      }
-    }
-
-    /* Focus states for accessibility */
-    .blog-post-header h3 a:focus,
-    .blog-post-actual-list a:focus {
-      outline: 2px solid var(--primary-color) !important;
-      outline-offset: 2px !important;
-      border-radius: var(--border-radius) !important;
-    }
-
-    /* Reduced motion preferences */
-    @media (prefers-reduced-motion: reduce) {
-      .blog-post-list,
-      .blog-post-actual-list > ul > li,
-      .blog-post-actual-list ul ul li,
-      .blog-post-header h3 a,
-      .blog-post-actual-list a {
-        transition: none !important;
-        transform: none !important;
-      }
-
-      .blog-post-list:hover,
-      .blog-post-actual-list > ul > li:hover,
-      .blog-post-actual-list ul ul li:hover {
-        transform: none !important;
-      }
-    }
-
-    /* High contrast mode support for blog post list */
-    @media (prefers-contrast: high) {
-      .blog-post-list {
-        border: 2px solid var(--text-color) !important;
-      }
-
-      .blog-post-actual-list > ul > li {
-        border: 2px solid var(--text-color) !important;
-      }
-
-      .blog-post-actual-list ul ul li {
-        border: 2px solid var(--primary-color) !important;
-      }
-    }
     /*──────────────────────────────────────────────────
       WORDPRESS HEADER LAYOUT
     ──────────────────────────────────────────────────*/

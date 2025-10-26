@@ -49,8 +49,16 @@ function mytech_enqueue_unified_header_assets() {
     wp_enqueue_script('jquery');
 
     // JavaScript files are now loaded via Simple Custom CSS and JS PRO
-    // No need to enqueue JS files here - they are managed dynamically
-    // This provides better control and performance optimization
+    // Current JS modules (Updated 2025):
+    // - utilities.js: Common utilities and error handling
+    // - sticky-header.js: Transparent sticky header with blur effect
+    // - table-of-contents.js: TOC functionality with nested list support
+    // - gradient-controller.js: Tri-lateral page background gradient controller
+    // - anchors.js: Anchor link handling and smooth scrolling
+    // - dust.js: Subtle floating dust particle effect using Three.js GPU particles
+    // - main.js: Application coordinator and module initializer
+    // - Custom JS ID 11946: Additional WordPress-specific functionality
+    // This provides better control, caching, and performance optimization
 }
 add_action('wp_enqueue_scripts', 'mytech_enqueue_unified_header_assets');
 
@@ -258,7 +266,15 @@ function mytech_admin_notice() {
         $screen = get_current_screen();
         if ($screen->id === 'themes') {
             echo '<div class="notice notice-info is-dismissible">';
-            echo '<p><strong>myTech.Today Unified Header:</strong> Child theme ready! Styles are in <code>style.css</code>, JS files managed via Simple Custom CSS and JS PRO. Customize settings in the <a href="' . admin_url('customize.php') . '">Customizer</a>.</p>';
+            echo '<p><strong>myTech.Today Unified Header:</strong> Child theme ready! Features include:</p>';
+            echo '<ul style="margin-left: 20px;">';
+            echo '<li>✅ Unified blur header with sticky functionality</li>';
+            echo '<li>✅ Blog post styling with blur backgrounds (class: blog-posts)</li>';
+            echo '<li>✅ Modular JavaScript architecture</li>';
+            echo '<li>✅ CSS root variables for blur effects</li>';
+            echo '<li>✅ WordPress customizer integration</li>';
+            echo '</ul>';
+            echo '<p>Customize settings in the <a href="' . admin_url('customize.php') . '">Customizer</a>.</p>';
             echo '</div>';
         }
     }

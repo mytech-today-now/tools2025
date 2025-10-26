@@ -19,9 +19,24 @@
 
 
 <!--
-    JavaScript Files are now managed via Simple Custom CSS and JS PRO
+    JavaScript Files are now managed via Simple Custom CSS and JS PRO (Updated 2025)
     This provides better control, caching, and performance optimization
-    Load order: utilities.js → sticky-header.js → table-of-contents.js → gradient-controller.js → main.js
+
+    Current Module Load Order:
+    1. utilities.js - Common utilities and error handling
+    2. sticky-header.js - Transparent sticky header with blur effect
+    3. table-of-contents.js - TOC functionality with nested list support
+    4. gradient-controller.js - Tri-lateral page background gradient controller
+    5. anchors.js - Anchor link handling and smooth scrolling
+    6. dust.js - Subtle floating dust particle effect using Three.js GPU particles
+    7. main.js - Application coordinator and module initializer
+    8. Custom JS ID 11946 - Additional WordPress-specific functionality
+
+    Features:
+    - Unified blur header with sticky functionality
+    - Blog post styling with blur backgrounds (.blog-posts class)
+    - CSS root variables for blur effects (--blur-light, --blur-medium, --blur-heavy, --blur-extra-heavy)
+    - Modular architecture for maintainability
 -->
 
 <?php wp_head(); ?>
