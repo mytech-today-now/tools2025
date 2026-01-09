@@ -3,26 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tools 2025</title>
+<title>Tools 2026</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!--
-    Refactored Modular JavaScript Files (Updated 2025)
-    Replaces the monolithic code.js with separated, maintainable modules:
+    Consolidated JavaScript File (Updated 2026-01-08)
+    All modules combined into a single file for better performance:
     - utilities.js: Common utilities and error handling
     - sticky-header.js: Transparent sticky header with blur effect
     - table-of-contents.js: TOC functionality with nested list support
     - gradient-controller.js: Tri-lateral page background gradient controller
+    - anchors.js: Anchor link functionality
     - dust.js: Subtle floating dust particle effect using Three.js GPU particles
     - main.js: Application coordinator and module initializer
 -->
-<script src="utilities.js" defer></script>
-<script src="sticky-header.js" defer></script>
-<script src="table-of-contents.js" defer></script>
-<script src="gradient-controller.js" defer></script>
-<script src="anchors.js" defer></script>
-<script src="dust.js" defer></script>
-<script src="main.js" defer></script>
+<script src="tools2026-consolidated.js" defer></script>
 </head>
 <body>
 <!-- WordPress Pre-Header -->
@@ -76,8 +71,8 @@
 
 <article>
 <header>
-<img src="https://plus.unsplash.com/premium_photo-1677009835876-4a29ddc4cc2c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Tools 2025">
-<h1>Tools 2025</h1>
+<img src="https://plus.unsplash.com/premium_photo-1677009835876-4a29ddc4cc2c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Tools 2026">
+<h1>Tools 2026</h1>
 <p>Your comprehensive directory of software, web services, and utilities. Find the perfect tools for developers, IT professionals, business leaders, marketers, designers, and technical specialists across all industries.</p>
 
 <section id="powershell-app-installer">
@@ -104,7 +99,7 @@
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-lg);">
 <div style="padding: var(--spacing-md); border-radius: var(--border-radius-large); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color);">
 <h4 style="margin-top: 0; color: var(--text-link);">📚 Full Documentation</h4>
-<p>Browse the complete Tools 2025 repository with detailed descriptions, categories, and curated selections.</p>
+<p>Browse the complete Tools 2026 repository with detailed descriptions, categories, and curated selections.</p>
 <a href="https://github.com/mytech-today-now/tools2025" target="_blank" rel="noopener" style="font-weight: 600;">View on GitHub →</a>
 </div>
 <div style="padding: var(--spacing-md); border-radius: var(--border-radius-large); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color);">
@@ -127,11 +122,7 @@
 </header>
 <!-- Literal Sticky TOC -->
 <nav class="toc" id="literal-toc">
-<div class="toc-title-bar">
 <h2>Table of Contents</h2>
-</div>
-<div class="toc-content">
-<div class="toc-scroll-container">
 <ul>
 <li><a href="#most-users">Most useful to most users</a>
 <ul>
@@ -383,8 +374,6 @@
 </ul>
 </li>
 </ul>
-</div>
-</div>
 </nav>
 <main>
 
@@ -4102,38 +4091,40 @@ Your writing assistant that never leaves your Mac. Powered by local AI models wi
 [sc name="contact-info"][/sc]
 <div class="ghost">
 <h2>
-Tools 2025
+Tools 2026
 </h2>
 <h3>
-Tools 2025
+Tools 2026
 </h3>
 <h4>
-Tools 2025
+Tools 2026
 </h4>
 <h5>
-Tools 2025
+Tools 2026
 </h5>
 <h6>
-Tools 2025
+Tools 2026
 </h6>
 </div>
 </article>
 
 <!-- Initialize refactored modules -->
 <script>
-// Wait for all modules to load, then initialize
-document.addEventListener('DOMContentLoaded', function() {
-    // Enable debug mode for gradient controller if URL parameter is present
-    if (window.location.search.includes('debug=gradient') || window.location.search.includes('debug=all')) {
-        if (window.GradientController) {
-            window.GradientController.debug.enable();
-            console.log('[Tools2025] Gradient debug mode enabled');
-        }
-    }
+// Page-specific event handlers (modules auto-initialize via main.js)
+(function() {
+    'use strict';
 
-    // Log successful module initialization
+    // Wait for app to be ready
     document.addEventListener('appReady', function(event) {
-        console.log('[Tools2025] All modules initialized successfully:', event.detail);
+        console.log('[Tools2026] All modules initialized successfully:', event.detail);
+
+        // Enable debug mode for gradient controller if URL parameter is present
+        if (window.location.search.includes('debug=gradient') || window.location.search.includes('debug=all')) {
+            if (window.GradientController) {
+                window.GradientController.debug.enable();
+                console.log('[Tools2026] Gradient debug mode enabled');
+            }
+        }
 
         // Optional: Display initialization status
         if (window.location.search.includes('debug=init')) {
@@ -4141,7 +4132,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const status = Object.entries(modules).map(([name, initialized]) =>
                 `${name}: ${initialized ? '✓' : '✗'}`
             ).join(', ');
-            console.log('[Tools2025] Module Status:', status);
+            console.log('[Tools2026] Module Status:', status);
         }
     });
 
@@ -4162,17 +4153,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Custom TOC state handling can be added here if needed
         // Example: Analytics tracking for TOC usage
     });
-});
-
-// Fallback initialization if modules don't auto-initialize
-setTimeout(function() {
-    if (window.MainApp && !window.MainApp.isReady()) {
-        console.log('[Tools2025] Fallback initialization triggered');
-        window.MainApp.init().catch(function(error) {
-            console.error('[Tools2025] Fallback initialization failed:', error);
-        });
-    }
-}, 2000);
+})();
 </script>
 
 </body>

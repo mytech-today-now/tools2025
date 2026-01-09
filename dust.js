@@ -56,7 +56,8 @@
         isInitialized: false,
         isRunning: false,
         lastTime: 0,
-        frameCount: 0
+        frameCount: 0,
+        isLoadingThreeJS: false
     };
 
     /**
@@ -415,6 +416,11 @@
 
             // Check if Three.js is available
             if (typeof THREE === 'undefined') {
+                // Prevent multiple simultaneous loads
+                if (DustState.isLoadingThreeJS) {
+                    console.info('[Dust Effect] Three.js is already being loaded...');
+                    return false;
+                }
                 console.warn('[Dust Effect] Three.js not found, loading from CDN...');
                 DustEffect.loadThreeJS(() => DustEffect.init());
                 return false;
@@ -459,10 +465,28 @@
          * Load Three.js from CDN
          */
         loadThreeJS(callback) {
+            // Check if already loaded or loading
+            if (typeof THREE !== 'undefined') {
+                console.info('[Dust Effect] Three.js already loaded');
+                if (callback) callback();
+                return;
+            }
+
+            if (DustState.isLoadingThreeJS) {
+                console.info('[Dust Effect] Three.js load already in progress');
+                return;
+            }
+
+            DustState.isLoadingThreeJS = true;
             const script = document.createElement('script');
             script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
-            script.onload = callback;
+            script.onload = () => {
+                DustState.isLoadingThreeJS = false;
+                console.info('[Dust Effect] Three.js loaded successfully');
+                if (callback) callback();
+            };
             script.onerror = () => {
+                DustState.isLoadingThreeJS = false;
                 console.error('[Dust Effect] Failed to load Three.js');
             };
             document.head.appendChild(script);

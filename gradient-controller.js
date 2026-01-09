@@ -552,7 +552,7 @@
 
                 const scroll = ViewportUtils.getScrollPosition();
                 const viewport = ViewportUtils.getDimensions();
-                const document = ViewportUtils.getDocumentDimensions();
+                const documentDimensions = ViewportUtils.getDocumentDimensions();
 
                 // Calculate progress values
                 const scrollProgress = ScrollCalculator.calculateScrollProgress();
@@ -571,7 +571,7 @@
                 CSSPropertiesManager.updateGradientProperties({
                     gradientProgress: gradientProgress,
                     viewportHeight: `${viewport.height}px`,
-                    pageHeight: `${document.height}px`,
+                    pageHeight: `${documentDimensions.height}px`,
                     scrollDirection: scrollDirection,
                     primaryHue: gradientColors.primaryHsl.h,
                     primarySaturation: `${gradientColors.primaryHsl.s}%`,
@@ -588,7 +588,7 @@
                         gradientProgress,
                         scrollDirection,
                         viewport,
-                        document,
+                        document: documentDimensions,
                         colors: gradientColors
                     }
                 });

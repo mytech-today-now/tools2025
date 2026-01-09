@@ -186,15 +186,29 @@
                 try {
                     // Check for common syntax issues
                     const content = script.textContent || script.innerHTML;
-                    if (content) {
-                        // Check for unmatched quotes or brackets
-                        const singleQuotes = (content.match(/'/g) || []).length;
-                        const doubleQuotes = (content.match(/"/g) || []).length;
-                        const openBrackets = (content.match(/\{/g) || []).length;
-                        const closeBrackets = (content.match(/\}/g) || []).length;
+                    if (content && content.trim().length > 0) {
+                        // Remove comments and strings before checking
+                        const cleanContent = content
+                            .replace(/\/\/.*$/gm, '') // Remove single-line comments
+                            .replace(/\/\*[\s\S]*?\*\//g, '') // Remove multi-line comments
+                            .replace(/'[^'\\]*(\\.[^'\\]*)*'/g, '""') // Replace single-quoted strings
+                            .replace(/"[^"\\]*(\\.[^"\\]*)*"/g, '""') // Replace double-quoted strings
+                            .replace(/`[^`\\]*(\\.[^`\\]*)*`/g, '""'); // Replace template literals
 
-                        if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || openBrackets !== closeBrackets) {
-                            console.warn(`[Utilities] Potential syntax error in inline script #${index + 1}`);
+                        // Check for unmatched brackets only (quotes are handled by string replacement)
+                        const openBrackets = (cleanContent.match(/\{/g) || []).length;
+                        const closeBrackets = (cleanContent.match(/\}/g) || []).length;
+                        const openParens = (cleanContent.match(/\(/g) || []).length;
+                        const closeParens = (cleanContent.match(/\)/g) || []).length;
+                        const openSquare = (cleanContent.match(/\[/g) || []).length;
+                        const closeSquare = (cleanContent.match(/\]/g) || []).length;
+
+                        if (openBrackets !== closeBrackets || openParens !== closeParens || openSquare !== closeSquare) {
+                            console.warn(`[Utilities] Potential syntax error in inline script #${index + 1}:`, {
+                                brackets: { open: openBrackets, close: closeBrackets },
+                                parens: { open: openParens, close: closeParens },
+                                square: { open: openSquare, close: closeSquare }
+                            });
                         }
                     }
                 } catch (error) {

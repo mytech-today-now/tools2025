@@ -45,6 +45,9 @@
     @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+	.tldr { background: var(--background-color); padding: 20px; border-left: 4px solid #667eea; margin: 20px 0; border-radius: 4px; }
+	.repo-card { background: var(--background-color); padding: 20px; margin: 20px 0; border-radius: 6px; border-left: 4px solid #764ba2; }
+
 
     /* Reset and base styles */
     * {
@@ -142,8 +145,8 @@
 
     /* Mobile-first responsive container */
     .container {
-      max-width: 100%;
-      margin: 0 auto;
+      max-width: 850px;
+      margin: 0;
       padding: 0 var(--spacing-sm);
     }
 
@@ -2130,37 +2133,33 @@
       overflow: hidden;
     }
 
-    /* TOC Title Bar */
-    .toc-title-bar {
+    /* TOC Title (h2) Styling */
+    nav.toc h2 {
       background: linear-gradient(135deg, var(--primary-color), #003a6b);
       color: white;
       padding: var(--spacing-md) var(--spacing-lg);
       cursor: pointer;
       user-select: none;
-    }
-
-    .toc-title-bar h2 {
       margin: 0;
       font-size: 1.3rem;
       font-weight: 600;
       text-align: center;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
     }
 
-    /* TOC Content Container */
-    .toc-content {
+    /* TOC List Container */
+    nav.toc > ul {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
       background: white;
+      margin: 0;
+      padding: 0;
+      list-style: none;
     }
 
-    /* Show content on hover */
-    .literal-toc:hover .toc-content {
-      max-height: 70vh;
-    }
-
-    /* TOC Scroll Container */
-    .toc-scroll-container {
+    /* Show list on hover */
+    nav.toc:hover > ul {
       max-height: 70vh;
       overflow-y: auto;
       padding: var(--spacing-sm) 0;
@@ -2250,22 +2249,19 @@
       -webkit-backdrop-filter: blur(10px);
     }
 
-    /* Sticky title bar styling */
-    .literal-toc.sticky .toc-title-bar {
+    /* Sticky title (h2) styling */
+    nav.toc.toc-sticky h2 {
       padding: var(--spacing-sm) var(--spacing-lg);
-    }
-
-    .literal-toc.sticky .toc-title-bar h2 {
       font-size: 1.1rem;
     }
 
     /* Collapsed state when not hovered and sticky */
-    .literal-toc.sticky:not(:hover) .toc-content {
+    nav.toc.toc-sticky:not(:hover) > ul {
       max-height: 0;
     }
 
     /* Expanded state when hovered and sticky */
-    .literal-toc.sticky:hover .toc-content {
+    nav.toc.toc-sticky:hover > ul {
       max-height: 60vh;
     }
 
@@ -2289,7 +2285,7 @@
         font-size: 0.9rem;
       }
 
-      .literal-toc.sticky:hover .toc-content {
+      nav.toc.toc-sticky:hover > ul {
         max-height: 50vh;
       }
 
@@ -6107,4 +6103,615 @@
     /* Clear both utility for pagination - ensure it doesn't interfere */
     .pag .clearboth {
       display: none !important;
+    }
+
+    /* ========================================
+       APP-SPECIFIC STYLES (snap.html, fans.html, youtube.html)
+       ======================================== */
+
+    /* Success alert styling */
+    .success {
+      background: #d4edda !important;
+      border: 1px solid #c3e6cb !important;
+      padding: 15px !important;
+      border-radius: var(--border-radius) !important;
+      margin: 15px 0 !important;
+      color: #155724 !important;
+    }
+
+    /* Warning alert styling */
+    .warning {
+      background: #fff3cd !important;
+      border: 1px solid #ffeaa7 !important;
+      padding: 15px !important;
+      border-radius: var(--border-radius) !important;
+      margin: 15px 0 !important;
+      color: #856404 !important;
+    }
+
+    /* Feature grid layout */
+    .feature-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+      gap: var(--spacing-lg) !important;
+      margin: var(--spacing-lg) 0 !important;
+      max-width: 850px !important;
+      width: 100% !important;
+    }
+
+    /* Feature card styling */
+    .feature-card {
+      position: relative !important;
+      padding: var(--spacing-lg) !important;
+      border-radius: var(--border-radius-large) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      backdrop-filter: blur(var(--blur-light)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-light)) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .feature-card:hover {
+      backdrop-filter: blur(var(--blur-medium)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-medium)) !important;
+      background: rgba(255, 255, 255, 0.08) !important;
+      border-color: rgba(255, 255, 255, 0.2) !important;
+      transform: translateY(-4px) !important;
+      box-shadow: var(--shadow-medium) !important;
+    }
+
+    .feature-card h3,
+    .feature-card h4 {
+      color: rgba(255, 255, 255, 0.95) !important;
+      margin-top: 0 !important;
+      margin-bottom: var(--spacing-md) !important;
+    }
+
+    .feature-card p {
+      color: var(--text-color) !important;
+      margin-bottom: var(--spacing-sm) !important;
+      line-height: 1.6 !important;
+    }
+
+    /* Code block styling */
+    .code-block {
+      position: relative !important;
+      padding: var(--spacing-lg) !important;
+      border-radius: var(--border-radius-large) !important;
+      background: rgba(0, 0, 0, 0.3) !important;
+      backdrop-filter: blur(var(--blur-light)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-light)) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      margin: var(--spacing-lg) 0 !important;
+      max-width: 840px !important;
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+      word-break: break-word !important;
+    }
+
+    .code-block pre {
+      margin: 0 !important;
+      color: var(--text-muted) !important;
+      font-family: 'Courier New', monospace !important;
+      font-size: 0.9rem !important;
+      line-height: 1.5 !important;
+      max-width: 840px !important;
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+      word-break: break-word !important;
+      white-space: pre-wrap !important;
+    }
+
+    /* Inline code styling */
+    code {
+      max-width: 840px !important;
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+      word-break: break-word !important;
+    }
+
+	code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; }
+	pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; }
+	pre code { background: none; padding: 0; color: inherit; }
+
+    /* Architecture diagram styling */
+    .architecture-diagram {
+      position: relative !important;
+      padding: var(--spacing-lg) !important;
+      border-radius: var(--border-radius-large) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      backdrop-filter: blur(var(--blur-light)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-light)) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      margin: var(--spacing-lg) 0 !important;
+    }
+
+    .architecture-diagram h3 {
+      color: rgba(255, 255, 255, 0.95) !important;
+      margin-top: 0 !important;
+      margin-bottom: var(--spacing-md) !important;
+    }
+
+    .architecture-diagram p {
+      color: var(--text-color) !important;
+      margin-bottom: var(--spacing-md) !important;
+      line-height: 1.6 !important;
+    }
+
+    /* API endpoint styling */
+    .api-endpoint {
+      position: relative !important;
+      padding: var(--spacing-md) var(--spacing-lg) !important;
+      border-radius: var(--border-radius) !important;
+      background: rgba(255, 255, 255, 0.03) !important;
+      border-left: 4px solid var(--secondary-color) !important;
+      margin: var(--spacing-md) 0 !important;
+      color: var(--text-color) !important;
+      font-family: 'Courier New', monospace !important;
+      font-size: 0.95rem !important;
+    }
+
+    /* Security note styling */
+    .security-note {
+      position: relative !important;
+      padding: var(--spacing-lg) !important;
+      border-radius: var(--border-radius-large) !important;
+      background: rgba(211, 47, 47, 0.1) !important;
+      border-left: 4px solid #d32f2f !important;
+      margin: var(--spacing-lg) 0 !important;
+      color: var(--text-color) !important;
+    }
+
+    .security-note strong {
+      color: #ff6b6b !important;
+    }
+
+    /* Highlight section styling */
+    .highlight {
+      position: relative !important;
+      padding: var(--spacing-lg) !important;
+      border-radius: var(--border-radius-large) !important;
+      background: rgba(16, 163, 127, 0.1) !important;
+      border-left: 4px solid var(--secondary-color) !important;
+      margin: var(--spacing-lg) 0 !important;
+    }
+
+    .highlight h2 {
+      color: rgba(255, 255, 255, 0.95) !important;
+      margin-top: 0 !important;
+      margin-bottom: var(--spacing-md) !important;
+    }
+
+    .highlight p {
+      color: var(--text-color) !important;
+      line-height: 1.6 !important;
+    }
+
+    /* Tech stack container */
+    .tech-stack {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: var(--spacing-md) !important;
+      margin: var(--spacing-lg) 0 !important;
+    }
+
+    /* Tech badge styling */
+    .tech-badge {
+      display: inline-block !important;
+      padding: var(--spacing-sm) var(--spacing-md) !important;
+      background: rgba(85, 126, 161, 0.2) !important;
+      border: 1px solid var(--primary-color) !important;
+      border-radius: var(--border-radius-large) !important;
+      color: var(--text-link) !important;
+      font-size: 0.9rem !important;
+      font-weight: 500 !important;
+      transition: all 0.3s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .tech-badge:hover {
+      background: rgba(85, 126, 161, 0.3) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: var(--shadow-light) !important;
+    }
+
+    /* Endpoint styling for API documentation */
+    .endpoint {
+      position: relative !important;
+      padding: var(--spacing-md) var(--spacing-lg) !important;
+      border-radius: var(--border-radius) !important;
+      overflow: hidden !important;
+      backdrop-filter: blur(var(--blur-light)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-light)) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      border-left: 4px solid var(--secondary-color) !important;
+      margin: var(--spacing-md) 0 !important;
+      color: var(--text-color) !important;
+      font-family: 'Courier New', monospace !important;
+      font-size: 0.95rem !important;
+    }
+
+    /* HTTP method badges */
+    .method-get,
+    .method-post,
+    .method-put,
+    .method-delete,
+    .method-patch {
+      display: inline-block !important;
+      padding: var(--spacing-xs) var(--spacing-sm) !important;
+      border-radius: var(--border-radius) !important;
+      font-weight: 600 !important;
+      font-size: 0.85rem !important;
+      margin-right: var(--spacing-sm) !important;
+      font-family: 'Courier New', monospace !important;
+    }
+
+    .method-get {
+      background: rgba(25, 118, 210, 0.2) !important;
+      color: #1976d2 !important;
+      border: 1px solid #1976d2 !important;
+    }
+
+    .method-post {
+      background: rgba(56, 142, 60, 0.2) !important;
+      color: #388e3c !important;
+      border: 1px solid #388e3c !important;
+    }
+
+    .method-put {
+      background: rgba(251, 140, 0, 0.2) !important;
+      color: #fb8c00 !important;
+      border: 1px solid #fb8c00 !important;
+    }
+
+    .method-delete {
+      background: rgba(211, 47, 47, 0.2) !important;
+      color: #d32f2f !important;
+      border: 1px solid #d32f2f !important;
+    }
+
+    .method-patch {
+      background: rgba(123, 31, 162, 0.2) !important;
+      color: #7b1fa2 !important;
+      border: 1px solid #7b1fa2 !important;
+    }
+
+    /* Button styling for app-specific actions */
+    .create-tier-btn,
+    .upload-content-btn,
+    .stream-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      padding: var(--spacing-sm) var(--spacing-md) !important;
+      background: rgba(85, 126, 161, 0.2) !important;
+      border: 1px solid var(--primary-color) !important;
+      border-radius: var(--border-radius-large) !important;
+      color: var(--text-link) !important;
+      font-size: 0.95rem !important;
+      font-weight: 500 !important;
+      cursor: pointer !important;
+      transition: all 0.3s ease !important;
+      text-decoration: none !important;
+    }
+
+    .create-tier-btn:hover,
+    .upload-content-btn:hover,
+    .stream-btn:hover {
+      background: rgba(85, 126, 161, 0.3) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: var(--shadow-light) !important;
+    }
+
+    .stream-btn.live {
+      background: rgba(211, 47, 47, 0.2) !important;
+      border-color: #d32f2f !important;
+      color: #d32f2f !important;
+    }
+
+    /* App footer styling */
+    .app-footer {
+      margin-top: var(--spacing-xl) !important;
+      padding-top: var(--spacing-lg) !important;
+      border-top: 2px solid var(--border-color) !important;
+      text-align: center !important;
+      color: var(--text-color) !important;
+    }
+
+    .app-footer p {
+      margin: var(--spacing-sm) 0 !important;
+      color: var(--text-color) !important;
+    }
+
+    .app-footer strong {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    /* ========================================
+       WORDPRESS BLOG WIDTH OPTIMIZATION (850px)
+       ======================================== */
+
+    /* Optimize container for 850px WordPress blog width */
+    @media (max-width: 900px) {
+      .container {
+        max-width: 100%;
+        padding: 0 var(--spacing-md);
+      }
+
+      /* Reduce margins and padding for narrower screens */
+      h1 {
+        font-size: 1.9rem !important;
+        margin: var(--spacing-md) 0 !important;
+      }
+
+      h2 {
+        font-size: 1.5rem !important;
+        margin: var(--spacing-lg) 0 var(--spacing-md) 0 !important;
+      }
+
+      h3 {
+        font-size: 1.3rem !important;
+        margin: var(--spacing-md) 0 var(--spacing-sm) 0 !important;
+      }
+
+      h4 {
+        font-size: 1.15rem !important;
+        margin: var(--spacing-md) 0 var(--spacing-sm) 0 !important;
+      }
+
+      /* Adjust feature grid for 2-column layout on 850px screens */
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--spacing-lg) !important;
+        margin: var(--spacing-lg) 0 !important;
+      }
+
+      /* Optimize padding on feature cards */
+      .feature-card {
+        padding: var(--spacing-lg) !important;
+      }
+
+      .feature-card h3,
+      .feature-card h4 {
+        margin-bottom: var(--spacing-sm) !important;
+        font-size: 1.15rem !important;
+      }
+
+      .feature-card p {
+        font-size: 0.98rem !important;
+        margin-bottom: var(--spacing-xs) !important;
+      }
+
+      /* Optimize code blocks for 850px screens */
+      .code-block {
+        padding: var(--spacing-lg) !important;
+        margin: var(--spacing-lg) 0 !important;
+        font-size: 0.9rem !important;
+        max-width: 840px !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+      }
+
+      .code-block pre {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+        max-width: 840px !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: pre-wrap !important;
+      }
+
+      /* Optimize architecture diagram */
+      .architecture-diagram {
+        padding: var(--spacing-lg) !important;
+        margin: var(--spacing-lg) 0 !important;
+      }
+
+      .architecture-diagram h3 {
+        font-size: 1.2rem !important;
+        margin-bottom: var(--spacing-sm) !important;
+      }
+
+      .architecture-diagram p {
+        font-size: 0.98rem !important;
+        margin-bottom: var(--spacing-sm) !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Optimize tech stack for 850px screens */
+      .tech-stack {
+        gap: var(--spacing-md) !important;
+        margin: var(--spacing-lg) 0 !important;
+      }
+
+      .tech-badge {
+        padding: var(--spacing-xs) var(--spacing-sm) !important;
+        font-size: 0.9rem !important;
+      }
+
+      /* Optimize alert boxes */
+      .success,
+      .warning {
+        padding: var(--spacing-lg) !important;
+        margin: var(--spacing-lg) 0 !important;
+      }
+
+      .success h3,
+      .warning h3 {
+        font-size: 1.2rem !important;
+        margin-bottom: var(--spacing-sm) !important;
+      }
+
+      .success ul,
+      .warning ul {
+        margin: var(--spacing-sm) 0 !important;
+        padding-left: var(--spacing-lg) !important;
+      }
+
+      .success li,
+      .warning li {
+        margin-bottom: var(--spacing-xs) !important;
+        font-size: 0.98rem !important;
+      }
+
+      /* Optimize highlight sections */
+      .highlight {
+        padding: var(--spacing-lg) !important;
+        margin: var(--spacing-lg) 0 !important;
+      }
+
+      .highlight h2 {
+        font-size: 1.3rem !important;
+        margin-bottom: var(--spacing-sm) !important;
+      }
+
+      .highlight p {
+        font-size: 0.98rem !important;
+        margin-bottom: var(--spacing-sm) !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Optimize API endpoint styling */
+      .endpoint {
+        padding: var(--spacing-md) var(--spacing-lg) !important;
+        margin: var(--spacing-md) 0 !important;
+        font-size: 0.95rem !important;
+      }
+
+      /* Optimize method badges */
+      .method-get,
+      .method-post,
+      .method-put,
+      .method-delete,
+      .method-patch {
+        padding: var(--spacing-xs) var(--spacing-sm) !important;
+        font-size: 0.8rem !important;
+        margin-right: var(--spacing-sm) !important;
+      }
+
+      /* Optimize button styling */
+      .create-tier-btn,
+      .upload-content-btn,
+      .stream-btn {
+        padding: var(--spacing-md) var(--spacing-lg) !important;
+        font-size: 0.95rem !important;
+      }
+
+      /* Optimize footer */
+      .app-footer {
+        margin-top: var(--spacing-xl) !important;
+        padding-top: var(--spacing-lg) !important;
+      }
+
+      .app-footer p {
+        font-size: 0.95rem !important;
+        margin: var(--spacing-sm) 0 !important;
+      }
+
+      /* Optimize security note */
+      .security-note {
+        padding: var(--spacing-lg) !important;
+        margin: var(--spacing-lg) 0 !important;
+      }
+
+      .security-note strong {
+        font-size: 0.98rem !important;
+      }
+
+      /* Optimize API endpoint styling */
+      .api-endpoint {
+        padding: var(--spacing-md) var(--spacing-lg) !important;
+        margin: var(--spacing-md) 0 !important;
+        font-size: 0.9rem !important;
+      }
+
+      /* General text optimization */
+      p {
+        font-size: 0.98rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: var(--spacing-md) !important;
+      }
+
+      ul, ol {
+        margin: var(--spacing-md) 0 !important;
+        padding-left: var(--spacing-lg) !important;
+      }
+
+      li {
+        margin-bottom: var(--spacing-sm) !important;
+        font-size: 0.98rem !important;
+      }
+
+      /* Optimize section spacing */
+      section {
+        margin: var(--spacing-lg) 0 !important;
+        padding: var(--spacing-lg) !important;
+      }
+
+      /* Reduce iframe container margins */
+      .iframe-container {
+        margin: var(--spacing-lg) 0 !important;
+      }
+    }
+
+    /* Extra small screens (mobile) */
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 var(--spacing-sm);
+      }
+
+      h1 {
+        font-size: 1.5rem !important;
+      }
+
+      h2 {
+        font-size: 1.2rem !important;
+      }
+
+      h3 {
+        font-size: 1rem !important;
+      }
+
+      .feature-card {
+        padding: var(--spacing-sm) !important;
+      }
+
+      .code-block {
+        padding: var(--spacing-sm) !important;
+        font-size: 0.8rem !important;
+        max-width: 100% !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+      }
+
+      .code-block pre {
+        font-size: 0.75rem !important;
+        max-width: 100% !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: pre-wrap !important;
+      }
+
+      .tech-badge {
+        padding: var(--spacing-xs) var(--spacing-xs) !important;
+        font-size: 0.8rem !important;
+      }
+
+      .success,
+      .warning,
+      .highlight {
+        padding: var(--spacing-sm) !important;
+        margin: var(--spacing-sm) 0 !important;
+      }
+
+      p {
+        font-size: 0.9rem !important;
+      }
+
+      ul, ol {
+        padding-left: var(--spacing-md) !important;
+      }
     }
