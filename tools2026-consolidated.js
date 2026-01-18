@@ -870,7 +870,7 @@
             tablet: '60vh',
             desktop: '70vh'
         },
-        debug: false
+        debug: false // Disable verbose debug logging (enable for troubleshooting)
     };
 
     /**
@@ -1204,17 +1204,29 @@
          */
         init() {
             try {
+                console.log('[TOC] Initializing nested list interactions...');
+
                 const parentItems = safeQuerySelector(TOCConfig.selectors.tocParentItems, true);
 
                 if (!parentItems || parentItems.length === 0) {
+                    console.log('[TOC] No parent items found with :has() selector, using fallback...');
                     // Use fallback selector for browsers that don't support :has()
                     this.initFallbackNestedInteractions();
                     return;
                 }
 
-                parentItems.forEach(item => {
+                console.log(`[TOC] Found ${parentItems.length} parent items with nested lists`);
+
+                parentItems.forEach((item, index) => {
+                    const link = item.querySelector('a');
+                    const text = link ? link.textContent.trim() : `Item ${index + 1}`;
+                    if (TOCConfig.debug) {
+                        console.log(`[TOC] Setting up interactions for: "${text}"`);
+                    }
                     this.setupParentItemInteractions(item);
                 });
+
+                console.log('[TOC] Nested list interactions initialized successfully');
 
             } catch (error) {
                 logError('nested', 1, `Nested list init error: ${error.message}`, 0, 0);
@@ -1228,16 +1240,30 @@
          */
         initFallbackNestedInteractions() {
             try {
+                console.log('[TOC] Using fallback method to detect nested lists...');
+
                 const allListItems = safeQuerySelector('nav.toc li', true);
 
-                if (!allListItems) return;
+                if (!allListItems) {
+                    console.warn('[TOC] No list items found in TOC');
+                    return;
+                }
 
-                allListItems.forEach(item => {
+                let parentCount = 0;
+                allListItems.forEach((item, index) => {
                     const nestedList = item.querySelector('ul');
                     if (nestedList) {
+                        parentCount++;
+                        const link = item.querySelector('a');
+                        const text = link ? link.textContent.trim() : `Item ${index + 1}`;
+                        if (TOCConfig.debug) {
+                            console.log(`[TOC] Fallback: Setting up interactions for: "${text}"`);
+                        }
                         this.setupParentItemInteractions(item);
                     }
                 });
+
+                console.log(`[TOC] Fallback method found ${parentCount} parent items with nested lists`);
 
             } catch (error) {
                 logError('nested', 2, `Fallback nested init error: ${error.message}`, 0, 0);
@@ -1256,18 +1282,25 @@
                 // Add class for CSS fallback (browsers without :has() support)
                 parentItem.classList.add(TOCConfig.classes.hasNested);
 
-                // Add hover events for nested list expansion
-                parentItem.addEventListener('mouseenter', (event) => {
-                    event.stopPropagation();
-                    this.handleParentHover(parentItem, true);
-                });
+                // Add JavaScript hover events for both sticky and non-sticky TOCs
+                const toc = parentItem.closest('nav.toc');
+                const isSticky = toc && toc.classList.contains('toc-sticky');
 
-                parentItem.addEventListener('mouseleave', (event) => {
-                    event.stopPropagation();
-                    this.handleParentHover(parentItem, false);
-                });
+                if (isSticky) {
+                    // Add hover events for nested list expansion (sticky TOC only)
+                    parentItem.addEventListener('mouseenter', (event) => {
+                        event.stopPropagation();
+                        this.handleParentHover(parentItem, true);
+                    });
 
-                // Add focus events for keyboard navigation
+                    parentItem.addEventListener('mouseleave', (event) => {
+                        event.stopPropagation();
+                        this.handleParentHover(parentItem, false);
+                    });
+                }
+                // For non-sticky TOC: No hover events needed - CSS shows all nested lists expanded
+
+                // Add focus events for keyboard navigation (all TOC types)
                 parentItem.addEventListener('focusin', (event) => {
                     this.handleParentFocus(parentItem, true);
                 });
@@ -1342,7 +1375,19 @@
         expandNestedList(parentItem) {
             try {
                 const nestedList = parentItem.querySelector('ul');
-                if (!nestedList) return;
+                if (!nestedList) {
+                    if (TOCConfig.debug) {
+                        console.warn('[TOC] No nested list found for parent item:', parentItem);
+                    }
+                    return;
+                }
+
+                const parentLink = parentItem.querySelector('a');
+                const parentText = parentLink ? parentLink.textContent.trim() : 'Unknown';
+
+                if (TOCConfig.debug) {
+                    console.log(`[TOC] Expanding nested list for: "${parentText}"`);
+                }
 
                 parentItem.setAttribute('aria-expanded', 'true');
                 nestedList.setAttribute('aria-hidden', 'false');
@@ -1358,6 +1403,7 @@
                     detail: {
                         parentItem,
                         nestedList,
+                        parentText,
                         isSticky: false, // Always false since sticky is disabled
                         isScrollable: TOCState.isScrollable
                     }
@@ -1376,7 +1422,19 @@
         collapseNestedList(parentItem) {
             try {
                 const nestedList = parentItem.querySelector('ul');
-                if (!nestedList) return;
+                if (!nestedList) {
+                    if (TOCConfig.debug) {
+                        console.warn('[TOC] No nested list found for parent item:', parentItem);
+                    }
+                    return;
+                }
+
+                const parentLink = parentItem.querySelector('a');
+                const parentText = parentLink ? parentLink.textContent.trim() : 'Unknown';
+
+                if (TOCConfig.debug) {
+                    console.log(`[TOC] Collapsing nested list for: "${parentText}"`);
+                }
 
                 parentItem.setAttribute('aria-expanded', 'false');
                 nestedList.setAttribute('aria-hidden', 'true');
@@ -1390,6 +1448,7 @@
                     detail: {
                         parentItem,
                         nestedList,
+                        parentText,
                         isSticky: false // Always false since sticky is disabled
                     }
                 });
@@ -3704,6 +3763,718 @@
             console.error('[Main App] Failed to initialize application:', error);
         });
     }
+
+})();
+
+
+// ============================================================================
+// MODULE: SLIDESHOW-TOC
+// ============================================================================
+
+/**
+ * Vertical Slideshow TOC Module
+ *
+ * Transforms the table of contents into an engaging vertical slideshow
+ * where each H2 section becomes an individual slide with skeuomorphic design.
+ *
+ * Features:
+ * - Slide navigation (prev/next buttons)
+ * - Keyboard navigation (arrow keys, Home, End)
+ * - Touch/swipe gestures
+ * - Slide indicators (dots)
+ * - Accessibility (ARIA labels, keyboard support)
+ * - Responsive design
+ * - Mouse wheel navigation
+ * - Sticky behavior on scroll
+ *
+ * Architecture:
+ * - State management: SlideshowState object tracks current slide, animation state, touch positions
+ * - Configuration: SlideshowConfig object defines selectors, classes, timing, keyboard/touch settings
+ * - Event handlers: Setup functions for navigation, keyboard, touch, mouse wheel, indicators
+ * - Public API: Exposed via window.SlideshowTOC for external control
+ *
+ * Usage:
+ *   // Initialize (auto-initializes on DOM ready)
+ *   window.SlideshowTOC.init();
+ *
+ *   // Navigate programmatically
+ *   window.SlideshowTOC.nextSlide();
+ *   window.SlideshowTOC.prevSlide();
+ *   window.SlideshowTOC.showSlide(3);
+ *
+ *   // Get state
+ *   const currentSlide = window.SlideshowTOC.getCurrentSlide();
+ *   const totalSlides = window.SlideshowTOC.getTotalSlides();
+ *
+ * @author myTech.Today
+ * @version 1.0.0
+ * @requires DOM API, Touch Events API
+ */
+
+(function() {
+    'use strict';
+
+    /**
+     * Slideshow State Management
+     *
+     * Tracks the current state of the slideshow including:
+     * - currentSlide: {number} - Index of currently displayed slide (1-based)
+     * - totalSlides: {number} - Total number of slides in the slideshow
+     * - isAnimating: {boolean} - Flag to prevent overlapping animations
+     * - touchStartX/Y: {number} - Touch gesture start coordinates
+     * - touchEndX/Y: {number} - Touch gesture end coordinates
+     * - initialized: {boolean} - Flag indicating if slideshow has been initialized
+     */
+    const SlideshowState = {
+        currentSlide: 1,
+        totalSlides: 0,
+        isAnimating: false,
+        touchStartX: 0,
+        touchStartY: 0,
+        touchEndX: 0,
+        touchEndY: 0,
+        initialized: false
+    };
+
+    /**
+     * Slideshow Configuration
+     *
+     * Customize the behavior and appearance of the vertical slideshow TOC.
+     *
+     * Configuration Options:
+     *
+     * selectors: {Object} - CSS selectors for slideshow elements
+     *   - container: {string} - Main slideshow container selector (default: '.toc-slideshow-container')
+     *   - slides: {string} - Individual slide selector (default: '.toc-slide')
+     *   - prevBtn: {string} - Previous button selector (default: '.toc-nav-prev')
+     *   - nextBtn: {string} - Next button selector (default: '.toc-nav-next')
+     *   - indicators: {string} - Slide indicator dots selector (default: '.toc-indicator')
+     *   - nav: {string} - Navigation controls container selector (default: '.toc-slideshow-nav')
+     *
+     * classes: {Object} - CSS class names for state management
+     *   - active: {string} - Class applied to active slide/indicator (default: 'active')
+     *   - animating: {string} - Class applied during slide transitions (default: 'animating')
+     *
+     * timing: {Object} - Animation and interaction timing settings
+     *   - transitionDuration: {number} - Slide transition duration in milliseconds (default: 500)
+     *   - swipeThreshold: {number} - Minimum swipe distance in pixels to trigger navigation (default: 50)
+     *
+     * keyboard: {Object} - Keyboard navigation settings
+     *   - enabled: {boolean} - Enable/disable keyboard navigation (default: true)
+     *   - keys: {Object} - Key mappings for navigation actions
+     *     - prev: {Array<string>} - Keys to navigate to previous slide (default: ['ArrowLeft', 'ArrowUp'])
+     *     - next: {Array<string>} - Keys to navigate to next slide (default: ['ArrowRight', 'ArrowDown'])
+     *     - first: {Array<string>} - Keys to jump to first slide (default: ['Home'])
+     *     - last: {Array<string>} - Keys to jump to last slide (default: ['End'])
+     *
+     * touch: {Object} - Touch gesture settings
+     *   - enabled: {boolean} - Enable/disable touch gestures (default: true)
+     *   - minSwipeDistance: {number} - Minimum swipe distance in pixels (default: 50)
+     *
+     * debug: {boolean} - Enable/disable debug logging to console (default: false)
+     *
+     * Example Usage:
+     *   // Enable debug mode
+     *   window.SlideshowTOC.config.debug = true;
+     *
+     *   // Disable keyboard navigation
+     *   window.SlideshowTOC.config.keyboard.enabled = false;
+     *
+     *   // Change transition duration
+     *   window.SlideshowTOC.config.timing.transitionDuration = 800;
+     */
+    const SlideshowConfig = {
+        selectors: {
+            container: '.toc-slideshow-container',
+            slides: '.toc-slide',
+            prevBtn: '.toc-nav-prev',
+            nextBtn: '.toc-nav-next',
+            indicators: '.toc-indicator',
+            nav: '.toc-slideshow-nav'
+        },
+        classes: {
+            active: 'active',
+            animating: 'animating'
+        },
+        timing: {
+            transitionDuration: 500,
+            swipeThreshold: 50
+        },
+        keyboard: {
+            enabled: true,
+            keys: {
+                prev: ['ArrowLeft', 'ArrowUp'],
+                next: ['ArrowRight', 'ArrowDown'],
+                first: ['Home'],
+                last: ['End']
+            }
+        },
+        touch: {
+            enabled: true,
+            minSwipeDistance: 50
+        },
+        debug: false
+    };
+
+    /**
+     * Utility: Safe query selector
+     */
+    function safeQuerySelector(selector, all = false) {
+        try {
+            return all ? document.querySelectorAll(selector) : document.querySelector(selector);
+        } catch (error) {
+            console.error(`[SlideshowTOC] Query selector error for "${selector}":`, error);
+            return all ? [] : null;
+        }
+    }
+
+    /**
+     * Utility: Log debug messages
+     */
+    function logDebug(message, data = null) {
+        if (SlideshowConfig.debug) {
+            console.log(`[SlideshowTOC] ${message}`, data || '');
+        }
+    }
+
+    /**
+     * Initialize the slideshow
+     *
+     * Main initialization function that:
+     * 1. Counts and validates slides
+     * 2. Shows the first slide
+     * 3. Sets up all event handlers (navigation, keyboard, touch, mouse wheel)
+     * 4. Configures slide indicators
+     * 5. Enables sticky TOC behavior
+     * 6. Adds window resize handler for responsive behavior
+     *
+     * Called automatically on DOM ready, or can be called manually via window.SlideshowTOC.init()
+     *
+     * @returns {void}
+     */
+    function initSlideshow() {
+        try {
+            logDebug('Initializing slideshow...');
+
+            // Find all slides in the DOM
+            const slides = safeQuerySelector(SlideshowConfig.selectors.slides, true);
+            if (!slides || slides.length === 0) {
+                logDebug('No slides found, slideshow not initialized');
+                return;
+            }
+
+            // Store total slide count
+            SlideshowState.totalSlides = slides.length;
+            logDebug(`Found ${SlideshowState.totalSlides} slides`);
+
+            // Display the first slide
+            showSlide(1);
+
+            // Setup prev/next button navigation
+            setupNavigation();
+
+            // Setup keyboard navigation (arrow keys, Home, End)
+            if (SlideshowConfig.keyboard.enabled) {
+                setupKeyboardNavigation();
+            }
+
+            // Setup touch/swipe gestures for mobile
+            if (SlideshowConfig.touch.enabled) {
+                setupTouchGestures();
+            }
+
+            // Setup clickable slide indicator dots
+            setupIndicators();
+
+            // Setup mouse wheel navigation when hovering over slideshow
+            setupMouseWheelNavigation();
+
+            // Setup sticky TOC behavior (collapses when scrolled past)
+            setupStickyTOC();
+
+            // Setup window resize handler to adjust container height dynamically
+            window.addEventListener('resize', () => {
+                if (SlideshowState.initialized) {
+                    adjustContainerHeight();
+                }
+            });
+
+            // Mark as initialized
+            SlideshowState.initialized = true;
+            logDebug('Slideshow initialized successfully');
+
+        } catch (error) {
+            console.error('[SlideshowTOC] Initialization error:', error);
+        }
+    }
+
+    /**
+     * Show a specific slide
+     *
+     * Displays the requested slide and hides all others. Updates:
+     * - Slide visibility (adds/removes 'active' class)
+     * - ARIA attributes for accessibility
+     * - Indicator dots to reflect current slide
+     * - Navigation button states (disable at boundaries)
+     * - Container height to fit active slide content
+     *
+     * Prevents overlapping animations by checking isAnimating flag.
+     *
+     * @param {number} slideNumber - The slide to display (1-based index)
+     * @returns {void}
+     */
+    function showSlide(slideNumber) {
+        try {
+            // Prevent overlapping animations
+            if (SlideshowState.isAnimating) {
+                logDebug('Animation in progress, ignoring slide change');
+                return;
+            }
+
+            // Clamp slide number to valid range [1, totalSlides]
+            if (slideNumber < 1) slideNumber = 1;
+            if (slideNumber > SlideshowState.totalSlides) slideNumber = SlideshowState.totalSlides;
+
+            logDebug(`Showing slide ${slideNumber}`);
+
+            // Set animation flag to prevent concurrent transitions
+            SlideshowState.isAnimating = true;
+            SlideshowState.currentSlide = slideNumber;
+
+            const slides = safeQuerySelector(SlideshowConfig.selectors.slides, true);
+            const indicators = safeQuerySelector(SlideshowConfig.selectors.indicators, true);
+
+            // Update slide visibility and accessibility attributes
+            slides.forEach((slide, index) => {
+                if (index + 1 === slideNumber) {
+                    slide.classList.add(SlideshowConfig.classes.active);
+                    slide.setAttribute('aria-hidden', 'false'); // Make visible to screen readers
+                } else {
+                    slide.classList.remove(SlideshowConfig.classes.active);
+                    slide.setAttribute('aria-hidden', 'true'); // Hide from screen readers
+                }
+            });
+
+            // Update indicator dots to reflect current slide
+            indicators.forEach((indicator, index) => {
+                if (index + 1 === slideNumber) {
+                    indicator.classList.add(SlideshowConfig.classes.active);
+                    indicator.setAttribute('aria-selected', 'true');
+                } else {
+                    indicator.classList.remove(SlideshowConfig.classes.active);
+                    indicator.setAttribute('aria-selected', 'false');
+                }
+            });
+
+            // Disable prev/next buttons at boundaries
+            updateNavigationButtons();
+
+            // Adjust container height to fit active slide content
+            adjustContainerHeight();
+
+            // Reset animation flag after transition completes
+            setTimeout(() => {
+                SlideshowState.isAnimating = false;
+            }, SlideshowConfig.timing.transitionDuration);
+
+        } catch (error) {
+            console.error('[SlideshowTOC] Show slide error:', error);
+            SlideshowState.isAnimating = false;
+        }
+    }
+
+    /**
+     * Navigate to previous slide
+     */
+    function prevSlide() {
+        logDebug('Previous slide');
+        showSlide(SlideshowState.currentSlide - 1);
+    }
+
+    /**
+     * Navigate to next slide
+     */
+    function nextSlide() {
+        logDebug('Next slide');
+        showSlide(SlideshowState.currentSlide + 1);
+    }
+
+    /**
+     * Navigate to first slide
+     */
+    function firstSlide() {
+        logDebug('First slide');
+        showSlide(1);
+    }
+
+    /**
+     * Navigate to last slide
+     */
+    function lastSlide() {
+        logDebug('Last slide');
+        showSlide(SlideshowState.totalSlides);
+    }
+
+    /**
+     * Update navigation button states
+     */
+    function updateNavigationButtons() {
+        const prevBtn = safeQuerySelector(SlideshowConfig.selectors.prevBtn);
+        const nextBtn = safeQuerySelector(SlideshowConfig.selectors.nextBtn);
+
+        if (prevBtn) {
+            prevBtn.disabled = SlideshowState.currentSlide === 1;
+        }
+
+        if (nextBtn) {
+            nextBtn.disabled = SlideshowState.currentSlide === SlideshowState.totalSlides;
+        }
+    }
+
+    /**
+     * Adjust container height to fit active slide
+     */
+    function adjustContainerHeight() {
+        try {
+            const container = safeQuerySelector(SlideshowConfig.selectors.container);
+            const activeSlide = safeQuerySelector('.toc-slide.active');
+
+            if (!container || !activeSlide) return;
+
+            // Get the actual height of the active slide
+            const slideHeight = activeSlide.offsetHeight;
+
+            // Set container height to match active slide
+            container.style.height = slideHeight + 'px';
+
+            logDebug(`Container height adjusted to ${slideHeight}px`);
+
+        } catch (error) {
+            console.error('[SlideshowTOC] Adjust container height error:', error);
+        }
+    }
+
+    /**
+     * Setup navigation buttons
+     */
+    function setupNavigation() {
+        try {
+            const prevBtn = safeQuerySelector(SlideshowConfig.selectors.prevBtn);
+            const nextBtn = safeQuerySelector(SlideshowConfig.selectors.nextBtn);
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', prevSlide);
+                logDebug('Previous button setup');
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', nextSlide);
+                logDebug('Next button setup');
+            }
+
+        } catch (error) {
+            console.error('[SlideshowTOC] Navigation setup error:', error);
+        }
+    }
+
+    /**
+     * Setup keyboard navigation
+     */
+    function setupKeyboardNavigation() {
+        try {
+            document.addEventListener('keydown', (event) => {
+                // Only handle keyboard events when TOC is visible
+                const container = safeQuerySelector(SlideshowConfig.selectors.container);
+                if (!container) return;
+
+                const key = event.key;
+
+                if (SlideshowConfig.keyboard.keys.prev.includes(key)) {
+                    event.preventDefault();
+                    prevSlide();
+                } else if (SlideshowConfig.keyboard.keys.next.includes(key)) {
+                    event.preventDefault();
+                    nextSlide();
+                } else if (SlideshowConfig.keyboard.keys.first.includes(key)) {
+                    event.preventDefault();
+                    firstSlide();
+                } else if (SlideshowConfig.keyboard.keys.last.includes(key)) {
+                    event.preventDefault();
+                    lastSlide();
+                }
+            });
+
+            logDebug('Keyboard navigation setup');
+
+        } catch (error) {
+            console.error('[SlideshowTOC] Keyboard navigation setup error:', error);
+        }
+    }
+
+    /**
+     * Setup touch gestures
+     */
+    function setupTouchGestures() {
+        try {
+            const container = safeQuerySelector(SlideshowConfig.selectors.container);
+            if (!container) return;
+
+            container.addEventListener('touchstart', handleTouchStart, { passive: true });
+            container.addEventListener('touchmove', handleTouchMove, { passive: true });
+            container.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+            logDebug('Touch gestures setup');
+
+        } catch (error) {
+            console.error('[SlideshowTOC] Touch gestures setup error:', error);
+        }
+    }
+
+    /**
+     * Handle touch start
+     *
+     * Records the initial touch position when user touches the screen.
+     * Used to calculate swipe direction and distance in handleTouchEnd.
+     *
+     * @param {TouchEvent} event - Touch start event
+     * @returns {void}
+     */
+    function handleTouchStart(event) {
+        SlideshowState.touchStartX = event.touches[0].clientX;
+        SlideshowState.touchStartY = event.touches[0].clientY;
+    }
+
+    /**
+     * Handle touch move
+     *
+     * Tracks the current touch position as user moves their finger.
+     * Updates continuously during the swipe gesture.
+     *
+     * @param {TouchEvent} event - Touch move event
+     * @returns {void}
+     */
+    function handleTouchMove(event) {
+        SlideshowState.touchEndX = event.touches[0].clientX;
+        SlideshowState.touchEndY = event.touches[0].clientY;
+    }
+
+    /**
+     * Handle touch end
+     *
+     * Processes the completed swipe gesture:
+     * - Calculates horizontal (deltaX) and vertical (deltaY) distances
+     * - Ignores vertical swipes (deltaY > 50px) to allow normal scrolling
+     * - Triggers slide navigation if horizontal swipe exceeds minSwipeDistance
+     * - Swipe left (deltaX > 0) = next slide
+     * - Swipe right (deltaX < 0) = previous slide
+     *
+     * @returns {void}
+     */
+    function handleTouchEnd() {
+        const deltaX = SlideshowState.touchStartX - SlideshowState.touchEndX;
+        const deltaY = Math.abs(SlideshowState.touchStartY - SlideshowState.touchEndY);
+
+        // Only process horizontal swipes (ignore vertical scrolling)
+        if (deltaY > 50) return;
+
+        if (Math.abs(deltaX) > SlideshowConfig.touch.minSwipeDistance) {
+            if (deltaX > 0) {
+                // Swipe left - next slide
+                nextSlide();
+            } else {
+                // Swipe right - previous slide
+                prevSlide();
+            }
+        }
+    }
+
+    /**
+     * Setup slide indicators
+     */
+    function setupIndicators() {
+        try {
+            const indicators = safeQuerySelector(SlideshowConfig.selectors.indicators, true);
+            if (!indicators || indicators.length === 0) return;
+
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    showSlide(index + 1);
+                });
+
+                // Keyboard support for indicators
+                indicator.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        showSlide(index + 1);
+                    }
+                });
+            });
+
+            logDebug('Indicators setup');
+
+        } catch (error) {
+            console.error('[SlideshowTOC] Indicators setup error:', error);
+        }
+    }
+
+    /**
+     * Setup mouse wheel navigation
+     */
+    function setupMouseWheelNavigation() {
+        try {
+            const container = safeQuerySelector(SlideshowConfig.selectors.container);
+            if (!container) return;
+
+            let wheelTimeout = null;
+            let isHovering = false;
+
+            // Track hover state
+            container.addEventListener('mouseenter', () => {
+                isHovering = true;
+                logDebug('Mouse entered slideshow container');
+            });
+
+            container.addEventListener('mouseleave', () => {
+                isHovering = false;
+                logDebug('Mouse left slideshow container');
+            });
+
+            // Handle wheel events
+            container.addEventListener('wheel', (event) => {
+                if (!isHovering) return;
+
+                // Prevent default scroll behavior
+                event.preventDefault();
+
+                // Clear existing timeout
+                if (wheelTimeout) {
+                    clearTimeout(wheelTimeout);
+                }
+
+                // Debounce wheel events (wait for scroll to finish)
+                wheelTimeout = setTimeout(() => {
+                    const delta = event.deltaY;
+
+                    if (delta > 0) {
+                        // Scrolling down - next slide
+                        nextSlide();
+                        logDebug('Wheel scroll down - next slide');
+                    } else if (delta < 0) {
+                        // Scrolling up - previous slide
+                        prevSlide();
+                        logDebug('Wheel scroll up - previous slide');
+                    }
+                }, 50); // 50ms debounce
+
+            }, { passive: false }); // passive: false to allow preventDefault
+
+            logDebug('Mouse wheel navigation setup');
+
+        } catch (error) {
+            console.error('[SlideshowTOC] Mouse wheel setup error:', error);
+        }
+    }
+
+    /**
+     * Setup sticky TOC behavior
+     */
+    function setupStickyTOC() {
+        try {
+            const tocElement = document.querySelector('.toc.toc-slideshow');
+            if (!tocElement) {
+                logDebug('TOC element not found for sticky behavior');
+                return;
+            }
+
+            // Store original position and dimensions
+            const tocOriginalTop = tocElement.offsetTop;
+            let isSticky = false;
+
+            // Function to update sticky positioning
+            function updateStickyPosition() {
+                if (!isSticky) return;
+
+                // Calculate the left offset to match content edges
+                const viewportWidth = window.innerWidth;
+                const contentMaxWidth = 1200;
+                const desiredTotalWidth = Math.min(contentMaxWidth, viewportWidth);
+                const leftOffset = Math.max(0, (viewportWidth - desiredTotalWidth) / 2);
+
+                // Set left position and width using setProperty with !important
+                // With box-sizing: border-box, the width includes padding
+                tocElement.style.setProperty('left', leftOffset + 'px', 'important');
+                tocElement.style.setProperty('width', desiredTotalWidth + 'px', 'important');
+                tocElement.style.setProperty('right', 'auto', 'important');
+                tocElement.style.setProperty('box-sizing', 'border-box', 'important');
+
+                logDebug(`Sticky TOC positioned: left=${leftOffset}px, width=${desiredTotalWidth}px`);
+            }
+
+            // Handle scroll events
+            function handleScroll() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > tocOriginalTop && !isSticky) {
+                    // Add sticky class
+                    tocElement.classList.add('sticky');
+                    isSticky = true;
+                    updateStickyPosition();
+                    logDebug('TOC is now sticky');
+                } else if (scrollTop <= tocOriginalTop && isSticky) {
+                    // Remove sticky class and clear inline styles
+                    tocElement.classList.remove('sticky');
+                    tocElement.style.removeProperty('left');
+                    tocElement.style.removeProperty('right');
+                    tocElement.style.removeProperty('width');
+                    tocElement.style.removeProperty('box-sizing');
+                    isSticky = false;
+                    logDebug('TOC is no longer sticky');
+                }
+            }
+
+            // Handle window resize
+            function handleResize() {
+                updateStickyPosition();
+            }
+
+            // Attach listeners
+            window.addEventListener('scroll', handleScroll);
+            window.addEventListener('resize', handleResize);
+
+            logDebug('Sticky TOC setup complete');
+
+        } catch (error) {
+            console.error('[SlideshowTOC] Sticky TOC setup error:', error);
+        }
+    }
+
+    /**
+     * Public API
+     */
+    window.SlideshowTOC = {
+        init: initSlideshow,
+        showSlide: showSlide,
+        nextSlide: nextSlide,
+        prevSlide: prevSlide,
+        firstSlide: firstSlide,
+        lastSlide: lastSlide,
+        getCurrentSlide: () => SlideshowState.currentSlide,
+        getTotalSlides: () => SlideshowState.totalSlides,
+        isInitialized: () => SlideshowState.initialized,
+        state: SlideshowState,
+        config: SlideshowConfig
+    };
+
+    /**
+     * Auto-initialize when DOM is ready
+     */
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSlideshow);
+    } else {
+        initSlideshow();
+    }
+
+    logDebug('Slideshow TOC module loaded');
 
 })();
 

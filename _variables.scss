@@ -1,0 +1,173 @@
+// ============================================
+// SCSS Variables
+// ============================================
+// All variables extracted from CSS custom properties
+// Last Updated: 2026-01-17
+
+// --------------------------------------------
+// Colors - Primary
+// --------------------------------------------
+$primary-color: #557ea1;
+$secondary-color: #10a37f;
+$tertiary-color: #8b5a3c;
+$danger-color: #d32f2f;
+$success-color: #1976d2;
+
+// --------------------------------------------
+// Colors - Borders
+// --------------------------------------------
+$border-color: #d1dce5;
+$light-border: #e8f0f5;
+
+// --------------------------------------------
+// Colors - Backgrounds
+// --------------------------------------------
+$background-color: #193959;
+$background-light: #002e56;
+$background-lighter: #274869;
+
+// --------------------------------------------
+// Colors - Text
+// --------------------------------------------
+$text-color: #929ba4;
+$text-muted: #e1e5e9;
+$text-light: #c2c9cf;
+$text-link: #419eef;
+
+// --------------------------------------------
+// Colors - RGBA (Black variations)
+// --------------------------------------------
+$color-black-80: rgba(0, 0, 0, 0.8);
+$color-black-60: rgba(0, 0, 0, 0.6);
+$color-black-50: rgba(0, 0, 0, 0.5);
+$color-black-30: rgba(0, 0, 0, 0.3);
+$color-black-20: rgba(0, 0, 0, 0.2);
+
+// --------------------------------------------
+// Colors - RGBA (White variations)
+// --------------------------------------------
+$color-white-100: rgba(255, 255, 255, 1);
+$color-white-95: rgba(255, 255, 255, 0.95);
+$color-white-90: rgba(255, 255, 255, 0.9);
+$color-white-85: rgba(255, 255, 255, 0.85);
+$color-white-50: rgba(255, 255, 255, 0.5);
+$color-white-40: rgba(255, 255, 255, 0.4);
+$color-white-30: rgba(255, 255, 255, 0.3);
+$color-white-20: rgba(255, 255, 255, 0.2);
+$color-white-10: rgba(255, 255, 255, 0.1);
+$color-white-05: rgba(255, 255, 255, 0.05);
+
+// --------------------------------------------
+// Colors - RGBA (Primary color variations)
+// --------------------------------------------
+$color-primary-30: rgba(85, 126, 161, 0.3);
+$color-primary-10: rgba(85, 126, 161, 0.1);
+
+// --------------------------------------------
+// Colors - RGBA (Background variations)
+// --------------------------------------------
+$color-bg-dark-90: rgba(15, 42, 68, 0.9);
+$color-bg-primary-80: rgba(25, 57, 89, 0.8);
+$color-bg-blue-30: rgba(0, 75, 141, 0.3);
+
+// --------------------------------------------
+// Shadows
+// --------------------------------------------
+$shadow-light: 0 2px 4px rgba(0, 75, 141, 0.1);
+$shadow-medium: 0 4px 8px rgba(0, 75, 141, 0.15);
+$shadow-heavy: 0 8px 16px rgba(0, 75, 141, 0.2);
+
+// --------------------------------------------
+// Border Radius
+// --------------------------------------------
+$border-radius: 4px;
+$border-radius-large: 8px;
+$border-radius-round: 50%;
+
+// --------------------------------------------
+// Spacing
+// --------------------------------------------
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+
+// --------------------------------------------
+// Blur
+// --------------------------------------------
+$blur-light: 5px;
+$blur-medium: 10px;
+$blur-heavy: 15px;
+$blur-extra-heavy: 30px;
+
+// --------------------------------------------
+// Dust Particles
+// --------------------------------------------
+$dust-particle-count: 350;
+$dust-particle-size: 3.0;
+$dust-opacity: 0.8;
+$dust-brightness: 0.8;
+$dust-density: 0.99;
+$dust-speed: 0.5;
+
+// --------------------------------------------
+// Breakpoints
+// --------------------------------------------
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large: 1200px;
+$breakpoint-xlarge: 1440px;
+
+// --------------------------------------------
+// Typography
+// --------------------------------------------
+$font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+$font-family-mono: 'Courier New', monospace;
+
+// Font sizes (common values)
+$font-size-xs: 0.8rem;
+$font-size-sm: 0.9rem;
+$font-size-base: 1rem;
+$font-size-md: 1.1rem;
+$font-size-lg: 1.2rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 2rem;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$viewport-height: 100vh;
+$page-height: 100vh;
+$pre-header-height: 50px;
+
+// --------------------------------------------
+// Z-index layers
+// --------------------------------------------
+$z-index-base: 1;
+$z-index-dropdown: 100;
+$z-index-sticky: 200;
+$z-index-fixed: 300;
+$z-index-modal-backdrop: 400;
+$z-index-modal: 500;
+$z-index-popover: 600;
+$z-index-tooltip: 700;
+
+// --------------------------------------------
+// Mermaid Chart Colors
+// --------------------------------------------
+$mermaid-bg: rgba(255, 255, 255, 0.95);
+$mermaid-border: $border-color;
+$mermaid-text: #1a1a1a;
+$mermaid-title-size: 1.2rem;
+$mermaid-title-size-tablet: 1rem;
+$mermaid-title-size-mobile: 0.9rem;
+$mermaid-text-size-tablet: 0.85rem;
+$mermaid-text-size-mobile: 0.75rem;
+
+// --------------------------------------------
+// End of Variables
+// --------------------------------------------
+

@@ -46,7 +46,7 @@
 
 
 	.tldr { background: var(--background-color); padding: 20px; border-left: 4px solid #667eea; margin: 20px 0; border-radius: 4px; }
-	.repo-card { background: var(--background-color); padding: 20px; margin: 20px 0; border-radius: 8px; border-left: 4px solid #764ba2; }
+	.repo-card { background: var(--background-color); padding: 20px; margin: 20px 0; border-radius: 6px; border-left: 4px solid #764ba2; }
 
 
     /* Reset and base styles */
@@ -2105,7 +2105,7 @@
       background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9)) !important;
       border: 1px solid rgba(85, 126, 161, 0.3) !important;
       box-shadow:
-        8px 8px 16px rgba(0, 0, 0, 0.3),
+        8px 8px 16px rgba(0, 0, 0, 0.4),
         -8px -8px 16px rgba(85, 126, 161, 0.1) !important;
     }
 
@@ -2250,7 +2250,7 @@
       z-index: 999;
       border-radius: 0;
       box-shadow: var(--shadow-medium);
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
@@ -2334,7 +2334,7 @@
       z-index: 999 !important;
       max-width: 900px !important;
       width: 90% !important;
-      background: rgba(255, 255, 255, 0.95) !important;
+      background: rgba(255, 255, 255, 0.98) !important;
       backdrop-filter: blur(10px) !important;
       -webkit-backdrop-filter: blur(10px) !important;
       box-shadow: var(--shadow-medium) !important;
@@ -3744,7 +3744,7 @@
       background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9));
       border: 1px solid rgba(85, 126, 161, 0.3);
       box-shadow:
-        8px 8px 16px rgba(0, 0, 0, 0.3),
+        8px 8px 16px rgba(0, 0, 0, 0.4),
         -8px -8px 16px rgba(85, 126, 161, 0.1);
     }
 
@@ -4414,7 +4414,7 @@
       background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9)) !important;
       border: 1px solid rgba(85, 126, 161, 0.3) !important;
       box-shadow:
-        8px 8px 16px rgba(0, 0, 0, 0.3),
+        8px 8px 16px rgba(0, 0, 0, 0.4),
         -8px -8px 16px rgba(85, 126, 161, 0.1) !important;
     }
 
@@ -4847,7 +4847,7 @@
         background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9)) !important;
         border: 1px solid rgba(85, 126, 161, 0.3) !important;
         box-shadow:
-          8px 8px 16px rgba(0, 0, 0, 0.3),
+          8px 8px 16px rgba(0, 0, 0, 0.4),
           -8px -8px 16px rgba(85, 126, 161, 0.1) !important;
       }
 
@@ -4903,7 +4903,7 @@
         background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9)) !important;
         border: 1px solid rgba(85, 126, 161, 0.3) !important;
         box-shadow:
-          6px 6px 12px rgba(0, 0, 0, 0.3),
+          6px 6px 12px rgba(0, 0, 0, 0.4),
           -6px -6px 12px rgba(85, 126, 161, 0.1) !important;
       }
 
@@ -5031,7 +5031,7 @@
         background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9)) !important;
         border: 1px solid rgba(85, 126, 161, 0.3) !important;
         box-shadow:
-          10px 10px 20px rgba(0, 0, 0, 0.3),
+          10px 10px 20px rgba(0, 0, 0, 0.4),
           -10px -10px 20px rgba(85, 126, 161, 0.1) !important;
       }
 
@@ -5062,7 +5062,7 @@
         background: linear-gradient(145deg, rgba(25, 57, 89, 0.8), rgba(15, 42, 68, 0.9)) !important;
         border: 1px solid rgba(85, 126, 161, 0.3) !important;
         box-shadow:
-          12px 12px 24px rgba(0, 0, 0, 0.3),
+          12px 12px 24px rgba(0, 0, 0, 0.4),
           -12px -12px 24px rgba(85, 126, 161, 0.1) !important;
       }
     }
@@ -6215,8 +6215,8 @@
       word-break: break-word !important;
     }
 
-	code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', monospace; }
-	pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 8px; overflow-x: auto; }
+	code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; }
+	pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; }
 	pre code { background: none; padding: 0; color: inherit; }
 
     /* Architecture diagram styling */
@@ -6928,7 +6928,7 @@
     rgba(25, 57, 89, 0.95) 100%) !important;
   padding-left: var(--spacing-md) !important;
   box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
   border-left: 4px solid #419eef !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
@@ -7359,7 +7359,7 @@
 .content-section li code {
   background: rgba(0, 0, 0, 0.2);
   padding: 2px 6px;
-  border-radius: 4px;
+  border-radius: 3px;
   font-size: 0.85em;
 }
 
@@ -7666,119 +7666,3 @@
     display: none;
   }
 }
-
-/* ========================================
-   MERMAID CHART STYLES
-   ======================================== */
-
-/* Mermaid chart wrapper - provides container styling */
-.mermaid-chart-wrapper {
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-large);
-  padding: var(--spacing-lg);
-  margin: var(--spacing-lg) 0;
-  text-align: center;
-  overflow-x: auto;
-  box-shadow: var(--shadow-medium);
-  backdrop-filter: blur(var(--blur-light));
-  -webkit-backdrop-filter: blur(var(--blur-light));
-}
-
-/* Mermaid diagram container (generated by WP Mermaid plugin) */
-.mermaid-chart-wrapper .mermaid {
-  max-width: 100%;
-  overflow-x: auto;
-  display: inline-block;
-  margin: 0 auto;
-}
-
-/* Mermaid SVG responsive sizing */
-.mermaid-chart-wrapper .mermaid svg {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Mermaid chart text styling */
-.mermaid-chart-wrapper .mermaid text {
-  font-family: var(--font-family-system, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif);
-  fill: #1a1a1a;
-}
-
-/* Mermaid chart title styling */
-.mermaid-chart-wrapper .mermaid .titleText {
-  font-size: 1.2rem;
-  font-weight: 600;
-  fill: #1a1a1a;
-}
-
-/* Responsive adjustments for Mermaid charts */
-@media (max-width: 768px) {
-  .mermaid-chart-wrapper {
-    padding: var(--spacing-md);
-    margin: var(--spacing-md) 0;
-    overflow-x: scroll;
-  }
-
-  .mermaid-chart-wrapper .mermaid {
-    font-size: 0.85rem;
-  }
-
-  .mermaid-chart-wrapper .mermaid .titleText {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .mermaid-chart-wrapper {
-    padding: var(--spacing-sm);
-    margin: var(--spacing-sm) 0;
-  }
-
-  .mermaid-chart-wrapper .mermaid {
-    font-size: 0.75rem;
-  }
-
-  .mermaid-chart-wrapper .mermaid .titleText {
-    font-size: 0.9rem;
-  }
-}
-
-/* Print styles for Mermaid charts */
-@media print {
-  .mermaid-chart-wrapper {
-    background: white;
-    border: 1px solid #ccc;
-    box-shadow: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    page-break-inside: avoid;
-  }
-
-  .mermaid-chart-wrapper .mermaid text {
-    fill: black;
-  }
-}
-
-/* ========================================
-   UNUSED STYLES
-   ======================================== */
-
-/*
- * This section contains CSS styles that are not currently used by the tools2025 HTML files
- * but are kept for potential future use or for blog posts/WordPress integration.
- *
- * Styles in this section will be reviewed every 6 months and removed if still unused.
- *
- * Last Review: 2026-01-17
- * Next Review: 2026-07-17
- */
-
-/* No unused styles at this time - all styles are either:
- * 1. Used by tools2025 HTML files
- * 2. Used by blog posts (blogs/ folder)
- * 3. Used by WordPress integration
- * 4. Used by JavaScript libraries (Tocbot, etc.)
- */

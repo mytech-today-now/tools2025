@@ -1,0 +1,874 @@
+UNUSED CSS SELECTOR ANALYSIS
+Generated: 2026-01-16 19:06:40
+
+HTML Files Analyzed:
+  - dust-integration-example.html
+  - homepage.html
+  - iframe.html
+  - pastblog.html
+  - tools2025-comprehensive-test.html
+  - tools2025.html
+  - tools2026.html
+  - yesterday.html
+
+
+Summary:
+  Total CSS selectors: 1028
+  Used selectors: 741
+  Potentially unused selectors: 131
+  Pseudo-selectors (skipped): 156
+
+POTENTIALLY UNUSED SELECTORS:
+  /* CSS Custom Properties for consistent theming */
+    :root
+  .repo-card
+  /* Reset and base styles */
+    *
+  position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      opacity: var(--dust-opacity);
+      transition: opacity 0.3s ease;
+    }
+
+    /* Hide dust on mobile devices for performance */
+    @media (max-width: 768px)
+  display: none;
+      }
+    }
+
+    /* Reduce dust on tablets */
+    @media (max-width: 1024px)
+  opacity: 0.5;
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading-shimmer 1.5s infinite;
+    }
+
+    /* Loading shimmer animation */
+    @keyframes loading-shimmer
+  0%
+  background-position: -200% 0;
+      }
+      100%
+  content: "Content failed to load. Please refresh the page.";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--danger-color);
+      font-weight: 600;
+      text-align: center;
+      padding: var(--spacing-md);
+      backdrop-filter: blur(var(--blur-light));
+      -webkit-backdrop-filter: blur(var(--blur-light));
+      border-radius: var(--border-radius);
+    }
+
+    /* Pulse animation for loading state */
+    @keyframes pulse
+  0%, 100%
+  opacity: 1;
+      }
+      50%
+  background: var(--background-light) !important;
+      color: var(--primary-color) !important;
+    }
+
+    /* WordPress Mega Menu Support */
+    .mega-menu,
+    .mega-menu-wrap
+  opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+    }
+
+    .mega-menu-columns
+  color: var(--primary-color) !important;
+      font-size: 1rem !important;
+      font-weight: 600 !important;
+      margin-bottom: var(--spacing-sm) !important;
+      border-bottom: 2px solid var(--primary-color) !important;
+      padding-bottom: var(--spacing-xs) !important;
+    }
+
+    /* WordPress Mobile Menu Toggle */
+    .menu-toggle,
+    .mobile-menu-toggle,
+    .hamburger,
+    .navbar-toggler
+  display: flex !important;
+      align-items: center !important;
+    }
+
+    .search-field,
+    .wp-block-search__input
+  color: rgba(255, 255, 255, 0.7) !important;
+    }
+
+    .search-submit,
+    .wp-block-search__button
+  top: 32px !important;
+    }
+
+    @media screen and (max-width: 782px)
+  margin-top: 152px !important; /* 120px + 32px admin bar */
+    }
+
+    @media screen and (max-width: 782px)
+  font-size: 1.3rem !important;
+      }
+    }
+
+    /* Mobile responsive styles for WordPress pages */
+    @media screen and (max-width: 768px)
+  min-width: 35px !important;
+        height: 35px !important;
+        padding: var(--spacing-xs) var(--spacing-sm) !important;
+        font-size: 0.9rem !important;
+      }
+    }
+
+    /* Small mobile responsive styles */
+    @media screen and (max-width: 480px)
+  padding: var(--spacing-sm) !important;
+      }
+    }
+
+    /* High contrast mode support for WordPress pages */
+    @media (prefers-contrast: high)
+  max-width: 100% !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+    }
+
+    /* WordPress block editor styles */
+    .wp-block
+  max-width: none !important;
+    }
+
+    .wp-block-group__inner-container
+  display: none !important;
+    }
+
+    /* Full-width page template styles */
+    .page-template-default .site-content,
+    .page-template-full-width .site-content,
+    .single-post .site-content
+  justify-content: space-around !important;
+      }
+    }
+
+    /* Medium screens - Remove tagline and adjust layout */
+    @media (max-width: 1024px)
+  order: 3 !important;
+      }
+    }
+
+    /* Extra small screens - Further simplification */
+    @media (max-width: 480px)
+  padding-top: 140px !important;
+        /* Mobile optimization - fixed attachment can cause issues */
+        background-attachment: scroll !important;
+      }
+    }
+
+    @media (max-width: 480px)
+  transform: translateY(-2px) !important;
+      box-shadow:
+        12px 12px 24px rgba(0, 0, 0, 0.6),
+        -12px -12px 24px rgba(85, 126, 161, 0.15) !important;
+    }
+
+    /* ========================================
+       LITERAL STICKY TOC STYLES
+       ======================================== */
+
+    /* Literal TOC Container */
+    .literal-toc
+  max-height: 70vh;
+      overflow-y: auto;
+      padding: var(--spacing-sm) 0;
+    }
+
+    /* TOC Items */
+    .toc-item
+  border-bottom: none;
+    }
+
+    /* TOC Links */
+    .toc-link
+  background: rgba(0, 75, 141, 0.05);
+      color: #003a6b;
+    }
+
+    /* Arrow for expandable items */
+    .toc-arrow
+  font-size: 0.8rem;
+      transition: transform 0.2s ease;
+      color: var(--text-light);
+    }
+
+    /* Expanded state arrow */
+    .toc-item.expanded .toc-arrow
+  transform: rotate(90deg);
+    }
+
+    /* Sub-items container */
+    .toc-subitems
+  max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: rgba(0, 75, 141, 0.02);
+    }
+
+    /* Show sub-items when parent is expanded */
+    .toc-item.expanded .toc-subitems
+  max-height: 500px;
+    }
+
+    /* Sub-item styling */
+    .toc-subitem
+  border-bottom: none;
+    }
+
+    .toc-subitem .toc-link
+  padding-left: calc(var(--spacing-lg) + var(--spacing-xl));
+      font-weight: 400;
+      font-size: 0.95rem;
+    }
+
+    /* Sticky TOC Behavior */
+    .literal-toc.sticky
+  max-height: 60vh;
+    }
+
+    /* Sticky TOC styling removed - functionality disabled */
+
+    /* All sticky TOC CSS rules removed - functionality disabled */
+
+    /* Responsive TOC Styles */
+    @media (max-width: 768px)
+  .literal-toc.sticky
+  padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.95rem;
+      }
+
+      .toc-subitem .toc-link
+  .literal-toc.sticky
+  .literal-toc.sticky
+  background: var(--primary-color) !important;
+      color: white !important;
+      border-left-color: #003a6b;
+      font-weight: 600;
+    }
+
+    /* Tocbot Responsive Styles */
+    @media (max-width: 768px)
+  margin-left: var(--spacing-md) !important;
+      }
+    }
+
+    /* Desktop Responsive Styles for Tocbot */
+    @media (min-width: 1200px)
+  max-height: 50vh !important;
+      }
+    }
+
+    @media (min-width: 1200px)
+  background: #4a7ba7 !important; /* Light blue for active grandchild */
+      color: white !important;
+      border-left-color: #2d5a87;
+      font-weight: 400;
+    }
+
+    /* Responsive design for TOC - Screens less than 1002px */
+    @media (max-width: 1002px)
+  margin-left: var(--spacing-md) !important;
+      }
+    }
+
+    /* TOC responsive behavior - Mobile adjustments for sticky design */
+    @media screen and (max-width: 768px)
+  opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+      }
+    }
+
+    /* TOC enhanced behavior for larger screens */
+    @media screen and (min-width: 1200px)
+  outline: 2px solid var(--primary-color); /* Clear focus indicator */
+      outline-offset: 2px;
+    }
+
+
+    /* Modern Edge (Chromium-based) specific fixes */
+    @supports ((-webkit-appearance: none) and (not (-moz-appearance: none)))
+  transition-delay: 0s !important;
+        animation: none !important;
+      }
+    }
+
+    /* Modern Edge (Chromium) hover stabilization and positioning fixes */
+    @supports ((-webkit-appearance: none) and (not (-moz-appearance: none)))
+  opacity: 1;
+      visibility: visible;
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+
+    /* Responsive adjustments for anchor links */
+    @media (max-width: 768px)
+  scroll-margin-top: 60px; /* Smaller margin for mobile */
+      }
+    }
+
+    /* Copy notification */
+    .copy-notification
+  position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--success-color);
+      color: white;
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-medium);
+      z-index: 9999;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .copy-notification.show
+  margin-left: 35px;
+    }
+
+    @media (max-width: 768px)
+  scroll-margin-top: 80px; /* Account for sticky TOC height */
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high)
+  border-bottom: 3px solid var(--primary-color);
+      }
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce)
+  font-size: 0.8rem;
+        padding: var(--spacing-xs);
+      }
+    }
+
+    @media (max-width: 768px)
+  display: none; /* Hidden by default */
+    }
+
+    /* ========================================
+       RESPONSIVE MEDIA QUERIES
+       ======================================== */
+
+    /* Responsive margins for smaller screens */
+    @media screen and (max-width: 1001px)
+  position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      overflow: hidden !important;
+      z-index: 1 !important;
+    }
+
+    /* Pre-Header Responsive Styles */
+    @media screen and (max-width: 768px)
+  transform: none !important;
+      }
+    }
+
+    @media screen and (max-width: 480px)
+  font-size: 0.8rem !important;
+      }
+    }
+
+    /* WordPress Header Responsive Styles */
+    @media screen and (max-width: 768px)
+  flex-direction: column !important;
+        gap: var(--spacing-md) !important;
+        padding: var(--spacing-md) !important;
+      }
+
+      /* Show Mobile Menu Toggle */
+      .menu-toggle,
+      .mobile-menu-toggle,
+      .hamburger,
+      .navbar-toggler
+  width: 100% !important;
+        justify-content: center !important;
+      }
+
+      .search-field
+  flex: 1 !important;
+        max-width: 250px !important;
+      }
+    }
+
+    @media screen and (min-width: 769px)
+  /* Desktop Header Layout */
+      .menu-toggle,
+      .mobile-menu-toggle,
+      .hamburger,
+      .navbar-toggler
+  display: flex !important;
+      }
+    }
+
+    /* WordPress media queries and responsive overrides */
+
+    /* Responsive styles */
+    @media screen and (max-width: 599px)
+  font-size: 1.5rem;
+      }
+    }
+
+    @media screen and (min-width: 600px)
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    }
+
+    @media screen and (min-width: 768px)
+  width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+      }
+    }
+
+    @media screen and (min-width: 1024px)
+  max-width: 800px !important;
+        margin: 0 auto !important;
+        padding: var(--spacing-md) !important;
+      }
+    }
+
+    /* WordPress-specific utility classes */
+    .wp-full-width
+  width: 100vw !important;
+      margin-left: calc(50% - 50vw) !important;
+    }
+
+    .wp-no-padding
+  content: '\f101' !important;
+    }
+
+    /* ========================================
+       BLOG POST RESPONSIVE STYLES
+       ======================================== */
+
+    /* Tablet responsive styles */
+    @media screen and (max-width: 1024px)
+  font-size: 0.9rem !important;
+      }
+    }
+
+    /* Mobile responsive styles */
+    @media screen and (max-width: 768px)
+  min-width: 35px !important;
+        height: 35px !important;
+        padding: var(--spacing-xs) var(--spacing-sm) !important;
+        font-size: 0.9rem !important;
+      }
+    }
+
+    /* Small mobile responsive styles */
+    @media screen and (max-width: 480px)
+  min-width: 30px !important;
+        height: 30px !important;
+        padding: 4px 8px !important;
+        font-size: 0.8rem !important;
+      }
+    }
+
+    /* ========================================
+       MASONRY LAYOUT ENHANCEMENTS
+       ======================================== */
+
+    /* Ensure proper masonry layout on larger screens */
+    @media screen and (min-width: 1200px)
+  max-width: 800px !important;
+        padding: var(--spacing-lg) !important;
+      }
+    }
+
+    /* Note: Masonry layout typically uses 3 columns max for readability */
+    /* Keeping 3-column layout even on very large screens */
+    @media screen and (min-width: 1600px)
+  outline: 2px solid var(--primary-color) !important;
+      outline-offset: 2px !important;
+    }
+
+    /* Reduced motion preferences */
+    @media (prefers-reduced-motion: reduce)
+  display: inline-flex !important;
+    }
+
+    @media (max-width: 768px)
+  backdrop-filter: blur(30px) !important;
+      -webkit-backdrop-filter: blur(30px) !important;
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle
+  justify-content: space-around !important;
+      }
+    }
+
+    /* Medium screens - Remove tagline and adjust layout */
+    @media (max-width: 1024px)
+  flex-direction: column !important;
+        gap: var(--spacing-sm) !important;
+        text-align: center !important;
+      }
+
+      .mobile-menu-toggle
+  font-size: 0.9rem !important;
+        padding: var(--spacing-xs) !important;
+      }
+    }
+
+    /* Very small screens - Further simplification */
+    @media (max-width: 480px)
+  opacity: 1 !important;
+      transition: opacity 0.3s ease !important;
+    }
+
+    /* Fallback for browsers without backdrop-filter support */
+    @supports not (backdrop-filter: blur(25px))
+  transform: none !important;
+      }
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high)
+  transform: translateX(4px) !important;
+    }
+
+    /* Responsive adjustments for blog posts container */
+    @media (max-width: 1024px)
+  font-size: 1.8rem !important;
+        padding-bottom: var(--spacing-sm) !important;
+      }
+    }
+
+    @media (max-width: 768px)
+  font-size: 1.6rem !important;
+        margin-bottom: var(--spacing-sm) !important;
+      }
+    }
+
+    @media (max-width: 480px)
+  width: 6px; /* Thinner scrollbar for mobile */
+      }
+    }
+
+    /* Desktop scrollbar adjustments */
+    @media (min-width: 1025px)
+  display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--spacing-xs);
+    }
+    .branding-text
+  display: none;
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: var(--spacing-sm);
+      border-radius: var(--border-radius);
+      position: absolute;
+      top: var(--spacing-md);
+      right: var(--spacing-md);
+    }
+
+    @media (max-width: 768px)
+  font-size: 1rem;
+      }
+      .mobile-menu-toggle
+  justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px)
+  background: #d4edda !important;
+      border: 1px solid #c3e6cb !important;
+      padding: 15px !important;
+      border-radius: var(--border-radius) !important;
+      margin: 15px 0 !important;
+      color: #155724 !important;
+    }
+
+    /* Warning alert styling */
+    .warning
+  background: #fff3cd !important;
+      border: 1px solid #ffeaa7 !important;
+      padding: 15px !important;
+      border-radius: var(--border-radius) !important;
+      margin: 15px 0 !important;
+      color: #856404 !important;
+    }
+
+    /* Feature grid layout */
+    .feature-grid
+  display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+      gap: var(--spacing-lg) !important;
+      margin: var(--spacing-lg) 0 !important;
+      max-width: 850px !important;
+      width: 100% !important;
+    }
+
+    /* Feature card styling */
+    .feature-card
+  /* Architecture diagram styling */
+    .architecture-diagram
+  color: var(--text-color) !important;
+      margin-bottom: var(--spacing-md) !important;
+      line-height: 1.6 !important;
+    }
+
+    /* API endpoint styling */
+    .api-endpoint
+  position: relative !important;
+      padding: var(--spacing-md) var(--spacing-lg) !important;
+      border-radius: var(--border-radius) !important;
+      background: rgba(255, 255, 255, 0.03) !important;
+      border-left: 4px solid var(--secondary-color) !important;
+      margin: var(--spacing-md) 0 !important;
+      color: var(--text-color) !important;
+      font-family: 'Courier New', monospace !important;
+      font-size: 0.95rem !important;
+    }
+
+    /* Security note styling */
+    .security-note
+  color: var(--text-color) !important;
+      line-height: 1.6 !important;
+    }
+
+    /* Tech stack container */
+    .tech-stack
+  display: flex !important;
+      flex-wrap: wrap !important;
+      gap: var(--spacing-md) !important;
+      margin: var(--spacing-lg) 0 !important;
+    }
+
+    /* Tech badge styling */
+    .tech-badge
+  position: relative !important;
+      padding: var(--spacing-md) var(--spacing-lg) !important;
+      border-radius: var(--border-radius) !important;
+      overflow: hidden !important;
+      backdrop-filter: blur(var(--blur-light)) !important;
+      -webkit-backdrop-filter: blur(var(--blur-light)) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      border-left: 4px solid var(--secondary-color) !important;
+      margin: var(--spacing-md) 0 !important;
+      color: var(--text-color) !important;
+      font-family: 'Courier New', monospace !important;
+      font-size: 0.95rem !important;
+    }
+
+    /* HTTP method badges */
+    .method-get,
+    .method-post,
+    .method-put,
+    .method-delete,
+    .method-patch
+  display: inline-block !important;
+      padding: var(--spacing-xs) var(--spacing-sm) !important;
+      border-radius: var(--border-radius) !important;
+      font-weight: 600 !important;
+      font-size: 0.85rem !important;
+      margin-right: var(--spacing-sm) !important;
+      font-family: 'Courier New', monospace !important;
+    }
+
+    .method-get
+  color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    /* ========================================
+       WORDPRESS BLOG WIDTH OPTIMIZATION (850px)
+       ======================================== */
+
+    /* Optimize container for 850px WordPress blog width */
+    @media (max-width: 900px)
+  font-size: 1.15rem !important;
+        margin: var(--spacing-md) 0 var(--spacing-sm) 0 !important;
+      }
+
+      /* Adjust feature grid for 2-column layout on 850px screens */
+      .feature-grid
+  grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--spacing-lg) !important;
+        margin: var(--spacing-lg) 0 !important;
+      }
+
+      /* Optimize padding on feature cards */
+      .feature-card
+  font-size: 0.98rem !important;
+        margin-bottom: var(--spacing-sm) !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Optimize tech stack for 850px screens */
+      .tech-stack
+  gap: var(--spacing-md) !important;
+        margin: var(--spacing-lg) 0 !important;
+      }
+
+      .tech-badge
+  padding: var(--spacing-xs) var(--spacing-sm) !important;
+        font-size: 0.9rem !important;
+      }
+
+      /* Optimize alert boxes */
+      .success,
+      .warning
+  margin-bottom: var(--spacing-xs) !important;
+        font-size: 0.98rem !important;
+      }
+
+      /* Optimize highlight sections */
+      .highlight
+  padding: var(--spacing-md) var(--spacing-lg) !important;
+        margin: var(--spacing-md) 0 !important;
+        font-size: 0.95rem !important;
+      }
+
+      /* Optimize method badges */
+      .method-get,
+      .method-post,
+      .method-put,
+      .method-delete,
+      .method-patch
+  font-size: 0.95rem !important;
+        margin: var(--spacing-sm) 0 !important;
+      }
+
+      /* Optimize security note */
+      .security-note
+  font-size: 0.98rem !important;
+      }
+
+      /* Optimize API endpoint styling */
+      .api-endpoint
+  margin: var(--spacing-lg) 0 !important;
+      }
+    }
+
+    /* Extra small screens (mobile) */
+    @media (max-width: 600px)
+  font-size: 1rem !important;
+      }
+
+      .feature-card
+  padding: var(--spacing-xs) var(--spacing-xs) !important;
+        font-size: 0.8rem !important;
+      }
+
+      .success,
+      .warning,
+      .highlight
+  width: 7px;
+    height: 7px;
+  }
+}
+
+@media screen and (max-width: 480px)
+  width: 6px;
+    height: 6px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce)
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Table of Contents */
+.table-of-contents
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.call-to-action
+  color: rgba(255, 255, 255, 0.95);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.related-posts
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Responsive blog post styles */
+@media (max-width: 1024px)
+  .blog-post
+  font-size: 2rem;
+  }
+
+  .page-subtitle
+  font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px)
+  .blog-post
+  font-size: 1.75rem;
+  }
+
+  .page-subtitle
+  padding: var(--spacing-md);
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px)
+  .blog-post
+  font-size: 1.5rem;
+  }
+
+  .page-subtitle
+  padding-left: var(--spacing-lg);
+  }
+}
+
+/* Print styles for blog posts */
+@media print
+  .blog-post
+
+
+NOTE: This is an automated analysis and may have false positives.
+Selectors may be used by:
+  - JavaScript (dynamically added classes)
+  - Blog posts (not analyzed)
+  - Future HTML files
+  - WordPress integration
+
+Manual review is required before removing any selectors.

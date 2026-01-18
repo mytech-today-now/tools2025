@@ -3,11 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tools 2026</title>
+<title>Tools 2026 - Comprehensive Software Directory | myTech.Today</title>
+<meta name="description" content="Discover 1000+ software tools and services for developers, IT professionals, marketers, and more. Curated by myTech.Today.">
+<meta name="keywords" content="software tools, developer tools, IT tools, web services, productivity tools, AI tools, developer resources">
+<link rel="stylesheet" href="https://mytech.today/wp-content/uploads/custom-css-js/12826.css">
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <!--
-    Consolidated JavaScript File (Updated 2026-01-08)
+    Consolidated JavaScript File (Updated 2026-01-09)
     All modules combined into a single file for better performance:
     - utilities.js: Common utilities and error handling
     - sticky-header.js: Transparent sticky header with blur effect
@@ -120,10 +124,98 @@
 </div>
 </section>
 </header>
-<!-- Literal Sticky TOC -->
-<nav class="toc" id="literal-toc">
+
+<!--
+  ============================================================================
+  VERTICAL SLIDESHOW TABLE OF CONTENTS
+  ============================================================================
+
+  Interactive slideshow-style table of contents with skeuomorphic design.
+
+  FEATURES:
+  - Vertical slide navigation with prev/next buttons
+  - Keyboard navigation (Arrow keys, Home, End)
+  - Touch/swipe gestures for mobile devices
+  - Mouse wheel navigation when hovering
+  - Clickable slide indicator dots
+  - Sticky behavior (collapses when scrolled past, expands on hover)
+  - Responsive design for all screen sizes
+  - Full accessibility support (ARIA labels, keyboard navigation)
+
+  NAVIGATION METHODS:
+  1. Buttons: Click ▲ (previous) or ▼ (next) buttons
+  2. Keyboard: Arrow Up/Left (previous), Arrow Down/Right (next), Home (first), End (last)
+  3. Touch: Swipe left (next) or right (previous) on mobile
+  4. Mouse Wheel: Scroll up (previous) or down (next) while hovering
+  5. Indicators: Click any dot to jump to that slide
+
+  JAVASCRIPT API:
+  - window.SlideshowTOC.init() - Initialize slideshow
+  - window.SlideshowTOC.showSlide(n) - Show slide n (1-based)
+  - window.SlideshowTOC.nextSlide() - Navigate to next slide
+  - window.SlideshowTOC.prevSlide() - Navigate to previous slide
+  - window.SlideshowTOC.firstSlide() - Jump to first slide
+  - window.SlideshowTOC.lastSlide() - Jump to last slide
+  - window.SlideshowTOC.getCurrentSlide() - Get current slide number
+  - window.SlideshowTOC.getTotalSlides() - Get total slide count
+
+  CONFIGURATION:
+  Modify window.SlideshowTOC.config to customize behavior:
+  - config.keyboard.enabled - Enable/disable keyboard navigation
+  - config.touch.enabled - Enable/disable touch gestures
+  - config.timing.transitionDuration - Slide transition duration (ms)
+  - config.debug - Enable debug logging
+
+  STRUCTURE:
+  - .toc.toc-slideshow - Main container
+  - .toc-slideshow-nav - Navigation controls (buttons + indicators)
+  - .toc-slideshow-container - Slide container
+  - .toc-slide - Individual slides
+  - .toc-indicator - Slide indicator dots
+
+  See tools2026-consolidated.js for full implementation details.
+  ============================================================================
+-->
+
+<!-- Vertical Slideshow TOC -->
+<nav class="toc toc-slideshow" id="literal-toc" role="navigation" aria-label="Table of Contents Slideshow">
 <h2>Table of Contents</h2>
-<ul>
+
+<!-- Navigation Controls -->
+<div class="toc-slideshow-nav" role="group" aria-label="Slideshow navigation">
+  <button class="toc-nav-btn toc-nav-prev" aria-label="Previous slide" title="Previous slide">
+    <span aria-hidden="true">▲</span>
+  </button>
+  <div class="toc-slide-indicators" role="tablist" aria-label="Slide indicators">
+    <button class="toc-indicator active" data-slide="1" role="tab" aria-label="Slide 1: Most useful to most users" aria-selected="true"></button>
+    <button class="toc-indicator" data-slide="2" role="tab" aria-label="Slide 2: Most useful for programmers" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="3" role="tab" aria-label="Slide 3: Most useful for video game developers" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="4" role="tab" aria-label="Slide 4: Most useful for web designers/creators" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="5" role="tab" aria-label="Slide 5: Most useful AI tools" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="6" role="tab" aria-label="Slide 6: Most useful for artists" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="7" role="tab" aria-label="Slide 7: Most useful for IT technicians" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="8" role="tab" aria-label="Slide 8: Most useful for Mac/iOS Users" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="9" role="tab" aria-label="Slide 9: Most useful for Linux users" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="10" role="tab" aria-label="Slide 10: Most useful for marketers/SEO/advertising/sales" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="11" role="tab" aria-label="Slide 11: Analytics & Data Science" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="12" role="tab" aria-label="Slide 12: Other Tools" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="13" role="tab" aria-label="Slide 13: Investment Tools" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="14" role="tab" aria-label="Slide 14: EDI Systems and Tools" aria-selected="false"></button>
+    <button class="toc-indicator" data-slide="15" role="tab" aria-label="Slide 15: Real Estate, Construction & Facilities" aria-selected="false"></button>
+  </div>
+  <button class="toc-nav-btn toc-nav-next" aria-label="Next slide" title="Next slide">
+    <span aria-hidden="true">▼</span>
+  </button>
+</div>
+
+<!-- Slideshow Container -->
+<div class="toc-slideshow-container" role="region" aria-live="polite">
+
+  <!-- Slide 1: Most useful to most users -->
+  <div class="toc-slide" data-slide="1" role="group" aria-label="Most useful to most users">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#most-users">Most useful to most users</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#most-users">Most useful to most users</a>
 <ul>
 <li><a href="#browser-add‑ins">Browser Add‑ins</a></li>
@@ -146,6 +238,15 @@
 <li><a href="#web-tools">Web Tools</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 2: Most useful for programmers -->
+  <div class="toc-slide" data-slide="2" role="group" aria-label="Most useful for programmers">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#programmers">Most useful for programmers</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#programmers">Most useful for programmers</a>
 <ul>
 <li><a href="#ides-text-editors">IDEs & Text Editors</a></li>
@@ -157,6 +258,15 @@
 <li><a href="#resources">Resources</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 3: Most useful for video game developers -->
+  <div class="toc-slide" data-slide="3" role="group" aria-label="Most useful for video game developers">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#game">Most useful for video game developers</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#game">Most useful for video game developers</a>
 <ul>
 <li><a href="#video-game-development">Video Game Development</a></li>
@@ -165,6 +275,15 @@
 <li><a href="#cad">CAD</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 4: Most useful for web designers/creators -->
+  <div class="toc-slide" data-slide="4" role="group" aria-label="Most useful for web designers/creators">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#web-designers">Most useful for web designers/creators</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#web-designers">Most useful for web designers/creators</a>
 <ul>
 <li><a href="#web-services">Web Services</a></li>
@@ -174,6 +293,15 @@
 <li><a href="#css-frameworks">CSS Frameworks</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 5: Most useful AI tools -->
+  <div class="toc-slide" data-slide="5" role="group" aria-label="Most useful AI tools">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#ai">Most useful AI tools</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#ai">Most useful AI tools</a>
 <ul>
 <li><a href="#ai-assistants-tools">AI Assistants & Tools</a></li>
@@ -190,6 +318,15 @@
 <li><a href="#ai-enterprise-solutions">AI Enterprise Solutions</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 6: Most useful for artists -->
+  <div class="toc-slide" data-slide="6" role="group" aria-label="Most useful for artists">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#artists">Most useful for artists</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#artists">Most useful for artists</a>
 <ul>
 <li><a href="#audio-streaming-players">Audio Streaming Players</a></li>
@@ -205,6 +342,15 @@
 <li><a href="#collaboration-project-management">Collaboration & Project Management</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 7: Most useful for IT technicians -->
+  <div class="toc-slide" data-slide="7" role="group" aria-label="Most useful for IT technicians">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#it-technicians">Most useful for IT technicians</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#it-technicians">Most useful for IT technicians</a>
 <ul>
 <li><a href="#security-networking">Security & Networking</a></li>
@@ -218,6 +364,15 @@
 <li><a href="#documentation-ticketing">Documentation & Ticketing</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 8: Most useful for Mac/iOS Users -->
+  <div class="toc-slide" data-slide="8" role="group" aria-label="Most useful for Mac/iOS Users">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#mac">Most useful for Mac/iOS Users</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#mac">Most useful for Mac/iOS Users</a>
 <ul>
 <li><a href="#macos-system-tools">macOS System Tools & Development</a></li>
@@ -229,6 +384,15 @@
 <li><a href="#macos-network-remote-access">Network & Remote Access Tools</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 9: Most useful for Linux users -->
+  <div class="toc-slide" data-slide="9" role="group" aria-label="Most useful for Linux users">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#linux">Most useful for Linux users</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#linux">Most useful for Linux users</a>
 <ul>
 <li><a href="#linux-development">Development & Programming Tools</a></li>
@@ -251,6 +415,15 @@
 <li><a href="#linux-legacy-compatibility">Legacy & Compatibility Tools</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 10: Most useful for marketers/SEO/advertising/sales -->
+  <div class="toc-slide" data-slide="10" role="group" aria-label="Most useful for marketers/SEO/advertising/sales">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#marketers">Most useful for marketers/SEO/advertising/sales</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#marketers">Most useful for marketers/SEO/advertising/sales</a>
 <ul>
 <li><a href="#seo-analytics">SEO & Analytics</a></li>
@@ -265,6 +438,15 @@
 <li><a href="#sales-customer-service">Sales & Customer Service</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 11: Analytics & Data Science -->
+  <div class="toc-slide" data-slide="11" role="group" aria-label="Analytics & Data Science">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#analytics-data-science">Analytics & Data Science</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#analytics-data-science">Analytics & Data Science</a>
 <ul>
 <li><a href="#analytics-data-science">Analytics & Data Science</a></li>
@@ -279,6 +461,15 @@
 <li><a href="#data-science-communities">Data Science Communities</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 12: Other Tools -->
+  <div class="toc-slide" data-slide="12" role="group" aria-label="Other Tools">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#others">Other Tools</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#others">Other Tools</a>
 <ul>
 <li><a href="#website-monitoring-uptime">Website Monitoring & Uptime</a></li>
@@ -291,6 +482,15 @@
 <li><a href="#screen-recording-screenshots">Screen Recording & Screenshots</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 13: Investment Tools -->
+  <div class="toc-slide" data-slide="13" role="group" aria-label="Investment Tools">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#investment">Investment Tools</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#investment">Investment Tools</a>
 <ul>
 <li><a href="#research-analysis">Research & Analysis</a></li>
@@ -308,6 +508,15 @@
 <li><a href="#erp">ERP Systems and Tools</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 14: EDI Systems and Tools -->
+  <div class="toc-slide" data-slide="14" role="group" aria-label="EDI Systems and Tools">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#edi">EDI Systems and Tools</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#edi">EDI Systems and Tools</a>
 <ul>
 <li><a href="#edi-systems">EDI Systems</a></li>
@@ -320,6 +529,15 @@
 <li><a href="#edi-training-certification">EDI Training & Certification</a></li>
 </ul>
 </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 15: Real Estate, Construction & Facilities -->
+  <div class="toc-slide" data-slide="15" role="group" aria-label="Real Estate, Construction & Facilities">
+    <div class="toc-slide-card">
+      <h3 class="toc-slide-title"><a href="#realestate">Real Estate, Construction & Facilities</a></h3>
+      <ul class="toc-slide-content">
 <li><a href="#realestate">Real Estate, Construction & Facilities</a>
 <ul>
 <li><a href="#realestate-platforms">Real Estate Platforms</a></li>
@@ -373,7 +591,12 @@
 <li><a href="#realestate-other">Real Estate Other</a></li>
 </ul>
 </li>
-</ul>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- End slideshow container -->
+
 </nav>
 <main>
 
@@ -4155,6 +4378,9 @@ Tools 2026
     });
 })();
 </script>
+
+<!-- Dust Particles Canvas -->
+<canvas id="dust-canvas"></canvas>
 
 </body>
 </html>

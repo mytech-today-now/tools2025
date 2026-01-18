@@ -1,0 +1,318 @@
+// ============================================
+// SCSS Mixins
+// ============================================
+// Reusable mixins for common CSS patterns
+// Last Updated: 2026-01-17
+
+// --------------------------------------------
+// 1. Backdrop Blur Mixin
+// --------------------------------------------
+// Usage: @include backdrop-blur(10px);
+// Occurrences: 43 instances in original CSS
+
+@mixin backdrop-blur($blur-amount) {
+  backdrop-filter: blur($blur-amount);
+  -webkit-backdrop-filter: blur($blur-amount);
+}
+
+// --------------------------------------------
+// 2. Gradient Background Mixins
+// --------------------------------------------
+// Usage: @include gradient-background(145deg, $color1, $color2);
+// Occurrences: 15+ instances
+
+@mixin gradient-background($angle, $color1, $color2) {
+  background: linear-gradient($angle, $color1, $color2);
+}
+
+// Neumorphic gradient (common pattern)
+@mixin neumorphic-gradient() {
+  background: linear-gradient(145deg, $color-bg-primary-80, $color-bg-dark-90);
+}
+
+// --------------------------------------------
+// 3. Box Shadow Mixins
+// --------------------------------------------
+// Neumorphic box-shadow with dual shadows
+// Usage: @include neumorphic-shadow(8px);
+// Occurrences: 10+ instances
+
+@mixin neumorphic-shadow($size: 8px) {
+  box-shadow:
+    #{$size} #{$size} #{$size * 2} $color-black-30,
+    #{-$size} #{-$size} #{$size * 2} $color-primary-10;
+}
+
+// Single shadow
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+// --------------------------------------------
+// 4. Responsive Breakpoint Mixins
+// --------------------------------------------
+// Usage: @include mobile { ... }
+// Occurrences: 50+ instances
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: $breakpoint-tablet + 1) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-down {
+  @media (max-width: $breakpoint-desktop - 1) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $breakpoint-large) {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media (min-width: $breakpoint-xlarge) {
+    @content;
+  }
+}
+
+// Custom breakpoint
+@mixin breakpoint($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+// --------------------------------------------
+// 5. Flexbox Mixins
+// --------------------------------------------
+// Usage: @include flex-center;
+// Occurrences: 20+ instances
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+// --------------------------------------------
+// 6. Text Shadow Mixins
+// --------------------------------------------
+// Multi-directional text shadow for readability
+// Usage: @include text-shadow-outline();
+// Occurrences: 15+ instances
+
+@mixin text-shadow-outline($color: $color-black-80) {
+  text-shadow:
+    -1px -1px 0 $color,
+    1px -1px 0 $color,
+    -1px 1px 0 $color,
+    1px 1px 0 $color;
+}
+
+@mixin text-shadow-glow($color: $color-black-30, $blur: 10px) {
+  text-shadow: 0 0 $blur $color;
+}
+
+// Combined outline + glow
+@mixin text-shadow-full($outline-color: $color-black-60, $glow-color: $color-black-30, $blur: 10px) {
+  text-shadow:
+    -1px -1px 0 $outline-color,
+    1px -1px 0 $outline-color,
+    -1px 1px 0 $outline-color,
+    1px 1px 0 $outline-color,
+    0 0 $blur $glow-color;
+}
+
+// --------------------------------------------
+// 7. Transition Mixin
+// --------------------------------------------
+// Usage: @include transition(all, 0.3s, ease);
+// Occurrences: 30+ instances
+
+@mixin transition($properties: all, $duration: 0.3s, $easing: ease) {
+  transition: $properties $duration $easing;
+}
+
+// --------------------------------------------
+// 8. Scrollbar Styling Mixin
+// --------------------------------------------
+// Custom scrollbar for webkit browsers
+// Usage: @include custom-scrollbar(8px, transparent, rgba(255, 255, 255, 0.2));
+// Occurrences: 5+ instances
+
+@mixin custom-scrollbar($width: 8px, $track-color: transparent, $thumb-color: $color-white-20) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+    border-radius: $border-radius;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+    border-radius: $border-radius;
+
+    &:hover {
+      background: lighten($thumb-color, 10%);
+    }
+  }
+}
+
+// --------------------------------------------
+// 9. Position Mixins
+// --------------------------------------------
+// Absolute positioning shortcuts
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// --------------------------------------------
+// 10. Typography Mixins
+// --------------------------------------------
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin line-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// --------------------------------------------
+// 11. Utility Mixins
+// --------------------------------------------
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin hide-visually {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+// --------------------------------------------
+// 12. Mermaid Chart Mixin
+// --------------------------------------------
+// Usage: @include mermaid-chart-wrapper;
+// Creates a styled container for Mermaid diagrams
+
+@mixin mermaid-chart-wrapper {
+  background: $mermaid-bg;
+  border: 1px solid $mermaid-border;
+  border-radius: $border-radius-large;
+  padding: $spacing-lg;
+  margin: $spacing-lg 0;
+  text-align: center;
+  overflow-x: auto;
+  box-shadow: $shadow-medium;
+  @include backdrop-blur($blur-light);
+}
+
+@mixin mermaid-responsive {
+  @include tablet {
+    padding: $spacing-md;
+    margin: $spacing-md 0;
+    overflow-x: scroll;
+
+    .mermaid {
+      font-size: $mermaid-text-size-tablet;
+    }
+
+    .mermaid .titleText {
+      font-size: $mermaid-title-size-tablet;
+    }
+  }
+
+  @include mobile {
+    padding: $spacing-sm;
+    margin: $spacing-sm 0;
+
+    .mermaid {
+      font-size: $mermaid-text-size-mobile;
+    }
+
+    .mermaid .titleText {
+      font-size: $mermaid-title-size-mobile;
+    }
+  }
+}
+
+// --------------------------------------------
+// End of Mixins
+// --------------------------------------------
+
