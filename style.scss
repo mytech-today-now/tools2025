@@ -2,22 +2,28 @@
 // Main SCSS File for tools2025
 // ============================================
 // Compiles to style.css
-// Last Updated: 2026-01-19
+// Last Updated: 2026-01-21
 //
 // Compile with: sass style.scss style.css
+// Watch with: sass --watch style.scss:style.css
 //
-// This file demonstrates SCSS nesting implementation
-// Task: mytechtoday-6fh - Nesting Implementation
+// This file imports all SCSS partials
+// Task: mytechtoday-u1l5 - SCSS File Creation
 //
-// Current Status: Phase 4 - SCSS Nesting Implementation
-// - _variables.scss: ✓ Complete
-// - _mixins.scss: ✓ Complete
-// - Nesting implementation: ✓ In Progress
+// Current Status: Phase 5 - SCSS Partials Implementation
+// - _variables.scss: ✓ Complete (174 lines)
+// - _mixins.scss: ✓ Complete (319 lines)
+// - _base.scss: ✓ Complete (base styles)
+// - _toc.scss: ✓ Complete (TOC navigation)
+// - _dust.scss: ✓ Complete (dust effects)
+// - _blog.scss: ✓ Complete (blog grid)
+// - _iframe.scss: ✓ Complete (iframe container)
+// - _series-navigation.scss: ✓ Complete (series navigation)
 //
-// Nesting Principles:
-// - Maximum nesting depth: 3-4 levels
-// - Use nesting for: Parent-child relationships, pseudo-classes, media queries
-// - Avoid nesting for: Unrelated selectors, overly specific selectors
+// Partial Organization:
+// 1. Configuration (variables, mixins)
+// 2. Base styles (body, section)
+// 3. Components (alphabetical order)
 
 // --------------------------------------------
 // 1. Configuration - Variables and Mixins
@@ -26,437 +32,19 @@
 @import 'mixins';
 
 // --------------------------------------------
-// 2. SCSS Nesting Examples
+// 2. Base Styles
 // --------------------------------------------
-// This section demonstrates proper SCSS nesting patterns
-// following the guidelines in scss-nesting-plan.md
-
-// Example 1: TOC Nesting Structure (Simplified demonstration)
-// Full implementation would include all TOC styles from style.css
-nav.toc {
-  // TOC container base styles
-  position: relative;
-  background: white;
-  border-radius: $border-radius-large;
-  box-shadow: $shadow-medium;
-  margin: $spacing-lg 0;
-
-  // TOC title (h2)
-  h2 {
-    background: linear-gradient(135deg, $primary-color, #003a6b);
-    color: white;
-    padding: $spacing-md $spacing-lg;
-    cursor: pointer;
-    user-select: none;
-    margin: 0;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-align: center;
-    border-radius: $border-radius $border-radius 0 0;
-
-    &:focus {
-      outline: 2px solid $primary-color;
-      outline-offset: 2px;
-    }
-  }
-
-  // TOC list container
-  > ul {
-    max-height: none;
-    overflow: visible;
-    transition: max-height 0.3s ease;
-    background: white;
-    margin: 0;
-    padding: $spacing-sm 0;
-    list-style: none;
-  }
-
-  // List items
-  li {
-    margin: 0 !important;
-    padding: 0 !important;
-    position: relative;
-
-    // Parent level links (Level 0)
-    > a {
-      display: block;
-      padding: $spacing-sm $spacing-md;
-      color: #1a365d !important;
-      text-decoration: none !important;
-      border-radius: $border-radius;
-      transition: all 0.3s ease;
-      font-weight: 700;
-      border-left: 4px solid transparent;
-      background: transparent;
-
-      &:hover,
-      &:focus {
-        background: rgba(26, 54, 93, 0.12) !important;
-        color: #003a6b !important;
-        border-left-color: #1a365d;
-        transform: translateX(6px);
-        box-shadow: 0 3px 12px rgba(26, 54, 93, 0.25);
-      }
-
-      &:target,
-      &.active {
-        background: #1a365d !important;
-        color: white !important;
-        border-left-color: #003a6b;
-        font-weight: 700;
-      }
-    }
-
-    // Nested lists (Level 1)
-    ul {
-      max-height: 0;
-      opacity: 0;
-      visibility: hidden;
-      overflow: hidden;
-      transform: translateY(-10px);
-      transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-      margin: 0;
-      padding: 0;
-
-      // Child level list items
-      li {
-        // Child level links (Level 1)
-        a {
-          display: block;
-          padding: $spacing-xs $spacing-md;
-          color: #2d5a87 !important;
-          text-decoration: none !important;
-          border-radius: $border-radius;
-          transition: all 0.3s ease;
-          font-weight: 500;
-          border-left: 3px solid transparent;
-          background: transparent;
-
-          &:hover,
-          &:focus {
-            background: rgba(45, 90, 135, 0.1) !important;
-            color: #1a365d !important;
-            border-left-color: #2d5a87;
-            transform: translateX(4px);
-            box-shadow: 0 2px 8px rgba(45, 90, 135, 0.2);
-          }
-
-          &:target,
-          &.active {
-            background: #2d5a87 !important;
-            color: white !important;
-            border-left-color: #1a365d;
-            font-weight: 500;
-          }
-        }
-
-        // Grandchild level (Level 2)
-        ul {
-          li {
-            a {
-              display: block;
-              color: #4a7ba7 !important;
-              font-weight: 400;
-              font-size: 0.9rem;
-              padding: $spacing-xs $spacing-sm;
-              margin-left: calc($spacing-xl + $spacing-lg);
-              padding-left: $spacing-xl;
-              border-left: 2px solid transparent;
-              line-height: 1.2;
-              text-decoration: none !important;
-
-              &:hover,
-              &:focus {
-                background: rgba(74, 123, 167, 0.08) !important;
-                color: #2d5a87 !important;
-                border-left-color: #4a7ba7;
-                transform: translateX(3px);
-                box-shadow: 0 2px 6px rgba(74, 123, 167, 0.15);
-              }
-
-              &:target,
-              &.active {
-                background: #4a7ba7 !important;
-                color: white !important;
-                border-left-color: #2d5a87;
-                font-weight: 400;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // Sticky TOC modifier
-  &.toc-sticky {
-    position: fixed;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    max-width: min(800px, 90vw);
-    width: 100%;
-
-    h2 {
-      padding: $spacing-sm $spacing-lg;
-      font-size: 1.1rem;
-    }
-
-    > ul {
-      max-height: 0;
-      overflow: hidden;
-      padding: 0;
-    }
-
-    &:hover,
-    &:focus-within {
-      > ul {
-        max-height: 70vh;
-        overflow-y: auto;
-        padding: $spacing-sm 0;
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
-    }
-
-    // Nested media queries for responsive behavior
-    @include tablet {
-      max-height: 50px;
-      top: 50px;
-
-      &:hover > ul {
-        max-height: 50vh !important;
-      }
-    }
-
-    @include desktop {
-      max-height: 70px;
-      top: 70px;
-
-      h2 {
-        font-size: 1.3rem !important;
-        padding: $spacing-lg $spacing-xl !important;
-      }
-
-      &:hover {
-        max-height: 80vh;
-
-        ul {
-          max-height: calc(80vh - 90px);
-        }
-      }
-    }
-  }
-
-  // Responsive adjustments
-  @include tablet {
-    margin-left: $spacing-md;
-    margin-right: $spacing-md;
-    max-width: calc(100% - 2 * $spacing-md);
-  }
-}
-
-// Example 2: Body and Pseudo-element Nesting
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-  margin: 0;
-  padding: $spacing-sm;
-  color: $text-color;
-  line-height: 1.5;
-  min-height: 100vh;
-  position: relative;
-
-  // Dynamic gradient background using pseudo-elements
-  &::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -2;
-    background: linear-gradient(135deg, #193959 0%, #274869 100%);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
-
-  &::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    background: linear-gradient(45deg, #040e17 0%, #002e56 100%);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    mix-blend-mode: multiply;
-    opacity: calc(0.5 + (var(--gradient-progress) * 0.5));
-    transform: scale(calc(1 + (var(--gradient-progress) * 0.2)));
-    transition: opacity 0.1s ease-out, transform 0.1s ease-out;
-  }
-
-  // WordPress page templates
-  &.page-template-default,
-  &.archive,
-  &.blog {
-    .entry-title {
-      a {
-        color: $text-link;
-        text-decoration: none;
-
-        &:hover {
-          color: $primary-color;
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .entry-content {
-      p, div {
-        margin: $spacing-md 0;
-        line-height: 1.6;
-      }
-    }
-  }
-}
-
-// Example 3: Section with Pseudo-elements and Backdrop Filter
-section {
-  position: relative !important;
-  backdrop-filter: blur($blur-medium) !important;
-  -webkit-backdrop-filter: blur($blur-medium) !important;
-  border-radius: $border-radius-large !important;
-  margin: $spacing-lg 0 !important;
-  padding: $spacing-lg !important;
-  overflow: hidden !important;
-
-  &::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: transparent !important;
-    z-index: -1 !important;
-  }
-
-  &::after {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: rgba(0, 0, 0, 0.05) !important;
-    z-index: -1 !important;
-  }
-}
-
-// Example 4: Dust Container with Media Query Nesting
-#dust-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-  opacity: var(--dust-opacity);
-  transition: opacity 0.3s ease;
-
-  // Hide on mobile for performance
-  @include mobile {
-    display: none;
-  }
-
-  // Reduce on tablets
-  @include tablet {
-    opacity: calc(var(--dust-opacity) * 0.5);
-  }
-}
-
-// Example 5: Blog Grid with Attribute Selectors and Media Queries
-.blog-grid {
-  &.element.column-3.masonry-brick {
-    width: 33.33%;
-    padding: $spacing-md;
-    box-sizing: border-box;
-
-    // Override inline styles
-    &[style] {
-      width: 33.33% !important;
-    }
-
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: $shadow-heavy;
-      transition: all 0.3s ease;
-    }
-
-    @include tablet {
-      width: 50%;
-
-      &[style] {
-        width: 50% !important;
-      }
-    }
-
-    @include mobile {
-      width: 100%;
-
-      &[style] {
-        width: 100% !important;
-      }
-    }
-  }
-}
-
-// Example 6: Iframe Container with Nested Elements
-.iframe-container {
-  position: relative;
-  width: 100%;
-  margin: $spacing-lg 0;
-  border-radius: $border-radius-large;
-  overflow: hidden;
-
-  iframe {
-    width: 100%;
-    border: none;
-    display: block;
-  }
-
-  &::before {
-    content: '';
-    display: block;
-    padding-top: 56.25%; // 16:9 aspect ratio
-  }
-
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
+@import 'base';
 
 // --------------------------------------------
-// 3. Nesting Validation Notes
+// 3. Components (Alphabetical Order)
 // --------------------------------------------
-// This SCSS file demonstrates:
-// ✓ Parent-child nesting (nav.toc > ul > li > a)
-// ✓ Pseudo-class nesting (&:hover, &:focus, &:active)
-// ✓ Pseudo-element nesting (&::before, &::after)
-// ✓ Media query nesting (@include mobile, @include tablet, @include desktop)
-// ✓ Attribute selector nesting (&[style])
-// ✓ Modifier class nesting (&.toc-sticky)
-// ✓ Maximum nesting depth: 3-4 levels (as per guidelines)
-//
-// To compile: sass style.scss style.css
-// To watch: sass --watch style.scss:style.css
+@import 'blog';
+@import 'dust';
+@import 'iframe';
+@import 'series-navigation';
+@import 'toc';
 
+// --------------------------------------------
+// End of Main SCSS File
+// --------------------------------------------

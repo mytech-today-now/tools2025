@@ -1,0 +1,8 @@
+"File","HasCSSRef","HasHTML","HasHead","HasBody","HasTOC","HasSeriesNav","HasBlogGrid","HasIframe","HasDust","Status"
+"dust-integration-example.html","True","True","True","True","False","False","False","False","False","PASS"
+"homepage.html","True","True","True","True","False","False","False","False","False","PASS"
+"iframe.html","True","True","True","True","True","False","False","True","False","PASS"
+"pastblog.html","True","True","True","True","False","False","False","False","False","PASS"
+"tools2025.html","True","True","True","True","True","False","False","False","False","PASS"
+"tools2026.html","True","True","True","True","False","False","False","False","False","PASS"
+"yesterday.html","False","True","True","True","True","False","True","True","True","FAIL"

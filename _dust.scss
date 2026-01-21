@@ -1,0 +1,35 @@
+// ============================================
+// Dust Container
+// ============================================
+// Dust particle container and effects
+// Last Updated: 2026-01-21
+
+// --------------------------------------------
+// Dust Container
+// --------------------------------------------
+#dust-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: var(--dust-opacity);
+  transition: opacity 0.3s ease;
+
+  // Hide on mobile for performance
+  @include mobile {
+    display: none;
+  }
+
+  // Reduce on tablets
+  @include tablet {
+    opacity: calc(var(--dust-opacity) * 0.5);
+  }
+}
+
+// --------------------------------------------
+// End of Dust Container
+// --------------------------------------------
+

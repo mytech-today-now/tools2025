@@ -2,30 +2,67 @@
 // SCSS Mixins
 // ============================================
 // Reusable mixins for common CSS patterns
-// Last Updated: 2026-01-17
+// Last Updated: 2026-01-21
+//
+// Purpose: Provide DRY (Don't Repeat Yourself) patterns for
+// frequently used CSS combinations and vendor prefixes.
+//
+// Usage: Import this file after variables in style.scss:
+//   @import 'variables';
+//   @import 'mixins';
+//
+// Benefits:
+//   - Reduces code duplication
+//   - Ensures consistent styling
+//   - Simplifies vendor prefix management
+//   - Makes responsive design easier
+// ============================================
 
 // --------------------------------------------
 // 1. Backdrop Blur Mixin
 // --------------------------------------------
-// Usage: @include backdrop-blur(10px);
+// Creates glassmorphic blur effect on element backgrounds
+// Automatically includes -webkit- prefix for Safari compatibility
+//
+// Usage:
+//   .card {
+//     @include backdrop-blur(10px);
+//     background: rgba(255, 255, 255, 0.95);
+//   }
+//
+// Parameters:
+//   $blur-amount: Blur radius (px) - typically 5px, 10px, or 15px
+//
+// Browser Support: Modern browsers (Chrome, Firefox, Safari, Edge)
 // Occurrences: 43 instances in original CSS
-
 @mixin backdrop-blur($blur-amount) {
   backdrop-filter: blur($blur-amount);
-  -webkit-backdrop-filter: blur($blur-amount);
+  -webkit-backdrop-filter: blur($blur-amount);  // Safari support
 }
 
 // --------------------------------------------
 // 2. Gradient Background Mixins
 // --------------------------------------------
-// Usage: @include gradient-background(145deg, $color1, $color2);
-// Occurrences: 15+ instances
-
+// Creates linear gradient backgrounds for depth and visual interest
+//
+// Usage:
+//   .hero {
+//     @include gradient-background(145deg, $primary-color, $secondary-color);
+//   }
+//
+// Parameters:
+//   $angle: Gradient angle (deg) - typically 135deg or 145deg
+//   $color1: Start color
+//   $color2: End color
+//
+// Occurrences: 15+ instances in original CSS
 @mixin gradient-background($angle, $color1, $color2) {
   background: linear-gradient($angle, $color1, $color2);
 }
 
 // Neumorphic gradient (common pattern)
+// Pre-configured gradient for neumorphic design style
+// Usage: @include neumorphic-gradient();
 @mixin neumorphic-gradient() {
   background: linear-gradient(145deg, $color-bg-primary-80, $color-bg-dark-90);
 }
@@ -33,17 +70,30 @@
 // --------------------------------------------
 // 3. Box Shadow Mixins
 // --------------------------------------------
-// Neumorphic box-shadow with dual shadows
-// Usage: @include neumorphic-shadow(8px);
-// Occurrences: 10+ instances
-
+// Creates depth and elevation effects using box shadows
+//
+// Neumorphic Shadow:
+// Creates soft, dual-direction shadows for neumorphic design
+// Combines dark shadow (bottom-right) and light shadow (top-left)
+//
+// Usage:
+//   .button {
+//     @include neumorphic-shadow(8px);
+//   }
+//
+// Parameters:
+//   $size: Shadow offset and spread (default: 8px)
+//
+// Occurrences: 10+ instances in original CSS
 @mixin neumorphic-shadow($size: 8px) {
   box-shadow:
-    #{$size} #{$size} #{$size * 2} $color-black-30,
-    #{-$size} #{-$size} #{$size * 2} $color-primary-10;
+    #{$size} #{$size} #{$size * 2} $color-black-30,      // Dark shadow (bottom-right)
+    #{-$size} #{-$size} #{$size * 2} $color-primary-10;  // Light shadow (top-left)
 }
 
 // Single shadow
+// Simple wrapper for standard box-shadow
+// Usage: @include box-shadow($shadow-medium);
 @mixin box-shadow($shadow) {
   box-shadow: $shadow;
 }
@@ -51,45 +101,74 @@
 // --------------------------------------------
 // 4. Responsive Breakpoint Mixins
 // --------------------------------------------
-// Usage: @include mobile { ... }
-// Occurrences: 50+ instances
+// Mobile-first responsive design helpers
+// Nest these mixins inside selectors to apply responsive styles
+//
+// Usage:
+//   .container {
+//     width: 100%;
+//
+//     @include tablet {
+//       width: 750px;
+//     }
+//
+//     @include desktop {
+//       width: 1000px;
+//     }
+//   }
+//
+// Occurrences: 50+ instances in original CSS
 
+// Mobile: 480px and below
+// Targets small phones
 @mixin mobile {
   @media (max-width: $breakpoint-mobile) {
     @content;
   }
 }
 
+// Tablet: 768px and below
+// Targets tablets and large phones
 @mixin tablet {
   @media (max-width: $breakpoint-tablet) {
     @content;
   }
 }
 
+// Tablet-up: 769px and above
+// Targets tablet and larger screens
 @mixin tablet-up {
   @media (min-width: $breakpoint-tablet + 1) {
     @content;
   }
 }
 
+// Desktop: 1024px and above
+// Targets desktop and laptop screens
 @mixin desktop {
   @media (min-width: $breakpoint-desktop) {
     @content;
   }
 }
 
+// Desktop-down: 1023px and below
+// Targets mobile and tablet screens
 @mixin desktop-down {
   @media (max-width: $breakpoint-desktop - 1) {
     @content;
   }
 }
 
+// Large: 1200px and above
+// Targets large desktop screens
 @mixin large {
   @media (min-width: $breakpoint-large) {
     @content;
   }
 }
 
+// XLarge: 1440px and above
+// Targets extra large screens
 @mixin xlarge {
   @media (min-width: $breakpoint-xlarge) {
     @content;
@@ -97,6 +176,8 @@
 }
 
 // Custom breakpoint
+// For one-off responsive needs
+// Usage: @include breakpoint(900px) { ... }
 @mixin breakpoint($width) {
   @media (max-width: $width) {
     @content;
@@ -106,15 +187,27 @@
 // --------------------------------------------
 // 5. Flexbox Mixins
 // --------------------------------------------
-// Usage: @include flex-center;
-// Occurrences: 20+ instances
+// Common flexbox layout patterns for quick alignment
+// Reduces repetitive flex property declarations
+//
+// Occurrences: 20+ instances in original CSS
 
+// Flex Center: Horizontally and vertically centered
+// Usage:
+//   .modal {
+//     @include flex-center;
+//   }
 @mixin flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+// Flex Column Center: Vertically stacked and centered
+// Usage:
+//   .card-content {
+//     @include flex-column-center;
+//   }
 @mixin flex-column-center {
   display: flex;
   flex-direction: column;
@@ -122,12 +215,22 @@
   justify-content: center;
 }
 
+// Flex Between: Space between items, vertically centered
+// Usage:
+//   .header {
+//     @include flex-between;
+//   }
 @mixin flex-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+// Flex Start: Left-aligned, vertically centered
+// Usage:
+//   .nav-items {
+//     @include flex-start;
+//   }
 @mixin flex-start {
   display: flex;
   align-items: center;
@@ -137,10 +240,20 @@
 // --------------------------------------------
 // 6. Text Shadow Mixins
 // --------------------------------------------
-// Multi-directional text shadow for readability
-// Usage: @include text-shadow-outline();
-// Occurrences: 15+ instances
+// Text shadow effects for readability and visual impact
+// Especially useful for text over images or complex backgrounds
+//
+// Occurrences: 15+ instances in original CSS
 
+// Text Shadow Outline: 4-directional outline for maximum readability
+// Creates a stroke effect around text
+// Usage:
+//   h1 {
+//     @include text-shadow-outline($color-black-80);
+//   }
+//
+// Parameters:
+//   $color: Outline color (default: $color-black-80)
 @mixin text-shadow-outline($color: $color-black-80) {
   text-shadow:
     -1px -1px 0 $color,
@@ -149,11 +262,30 @@
     1px 1px 0 $color;
 }
 
+// Text Shadow Glow: Soft glow effect
+// Usage:
+//   .hero-title {
+//     @include text-shadow-glow($color-black-30, 10px);
+//   }
+//
+// Parameters:
+//   $color: Glow color (default: $color-black-30)
+//   $blur: Blur radius (default: 10px)
 @mixin text-shadow-glow($color: $color-black-30, $blur: 10px) {
   text-shadow: 0 0 $blur $color;
 }
 
 // Combined outline + glow
+// Maximum readability with both outline and glow
+// Usage:
+//   .overlay-text {
+//     @include text-shadow-full();
+//   }
+//
+// Parameters:
+//   $outline-color: Outline color (default: $color-black-60)
+//   $glow-color: Glow color (default: $color-black-30)
+//   $blur: Glow blur radius (default: 10px)
 @mixin text-shadow-full($outline-color: $color-black-60, $glow-color: $color-black-30, $blur: 10px) {
   text-shadow:
     -1px -1px 0 $outline-color,
@@ -166,9 +298,25 @@
 // --------------------------------------------
 // 7. Transition Mixin
 // --------------------------------------------
-// Usage: @include transition(all, 0.3s, ease);
-// Occurrences: 30+ instances
-
+// Smooth transitions for interactive elements
+// Provides consistent animation timing across the site
+//
+// Usage:
+//   .button {
+//     @include transition(background-color, 0.3s, ease);
+//   }
+//
+//   .card {
+//     @include transition(all, 0.2s, ease-in-out);
+//   }
+//
+// Parameters:
+//   $properties: CSS properties to transition (default: all)
+//   $duration: Transition duration (default: 0.3s)
+//   $easing: Timing function (default: ease)
+//
+// Common easing values: ease, ease-in, ease-out, ease-in-out, linear
+// Occurrences: 30+ instances in original CSS
 @mixin transition($properties: all, $duration: 0.3s, $easing: ease) {
   transition: $properties $duration $easing;
 }
@@ -176,10 +324,22 @@
 // --------------------------------------------
 // 8. Scrollbar Styling Mixin
 // --------------------------------------------
-// Custom scrollbar for webkit browsers
-// Usage: @include custom-scrollbar(8px, transparent, rgba(255, 255, 255, 0.2));
-// Occurrences: 5+ instances
-
+// Custom scrollbar styling for webkit browsers (Chrome, Safari, Edge)
+// Creates consistent, branded scrollbar appearance
+//
+// Usage:
+//   .scrollable-content {
+//     @include custom-scrollbar(8px, transparent, $color-white-20);
+//   }
+//
+// Parameters:
+//   $width: Scrollbar width (default: 8px)
+//   $track-color: Track background color (default: transparent)
+//   $thumb-color: Scrollbar thumb color (default: $color-white-20)
+//
+// Browser Support: Chrome, Safari, Edge (webkit-based)
+// Note: Firefox uses different scrollbar styling properties
+// Occurrences: 5+ instances in original CSS
 @mixin custom-scrollbar($width: 8px, $track-color: transparent, $thumb-color: $color-white-20) {
   &::-webkit-scrollbar {
     width: $width;
@@ -195,7 +355,7 @@
     border-radius: $border-radius;
 
     &:hover {
-      background: lighten($thumb-color, 10%);
+      background: lighten($thumb-color, 10%);  // Slightly lighter on hover
     }
   }
 }
@@ -203,8 +363,16 @@
 // --------------------------------------------
 // 9. Position Mixins
 // --------------------------------------------
-// Absolute positioning shortcuts
+// Common positioning patterns for absolute elements
+// Simplifies centering and full-coverage positioning
 
+// Absolute Center: Perfect centering using transform
+// Usage:
+//   .modal-content {
+//     @include absolute-center;
+//   }
+//
+// Note: Parent element must have position: relative
 @mixin absolute-center {
   position: absolute;
   top: 50%;
@@ -212,6 +380,13 @@
   transform: translate(-50%, -50%);
 }
 
+// Absolute Full: Full coverage of parent element
+// Usage:
+//   .overlay {
+//     @include absolute-full;
+//   }
+//
+// Note: Parent element must have position: relative
 @mixin absolute-full {
   position: absolute;
   top: 0;
@@ -223,18 +398,41 @@
 // --------------------------------------------
 // 10. Typography Mixins
 // --------------------------------------------
+// Text rendering and truncation utilities
 
+// Font Smoothing: Improves text rendering on macOS/iOS
+// Usage:
+//   body {
+//     @include font-smoothing;
+//   }
+//
+// Note: Makes text appear thinner/lighter on Apple devices
 @mixin font-smoothing {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+// Truncate: Single-line text truncation with ellipsis
+// Usage:
+//   .card-title {
+//     @include truncate;
+//   }
 @mixin truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+// Line Clamp: Multi-line text truncation with ellipsis
+// Usage:
+//   .description {
+//     @include line-clamp(3);  // Truncate after 3 lines
+//   }
+//
+// Parameters:
+//   $lines: Number of lines to show before truncating (default: 2)
+//
+// Browser Support: Modern browsers (webkit-based)
 @mixin line-clamp($lines: 2) {
   display: -webkit-box;
   -webkit-line-clamp: $lines;
@@ -245,7 +443,15 @@
 // --------------------------------------------
 // 11. Utility Mixins
 // --------------------------------------------
+// General-purpose utility mixins for common needs
 
+// Clearfix: Clears floated children
+// Usage:
+//   .container {
+//     @include clearfix;
+//   }
+//
+// Note: Mostly legacy - flexbox/grid preferred for modern layouts
 @mixin clearfix {
   &::after {
     content: "";
@@ -254,6 +460,13 @@
   }
 }
 
+// Hide Visually: Hides element visually but keeps it accessible to screen readers
+// Usage:
+//   .sr-only {
+//     @include hide-visually;
+//   }
+//
+// Use case: Accessibility - hide labels visually but keep for screen readers
 @mixin hide-visually {
   position: absolute;
   width: 1px;
@@ -268,9 +481,20 @@
 // --------------------------------------------
 // 12. Mermaid Chart Mixin
 // --------------------------------------------
-// Usage: @include mermaid-chart-wrapper;
-// Creates a styled container for Mermaid diagrams
+// Specialized mixins for Mermaid.js diagram containers
+// Creates consistent, responsive styling for technical diagrams
 
+// Mermaid Chart Wrapper: Base styling for diagram containers
+// Usage:
+//   .mermaid-container {
+//     @include mermaid-chart-wrapper;
+//   }
+//
+// Features:
+//   - Semi-transparent white background
+//   - Glassmorphic blur effect
+//   - Rounded corners and shadow
+//   - Horizontal scrolling for wide diagrams
 @mixin mermaid-chart-wrapper {
   background: $mermaid-bg;
   border: 1px solid $mermaid-border;
@@ -283,6 +507,17 @@
   @include backdrop-blur($blur-light);
 }
 
+// Mermaid Responsive: Responsive adjustments for diagrams
+// Usage:
+//   .mermaid-container {
+//     @include mermaid-chart-wrapper;
+//     @include mermaid-responsive;
+//   }
+//
+// Adjustments:
+//   - Reduces padding on smaller screens
+//   - Scales down font sizes for readability
+//   - Enables horizontal scrolling on mobile
 @mixin mermaid-responsive {
   @include tablet {
     padding: $spacing-md;
@@ -315,4 +550,7 @@
 // --------------------------------------------
 // End of Mixins
 // --------------------------------------------
+// Total: 12 mixin categories with 25+ individual mixins
+// Usage: Import after variables in style.scss
+// Maintenance: Add new mixins here to keep them centralized and reusable
 

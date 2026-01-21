@@ -1,0 +1,337 @@
+nav.toc {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 75, 141, 0.15);
+  margin: 1.5rem 0;
+}
+nav.toc h2 {
+  background: linear-gradient(135deg, #557ea1, #003a6b);
+  color: white;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+}
+nav.toc h2:focus {
+  outline: 2px solid #557ea1;
+  outline-offset: 2px;
+}
+nav.toc > ul {
+  max-height: none;
+  overflow: visible;
+  transition: max-height 0.3s ease;
+  background: white;
+  margin: 0;
+  padding: 0.5rem 0;
+  list-style: none;
+}
+nav.toc li {
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+}
+nav.toc li > a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #1a365d !important;
+  text-decoration: none !important;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  border-left: 4px solid transparent;
+  background: transparent;
+}
+nav.toc li > a:hover, nav.toc li > a:focus {
+  background: rgba(26, 54, 93, 0.12) !important;
+  color: #003a6b !important;
+  border-left-color: #1a365d;
+  transform: translateX(6px);
+  box-shadow: 0 3px 12px rgba(26, 54, 93, 0.25);
+}
+nav.toc li > a:target, nav.toc li > a.active {
+  background: #1a365d !important;
+  color: white !important;
+  border-left-color: #003a6b;
+  font-weight: 700;
+}
+nav.toc li ul {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+nav.toc li ul li a {
+  display: block;
+  padding: 0.25rem 1rem;
+  color: #2d5a87 !important;
+  text-decoration: none !important;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  background: transparent;
+}
+nav.toc li ul li a:hover, nav.toc li ul li a:focus {
+  background: rgba(45, 90, 135, 0.1) !important;
+  color: #1a365d !important;
+  border-left-color: #2d5a87;
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(45, 90, 135, 0.2);
+}
+nav.toc li ul li a:target, nav.toc li ul li a.active {
+  background: #2d5a87 !important;
+  color: white !important;
+  border-left-color: #1a365d;
+  font-weight: 500;
+}
+nav.toc li ul li ul li a {
+  display: block;
+  color: #4a7ba7 !important;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  margin-left: 3.5rem;
+  padding-left: 2rem;
+  border-left: 2px solid transparent;
+  line-height: 1.2;
+  text-decoration: none !important;
+}
+nav.toc li ul li ul li a:hover, nav.toc li ul li ul li a:focus {
+  background: rgba(74, 123, 167, 0.08) !important;
+  color: #2d5a87 !important;
+  border-left-color: #4a7ba7;
+  transform: translateX(3px);
+  box-shadow: 0 2px 6px rgba(74, 123, 167, 0.15);
+}
+nav.toc li ul li ul li a:target, nav.toc li ul li ul li a.active {
+  background: #4a7ba7 !important;
+  color: white !important;
+  border-left-color: #2d5a87;
+  font-weight: 400;
+}
+nav.toc.toc-sticky {
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  max-width: min(800px, 90vw);
+  width: 100%;
+}
+nav.toc.toc-sticky h2 {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+}
+nav.toc.toc-sticky > ul {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+}
+nav.toc.toc-sticky:hover > ul, nav.toc.toc-sticky:focus-within > ul {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 0.5rem 0;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  nav.toc.toc-sticky {
+    max-height: 50px;
+    top: 50px;
+  }
+  nav.toc.toc-sticky:hover > ul {
+    max-height: 50vh !important;
+  }
+}
+@media (min-width: 1024px) {
+  nav.toc.toc-sticky {
+    max-height: 70px;
+    top: 70px;
+  }
+  nav.toc.toc-sticky h2 {
+    font-size: 1.3rem !important;
+    padding: 1.5rem 2rem !important;
+  }
+  nav.toc.toc-sticky:hover {
+    max-height: 80vh;
+  }
+  nav.toc.toc-sticky:hover ul {
+    max-height: calc(80vh - 90px);
+  }
+}
+@media (max-width: 768px) {
+  nav.toc {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0.5rem;
+  color: #929ba4;
+  line-height: 1.5;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background: linear-gradient(135deg, #193959 0%, #274869 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(45deg, #040e17 0%, #002e56 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  opacity: calc(0.5 + var(--gradient-progress) * 0.5);
+  transform: scale(calc(1 + var(--gradient-progress) * 0.2));
+  transition: opacity 0.1s ease-out, transform 0.1s ease-out;
+}
+body.page-template-default .entry-title a, body.archive .entry-title a, body.blog .entry-title a {
+  color: #419eef;
+  text-decoration: none;
+}
+body.page-template-default .entry-title a:hover, body.archive .entry-title a:hover, body.blog .entry-title a:hover {
+  color: #557ea1;
+  text-decoration: underline;
+}
+body.page-template-default .entry-content p, body.page-template-default .entry-content div, body.archive .entry-content p, body.archive .entry-content div, body.blog .entry-content p, body.blog .entry-content div {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+section {
+  position: relative !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-radius: 8px !important;
+  margin: 1.5rem 0 !important;
+  padding: 1.5rem !important;
+  overflow: hidden !important;
+}
+section::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: transparent !important;
+  z-index: -1 !important;
+}
+section::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.05) !important;
+  z-index: -1 !important;
+}
+
+#dust-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: var(--dust-opacity);
+  transition: opacity 0.3s ease;
+}
+@media (max-width: 480px) {
+  #dust-container {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  #dust-container {
+    opacity: calc(var(--dust-opacity) * 0.5);
+  }
+}
+
+.blog-grid.element.column-3.masonry-brick {
+  width: 33.33%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.blog-grid.element.column-3.masonry-brick[style] {
+  width: 33.33% !important;
+}
+.blog-grid.element.column-3.masonry-brick:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 75, 141, 0.2);
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .blog-grid.element.column-3.masonry-brick {
+    width: 50%;
+  }
+  .blog-grid.element.column-3.masonry-brick[style] {
+    width: 50% !important;
+  }
+}
+@media (max-width: 480px) {
+  .blog-grid.element.column-3.masonry-brick {
+    width: 100%;
+  }
+  .blog-grid.element.column-3.masonry-brick[style] {
+    width: 100% !important;
+  }
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.iframe-container iframe {
+  width: 100%;
+  border: none;
+  display: block;
+}
+.iframe-container::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=style-nested.css.map */

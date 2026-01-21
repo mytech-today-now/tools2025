@@ -1,0 +1,236 @@
+// ============================================
+// Series Navigation
+// ============================================
+// Navigation for multi-part blog series
+// Last Updated: 2026-01-21
+
+// --------------------------------------------
+// Series Navigation Container
+// --------------------------------------------
+.series-navigation {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px solid #dee2e6;
+  border-radius: $border-radius-large;
+  padding: $spacing-lg;
+  margin: $spacing-xl 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+}
+
+// --------------------------------------------
+// Series Navigation Header
+// --------------------------------------------
+.series-nav-header {
+  margin-bottom: $spacing-md;
+  padding-bottom: $spacing-md;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.series-return-link {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.95rem;
+
+  a {
+    color: #1a365d !important;
+    text-decoration: none !important;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+
+    &:hover,
+    &:focus {
+      color: #003a6b !important;
+      transform: translateX(-4px);
+      text-decoration: underline !important;
+    }
+  }
+}
+
+.series-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a365d;
+  text-align: center;
+}
+
+// --------------------------------------------
+// Series Navigation List
+// --------------------------------------------
+.series-nav-list {
+  margin: 0;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  li {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    a {
+      display: block;
+      padding: 0.75rem $spacing-md;
+      background: white;
+      border: 2px solid #dee2e6;
+      border-left: 4px solid $primary-color;
+      border-radius: 6px;
+      color: #1a365d !important;
+      text-decoration: none !important;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+      &:hover,
+      &:focus {
+        background: #f8f9fa;
+        border-left-color: #003a6b;
+        border-left-width: 6px;
+        color: #003a6b !important;
+        transform: translateX(4px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    // Current Article Highlight
+    &.current a {
+      background: linear-gradient(135deg, #1a365d 0%, #003a6b 100%);
+      color: white !important;
+      border-left-color: #ffc107;
+      border-left-width: 6px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(26, 54, 93, 0.3);
+
+      &:hover,
+      &:focus {
+        background: linear-gradient(135deg, #003a6b 0%, #1a365d 100%);
+        transform: translateX(2px);
+      }
+    }
+  }
+}
+
+// --------------------------------------------
+// Article Cards (for lead-in overview page)
+// --------------------------------------------
+.series-articles {
+  margin: $spacing-xl 0;
+}
+
+.article-card {
+  background: white;
+  border: 2px solid #dee2e6;
+  border-left: 6px solid $primary-color;
+  border-radius: $border-radius-large;
+  padding: $spacing-lg;
+  margin: $spacing-lg 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-left-color: #003a6b;
+    border-left-width: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+  }
+
+  h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a365d;
+  }
+
+  p {
+    margin: $spacing-sm 0;
+    line-height: 1.6;
+
+    strong a {
+      color: #1a365d !important;
+      text-decoration: none !important;
+      font-weight: 700;
+      transition: color 0.3s ease;
+
+      &:hover,
+      &:focus {
+        color: #003a6b !important;
+        text-decoration: underline !important;
+      }
+    }
+
+    em {
+      color: #6c757d;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+// --------------------------------------------
+// Responsive Design for Series Navigation
+// --------------------------------------------
+@media (max-width: 768px) {
+  .series-navigation {
+    padding: $spacing-md;
+    margin: $spacing-lg 0;
+  }
+
+  .series-title {
+    font-size: 1.1rem;
+  }
+
+  .series-nav-list li a {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .article-card {
+    padding: $spacing-md;
+    margin: $spacing-md 0;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .series-navigation {
+    padding: 0.75rem;
+  }
+
+  .series-title {
+    font-size: 1rem;
+  }
+
+  .series-nav-list li a {
+    padding: $spacing-sm 0.6rem;
+    font-size: 0.9rem;
+
+    &:hover,
+    &:focus {
+      transform: translateX(2px);
+    }
+  }
+
+  .article-card {
+    padding: 0.75rem;
+
+    h3 {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// --------------------------------------------
+// End of Series Navigation
+// --------------------------------------------
+

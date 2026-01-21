@@ -1,0 +1,112 @@
+// ============================================
+// Base Styles
+// ============================================
+// Foundation styles for body, sections, and general elements
+// Last Updated: 2026-01-21
+
+// --------------------------------------------
+// Body Element
+// --------------------------------------------
+body {
+  font-family: $font-family-system;
+  margin: 0;
+  padding: $spacing-sm;
+  color: $text-color;
+  line-height: 1.5;
+  min-height: 100vh;
+  position: relative;
+
+  // Dynamic gradient background using pseudo-elements
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    background: linear-gradient(135deg, $background-color 0%, $background-lighter 100%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(45deg, #040e17 0%, $background-light 100%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+    opacity: calc(0.5 + (var(--gradient-progress) * 0.5));
+    transform: scale(calc(1 + (var(--gradient-progress) * 0.2)));
+    transition: opacity 0.1s ease-out, transform 0.1s ease-out;
+  }
+
+  // WordPress page templates
+  &.page-template-default,
+  &.archive,
+  &.blog {
+    .entry-title {
+      a {
+        color: $text-link;
+        text-decoration: none;
+
+        &:hover {
+          color: $primary-color;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .entry-content {
+      p, div {
+        margin: $spacing-md 0;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+// --------------------------------------------
+// Section Element
+// --------------------------------------------
+section {
+  position: relative !important;
+  @include backdrop-blur($blur-medium);
+  border-radius: $border-radius-large !important;
+  margin: $spacing-lg 0 !important;
+  padding: $spacing-lg !important;
+  overflow: hidden !important;
+
+  &::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: transparent !important;
+    z-index: -1 !important;
+  }
+
+  &::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    z-index: -1 !important;
+  }
+}
+
+// --------------------------------------------
+// End of Base Styles
+// --------------------------------------------
+

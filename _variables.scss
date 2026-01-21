@@ -2,172 +2,241 @@
 // SCSS Variables
 // ============================================
 // All variables extracted from CSS custom properties
-// Last Updated: 2026-01-17
+// and harmonized during Phase 2 optimization
+// Last Updated: 2026-01-21
+//
+// Purpose: Centralized variable definitions for consistent
+// styling across all myTech.Today blog posts and tools.
+//
+// Usage: Import this file at the top of style.scss:
+//   @import 'variables';
+//
+// Compilation: Variables are replaced with their values
+// during SCSS compilation to CSS.
+// ============================================
 
 // --------------------------------------------
 // Colors - Primary
 // --------------------------------------------
-$primary-color: #557ea1;
-$secondary-color: #10a37f;
-$tertiary-color: #8b5a3c;
-$danger-color: #d32f2f;
-$success-color: #1976d2;
+// Main brand colors used throughout the site
+// Primary: myTech.Today brand blue (headers, links, accents)
+// Secondary: Success/action color (buttons, CTAs)
+// Tertiary: Warm accent color (highlights, warnings)
+// Danger: Error states and destructive actions
+// Success: Confirmation states and positive feedback
+$primary-color: #557ea1;      // Brand blue - main theme color
+$secondary-color: #10a37f;    // Teal green - success/action color
+$tertiary-color: #8b5a3c;     // Warm brown - accent color
+$danger-color: #d32f2f;       // Red - error/danger states
+$success-color: #1976d2;      // Blue - success/confirmation states
 
 // --------------------------------------------
 // Colors - Borders
 // --------------------------------------------
-$border-color: #d1dce5;
-$light-border: #e8f0f5;
+// Border colors for cards, containers, and dividers
+// Used in blog post cards, navigation elements, and content sections
+$border-color: #d1dce5;       // Standard border color (medium gray-blue)
+$light-border: #e8f0f5;       // Light border for subtle divisions
 
 // --------------------------------------------
 // Colors - Backgrounds
 // --------------------------------------------
-$background-color: #193959;
-$background-light: #002e56;
-$background-lighter: #274869;
+// Background colors for page body, sections, and containers
+// Dark blue theme creates professional, tech-focused aesthetic
+$background-color: #193959;      // Primary background (dark blue)
+$background-light: #002e56;      // Darker variant for depth/contrast
+$background-lighter: #274869;    // Lighter variant for elevated elements
 
 // --------------------------------------------
 // Colors - Text
 // --------------------------------------------
-$text-color: #929ba4;
-$text-muted: #e1e5e9;
-$text-light: #c2c9cf;
-$text-link: #419eef;
+// Text colors for body copy, headings, and links
+// Optimized for readability on dark backgrounds
+$text-color: #929ba4;         // Primary text color (medium gray)
+$text-muted: #e1e5e9;         // Muted/secondary text (light gray)
+$text-light: #c2c9cf;         // Light text for less emphasis
+$text-link: #419eef;          // Link color (bright blue)
 
 // --------------------------------------------
 // Colors - RGBA (Black variations)
 // --------------------------------------------
-$color-black-80: rgba(0, 0, 0, 0.8);
-$color-black-60: rgba(0, 0, 0, 0.6);
-$color-black-50: rgba(0, 0, 0, 0.5);
-$color-black-30: rgba(0, 0, 0, 0.3);
-$color-black-20: rgba(0, 0, 0, 0.2);
+// Semi-transparent black overlays for depth and contrast
+// Used in glassmorphic effects, shadows, and overlays
+// Harmonized during Phase 2: rgba(0,0,0,0.4) → 0.3
+$color-black-80: rgba(0, 0, 0, 0.8);   // Heavy overlay (80% opacity)
+$color-black-60: rgba(0, 0, 0, 0.6);   // Medium-heavy overlay
+$color-black-50: rgba(0, 0, 0, 0.5);   // Medium overlay
+$color-black-30: rgba(0, 0, 0, 0.3);   // Light overlay (canonical value)
+$color-black-20: rgba(0, 0, 0, 0.2);   // Very light overlay
 
 // --------------------------------------------
 // Colors - RGBA (White variations)
 // --------------------------------------------
-$color-white-100: rgba(255, 255, 255, 1);
-$color-white-95: rgba(255, 255, 255, 0.95);
-$color-white-90: rgba(255, 255, 255, 0.9);
-$color-white-85: rgba(255, 255, 255, 0.85);
-$color-white-50: rgba(255, 255, 255, 0.5);
-$color-white-40: rgba(255, 255, 255, 0.4);
-$color-white-30: rgba(255, 255, 255, 0.3);
-$color-white-20: rgba(255, 255, 255, 0.2);
-$color-white-10: rgba(255, 255, 255, 0.1);
-$color-white-05: rgba(255, 255, 255, 0.05);
+// Semi-transparent white overlays for glassmorphic effects
+// Used extensively in blog cards, navigation, and content containers
+// Harmonized during Phase 2: rgba(255,255,255,0.98) → 0.95
+$color-white-100: rgba(255, 255, 255, 1);      // Solid white
+$color-white-95: rgba(255, 255, 255, 0.95);    // Near-opaque (canonical for cards)
+$color-white-90: rgba(255, 255, 255, 0.9);     // High opacity overlay
+$color-white-85: rgba(255, 255, 255, 0.85);    // Medium-high opacity
+$color-white-50: rgba(255, 255, 255, 0.5);     // 50% transparent
+$color-white-40: rgba(255, 255, 255, 0.4);     // Medium transparency
+$color-white-30: rgba(255, 255, 255, 0.3);     // Light transparency
+$color-white-20: rgba(255, 255, 255, 0.2);     // Very light transparency
+$color-white-10: rgba(255, 255, 255, 0.1);     // Subtle transparency
+$color-white-05: rgba(255, 255, 255, 0.05);    // Barely visible overlay
 
 // --------------------------------------------
 // Colors - RGBA (Primary color variations)
 // --------------------------------------------
-$color-primary-30: rgba(85, 126, 161, 0.3);
-$color-primary-10: rgba(85, 126, 161, 0.1);
+// Semi-transparent primary brand color for subtle accents
+// Used in hover states, highlights, and neumorphic shadows
+$color-primary-30: rgba(85, 126, 161, 0.3);    // 30% opacity primary
+$color-primary-10: rgba(85, 126, 161, 0.1);    // 10% opacity primary (light accent)
 
 // --------------------------------------------
 // Colors - RGBA (Background variations)
 // --------------------------------------------
-$color-bg-dark-90: rgba(15, 42, 68, 0.9);
-$color-bg-primary-80: rgba(25, 57, 89, 0.8);
-$color-bg-blue-30: rgba(0, 75, 141, 0.3);
+// Semi-transparent background colors for layered effects
+// Used in gradients, overlays, and neumorphic designs
+$color-bg-dark-90: rgba(15, 42, 68, 0.9);      // Dark blue overlay (90% opacity)
+$color-bg-primary-80: rgba(25, 57, 89, 0.8);   // Primary bg overlay (80% opacity)
+$color-bg-blue-30: rgba(0, 75, 141, 0.3);      // Light blue accent overlay
 
 // --------------------------------------------
 // Shadows
 // --------------------------------------------
-$shadow-light: 0 2px 4px rgba(0, 75, 141, 0.1);
-$shadow-medium: 0 4px 8px rgba(0, 75, 141, 0.15);
-$shadow-heavy: 0 8px 16px rgba(0, 75, 141, 0.2);
+// Box shadow presets for depth and elevation
+// Used in cards, buttons, modals, and elevated elements
+// Blue-tinted shadows match the overall color scheme
+$shadow-light: 0 2px 4px rgba(0, 75, 141, 0.1);     // Subtle elevation
+$shadow-medium: 0 4px 8px rgba(0, 75, 141, 0.15);   // Standard elevation
+$shadow-heavy: 0 8px 16px rgba(0, 75, 141, 0.2);    // High elevation
 
 // --------------------------------------------
 // Border Radius
 // --------------------------------------------
-$border-radius: 4px;
-$border-radius-large: 8px;
-$border-radius-round: 50%;
+// Standardized border radius values for consistent rounded corners
+// Harmonized during Phase 2: 3px→4px, 6px→8px
+$border-radius: 4px;              // Standard radius (canonical value)
+$border-radius-large: 8px;        // Large radius for cards/containers (canonical)
+$border-radius-round: 50%;        // Fully rounded (circles, pills)
 
 // --------------------------------------------
 // Spacing
 // --------------------------------------------
-$spacing-xs: 0.25rem;
-$spacing-sm: 0.5rem;
-$spacing-md: 1rem;
-$spacing-lg: 1.5rem;
-$spacing-xl: 2rem;
-$spacing-xxl: 3rem;
+// Consistent spacing scale for padding, margin, and gaps
+// Based on 0.25rem (4px) increments for visual rhythm
+// Usage: padding: $spacing-md; margin: $spacing-lg 0;
+$spacing-xs: 0.25rem;    // 4px - Minimal spacing
+$spacing-sm: 0.5rem;     // 8px - Small spacing
+$spacing-md: 1rem;       // 16px - Standard spacing (base unit)
+$spacing-lg: 1.5rem;     // 24px - Large spacing
+$spacing-xl: 2rem;       // 32px - Extra large spacing
+$spacing-xxl: 3rem;      // 48px - Maximum spacing
 
 // --------------------------------------------
 // Blur
 // --------------------------------------------
-$blur-light: 5px;
-$blur-medium: 10px;
-$blur-heavy: 15px;
-$blur-extra-heavy: 30px;
+// Backdrop blur values for glassmorphic effects
+// Used extensively in blog cards, navigation, and overlays
+// 43+ instances of backdrop-blur in original CSS
+$blur-light: 5px;           // Subtle blur effect
+$blur-medium: 10px;         // Standard blur (most common)
+$blur-heavy: 15px;          // Strong blur effect
+$blur-extra-heavy: 30px;    // Maximum blur for dramatic effect
 
 // --------------------------------------------
 // Dust Particles
 // --------------------------------------------
-$dust-particle-count: 350;
-$dust-particle-size: 3.0;
-$dust-opacity: 0.8;
-$dust-brightness: 0.8;
-$dust-density: 0.99;
-$dust-speed: 0.5;
+// Configuration for animated dust particle effect
+// Used in _dust.scss for atmospheric background animation
+// Adjust these values to control particle appearance and behavior
+$dust-particle-count: 350;      // Number of particles (performance impact)
+$dust-particle-size: 3.0;       // Particle size multiplier
+$dust-opacity: 0.8;             // Particle opacity (0-1)
+$dust-brightness: 0.8;          // Particle brightness (0-1)
+$dust-density: 0.99;            // Particle density/distribution
+$dust-speed: 0.5;               // Animation speed multiplier
 
 // --------------------------------------------
 // Breakpoints
 // --------------------------------------------
-$breakpoint-mobile: 480px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
-$breakpoint-large: 1200px;
-$breakpoint-xlarge: 1440px;
+// Responsive design breakpoints for mobile-first approach
+// Used in responsive mixins (@include mobile, @include tablet, etc.)
+// 50+ instances of responsive patterns in original CSS
+//
+// Mobile-first strategy:
+//   - Base styles apply to all screen sizes
+//   - Use @include tablet { } for 768px and below
+//   - Use @include desktop { } for 1024px and above
+$breakpoint-mobile: 480px;      // Small phones (max-width)
+$breakpoint-tablet: 768px;      // Tablets and large phones (max-width)
+$breakpoint-desktop: 1024px;    // Desktop and laptops (min-width)
+$breakpoint-large: 1200px;      // Large desktops (min-width)
+$breakpoint-xlarge: 1440px;     // Extra large screens (min-width)
 
 // --------------------------------------------
 // Typography
 // --------------------------------------------
+// Font family stacks and size scale
+// System font stack provides native look and optimal performance
 $font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 $font-family-mono: 'Courier New', monospace;
 
 // Font sizes (common values)
-$font-size-xs: 0.8rem;
-$font-size-sm: 0.9rem;
-$font-size-base: 1rem;
-$font-size-md: 1.1rem;
-$font-size-lg: 1.2rem;
-$font-size-xl: 1.5rem;
-$font-size-xxl: 2rem;
+// Based on rem units for accessibility (respects user font size preferences)
+// 1rem = 16px (browser default)
+$font-size-xs: 0.8rem;      // 12.8px - Small text, captions
+$font-size-sm: 0.9rem;      // 14.4px - Secondary text
+$font-size-base: 1rem;      // 16px - Body text (base size)
+$font-size-md: 1.1rem;      // 17.6px - Emphasized text
+$font-size-lg: 1.2rem;      // 19.2px - Subheadings
+$font-size-xl: 1.5rem;      // 24px - Headings
+$font-size-xxl: 2rem;       // 32px - Large headings
 
 // --------------------------------------------
 // Layout
 // --------------------------------------------
-$viewport-height: 100vh;
-$page-height: 100vh;
-$pre-header-height: 50px;
+// Layout dimensions for full-height sections and fixed elements
+$viewport-height: 100vh;        // Full viewport height
+$page-height: 100vh;            // Full page height
+$pre-header-height: 50px;       // Fixed header height
 
 // --------------------------------------------
 // Z-index layers
 // --------------------------------------------
-$z-index-base: 1;
-$z-index-dropdown: 100;
-$z-index-sticky: 200;
-$z-index-fixed: 300;
-$z-index-modal-backdrop: 400;
-$z-index-modal: 500;
-$z-index-popover: 600;
-$z-index-tooltip: 700;
+// Standardized z-index scale for layering elements
+// Prevents z-index conflicts and maintains consistent stacking order
+// Use these values instead of arbitrary numbers
+$z-index-base: 1;               // Base layer (default content)
+$z-index-dropdown: 100;         // Dropdown menus
+$z-index-sticky: 200;           // Sticky headers/navigation
+$z-index-fixed: 300;            // Fixed position elements
+$z-index-modal-backdrop: 400;   // Modal backdrop overlay
+$z-index-modal: 500;            // Modal dialogs
+$z-index-popover: 600;          // Popovers and tooltips container
+$z-index-tooltip: 700;          // Tooltips (highest priority)
 
 // --------------------------------------------
 // Mermaid Chart Colors
 // --------------------------------------------
-$mermaid-bg: rgba(255, 255, 255, 0.95);
-$mermaid-border: $border-color;
-$mermaid-text: #1a1a1a;
-$mermaid-title-size: 1.2rem;
-$mermaid-title-size-tablet: 1rem;
-$mermaid-title-size-mobile: 0.9rem;
-$mermaid-text-size-tablet: 0.85rem;
-$mermaid-text-size-mobile: 0.75rem;
+// Styling variables for Mermaid.js diagrams
+// Used in _mixins.scss (@include mermaid-chart-wrapper)
+// Ensures diagrams are readable and match site design
+$mermaid-bg: rgba(255, 255, 255, 0.95);     // Semi-transparent white background
+$mermaid-border: $border-color;             // Border color (matches site borders)
+$mermaid-text: #1a1a1a;                     // Dark text for contrast on light bg
+$mermaid-title-size: 1.2rem;                // Desktop title size
+$mermaid-title-size-tablet: 1rem;           // Tablet title size
+$mermaid-title-size-mobile: 0.9rem;         // Mobile title size
+$mermaid-text-size-tablet: 0.85rem;         // Tablet text size
+$mermaid-text-size-mobile: 0.75rem;         // Mobile text size
 
 // --------------------------------------------
 // End of Variables
 // --------------------------------------------
+// Total: 70+ variables organized by category
+// Compilation: All variables are replaced with their values in compiled CSS
+// Maintenance: Update variables here to change values site-wide
 

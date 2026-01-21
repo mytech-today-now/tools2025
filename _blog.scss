@@ -1,0 +1,50 @@
+// ============================================
+// Blog Grid
+// ============================================
+// Blog grid and masonry layout
+// Last Updated: 2026-01-21
+
+// --------------------------------------------
+// Blog Grid Component
+// --------------------------------------------
+.blog-grid {
+  &.element.column-3.masonry-brick {
+    width: 33.33%;
+    padding: $spacing-md;
+    box-sizing: border-box;
+
+    // Override inline styles
+    &[style] {
+      width: 33.33% !important;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-heavy;
+      transition: all 0.3s ease;
+    }
+
+    // Tablet: 2 columns
+    @include tablet {
+      width: 50%;
+
+      &[style] {
+        width: 50% !important;
+      }
+    }
+
+    // Mobile: 1 column
+    @include mobile {
+      width: 100%;
+
+      &[style] {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+// --------------------------------------------
+// End of Blog Grid
+// --------------------------------------------
+
