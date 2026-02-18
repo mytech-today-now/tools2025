@@ -75,13 +75,77 @@ body {
 // --------------------------------------------
 // Section Element
 // --------------------------------------------
+// WordPress-specific selectors for higher specificity
+// Task: mytechtoday-3ca9.1 - Update CSS selectors for WordPress specificity
+// Task: mytechtoday-3ca9.2 - Add fallback backgrounds for backdrop-filter
+// Task: mytechtoday-3ca9.3 - Fix z-index stacking context
+// Task: mytechtoday-3ca9.5 - Override WordPress theme styles
+
+// Base section styles (for non-WordPress pages)
 section {
   position: relative !important;
-  @include backdrop-blur($blur-medium);
   border-radius: $border-radius-large !important;
   margin: $spacing-lg 0 !important;
   padding: $spacing-lg !important;
   overflow: hidden !important;
+
+  // Fallback background for browsers without backdrop-filter support
+  background: rgba(255, 255, 255, 0.1) !important;
+
+  // Apply backdrop-filter with feature query for progressive enhancement
+  @supports (backdrop-filter: blur($blur-medium)) or (-webkit-backdrop-filter: blur($blur-medium)) {
+    background: transparent !important;
+    backdrop-filter: blur($blur-medium) !important;
+    -webkit-backdrop-filter: blur($blur-medium) !important;
+  }
+
+  &::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: transparent !important;
+    z-index: -1 !important;
+  }
+
+  &::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    z-index: -1 !important;
+  }
+}
+
+// WordPress-specific high-specificity selectors
+// These override WordPress theme styles
+body .site-content section,
+body .entry-content section,
+body .post-content section,
+body main section,
+article.post section,
+article.page section {
+  position: relative !important;
+  border-radius: $border-radius-large !important;
+  margin: $spacing-lg 0 !important;
+  padding: $spacing-lg !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+
+  // Fallback background for browsers without backdrop-filter support
+  background: rgba(255, 255, 255, 0.1) !important;
+
+  // Apply backdrop-filter with feature query for progressive enhancement
+  @supports (backdrop-filter: blur($blur-medium)) or (-webkit-backdrop-filter: blur($blur-medium)) {
+    background: transparent !important;
+    backdrop-filter: blur($blur-medium) !important;
+    -webkit-backdrop-filter: blur($blur-medium) !important;
+  }
 
   &::before {
     content: '' !important;

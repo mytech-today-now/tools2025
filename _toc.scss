@@ -168,7 +168,7 @@ nav.toc {
     top: 70px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000;
+    z-index: 9999;
     max-width: min(800px, 90vw);
     width: 100%;
 
@@ -222,6 +222,40 @@ nav.toc {
         }
       }
     }
+  }
+}
+
+// --------------------------------------------
+// WordPress Admin Bar Compatibility
+// --------------------------------------------
+// Task: mytechtoday-3ca9.4 - Add WordPress admin bar compatibility
+// Adjust sticky TOC positioning when WordPress admin bar is present
+
+// Desktop admin bar (32px height)
+body.admin-bar nav.toc.toc-sticky {
+  top: 102px !important; // 70px + 32px admin bar
+
+  @include desktop {
+    top: 102px !important; // 70px + 32px admin bar
+  }
+}
+
+// Mobile admin bar (46px height on screens <= 782px)
+@media (max-width: 782px) {
+  body.admin-bar nav.toc.toc-sticky {
+    top: 96px !important; // 50px + 46px mobile admin bar
+  }
+}
+
+// --------------------------------------------
+// TOC Navigation Container (outside nav.toc)
+// --------------------------------------------
+nav.toc {
+  // Z-index hierarchy
+  z-index: 1000;
+
+  &.toc-sticky {
+    z-index: 9999;
   }
 
   // Responsive adjustments
