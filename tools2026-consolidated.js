@@ -11,7 +11,7 @@
  * - main.js: Application coordinator and module initializer
  * 
  * @author myTech.Today
- * @version 1.0.0
+ * @version 1.0.1
  * @date 2026-01-09
  * @generated Automatically generated - do not edit directly
  */
@@ -2811,10 +2811,26 @@
                 });
             });
 
-            observer.observe(document.body, {
-                childList: true,
-                subtree: true
-            });
+            function startObserver() {
+                try {
+                    if (document.body) {
+                        observer.observe(document.body, {
+                            childList: true,
+                            subtree: true
+                        });
+                    } else {
+                        console.warn('[Anchors] document.body not available, deferring MutationObserver');
+                    }
+                } catch (err) {
+                    console.error('[Anchors] MutationObserver.observe() failed:', err);
+                }
+            }
+
+            if (document.body) {
+                startObserver();
+            } else {
+                document.addEventListener('DOMContentLoaded', startObserver);
+            }
         }
     }
 
@@ -4476,6 +4492,176 @@
 
     logDebug('Slideshow TOC module loaded');
 
+})();
+
+
+// ============================================================================
+// ENHANCED CODE BLOCKS — Line Wrapping + Copy Button
+// mytechtoday-9a8d.3 / 9a8d.4 — Added 2026-02-18
+// ============================================================================
+
+(function () {
+    'use strict';
+
+    /**
+     * 9a8d.3 — Line-wrapping initializer
+     * Wraps each text line inside <pre><code> blocks in <span class="line">
+     * so CSS counters can display line numbers.
+     * Only targets blocks that do NOT already contain .line spans.
+     * Extracts ```language fence and displays it as a header label on the code block.
+     */
+    function wrapCodeLines() {
+        const codeBlocks = document.querySelectorAll('pre code');
+        codeBlocks.forEach(function (codeEl) {
+            // Skip if lines are already wrapped
+            if (codeEl.querySelector('.line')) return;
+
+            var pre = codeEl.closest('pre');
+            var rawHTML = codeEl.innerHTML;
+            var lines = rawHTML.split('\n');
+            var detectedLang = '';
+
+            // Strip leading blank lines
+            while (lines.length > 0 && lines[0].trim() === '') {
+                lines.shift();
+            }
+            // Strip trailing blank lines
+            while (lines.length > 0 && lines[lines.length - 1].trim() === '') {
+                lines.pop();
+            }
+
+            // Extract language from opening fence (```language) and strip it
+            if (lines.length > 0 && /^```/.test(lines[0].trim())) {
+                var fenceLine = lines.shift().trim();
+                // Extract language name after the backticks
+                var langMatch = fenceLine.match(/^```(\S+)/);
+                if (langMatch && langMatch[1]) {
+                    detectedLang = langMatch[1];
+                }
+            }
+            // Strip closing fence (```)
+            if (lines.length > 0 && /^```\s*$/.test(lines[lines.length - 1].trim())) {
+                lines.pop();
+            }
+
+            // Strip any new leading/trailing blank lines exposed after fence removal
+            while (lines.length > 0 && lines[0].trim() === '') {
+                lines.shift();
+            }
+            while (lines.length > 0 && lines[lines.length - 1].trim() === '') {
+                lines.pop();
+            }
+
+            codeEl.innerHTML = lines
+                .map(function (line) {
+                    return '<span class="line">' + line + '</span>';
+                })
+                .join('\n');
+
+            // Inject language label header into <pre> if a language was detected
+            if (detectedLang && pre && !pre.querySelector('.code-lang-label')) {
+                var label = document.createElement('div');
+                label.className = 'code-lang-label';
+                label.textContent = detectedLang;
+                label.setAttribute('aria-label', 'Code language: ' + detectedLang);
+                pre.insertBefore(label, pre.firstChild);
+            }
+        });
+    }
+
+    // SVG icon markup for copy button states
+    var ICON_COPY = '<svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+    var ICON_COPIED = '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>';
+    var ICON_ERROR = '<svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+
+    /**
+     * 9a8d.4 — Copy-to-clipboard button injector and handler
+     * Adds a sticky .copy-btn icon to every <pre> block.
+     * Uses navigator.clipboard with execCommand fallback.
+     */
+    function injectCopyButtons() {
+        var preBlocks = document.querySelectorAll('pre');
+        preBlocks.forEach(function (pre) {
+            // Skip if button already exists
+            if (pre.querySelector('.copy-btn')) return;
+
+            var btn = document.createElement('button');
+            btn.className = 'copy-btn';
+            btn.innerHTML = ICON_COPY;
+            btn.setAttribute('aria-label', 'Copy code to clipboard');
+            btn.setAttribute('title', 'Copy to clipboard');
+            btn.setAttribute('type', 'button');
+
+            btn.addEventListener('click', function () {
+                var codeEl = pre.querySelector('code');
+                var text = codeEl ? codeEl.textContent : pre.textContent;
+
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        showCopied(btn);
+                    }).catch(function () {
+                        fallbackCopy(text, btn);
+                    });
+                } else {
+                    fallbackCopy(text, btn);
+                }
+            });
+
+            // Insert as first child so sticky + float:right pins to top-right
+            pre.insertBefore(btn, pre.firstChild);
+        });
+    }
+
+    /**
+     * Fallback clipboard copy for non-secure contexts
+     */
+    function fallbackCopy(text, btn) {
+        var textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.cssText = 'position:fixed;left:-9999px;top:-9999px;opacity:0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            document.execCommand('copy');
+            showCopied(btn);
+        } catch (err) {
+            console.error('[CodeBlocks] Fallback copy failed:', err);
+            btn.innerHTML = ICON_ERROR;
+            btn.setAttribute('title', 'Error');
+            setTimeout(function () { btn.innerHTML = ICON_COPY; btn.setAttribute('title', 'Copy to clipboard'); }, 2000);
+        }
+        document.body.removeChild(textarea);
+    }
+
+    /**
+     * Toggle copied state on button for 2 seconds
+     */
+    function showCopied(btn) {
+        btn.innerHTML = ICON_COPIED;
+        btn.setAttribute('title', 'Copied!');
+        btn.classList.add('copied');
+        setTimeout(function () {
+            btn.innerHTML = ICON_COPY;
+            btn.setAttribute('title', 'Copy to clipboard');
+            btn.classList.remove('copied');
+        }, 2000);
+    }
+
+    /**
+     * Initialize enhanced code blocks
+     */
+    function initEnhancedCodeBlocks() {
+        wrapCodeLines();
+        injectCopyButtons();
+        console.log('[CodeBlocks] Enhanced code blocks initialized');
+    }
+
+    // Run on DOMContentLoaded or immediately if already loaded
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initEnhancedCodeBlocks);
+    } else {
+        initEnhancedCodeBlocks();
+    }
 })();
 
 
