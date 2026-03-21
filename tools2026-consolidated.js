@@ -837,6 +837,8 @@
         selectors: {
             toc: 'nav.toc',
             tocTitle: 'nav.toc h2',
+            tocTitleBar: 'nav.toc .toc-title-bar',
+            tocContent: 'nav.toc .toc-content',
             tocList: 'nav.toc ul',
             tocNestedList: 'nav.toc li ul',
             tocParentItems: 'nav.toc li:has(ul)',
@@ -971,7 +973,179 @@
         }
     };
 
-    // StickyManager removed - sticky functionality disabled
+    /**
+     * Collapse Manager — IntersectionObserver-based minimize-on-scroll
+     * Adds/removes .toc-collapsed when TOC scrolls out of its natural position.
+     * Title bar click re-expands/collapses the TOC while sticky.
+     */
+    const CollapseManager = {
+        /** @type {IntersectionObserver|null} */
+        observer: null,
+        /** @type {HTMLElement|null} sentinel element placed at TOC's original position */
+        sentinel: null,
+        /** Whether the user manually expanded while in collapsed/sticky state */
+        userExpanded: false,
+
+        /**
+         * Initialize the collapse manager
+         */
+        init() {
+            try {
+                const toc = safeQuerySelector(TOCConfig.selectors.toc);
+                if (!toc) return;
+
+                // Create a sentinel <div> right before the TOC to detect scroll-past
+                this.sentinel = document.createElement('div');
+                this.sentinel.style.height = '1px';
+                this.sentinel.style.width = '100%';
+                this.sentinel.style.pointerEvents = 'none';
+                this.sentinel.setAttribute('aria-hidden', 'true');
+                toc.parentNode.insertBefore(this.sentinel, toc);
+
+                // Setup IntersectionObserver
+                if ('IntersectionObserver' in window) {
+                    this.observer = new IntersectionObserver(
+                        (entries) => this.handleIntersection(entries),
+                        { threshold: 0, rootMargin: '0px' }
+                    );
+                    this.observer.observe(this.sentinel);
+                } else {
+                    // Fallback: scroll event listener
+                    this.setupScrollFallback(toc);
+                }
+
+                // Click handler on title bar to toggle expand/collapse
+                const titleBar = safeQuerySelector(TOCConfig.selectors.tocTitleBar);
+                if (titleBar) {
+                    titleBar.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        this.handleTitleClick();
+                    });
+
+                    // Keyboard: Enter/Space on title bar
+                    titleBar.setAttribute('tabindex', '0');
+                    titleBar.setAttribute('role', 'button');
+                    titleBar.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            this.handleTitleClick();
+                        }
+                    });
+                }
+
+                console.log('[TOC CollapseManager] Initialized');
+            } catch (error) {
+                logError('collapse', 1, `CollapseManager init error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * IntersectionObserver callback
+         * @param {IntersectionObserverEntry[]} entries
+         */
+        handleIntersection(entries) {
+            try {
+                const toc = safeQuerySelector(TOCConfig.selectors.toc);
+                if (!toc) return;
+
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        // Sentinel scrolled out of view → collapse TOC
+                        if (!this.userExpanded) {
+                            this.collapse(toc);
+                        }
+                    } else {
+                        // Sentinel back in view → expand TOC (back to natural position)
+                        this.userExpanded = false;
+                        this.expand(toc);
+                    }
+                });
+            } catch (error) {
+                logError('collapse', 2, `Intersection handler error: ${error.message}`, 0, 0);
+            }
+        },
+
+        /**
+         * Collapse the TOC content (minimize to header bar)
+         * @param {HTMLElement} toc
+         */
+        collapse(toc) {
+            toc.classList.add(TOCConfig.classes.collapsed);
+            toc.setAttribute('aria-expanded', 'false');
+            TOCState.isExpanded = false;
+
+            const event = new CustomEvent('tocCollapse', { detail: { collapsed: true } });
+            document.dispatchEvent(event);
+        },
+
+        /**
+         * Expand the TOC content
+         * @param {HTMLElement} toc
+         */
+        expand(toc) {
+            toc.classList.remove(TOCConfig.classes.collapsed);
+            toc.setAttribute('aria-expanded', 'true');
+            TOCState.isExpanded = true;
+
+            const event = new CustomEvent('tocExpand', { detail: { collapsed: false } });
+            document.dispatchEvent(event);
+        },
+
+        /**
+         * Handle title bar click — toggle expand/collapse
+         */
+        handleTitleClick() {
+            const toc = safeQuerySelector(TOCConfig.selectors.toc);
+            if (!toc) return;
+
+            if (toc.classList.contains(TOCConfig.classes.collapsed)) {
+                this.userExpanded = true;
+                this.expand(toc);
+            } else {
+                this.userExpanded = false;
+                this.collapse(toc);
+            }
+        },
+
+        /**
+         * Fallback scroll listener for browsers without IntersectionObserver
+         * @param {HTMLElement} toc
+         */
+        setupScrollFallback(toc) {
+            const tocTop = toc.getBoundingClientRect().top + window.pageYOffset;
+            let ticking = false;
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        if (scrollTop > tocTop && !this.userExpanded) {
+                            this.collapse(toc);
+                        } else if (scrollTop <= tocTop) {
+                            this.userExpanded = false;
+                            this.expand(toc);
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+        },
+
+        /**
+         * Destroy the observer
+         */
+        destroy() {
+            if (this.observer) {
+                this.observer.disconnect();
+                this.observer = null;
+            }
+            if (this.sentinel && this.sentinel.parentNode) {
+                this.sentinel.parentNode.removeChild(this.sentinel);
+                this.sentinel = null;
+            }
+        }
+    };
 
     /**
      * Scrollable content management for TOC
@@ -1652,7 +1826,7 @@
                 // Set ARIA attributes
                 toc.setAttribute('role', 'navigation');
                 toc.setAttribute('aria-label', 'Table of Contents');
-                toc.setAttribute('aria-expanded', 'false');
+                toc.setAttribute('aria-expanded', 'true'); // Starts expanded
 
                 tocTitle.setAttribute('tabindex', '0');
                 tocTitle.setAttribute('role', 'button');
@@ -1682,9 +1856,9 @@
                     tocTitle.addEventListener('keydown', (event) => {
                         if (event.key === 'Enter' || event.key === ' ') {
                             event.preventDefault();
-                            TOCInteraction.toggleExpansion();
+                            CollapseManager.handleTitleClick();
                         } else if (event.key === 'Escape') {
-                            TOCInteraction.collapseTOC();
+                            CollapseManager.collapse(safeQuerySelector(TOCConfig.selectors.toc));
                             tocTitle.blur();
                         }
                     });
@@ -1758,8 +1932,8 @@
                 return;
             }
 
-            // Initialize core managers (sticky functionality disabled)
-            // StickyManager.init(); // Disabled sticky functionality
+            // Initialize core managers
+            CollapseManager.init(); // IntersectionObserver minimize-on-scroll
             ScrollableManager.init();
             AccessibilityManager.init();
             NestedListManager.init();
@@ -1777,17 +1951,10 @@
             // Window resize handler
             window.addEventListener('resize', handleResize);
 
-            // Header sticky change listener disabled (sticky functionality removed)
-            // document.addEventListener('headerStickyChange', (event) => {
-            //     if (TOCState.isSticky) {
-            //         StickyManager.positionStickyTOC();
-            //     }
-            // });
-
             // Mark as initialized
             TOCState.initialized = true;
 
-            console.log('[TOC Module] Successfully initialized table of contents functionality with sticky behavior');
+            console.log('[TOC Module] Successfully initialized with minimize-on-scroll behavior');
 
         } catch (error) {
             logError('module', 2, `Initialization error: ${error.message}`, 0, 0);
@@ -1801,10 +1968,9 @@
         init: initTOC,
         state: TOCState,
         config: TOCConfig,
-        expand: () => TOCInteraction.expandTOC(),
-        collapse: () => TOCInteraction.collapseTOC(),
-        toggle: () => TOCInteraction.toggleExpansion(),
-        // Sticky functionality removed
+        expand: () => CollapseManager.expand(safeQuerySelector(TOCConfig.selectors.toc)),
+        collapse: () => CollapseManager.collapse(safeQuerySelector(TOCConfig.selectors.toc)),
+        toggle: () => CollapseManager.handleTitleClick(),
         scrollable: {
             updateState: () => ScrollableManager.updateScrollableState(),
             scrollToElement: (element) => ScrollableManager.scrollToElement(element),
